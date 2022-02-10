@@ -55,6 +55,7 @@ module.exports = function (env) {
         env.NODE_ENV === "production"
           ? "static/[name].[contenthash].js"
           : "index.js",
+      assetModuleFilename: "static/media/[hash][ext][query]",
       path: path.resolve(__dirname, "build"),
       publicPath: "",
       clean: true,
