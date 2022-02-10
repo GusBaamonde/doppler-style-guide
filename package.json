@@ -36,6 +36,7 @@
     "dotenv": "^16.0.0",
     "dotenv-flow-webpack": "^1.1.0",
     "eclint": "^2.8.1",
+    "jquery": "^3.6.0",
     "loader": "^2.1.1",
     "mini-css-extract-plugin": "^2.5.3",
     "prettier": "^2.5.1",
