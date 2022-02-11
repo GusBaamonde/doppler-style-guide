@@ -1,0 +1,57 @@
+@use "helpers/colors";
+
+////
+/// Settings File
+/// Init fonts, backgrounds, wrappers, breakpoints and Transition variables
+/// @group Settings
+////
+
+/// Fonts
+$dp-font-color: #101010 !default;
+$dp-font-color-bright: #edede6 !default;
+///
+$dp-font-small-lineheight: 18px;
+$dp-font-lineheight: 22px !default;
+///
+$dp-font-weight-light: 300 !default;
+$dp-font-weight: 400 !default;
+$dp-font-weight-semibold: 600 !default;
+$dp-font-weight-bold: 700 !default;
+$dp-font-weight-regular: $dp-font-weight !default;
+///
+$dp-font-size: 15px !default;
+///
+$dp-font-family: "proxima-nova", helvetica, arial, sans-serif;
+$dp-font-family-proximanova: "proxima-nova", Helvetica, Arial, sans-serif !default;
+$dp-font-family-handofsean: "hand-of-sean";
+///
+$dp-font: $dp-font-weight $dp-font-size $dp-font-family !default;
+
+/// Background ///
+///
+$dp-background: colors.$dp-color-ghostwhite !default;
+///
+
+/// Wrapper ///
+///
+$dp-wrapper-min-width: 1200px !default;
+$dp-wrapper-max-width: 1260px !default;
+
+/// Breakpoints ///
+///
+$dp-breakpoints: (
+  mobilexs: "max-width: 320px",
+  mobile: "max-width: 480px",
+  ipad: "max-width: 768px",
+  desktop: "max-width: 1024px",
+  hddesktop: "max-width: 1440px",
+) !default;
+
+/// Transitions/Animation ///
+///
+$dp-transition-duration: 0.25s !default;
+$dp-transition-timing: ease !default;
+
+/// border radius
+
+$border-radius: 3px;

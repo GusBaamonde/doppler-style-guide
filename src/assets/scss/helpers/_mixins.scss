@@ -1,0 +1,4 @@
+/* @include transition(all,2s,ease); */
+@mixin transition-all($what: all, $time: 0.35s, $how: ease) {
+  transition: $what $time $how;
+}
