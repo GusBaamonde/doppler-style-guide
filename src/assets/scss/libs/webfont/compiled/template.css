@@ -1,0 +1,292 @@
+@font-face {
+  font-family: "icon-font";
+  src: url("assets/fonts/icon-font.eot?1644345418015");
+  src: url("assets/fonts/icon-font.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/icon-font.woff2?1644345418015") format("woff2"),
+    url("assets/fonts/icon-font.woff?1644345418015") format("woff"),
+    url("assets/fonts/icon-font.ttf?1644345418015") format("truetype"),
+    url("assets/fonts/icon-font.svg?1644345418015#icon-font") format("svg");
+}
+
+.ms-icon {
+  font-family: "icon-font";
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  font-weight: normal;
+  font-style: normal;
+  speak: none;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-AZ::before {
+  content: "\ea01";
+}
+
+.icon-add-element::before {
+  content: "\ea02";
+}
+
+.icon-arrow-friendly::before {
+  content: "\ea03";
+}
+
+.icon-arrow-next::before {
+  content: "\ea04";
+}
+
+.icon-arrow-prev::before {
+  content: "\ea05";
+}
+
+.icon-associate::before {
+  content: "\ea06";
+}
+
+.icon-brackets::before {
+  content: "\ea07";
+}
+
+.icon-calendar::before {
+  content: "\ea08";
+}
+
+.icon-check::before {
+  content: "\ea09";
+}
+
+.icon-check-grey::before {
+  content: "\ea0a";
+}
+
+.icon-clock::before {
+  content: "\ea0b";
+}
+
+.icon-close::before {
+  content: "\ea0c";
+}
+
+.icon-colapse::before {
+  content: "\ea0d";
+}
+
+.icon-configure::before {
+  content: "\ea0e";
+}
+
+.icon-delete::before {
+  content: "\ea0f";
+}
+
+.icon-doppler-logo::before {
+  content: "\ea10";
+}
+
+.icon-download::before {
+  content: "\ea11";
+}
+
+.icon-duplicate::before {
+  content: "\ea12";
+}
+
+.icon-edit::before {
+  content: "\ea13";
+}
+
+.icon-editor-save::before {
+  content: "\ea14";
+}
+
+.icon-editor-saving::before {
+  content: "\ea15";
+}
+
+.icon-element-image::before {
+  content: "\ea16";
+}
+
+.icon-embed::before {
+  content: "\ea17";
+}
+
+.icon-emoji::before {
+  content: "\ea18";
+}
+
+.icon-globo::before {
+  content: "\ea19";
+}
+
+.icon-grid-check::before {
+  content: "\ea1a";
+}
+
+.icon-grid-delete::before {
+  content: "\ea1b";
+}
+
+.icon-grid-draft::before {
+  content: "\ea1c";
+}
+
+.icon-grid-edit::before {
+  content: "\ea1d";
+}
+
+.icon-grid-reports::before {
+  content: "\ea1e";
+}
+
+.icon-grid-sorting::before {
+  content: "\ea1f";
+}
+
+.icon-grid-sorting-down::before {
+  content: "\ea20";
+}
+
+.icon-grid-sorting-up::before {
+  content: "\ea21";
+}
+
+.icon-header-help::before {
+  content: "\ea22";
+}
+
+.icon-hide::before {
+  content: "\ea23";
+}
+
+.icon-info-icon::before {
+  content: "\ea24";
+}
+
+.icon-loader::before {
+  content: "\ea25";
+}
+
+.icon-lock::before {
+  content: "\ea26";
+}
+
+.icon-maximize::before {
+  content: "\ea27";
+}
+
+.icon-menu::before {
+  content: "\ea28";
+}
+
+.icon-notification::before {
+  content: "\ea29";
+}
+
+.icon-pending::before {
+  content: "\ea2a";
+}
+
+.icon-pointer::before {
+  content: "\ea2b";
+}
+
+.icon-redo::before {
+  content: "\ea2c";
+}
+
+.icon-reload::before {
+  content: "\ea2d";
+}
+
+.icon-rename::before {
+  content: "\ea2e";
+}
+
+.icon-sandclock::before {
+  content: "\ea2f";
+}
+
+.icon-search::before {
+  content: "\ea30";
+}
+
+.icon-sensor::before {
+  content: "\ea31";
+}
+
+.icon-share-facebook::before {
+  content: "\ea32";
+}
+
+.icon-share-googlemas::before {
+  content: "\ea33";
+}
+
+.icon-share-linkedin::before {
+  content: "\ea34";
+}
+
+.icon-share-pinterest::before {
+  content: "\ea35";
+}
+
+.icon-share-twitter::before {
+  content: "\ea36";
+}
+
+.icon-share-whatsapp::before {
+  content: "\ea37";
+}
+
+.icon-star::before {
+  content: "\ea38";
+}
+
+.icon-star-filled::before {
+  content: "\ea39";
+}
+
+.icon-suggestions::before {
+  content: "\ea3a";
+}
+
+.icon-tip::before {
+  content: "\ea3b";
+}
+
+.icon-tip-icon::before {
+  content: "\ea3c";
+}
+
+.icon-undo::before {
+  content: "\ea3d";
+}
+
+.icon-user::before {
+  content: "\ea3e";
+}
+
+.icon-view::before {
+  content: "\ea3f";
+}
+
+.icon-warning::before {
+  content: "\ea40";
+}
+
+.icon-zoom-fit-to-scale::before {
+  content: "\ea41";
+}
+
+.icon-zoom-in::before {
+  content: "\ea42";
+}
+
+.icon-zoom-out::before {
+  content: "\ea43";
+}
