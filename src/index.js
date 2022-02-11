@@ -1,4 +1,4 @@
-import { sayHi } from "./util";
+import { getJqueryVersion } from "./util";
 import "./styles.scss";
 
-sayHi();
+getJqueryVersion();
