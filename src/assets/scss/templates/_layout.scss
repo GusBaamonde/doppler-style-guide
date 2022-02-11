@@ -1,0 +1,19 @@
+.dp-library {
+  .dp-app-container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  .dp-page-wrapper {
+    width: 100%;
+    max-width: 1260px;
+    margin: 20px auto;
+    padding: 0 30px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+}

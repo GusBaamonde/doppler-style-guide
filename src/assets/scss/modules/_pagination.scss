@@ -1,0 +1,101 @@
+////
+/// This is a poster comment.
+/// It will apply annotations to all items from file.
+/// @access private
+/// @author Gustavo Baamonde
+/// Classes for the pagintaion component
+////
+
+@use "core/variables";
+@use "helpers/colors";
+
+.dp-library {
+  %pagination-link {
+    padding: variables.$dp-spaces--lv1 variables.$dp-spaces--lv0;
+    font-size: variables.$dp-sizing--lvl4;
+    text-align: center;
+    display: inline-block;
+    width: auto;
+    height: 36px;
+    min-width: 36px;
+    transition: background-color 0.5s ease;
+    position: relative;
+    line-height: 26px;
+  }
+
+  .dp-pagination {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    margin: variables.$dp-spaces--lv2 variables.$dp-spaces--lv0
+      variables.$dp-spaces--lv0;
+
+    @media screen and (max-width: 980px) {
+      justify-content: flex-start;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      padding: variables.$dp-spaces--lv0;
+      margin: variables.$dp-spaces--lv0;
+
+      li {
+        padding: variables.$dp-spaces--lv2 2px;
+      }
+
+      .dp-active-page {
+        background-color: colors.$dp-color-yellow;
+        @extend %pagination-link;
+        border-radius: 3px;
+      }
+    }
+
+    span {
+      display: flex;
+      position: relative;
+      font-size: variables.$dp-sizing--lvl4;
+    }
+
+    button,
+    a {
+      color: colors.$dp-color-grey;
+      @extend %pagination-link;
+      border: 2px solid colors.$dp-color-white;
+      line-height: 15px;
+      width: auto;
+      height: 36px;
+      min-width: 36px;
+      padding: 10px 7px;
+
+      &:hover {
+        display: inline-block;
+        border-radius: 3px;
+        border: 2px solid colors.$dp-color-yellow;
+      }
+    }
+
+    .icon-arrow-prev:before {
+      position: absolute;
+      top: 9px;
+      left: 10px;
+    }
+    .icon-arrow-next:before {
+      position: absolute;
+      top: 9px;
+      left: 13px;
+    }
+
+    .dp-pag-point {
+      position: relative;
+      &:before {
+        content: "...";
+        top: 4px;
+        position: absolute;
+        left: 8px;
+      }
+    }
+  }
+}

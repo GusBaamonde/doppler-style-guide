@@ -1,0 +1,102 @@
+////
+/// Preloader component
+/// @access private
+/// @author Gustavo Baamonde
+/// Classes and Mixin for the Preloader component
+////
+
+@use "helpers/colors";
+
+@mixin dp-preloader($color, $size, $background: "") {
+  @if $background != "" {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    opacity: 0.9;
+    background-color: $background;
+
+    &:before {
+      content: "";
+      left: 0;
+      opacity: 0.9;
+      position: absolute;
+    }
+  }
+
+  &:after {
+    content: "";
+    width: $size;
+    height: $size;
+    position: absolute;
+    border-radius: 50%;
+    border: 5px solid rgba($color, 0.3);
+    border-top-color: $color;
+    animation: dp-preloader-spin 0.7s infinite linear;
+  }
+}
+
+@keyframes dp-preloader-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.dp-library {
+  .wrapper-loading {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8em;
+    height: 8em;
+
+    .loading-page {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include dp-preloader(colors.$dp-color-lightgrey, 3.3em);
+    }
+    @keyframes flash {
+      from,
+      50%,
+      to {
+        opacity: 1;
+      }
+
+      25%,
+      75% {
+        opacity: 0;
+      }
+    }
+
+    .flash {
+      animation: flash 2s infinite linear;
+    }
+  }
+}
+/* loading kpi */
+.dp-library {
+  .loading-box {
+    @include dp-preloader(
+      colors.$dp-color-lightgrey,
+      3.3em,
+      colors.$dp-color-ghostwhite
+    );
+  }
+  .loading-app {
+    min-height: 100vh;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 100%;
+    z-index: -1;
+  }
+}

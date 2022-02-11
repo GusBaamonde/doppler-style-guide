@@ -1,0 +1,201 @@
+/// Messages Component
+/// @example markup - HTML structure
+/// <div class="dp-msj-error bounceIn">
+///  <p></p>
+/// </div>
+/// We have four message styles for our users: .dp-msj-error, .dp-msj-succes, .dp-msj-warning, .dp-msj-user
+/// @author gbaamonde@makingsense.com
+
+@use "core/variables";
+@use "core/settings";
+@use "helpers/colors";
+
+.dp-library {
+  @mixin dp-messages($color: "", $border-color: "", $background: "") {
+    font-size: variables.$dp-sizing--lvl2;
+    display: inline-block;
+    width: 100%;
+    padding: variables.$dp-spaces--lv2;
+    margin: variables.$dp-spaces--lv1 0;
+    color: $color;
+    border-color: $border-color;
+    border-style: solid;
+    border-width: 1px;
+    background: $background;
+    border-radius: settings.$border-radius;
+  }
+
+  .dp-msj-error {
+    @include dp-messages(
+      $color: colors.$dp-color-red,
+      $border-color: colors.$dp-color-red,
+      $background: colors.$dp-color-white
+    );
+
+    a {
+      color: colors.$dp-color-red;
+      text-decoration: underline;
+
+      &:hover {
+        color: colors.$dp-color-darkred;
+      }
+    }
+  }
+  .dp-msj-succes {
+    @include dp-messages(
+      $color: colors.$dp-color-green,
+      $border-color: colors.$dp-color-green,
+      $background: colors.$dp-color-white
+    );
+
+    a {
+      text-decoration: underline;
+    }
+  }
+  .dp-msj-warning {
+    @include dp-messages(
+      $color: colors.$dp-color-yellow,
+      $border-color: colors.$dp-color-yellow,
+      $background: colors.$dp-color-white
+    );
+
+    a {
+      color: colors.$dp-color-yellow;
+      text-decoration: underline;
+
+      &:hover {
+        color: colors.$dp-color-darkyellow;
+      }
+    }
+  }
+  .dp-msj-user {
+    @include dp-messages(
+      $color: colors.$dp-color-lightgrey,
+      $border-color: colors.$dp-color-lightgrey,
+      $background: colors.$dp-color-white
+    );
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  /* Message new */
+
+  .dp-wrap-message {
+    display: flex;
+    border-radius: 3px;
+    align-items: center;
+    justify-content: flex-start;
+    padding: variables.$dp-spaces--lv3;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      left: 0;
+    }
+
+    .dp-message-icon {
+      width: 22px;
+      height: 20px;
+      position: relative;
+      display: table;
+    }
+
+    .dp-content-message {
+      padding-left: variables.$dp-spaces--lv2;
+      width: 100%;
+
+      p {
+        font-size: variables.$dp-sizing--lvl2;
+        line-height: 18px;
+      }
+    }
+
+    .dp-content-partial {
+      display: block;
+    }
+
+    .dp-content-full {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      p {
+        padding-right: variables.$dp-spaces--lv4;
+        margin-bottom: variables.$dp-spaces--lv0;
+      }
+
+      .dp-message-link {
+        margin-top: variables.$dp-spaces--lv0;
+        min-width: 154px;
+      }
+    }
+
+    .dp-message-link {
+      text-transform: uppercase;
+      color: colors.$dp-color-darkgrey;
+      text-decoration: underline;
+      font-size: variables.$dp-sizing--lvl2;
+      text-align: right;
+      margin-top: variables.$dp-spaces--lv2;
+      display: inline-block;
+    }
+  }
+
+  /* Flashcards */
+  .dp-wrap-success {
+    background-color: colors.$dp-color-green-brightness;
+    border-top: 1px solid colors.$dp-greenBorder-forFlashcards;
+    border-bottom: 1px solid colors.$dp-greenBorder-forFlashcards;
+    border-right: 1px solid colors.$dp-greenBorder-forFlashcards;
+    border-left: 4px solid colors.$dp-color-green;
+
+    .dp-message-icon {
+      background-image: url(assets/img/message-check-icon.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  .dp-wrap-warning {
+    background-color: colors.$dp-color-yellow-brightness;
+    border-top: 1px solid colors.$dp-yellowBorder-forFlashcards;
+    border-bottom: 1px solid colors.$dp-yellowBorder-forFlashcards;
+    border-right: 1px solid colors.$dp-yellowBorder-forFlashcards;
+    border-left: 4px solid colors.$dp-color-yellow;
+
+    .dp-message-icon {
+      background-image: url(assets/img/message-warning-icon.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  .dp-wrap-cancel {
+    background-color: colors.$dp-color-red-brightness;
+    border-top: 1px solid colors.$dp-redBorder-forFlashcards;
+    border-bottom: 1px solid colors.$dp-redBorder-forFlashcards;
+    border-right: 1px solid colors.$dp-redBorder-forFlashcards;
+    border-left: 4px solid colors.$dp-color-red;
+
+    .dp-message-icon {
+      background-image: url(assets/img/message-cancel-icon.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  .dp-wrap-info {
+    background-color: colors.$dp-color-blue-brightness;
+    border-top: 1px solid colors.$dp-blueBorder-forFlashcards;
+    border-bottom: 1px solid colors.$dp-blueBorder-forFlashcards;
+    border-right: 1px solid colors.$dp-blueBorder-forFlashcards;
+    border-left: 4px solid colors.$dp-color-blue;
+
+    .dp-message-icon {
+      background-image: url(assets/img/message-advice.svg);
+      background-repeat: no-repeat;
+    }
+  }
+}

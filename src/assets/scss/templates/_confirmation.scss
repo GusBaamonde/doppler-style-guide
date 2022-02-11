@@ -1,0 +1,85 @@
+@use "core/variables";
+@use "core/settings";
+@use "helpers/colors";
+
+.dp-library {
+  .confirmation {
+    p {
+      font-family: settings.$dp-font-family-proximanova;
+    }
+
+    &-wrapper {
+      max-width: settings.$dp-wrapper-max-width;
+      margin: 0 auto;
+      width: 100%;
+      font-family: settings.$dp-font-family-proximanova;
+
+      .bg-c {
+        right: 0;
+        top: 30px;
+      }
+
+      .bg-b {
+        bottom: 0;
+        left: 100px;
+      }
+    }
+
+    &-header {
+      margin: variables.$dp-spaces--lv5 variables.$dp-spaces--lv8;
+    }
+
+    &-main {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 70vh;
+      padding: variables.$dp-spaces--lv2;
+
+      button {
+        color: colors.$dp-color-green;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &-article {
+      max-width: 550px;
+      margin-bottom: variables.$dp-spaces--lv5;
+
+      h2 {
+        font-family: settings.$dp-font-family-proximanova;
+        font-weight: settings.$dp-font-weight-bold;
+      }
+
+      .text-italic {
+        font-size: variables.$dp-sizing--lvl2;
+      }
+    }
+
+    &-footer {
+      width: 100%;
+      text-align: center;
+      padding-bottom: variables.$dp-spaces--lv5;
+    }
+  }
+  // TODO: fix the media-breakpoint block
+  //@include media-breakpoint("desktop") {
+  //  .confirmation {
+  //    &-wrapper {
+  //      .bg-c {
+  //        display: none;
+  //      }
+  //
+  //      .bg-b {
+  //        display: none;
+  //      }
+  //    }
+  //  }
+  //}
+}

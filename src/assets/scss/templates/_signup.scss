@@ -1,0 +1,192 @@
+////
+/// This is a poster comment.
+/// It will apply annotations to all items from file.
+/// @access private
+/// @group Templates
+/// @author Gustavo Baamonde
+/// Classes for Signup
+////
+
+@use "helpers/colors";
+@use "core/variables";
+@use "core/settings";
+@use "modules/mixins/breakpoints";
+
+.dp-library {
+  .panel-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    .main-panel {
+      width: 525px;
+      height: 100%;
+      padding: variables.$dp-spaces--lv7 variables.$dp-spaces--lv8;
+      background-color: colors.$dp-color-white;
+      overflow-y: auto;
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo-doppler {
+        height: 30px;
+      }
+
+      .content-signin {
+        display: inline-block;
+        margin-top: variables.$dp-spaces--lv3;
+        font-family: settings.$dp-font-family-proximanova;
+        font-style: italic;
+
+        a {
+          font-style: normal;
+          font-weight: settings.$dp-font-weight-bold;
+        }
+      }
+
+      h5 {
+        margin: variables.$dp-spaces--lv9 variables.$dp-spaces--lv0
+          variables.$dp-spaces--lv1;
+        font-family: settings.$dp-font-family-proximanova;
+        color: colors.$dp-color-brown;
+        font-weight: settings.$dp-font-weight-bold;
+        text-transform: uppercase;
+        font-size: variables.$dp-sizing--lvl3;
+      }
+
+      .content-subtitle {
+        margin: variables.$dp-spaces--lv0;
+        font-family: settings.$dp-font-family-proximanova;
+        font-style: italic;
+
+        a {
+          font-weight: settings.$dp-font-weight-bold;
+          text-transform: uppercase;
+          font-style: normal;
+        }
+      }
+
+      .content-promotion {
+        padding-top: variables.$dp-spaces--lv3;
+        border-top: 1px colors.$dp-color-grey dashed;
+        font-family: settings.$dp-font-family-proximanova;
+      }
+
+      small {
+        font-family: settings.$dp-font-family-proximanova;
+      }
+
+      .content-legal {
+        margin-top: variables.$dp-spaces--lv4;
+        margin-bottom: variables.$dp-spaces--lv7;
+
+        p {
+          font-size: variables.$dp-font-size-rpgd;
+          line-height: variables.$dp-line-height-rpgd;
+          font-family: settings.$dp-font-family-proximanova;
+        }
+      }
+
+      footer {
+        p {
+          font-size: variables.$dp-sizing--lvl2;
+        }
+      }
+    }
+
+    .feature-panel {
+      flex: 4;
+
+      .content-img {
+        margin: variables.$dp-spaces--lv0;
+
+        img {
+          width: 100%;
+        }
+      }
+      .feature-panel--bg {
+        background-size: cover;
+        background-position: top;
+        padding: variables.$dp-spaces--lv5 variables.$dp-spaces--lv10;
+        height: 100%;
+        min-height: 968px;
+        max-height: 1200px;
+
+        h1,
+        h6,
+        p {
+          color: inherit;
+        }
+      }
+    }
+
+    .feature-content {
+      max-width: 660px;
+      padding-left: 12%;
+
+      h3 {
+        margin: variables.$dp-spaces--lv2 0;
+        font-family: settings.$dp-font-family-proximanova;
+        font-weight: settings.$dp-font-weight-bold;
+      }
+
+      h6 {
+        margin-bottom: variables.$dp-spaces--lv2;
+        font-family: settings.$dp-font-family-proximanova;
+        font-weight: settings.$dp-font-weight-bold;
+        text-transform: uppercase;
+      }
+
+      p {
+        font-family: settings.$dp-font-family-proximanova;
+      }
+    }
+  }
+  @include breakpoints.media-breakpoint("desktop") {
+    .panel-wrapper {
+      .main-panel {
+        width: 100%;
+
+        .field-item--50 {
+          width: 100%;
+          // Left Column
+          &:nth-of-type(odd) {
+            padding-right: variables.$dp-spaces--lv0;
+          }
+        }
+      }
+
+      .feature-panel {
+        display: none;
+      }
+    }
+  }
+
+  @include breakpoints.media-breakpoint("mobilexs") {
+    .panel-wrapper {
+      .main-panel {
+        padding: variables.$dp-spaces--lv5 variables.$dp-spaces--lv4;
+
+        h5 {
+          margin: variables.$dp-spaces--lv8 variables.$dp-spaces--lv0
+            variables.$dp-spaces--lv1;
+          font-size: variables.$dp-sizing--lvl2;
+        }
+        .content-subtitle {
+          font-size: variables.$dp-sizing--lvl2;
+          line-height: variables.$dp-spaces--lv3;
+        }
+      }
+    }
+  }
+  @media (min-width: 375px) {
+    .panel-wrapper .main-panel {
+      padding: variables.$dp-spaces--lv5;
+    }
+  }
+}

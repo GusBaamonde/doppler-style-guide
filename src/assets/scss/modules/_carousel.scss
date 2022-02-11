@@ -1,0 +1,187 @@
+////
+/// This is a poster comment.
+/// It will apply annotations to all items from file.
+/// @access private
+/// @author Ornella Cicalello
+/// Classes for the Carousel component
+////
+
+@use "core/variables";
+@use "helpers/colors";
+@use "modules/mixins/breakpoints";
+
+.dp-library {
+  .dp-carousel {
+    position: relative;
+    padding-bottom: variables.$dp-spaces--lv5;
+
+    &-wrapper {
+      width: 100%;
+      height: auto;
+      border: 2px solid colors.$dp-color-silver;
+      background: colors.$dp-color-ghostwhite;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    &-content {
+      display: flex;
+
+      &.animating {
+        animation: slide-fade 1s;
+      }
+      @keyframes slide-fade {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+
+    &-slide {
+      position: relative;
+      display: none;
+      min-height: 205px;
+      padding: variables.$dp-spaces--lv3;
+      animation: fade-slide 1s;
+
+      @keyframes fade-slide {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      &.active {
+        display: block;
+        width: 100%;
+      }
+
+      @include breakpoints.media-breakpoint("mobile") {
+        min-height: 300px;
+      }
+
+      h3 {
+        font-size: variables.$dp-sizing--lvl3;
+        font-weight: 700;
+        color: colors.$dp-color-lightgrey;
+        margin-bottom: variables.$dp-spaces--lv3;
+        display: block;
+      }
+
+      p {
+        font-size: variables.$dp-sizing--lvl5;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        color: colors.$dp-color-darkgrey;
+        padding-bottom: variables.$dp-spaces--lv5;
+      }
+
+      a {
+        position: absolute;
+        bottom: 12px;
+        right: 20px;
+        padding-right: variables.$dp-spaces--lv4;
+        display: inherit;
+        font-size: variables.$dp-sizing--lvl3;
+        font-weight: 700;
+        text-decoration: none;
+        color: colors.$dp-color-lightgrey;
+        cursor: pointer;
+
+        span {
+          content: "";
+          display: block;
+          margin: 0;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          width: 18px;
+          height: 18px;
+          border-radius: 100%;
+          background: colors.$dp-color-lightgrey;
+          text-align: center;
+          font-size: variables.$dp-sizing--lvl1;
+          line-height: 18px;
+          color: colors.$dp-color-white;
+        }
+      }
+    }
+
+    &-dots {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: inline-flex;
+      justify-content: left;
+
+      .dp-carousel-dot {
+        position: relative;
+        width: 14px;
+        height: 14px;
+        box-shadow: none;
+        margin-right: variables.$dp-spaces--lv2;
+        cursor: pointer;
+      }
+
+      .dp-carousel-dot::after {
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        width: 16px;
+        height: 16px;
+        border-radius: 100%;
+        background: colors.$dp-color-snow;
+        opacity: 1;
+        transition-duration: 0.2s;
+      }
+
+      .dp-carousel-dot:hover:after {
+        background: colors.$dp-color-cement;
+        transition-duration: 0.2s;
+      }
+
+      .dp-carousel-dot:checked:after {
+        background: colors.$dp-color-cement;
+      }
+
+      .dp-carousel-dot:focus:after {
+        box-shadow: inset 0 0 0 2px colors.$dp-color-orange-focus;
+      }
+    }
+  }
+
+  .dp-carousel-orange {
+    border-color: colors.$dp-color-orange-carousel-border;
+    background: colors.$dp-color-orange-carousel-back;
+
+    .dp-carousel-content .dp-carousel-slide h3,
+    .dp-carousel-content .dp-carousel-slide a {
+      color: colors.$dp-color-orange-carousel;
+    }
+
+    .dp-carousel-content .dp-carousel-slide a span {
+      background: colors.$dp-color-orange-carousel;
+    }
+  }
+
+  .dp-carousel-purple {
+    border-color: colors.$dp-color-purple-carousel-border;
+    background: colors.$dp-color-purple-carousel-back;
+
+    .dp-carousel-content .dp-carousel-slide h3,
+    .dp-carousel-content .dp-carousel-slide a {
+      color: colors.$dp-color-purple-carousel;
+    }
+
+    .dp-carousel-content .dp-carousel-slide a span {
+      background: colors.$dp-color-purple-carousel;
+    }
+  }
+}

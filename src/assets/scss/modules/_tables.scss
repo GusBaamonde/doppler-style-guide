@@ -1,0 +1,380 @@
+////
+///	Tables
+/// @group Tables
+/// @author gbaamonde@makingsense.com
+////
+/// Table Component -
+/// This is a simple easy-to-use table component.
+/// @example markup
+///   <table class="dp-c-table">
+///     <caption>caption</caption>
+///     <thead>
+///       <tr>
+///         <th>
+///           Column 1
+///         </th>
+///         <th>
+///           Column 2
+///         </th>
+///       </tr>
+///     </thead>
+///     <tfoot>
+///       <tr>
+///         <td colspan="2">
+///           Single column for <tfoot>
+///         </td>
+///       </tr>
+///     </tfoot>
+///     <tbody>
+///       <tr>
+///         <td>
+///           Content 1
+///         </td>
+///         <td>
+///           Content 2
+///         </td>
+///       </tr>
+///     </tbody>
+///   </table>
+
+@use "core/variables";
+@use "helpers/colors";
+
+.dp-library {
+  @mixin dp-c-table($bg-color-zebra, $font-size-table, $bg-color-hover) {
+    .dp-expand-results {
+      position: absolute;
+      padding: variables.$dp-spaces--lv1 variables.$dp-spaces--lv3
+        variables.$dp-spaces--lv0 variables.$dp-spaces--lv0;
+      color: colors.$dp-color-green;
+      left: 0;
+      top: 5px;
+
+      &:focus {
+        outline: 0;
+      }
+
+      .icon-arrow-next {
+        position: absolute;
+        transform: rotate(0deg);
+        width: 20px;
+        top: -5px;
+        left: -4px;
+      }
+
+      &.dp-open-results {
+        .icon-arrow-next {
+          position: absolute;
+          transform: rotate(90deg);
+          top: -5px;
+          left: -7px;
+        }
+      }
+    }
+
+    .dp-c-table {
+      width: 100%;
+      font-size: $font-size-table;
+      border-collapse: collapse;
+      border-spacing: variables.$dp-spaces--lv0;
+      background: colors.$dp-color-white;
+
+      .dp-name-text {
+        position: relative;
+        padding-left: 18px;
+        display: block;
+      }
+
+      &.dp-nested-table {
+        tr {
+          border-bottom: 1px solid colors.$dp-color-silver;
+
+          &:nth-child(odd) {
+            background: colors.$dp-color-white;
+          }
+
+          &:nth-child(even) {
+            background: colors.$dp-color-white;
+          }
+
+          &:hover {
+            background: $bg-color-hover;
+          }
+        }
+      }
+
+      caption {
+        padding: variables.$dp-spaces--lv5 variables.$dp-spaces--lv2;
+        font-style: italic;
+        text-align: left;
+      }
+
+      th {
+        border-top: 1px solid colors.$dp-color-silver;
+        border-bottom: 1px dashed colors.$dp-color-lightgrey;
+        font-size: variables.$dp-sizing--lvl1;
+        font-weight: normal;
+        color: colors.$dp-color-grey;
+        text-transform: uppercase;
+        text-align: left;
+        padding: variables.$dp-spaces--lv0 variables.$dp-spaces--lv3
+          variables.$dp-spaces--lv0;
+        position: relative;
+
+        &:first-child {
+          border-left: none;
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          color: colors.$dp-color-grey;
+          font-weight: normal;
+          text-decoration: none;
+
+          &:hover {
+            color: colors.$dp-color-lightgrey;
+
+            span {
+              opacity: 0.6;
+            }
+          }
+        }
+      }
+
+      th + th:before {
+        content: "";
+        height: 10px;
+        border-right: 1px solid colors.$dp-color-lightgrey;
+        position: absolute;
+        left: 0;
+      }
+
+      tbody {
+        tr {
+          border-bottom: 1px solid colors.$dp-color-silver;
+
+          &:nth-child(odd) {
+            background: $bg-color-zebra;
+          }
+
+          &:nth-child(even) {
+            background: colors.$dp-color-white;
+          }
+
+          &:hover {
+            background: $bg-color-hover;
+          }
+
+          /* nested table */
+
+          &.dp-expanded-table {
+            background: $bg-color-zebra;
+            opacity: 0;
+            visibility: collapse;
+            transition: all 0.3s ease-in-out;
+
+            span {
+              display: block;
+            }
+
+            .dp-unexpected-error-table {
+              padding: 30px 66px;
+              font-style: italic;
+
+              .dp-icon-warning {
+                background: url(assets/img/warning-icon.svg) no-repeat 0 0;
+                background-size: cover;
+                width: 18px;
+                height: 18px;
+                position: absolute;
+                left: 40px;
+                top: 26px;
+              }
+            }
+
+            &.show {
+              opacity: 1;
+              visibility: visible;
+              background: $bg-color-zebra;
+              transition: all 0.3s ease-in-out;
+            }
+
+            .dp-list-results {
+              padding: variables.$dp-spaces--lv2 variables.$dp-spaces--lv0;
+            }
+            .dp-latest-results {
+              position: relative;
+
+              &:before {
+                content: "";
+                position: absolute;
+                right: 0;
+                border-right: 1px solid colors.$dp-color-silver;
+                width: 2px;
+                height: 90%;
+              }
+
+              span {
+                font-style: italic;
+                padding-left: variables.$dp-spaces--lv3;
+              }
+            }
+          }
+
+          .dp-table-results {
+            span {
+              display: flex;
+              white-space: nowrap;
+            }
+
+            th {
+              padding: variables.$dp-spaces--lv0 variables.$dp-spaces--lv3
+                variables.$dp-spaces--lv2;
+              text-align: left;
+              border: none;
+              font-size: variables.$dp-sizing--lvl1;
+              font-style: italic;
+              color: colors.$dp-color-grey;
+              text-transform: none;
+              background: $bg-color-zebra;
+
+              &:before {
+                display: none;
+              }
+            }
+
+            tbody {
+              tr {
+                border-bottom: 1px solid colors.$dp-color-silver;
+
+                &:nth-child(odd) {
+                  background: none;
+                }
+
+                &:nth-child(even) {
+                  background: transparent;
+                }
+
+                &:hover {
+                  background: transparent;
+                }
+              }
+
+              td {
+                vertical-align: top;
+                color: colors.$dp-color-grey;
+              }
+            }
+          }
+        }
+
+        td {
+          color: colors.$dp-color-grey;
+          border: variables.$dp-spaces--lv0;
+          font-size: $font-size-table;
+          position: relative;
+          vertical-align: top;
+        }
+
+        .sync {
+          color: colors.$dp-color-green;
+
+          td {
+            color: colors.$dp-color-green;
+            border-top: 1px solid colors.$dp-color-green;
+            border-bottom: 1px solid colors.$dp-color-green;
+          }
+
+          .text-sync {
+            animation: flash 2s infinite;
+
+            .icon-clock {
+              margin: 0 5px;
+              top: -2px;
+              position: relative;
+            }
+          }
+
+          /// Animation text
+          @keyframes flash {
+            from,
+            50%,
+            to {
+              opacity: 1;
+            }
+
+            25%,
+            75% {
+              opacity: 0;
+            }
+          }
+        }
+      }
+
+      th,
+      td {
+        padding: variables.$dp-spaces--lv2 variables.$dp-spaces--lv3;
+        text-align: left;
+      }
+    }
+  }
+
+  @include dp-c-table(
+    colors.$dp-color-ghostwhite,
+    variables.$dp-sizing--lvl2,
+    colors.$dp-color-hover-table
+  );
+
+  .dp-table-responsive {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    padding-bottom: variables.$dp-spaces--lv4;
+
+    @media screen and (min-width: 1025px) {
+      overflow-x: visible;
+      overflow-y: visible;
+    }
+  }
+
+  .dp-blocked-list {
+    display: flex;
+    align-items: center;
+
+    .dp-blocked-comment {
+      margin-left: variables.$dp-spaces--lv2;
+    }
+  }
+
+  .dp-icons-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    a {
+      color: colors.$dp-color-darkgrey;
+      margin: variables.$dp-spaces--lv0 3px;
+    }
+  }
+
+  .dp-icon-blocked {
+    background-image: url(assets/img/blocked-list.svg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: #fec4bf;
+    color: #e15147;
+    min-width: 93px;
+    font-size: 9px;
+    height: 18px;
+    padding: 5px 24px 0 6px;
+    max-width: 150px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    overflow: hidden;
+    font-weight: 700;
+    line-height: initial;
+  }
+}

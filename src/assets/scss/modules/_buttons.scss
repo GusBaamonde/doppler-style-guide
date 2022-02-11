@@ -1,0 +1,488 @@
+////
+/// Button component
+/// Mixin creator of classes for buttons. Primary and secondary buttons.
+/// @access private
+/// @author Gustavo Baamonde
+/// Classes for the button component
+////
+
+@use "core/variables";
+@use "core/settings";
+@use "helpers/colors";
+@use "helpers/mixins";
+@use "modules/preload";
+
+@mixin dp-button() {
+  .dp-button {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    appearance: none;
+    font-family: settings.$dp-font-family-proximanova;
+    border-radius: variables.$dp-border-radius;
+    font-weight: settings.$dp-font-weight-bold;
+    letter-spacing: 0.6px;
+    @include mixins.transition-all;
+
+    &.button-big {
+      font-size: variables.$dp-sizing--lvl3;
+      line-height: 15px;
+      padding: 16px 35px;
+    }
+
+    &.button-medium {
+      font-size: variables.$dp-sizing--lvl2;
+      line-height: 13px;
+      padding: 13px 25px;
+    }
+
+    &.button-small {
+      font-size: variables.$dp-sizing--lvl1;
+      line-height: 11px;
+      padding: 10px 15px;
+    }
+
+    &.button--loading {
+      @include preload.dp-preloader(colors.$dp-color-white, 1.5em);
+      padding-left: 3em;
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      &:after {
+        left: 1em;
+      }
+    }
+
+    &.button--centered-loading {
+      @include preload.dp-preloader(colors.$dp-color-white, 1.5em);
+
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 30px;
+
+      &:after {
+        left: 0;
+        position: relative;
+      }
+    }
+
+    &.button--round {
+      text-transform: uppercase;
+      border-radius: variables.$dp-border-radius--lv1;
+    }
+
+    &.primary- {
+      &green {
+        background-color: colors.$dp-color-green;
+        color: colors.$dp-color-white;
+
+        &:hover {
+          background-color: colors.$dp-color-darkgreen;
+          color: colors.$dp-color-white;
+        }
+      }
+
+      &grey {
+        background-color: colors.$dp-color-grey;
+        color: colors.$dp-color-white;
+
+        &:hover {
+          background-color: colors.$dp-color-darkgrey;
+          color: colors.$dp-color-white;
+        }
+      }
+
+      &brown {
+        background-color: colors.$dp-color-brown;
+        color: colors.$dp-color-white;
+
+        &:hover {
+          background-color: colors.$dp-color-brown--hover;
+          color: colors.$dp-color-white;
+        }
+      }
+    }
+
+    &.secondary- {
+      &green {
+        background: transparent;
+        color: colors.$dp-color-green;
+        box-shadow: inset 0 0 0 1px colors.$dp-color-green;
+
+        &:hover {
+          background: colors.$dp-color-green-brightness;
+        }
+
+        &:focus {
+          box-shadow: inset 0 0 0 2px colors.$dp-color-orange-focus,
+            inset 0 0 0 3px colors.$dp-color-white;
+          background: colors.$dp-color-green-brightness;
+        }
+      }
+
+      &brown {
+        background: transparent;
+        color: colors.$dp-color-brown;
+        box-shadow: inset 0 0 0 1px colors.$dp-color-brown;
+
+        &:hover {
+          background: colors.$dp-color-brown-brightness;
+        }
+
+        &:focus {
+          box-shadow: inset 0 0 0 2px colors.$dp-color-orange-focus,
+            inset 0 0 0 3px colors.$dp-color-white;
+          background: colors.$dp-color-brown-brightness;
+        }
+      }
+    }
+
+    &.link- {
+      &green {
+        color: colors.$dp-color-green;
+        font-weight: normal;
+
+        &:hover {
+          color: colors.$dp-color-darkgreen;
+        }
+      }
+    }
+
+    &:disabled {
+      pointer-events: none;
+      opacity: 0.4;
+    }
+
+    &.button--has-icon {
+      border: 1px solid colors.$dp-border-grey;
+      border-radius: variables.$dp-border-radius;
+      font-size: variables.$dp-sizing--lvl5;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: variables.$dp-spaces--lv2;
+      margin-left: variables.$dp-spaces--lv4;
+
+      &.is-spinning {
+        [class*="-icon"] {
+          display: inherit;
+          animation: spin 1s linear infinite;
+        }
+      }
+
+      &:hover {
+        border-color: darken(colors.$dp-border-grey, 10%);
+        background-color: colors.$dp-color-white;
+      }
+    }
+
+    &.dp-button-bd {
+      border: 1px solid colors.$dp-border-grey;
+      border-radius: variables.$dp-border-radius;
+      font-size: variables.$dp-sizing--lvl4;
+      background-color: colors.$dp-color-snow;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 2px;
+      font-weight: 800;
+      color: colors.$dp-color-grey;
+      width: 42px;
+      height: 34px;
+      position: relative;
+      right: 3px;
+      top: 0;
+
+      &:hover,
+      &:active {
+        background: colors.$dp-color-white;
+      }
+
+      &:focus,
+      &.active {
+        box-shadow: inset 0 0 0 2px colors.$dp-color-orange-focus,
+          inset 0 0 0 3px colors.$dp-color-white;
+        background: colors.$dp-color-white;
+      }
+    }
+  }
+}
+.dp-library {
+  @include dp-button();
+
+  .dp-button:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 2px colors.$dp-color-orange-focus,
+      inset 0 0 0 3px colors.$dp-color-white;
+  }
+
+  /* Swicht */
+
+  .dp-text-switch {
+    display: flex;
+  }
+
+  .dpsg-list-switch {
+    width: 100%;
+    li {
+      margin-bottom: variables.$dp-spaces--lv3;
+    }
+  }
+
+  .dp-switch {
+    position: relative;
+    margin-right: variables.$dp-spaces--lv2;
+
+    label {
+      cursor: pointer;
+    }
+
+    input[type="checkbox"] {
+      position: absolute;
+      left: -9999px;
+      width: 47px;
+      height: 24px;
+    }
+
+    input[type="checkbox"]:focus {
+      outline: 3px solid colors.$dp-color-orange-focus;
+      outline-offset: 0;
+      top: 1px;
+      position: absolute;
+      left: 1px;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+    }
+
+    span:last-child {
+      position: relative;
+      width: 50px;
+      height: 26px;
+      border-radius: 15px;
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
+      background: colors.$dp-color-silver;
+      transition: all 0.2s;
+    }
+
+    span:last-child::before,
+    span:last-child::after {
+      content: "";
+      position: absolute;
+    }
+
+    span:last-child::before {
+      left: 1px;
+      top: 1px;
+      width: 24px;
+      height: 24px;
+      background: colors.$dp-color-white;
+      border-radius: 50%;
+      z-index: 1;
+      transition: transform 0.3s;
+    }
+
+    span:last-child::after {
+      top: 50%;
+      right: 8px;
+      width: 12px;
+      height: 12px;
+      transform: translateY(-50%);
+      background-size: 12px 12px;
+    }
+
+    [type="checkbox"]:checked + label span:last-child {
+      background: colors.$dp-color-green;
+    }
+
+    [type="checkbox"]:checked + label span:last-child::before {
+      transform: translateX(24px);
+    }
+
+    [type="checkbox"]:checked + label span:last-child::after {
+      width: 14px;
+      height: 14px;
+      left: 8px;
+    }
+
+    .dp-text {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+
+  /* Slide double */
+
+  [slider] {
+    position: relative;
+    height: 14px;
+    border-radius: 10px;
+    text-align: left;
+    margin: 45px 0 10px 0;
+    width: 100%;
+  }
+
+  [slider] > div {
+    position: absolute;
+    left: 13px;
+    right: 15px;
+    height: 14px;
+  }
+
+  [slider] > div > [inverse-left] {
+    position: absolute;
+    left: 0;
+    width: 70%;
+    height: 5px;
+    border-radius: 10px;
+    background-color: colors.$dp-color-silver;
+    margin: 0 7px;
+  }
+
+  [slider] > div > [inverse-right] {
+    position: absolute;
+    right: 0;
+    width: 70%;
+    height: 5px;
+    border-radius: 10px;
+    background-color: colors.$dp-color-silver;
+    margin: 0 7px;
+  }
+
+  [slider] > div > [range] {
+    position: absolute;
+    left: 30%;
+    right: 40%;
+    height: 5px;
+    border-radius: 14px;
+    background-color: colors.$dp-color-green;
+  }
+
+  [slider] > div > [thumb] {
+    position: absolute;
+    top: -12px;
+    z-index: 2;
+    height: 28px;
+    width: 54px;
+    text-align: left;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 50%;
+  }
+
+  [slider] > input[type="range"] {
+    position: absolute;
+    pointer-events: none;
+    -webkit-appearance: none;
+    z-index: 3;
+    height: 28px;
+    top: -12px;
+    width: 100%;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;
+  }
+
+  div[slider] > input[type="range"]::-ms-track {
+    -webkit-appearance: none;
+    background: transparent;
+    color: transparent;
+  }
+
+  div[slider] > input[type="range"]::-moz-range-track {
+    -moz-appearance: none;
+    background: transparent;
+    color: transparent;
+  }
+
+  div[slider] > input[type="range"]:focus::-webkit-slider-runnable-track {
+    background: transparent;
+    border: transparent;
+  }
+
+  div[slider] > input[type="range"]:focus {
+    outline: none;
+  }
+
+  div[slider] > input[type="range"]::-ms-thumb {
+    pointer-events: all;
+    width: 54px;
+    height: 28px;
+    border-radius: 0;
+    border: 0 none;
+  }
+
+  div[slider] > input[type="range"]::-moz-range-thumb {
+    pointer-events: all;
+    width: 54px;
+    height: 28px;
+    border-radius: 0;
+    border: 0 none;
+  }
+
+  div[slider] > input[type="range"]::-webkit-slider-thumb {
+    pointer-events: all;
+    width: 54px;
+    height: 28px;
+    border-radius: 0;
+    border: 0 none;
+    -webkit-appearance: none;
+  }
+
+  div[slider] > input[type="range"]::-ms-fill-lower {
+    background: transparent;
+    border: 0 none;
+  }
+
+  div[slider] > input[type="range"]::-ms-fill-upper {
+    background: transparent;
+    border: 0 none;
+  }
+
+  div[slider] > input[type="range"]::-ms-tooltip {
+    display: none;
+  }
+
+  [slider] > div > [sign] {
+    display: flex;
+    position: absolute;
+    margin-left: -12px;
+    top: -12px;
+    z-index: 3;
+    background-color: colors.$dp-color-green;
+    color: colors.$dp-color-white;
+    width: 52px;
+    height: 28px;
+    border-radius: 28px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  [slider] > div > [sign-one] {
+    left: 30%;
+  }
+
+  [slider] > div > [sign-two] {
+    left: 60%;
+  }
+
+  [slider] > div > [sign] > span {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+
+  [slider]:hover > div > [sign] {
+    opacity: 1;
+  }
+}

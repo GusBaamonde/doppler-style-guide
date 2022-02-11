@@ -1,0 +1,88 @@
+////
+/// This is a poster comment.
+/// It will apply annotations to all items from file.
+/// @access private
+/// @group Templates
+/// @author Gustavo Baamonde
+/// Classes for Statement messages
+////
+
+@use "helpers/colors";
+@use "core/variables";
+@use "core/settings";
+
+.dp-library {
+  .messages-container {
+    display: flex;
+    padding: variables.$dp-spaces--lv2;
+    margin-bottom: variables.$dp-spaces--lv1;
+    font-family: settings.$dp-font-family;
+  }
+
+  .messages-container .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .messages-container p {
+    color: colors.$dp-color-white;
+    font-size: variables.$dp-sizing--lvl2;
+  }
+
+  .messages-container.blocker .button {
+    color: colors.$dp-color-red;
+  }
+
+  .messages-container.info .button {
+    color: colors.$dp-color-lightgreen;
+  }
+
+  .messages-container .button {
+    margin-left: 20px;
+  }
+
+  .messages-container.info {
+    background: colors.$dp-color-lightgreen;
+  }
+
+  .messages-container.warning {
+    background: colors.$dp-color-yellow;
+    .button {
+      color: colors.$dp-color-yellow;
+    }
+  }
+
+  .messages-container.blocker {
+    background: colors.$dp-color-red;
+  }
+  /* buttons */
+  .button {
+    border: 0;
+    border-radius: 3px;
+    color: colors.$dp-color-white;
+    cursor: pointer;
+    font-size: variables.$dp-sizing--lvl2;
+    line-height: 45px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 45px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .button--light {
+    background: colors.$dp-color-white;
+    border: 1px solid colors.$dp-color-white;
+    color: colors.$dp-color-grey;
+  }
+
+  .button--tiny {
+    font-size: variables.$dp-sizing--lvl2;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

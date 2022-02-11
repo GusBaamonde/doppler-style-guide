@@ -1,0 +1,779 @@
+////
+/// It will apply annotations to all items from file.
+/// @access private
+/// @author Gustavo Baamonde
+/// Classes for the Form component
+////
+
+/// Mixin for the circle in the validation of messages in the password
+/// Mixin circle simple
+
+@use "core/settings";
+@use "core/variables" as var;
+@use "helpers/colors";
+@use "modules/preload";
+@use "modules/mixins/breakpoints";
+
+.dp-library {
+  @mixin circle($background-color) {
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: var.$dp-border-radius--lv1;
+      margin-right: var.$dp-spaces--lv1;
+      background-color: $background-color;
+    }
+  }
+
+  /// Mixin circle with a check
+  @mixin circleCheck($background-color, $check-color) {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: var.$dp-border-radius--lv1;
+      background-color: $background-color;
+      margin-right: var.$dp-spaces--lv1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      bottom: var.$dp-spaces--lv1;
+      display: block;
+      width: 4px;
+      height: 7px;
+      border: solid $check-color;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+
+  /// form-request - user-menu
+  legend {
+    display: none;
+  }
+
+  label {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 0;
+    color: colors.$dp-color-grey;
+    font-weight: settings.$dp-font-weight-bold;
+    font-size: var.$dp-sizing--lvl2;
+    font-family: settings.$dp-font-family;
+  }
+  /// span with class .dropdown-arrow to draw arrow dropdown
+  .dropdown-arrow {
+    border-style: solid;
+    height: 0;
+    width: 0;
+    border-width: 7px 5.5px 0 5.5px;
+    border-color: colors.$dp-color-lightgrey transparent transparent transparent;
+    position: absolute;
+    right: 15px;
+    top: 2.5em;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  select {
+    height: 40px;
+    color: colors.$dp-color-grey;
+    border: 1px solid colors.$dp-color-silver;
+    width: 100%;
+    background-color: colors.$dp-color-white;
+    border-radius: var.$dp-border-radius;
+    font-size: var.$dp-sizing--lvl2;
+    padding: 0 40px 0 10px;
+    text-align: left;
+    line-height: 40px;
+    cursor: pointer;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  }
+
+  select:disabled {
+    background-color: colors.$dp-color-snow;
+    border: 1px solid colors.$dp-color-silver;
+    color: colors.$dp-color-grey;
+    cursor: default;
+  }
+
+  textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    padding: 10px;
+    color: colors.$dp-color-grey;
+    border-radius: var.$dp-border-radius;
+    font-size: var.$dp-sizing--lvl2;
+    border: 1px solid colors.$dp-color-silver;
+
+    &::placeholder {
+      color: colors.$dp-color-default;
+      font-style: italic;
+    }
+  }
+
+  .checkmark {
+    position: absolute;
+    left: 0;
+    /*top: 1px;*/
+    height: 16px;
+    width: 16px;
+    border: 1px solid colors.$dp-color-silver;
+    border-radius: var.$dp-border-radius;
+    background-color: colors.$dp-color-white;
+    pointer-events: none;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 5px;
+      /*top: 1px;*/
+      width: 5px;
+      height: 10px;
+      border: solid colors.$dp-color-white;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+  }
+  /// validate form
+  .field-group {
+    .field-item {
+      position: relative;
+      display: inline-block;
+      text-align: left;
+      float: left;
+      width: 100%;
+      margin-bottom: var.$dp-spaces--lv5;
+
+      &__checkbox {
+        cursor: pointer;
+        margin-bottom: var.$dp-spaces--lv2;
+
+        label {
+          font-weight: normal;
+          vertical-align: middle;
+          margin-left: var.$dp-spaces--lv4;
+        }
+
+        &:nth-last-child(1) {
+          margin-bottom: var.$dp-spaces--lv3;
+        }
+      }
+      /// Field checkbox
+      &--50 {
+        width: 50%;
+        /* Left Column */
+        &:nth-of-type(odd) {
+          padding-right: var.$dp-spaces--lv3;
+        }
+      }
+      /// Field to 50% percent
+
+      ///
+      &--70 {
+        width: 70%;
+        /* Left Column */
+        &:nth-of-type(odd) {
+          padding-right: var.$dp-spaces--lv3;
+        }
+      }
+
+      &--30 {
+        width: 30%;
+        /* Left Column */
+        &:nth-of-type(odd) {
+          padding-right: var.$dp-spaces--lv3;
+        }
+      }
+
+      .show-hide {
+        float: right;
+        font-size: var.$dp-sizing--lvl2;
+        font-weight: normal;
+        font-style: normal;
+        color: colors.$dp-color-lightbrown;
+        vertical-align: bottom;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+
+      .icon-hide:before,
+      .icon-view:before {
+        position: relative;
+        top: 2px;
+      }
+
+      .content-eye {
+        font-family: settings.$dp-font-family-proximanova;
+        font-size: var.$dp-sizing--lvl2;
+        font-style: italic;
+      }
+    }
+  }
+
+  input[type="checkbox"] {
+    cursor: pointer;
+    position: absolute;
+    width: 14px;
+    left: 0;
+    height: 14px;
+    /*top: 1px;*/
+
+    &:focus {
+      outline: 3px solid colors.$dp-color-orange-focus;
+      outline-offset: 0;
+      top: 2px;
+      left: 1px;
+    }
+
+    &:checked {
+      & ~ .checkmark {
+        border-color: colors.$dp-color-green;
+        background-color: colors.$dp-color-green;
+
+        &:after {
+          display: block;
+        }
+      }
+    }
+
+    &:disabled {
+      cursor: text;
+      & ~ .checkmark {
+        border-color: colors.$dp-color-snow;
+        background-color: colors.$dp-color-snow;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    &:focus {
+      & ~ .checkmark {
+        color: colors.$dp-color-lightbrown;
+        border-radius: var.$dp-border-radius;
+        outline: none;
+      }
+    }
+  }
+
+  input:not([type="checkbox"]) {
+    padding: 10px 12px;
+    height: 40px;
+    width: 100%;
+    color: colors.$dp-color-lightbrown;
+    border: 1px solid colors.$dp-color-silver;
+    border-radius: var.$dp-border-radius;
+    background-color: colors.$dp-color-white;
+    font-size: var.$dp-sizing--lvl2;
+    font-family: settings.$dp-font-family-proximanova;
+    line-height: 20px;
+
+    &::placeholder {
+      color: colors.$dp-color-lightbrown;
+      font-style: italic;
+    }
+
+    &:required {
+      box-shadow: none;
+    }
+
+    &:focus {
+      color: colors.$dp-color-lightbrown;
+      border-radius: var.$dp-border-radius;
+    }
+
+    &:disabled {
+      background-color: colors.$dp-color-snow;
+      border: 1px solid colors.$dp-color-silver;
+      color: colors.$dp-color-grey;
+      cursor: default;
+    }
+  }
+
+  input[type="tel"] {
+    -moz-appearance: textfield;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  /// Mixin for dp-message
+  /// @access private
+  @mixin dp-message($dp-font-color, $dp-font-size) {
+    a,
+    p,
+    button,
+    span {
+      font-size: settings.$dp-font-size;
+      color: settings.$dp-font-color;
+      text-align: left;
+      margin: var.$dp-spaces--lv0;
+      font-family: settings.$dp-font-family-proximanova;
+    }
+  }
+
+  /// Form messages and validations
+  /// @access public
+  /// @deprecated .error and .wrapper-errors will be removed in a next version of the library
+  /// @author gbaamonde@makingsense.com
+
+  /* Message modules */
+
+  .dp-message,
+  .error {
+    display: none;
+  }
+
+  /* Class for validation */
+
+  .dp-validate,
+  .error {
+    .checkmark,
+    input,
+    select,
+    textarea {
+      border: 1px solid colors.$dp-color-red;
+    }
+
+    /* common properties */
+    .dp-message-box {
+      padding-left: var.$dp-sizing--lvl10;
+      min-height: 45px;
+      display: flex;
+      margin: var.$dp-spaces--lv2 var.$dp-spaces--lv0;
+      flex-direction: column;
+      justify-content: center;
+    }
+    /* Messages and confirmations the forms */
+    .dp-message,
+    .wrapper-errors {
+      display: block;
+      margin: var.$dp-spaces--lv0;
+      font-family: settings.$dp-font-family-proximanova;
+      font-size: var.$dp-sizing--lvl2;
+
+      /* Validations error message */
+      &.dp-error-form {
+        @include dp-message(colors.$dp-color-red, var.$dp-sizing--lvl2);
+      }
+    }
+  }
+
+  /* Unexpected message box */
+  .form-message {
+    margin-bottom: var.$dp-spaces--lv4;
+    display: flex;
+    min-height: var.$dp-spaces--lv6;
+    padding: var.$dp-spaces--lv1 var.$dp-spaces--lv0 var.$dp-spaces--lv0
+      var.$dp-spaces--lv7;
+    flex-direction: column;
+    background-size: 30px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    font-family: settings.$dp-font-family-proximanova;
+
+    button,
+    a {
+      text-decoration: underline;
+    }
+
+    /* Validations Unexpected message */
+    &.dp-error {
+      //TODO: DE-470 - https://makingsense.atlassian.net/browse/DE-470
+      //@extend .dp-message-box;
+      @include dp-message(colors.$dp-color-red, var.$dp-sizing--lvl3);
+      background-image: url("assets/img/error-message.svg");
+
+      a,
+      button {
+        text-decoration: underline;
+      }
+    }
+    /* Validations message OK forgot password */
+    &.dp-ok-message {
+      //TODO: DE-470 - https://makingsense.atlassian.net/browse/DE-470
+      //@extend .dp-message-box;
+      @include dp-message(colors.$dp-color-green, var.$dp-sizing--lvl3);
+      background-image: url("assets/img/ok-message.svg");
+
+      .forgot-link {
+        margin: var.$dp-spaces--lv4 var.$dp-spaces--lv0;
+        font-size: var.$dp-sizing--lvl2;
+      }
+    }
+    &.dp-warning-message {
+      //TODO: DE-470 - https://makingsense.atlassian.net/browse/DE-470
+      //@extend .dp-message-box;
+      @include dp-message(colors.$dp-color-darkgrey, var.$dp-sizing--lvl3);
+      background-image: url("assets/img/warning-icon.svg");
+    }
+
+    .error {
+      padding-left: 0;
+
+      .wrapper-errors {
+        display: inline-block;
+        margin: 0;
+        color: colors.$dp-color-red;
+        font-size: var.$dp-sizing--lvl2;
+        font-family: proxima-nova, Helvetica;
+      }
+    }
+  }
+
+  /* Validations and password messages */
+  .wrapper-password {
+    display: block;
+    margin-top: var.$dp-spaces--lv1;
+
+    .password-message {
+      margin: var.$dp-spaces--lv0;
+      font-size: var.$dp-sizing--lvl2;
+      font-family: settings.$dp-font-family-proximanova;
+    }
+
+    .complete-message {
+      margin-right: var.$dp-spaces--lv4;
+      color: colors.$dp-color-lightgrey;
+      @include circle(colors.$dp-color-lightgrey);
+      display: inline-block;
+    }
+    /* Class to indicate that this validation is complete */
+    .waiting-message {
+      margin-right: var.$dp-spaces--lv4;
+      color: colors.$dp-color-grey;
+      @include circle(colors.$dp-color-yellow);
+      display: inline-block;
+    }
+    /* Class for waiting complete the password */
+    .lack-message {
+      margin-right: var.$dp-spaces--lv4;
+      color: colors.$dp-color-red;
+      @include circle(colors.$dp-color-red);
+      display: inline-block;
+    }
+    /* Class for lack digit in the password */
+    .secure-message {
+      margin-right: var.$dp-spaces--lv4;
+      color: colors.$dp-color-green;
+      @include circleCheck(colors.$dp-color-green, colors.$dp-color-white);
+    }
+    /* Class to indicate that password is secure */
+  }
+
+  .form-request {
+    font-family: settings.$dp-font-family;
+    padding: 20px 0 0;
+
+    li {
+      position: relative;
+    }
+
+    .container-buttons {
+      margin-top: var.$dp-spaces--lv3;
+      padding-top: var.$dp-spaces--lv3;
+      border-top: 1px solid colors.$dp-color-silver;
+      display: flex;
+      justify-content: flex-end;
+
+      .dp-button {
+        margin-left: var.$dp-spaces--lv2;
+      }
+    }
+  }
+
+  /* signup form */
+
+  .signup-form {
+    margin-top: var.$dp-spaces--lv6;
+
+    input,
+    label {
+      font-family: settings.$dp-font-family-proximanova;
+    }
+  }
+  /* login form */
+
+  .login-form {
+    margin-top: var.$dp-spaces--lv6;
+
+    .legend {
+      font-size: var.$dp-sizing--lvl2;
+      float: right;
+      color: colors.$dp-color-silver;
+      font-style: italic;
+      font-weight: settings.$dp-font-weight-light;
+    }
+  }
+
+  .forgot-link {
+    display: block;
+    margin: var.$dp-spaces--lv4 var.$dp-spaces--lv0;
+    font-size: var.$dp-sizing--lvl2;
+    font-style: italic;
+    font-family: settings.$dp-font-family-proximanova;
+    position: relative;
+  }
+
+  /* forgot password form */
+
+  .forgot-pass {
+    margin-top: var.$dp-spaces--lv6;
+  }
+
+  .triangle-right {
+    width: 0;
+    height: 0;
+    padding-left: var.$dp-spaces--lv3;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 7px;
+      border-top: 3px solid transparent;
+      border-right: 6px solid colors.$dp-color-green;
+      border-bottom: 3px solid transparent;
+    }
+  }
+  @include breakpoints.media-breakpoint("mobilexs") {
+    .login-form,
+    .signup-form {
+      margin-top: var.$dp-spaces--lv5;
+    }
+  }
+
+  ///
+  /// form the filters
+  ///
+
+  .dp-filters {
+    .dp-t-inputsh {
+      padding-top: 22px;
+    }
+
+    .dp-searchemail {
+      top: 22px;
+      padding: var.$dp-spaces--lv0 var.$dp-spaces--lv2 var.$dp-spaces--lv0
+        var.$dp-spaces--lv2;
+      text-align: left;
+      line-height: 40px;
+    }
+
+    .dropdown-arrow {
+      right: var.$dp-spaces--lv4;
+    }
+
+    .dp-button--search {
+      position: absolute;
+      top: 22px;
+      font-size: var.$dp-sizing--lvl3;
+      right: var.$dp-spaces--lv2;
+      color: colors.$dp-color-grey;
+      padding: var.$dp-spaces--lv0;
+      width: 40px;
+      height: 40px;
+    }
+
+    .dp-button.button--loading:after {
+      @include preload.dp-preloader(colors.$dp-color-grey, 1.5em);
+      border-color: rgba(204, 204, 204, 0.3);
+      border-top-color: colors.$dp-color-silver;
+      left: 9px;
+    }
+  }
+
+  select:focus,
+  textarea:focus,
+  input:focus {
+    outline: none;
+    border: 1px solid colors.$dp-color-orange-focus;
+    box-shadow: inset 0 0 0 2px colors.$dp-color-orange-focus;
+  }
+
+  /* Contact Policy Form */
+
+  .dp-contact-policy-form {
+    .field-item {
+      margin-bottom: var.$dp-spaces--lv4;
+    }
+    .dp-item-block {
+      display: flex;
+      flex-wrap: wrap;
+
+      div {
+        margin-bottom: var.$dp-spaces--lv5;
+      }
+    }
+
+    .dp-switch {
+      display: inline-block;
+      position: relative;
+      top: var.$dp-spaces--lv1;
+      left: var.$dp-spaces--lv0;
+      margin-bottom: var.$dp-spaces--lv4;
+    }
+
+    .dp-switch input[type="checkbox"]:focus {
+      left: -5px;
+    }
+
+    label {
+      width: auto;
+    }
+
+    input {
+      display: inline-block;
+      width: 40px;
+      padding: var.$dp-spaces--lv1;
+      margin-left: var.$dp-spaces--lv1;
+      margin-right: var.$dp-spaces--lv1;
+      text-align: center;
+      color: colors.$dp-color-grey;
+
+      &::placeholder {
+        color: colors.$dp-color-lightgrey;
+      }
+    }
+
+    input:disabled {
+      background-color: colors.$dp-color-snow;
+    }
+
+    .dp-error-input {
+      border: 1px solid colors.$dp-color-red;
+    }
+
+    [type="number"]::-webkit-inner-spin-button,
+    [type="number"]::-webkit-outer-spin-button {
+      height: 0;
+      display: none;
+    }
+
+    .align-button {
+      display: inline-block;
+    }
+  }
+
+  /* BigQuery Cloud Tags */
+
+  .dp-add-tags {
+    margin-top: 30px;
+    width: 100%;
+
+    .dp--dashed {
+      border-style: dashed;
+    }
+
+    .dp-more-tag {
+      color: colors.$dp-color-green;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      right: 0px;
+      font-size: 24px;
+      font-weight: bold;
+
+      &:hover {
+        color: colors.$dp-color-darkgreen;
+      }
+    }
+  }
+
+  /* input radio */
+
+  .dp-input--radio {
+    margin: var.$dp-spaces--lv1;
+    display: inline-block;
+    height: 30px;
+    position: relative;
+
+    label {
+      // TODO: duplicated code
+      display: flex;
+      cursor: pointer;
+      font-weight: 500;
+      position: relative;
+      overflow: hidden;
+      outline: 0;
+      border: 1px solid transparent;
+      box-shadow: inset 0 0 0 2px transparent;
+
+      &:focus-within {
+        outline: 0;
+        border: 1px solid colors.$dp-color-orange-focus;
+        box-shadow: inset 0 0 0 2px colors.$dp-color-orange-focus;
+      }
+
+      input {
+        position: absolute;
+        left: -9999px;
+
+        &:checked + span {
+          &:before {
+            box-shadow: inset 0 0 0 7px colors.$dp-color-green;
+          }
+        }
+
+        &:disabled + span {
+          &:before {
+            outline: 0;
+            border: 1px solid colors.$dp-color-snow;
+            box-shadow: inset 0 0 0 4px colors.$dp-color-snow;
+          }
+        }
+
+        &:disabled:checked + span {
+          &:before {
+            outline: 0;
+            border: 1px solid colors.$dp-color-snow;
+            box-shadow: inset 0 0 0 3px colors.$dp-color-snow;
+            background: colors.$dp-color-silver;
+          }
+        }
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        padding: var.$dp-spaces--lv1;
+        border-radius: 100%;
+        transition: 0.25s ease-in-out;
+
+        &:before {
+          display: flex;
+          flex-shrink: 0;
+          content: "";
+          background-color: colors.$dp-color-white;
+          width: 1.5em;
+          height: 1.5em;
+          border-radius: 100%;
+          margin-right: var.$dp-spaces--lv1;
+          transition: 0.25s ease;
+          box-shadow: inset 0 0 0 2px colors.$dp-color-lightgrey;
+        }
+      }
+    }
+  }
+}

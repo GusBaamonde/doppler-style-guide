@@ -1,0 +1,168 @@
+////
+/// @access private
+/// @author Gustavo Baamonde
+/// Classes for layout Big Query
+////
+
+@use "core/variables" as var;
+@use "helpers/colors";
+
+.dp-library {
+  %dp-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .dp-h-divider {
+    border-top: 1px solid colors.$dp-color-silver;
+  }
+
+  .p-heading {
+    color: colors.$dp-color-darkgrey;
+  }
+
+  .dp-content-left {
+    @extend %dp-content;
+    padding-right: var.$dp-spaces--lv17;
+    width: 95%;
+    @media screen and (max-width: 769px) {
+      padding-right: var.$dp-spaces--lv0;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: var.$dp-spaces--lv0;
+      border-right: 1px solid colors.$dp-color-silver;
+      height: 80%;
+      top: 18px;
+      @media screen and (max-width: 1024px) {
+        border-right: 0;
+      }
+    }
+  }
+
+  .dp-content-right {
+    @extend %dp-content;
+    padding-left: var.$dp-spaces--lv17;
+    width: 80%;
+
+    @media screen and (max-width: 1024px) {
+      padding-left: var.$dp-spaces--lv0;
+      width: 100%;
+    }
+
+    .dp-screen {
+      margin: var.$dp-spaces--lv9 var.$dp-spaces--lv0 var.$dp-spaces--lv0;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .dp-cloud-tags {
+    width: 100%;
+
+    li {
+      display: inline-block;
+      width: auto;
+      padding: var.$dp-spaces--lv1;
+    }
+
+    .dp-add-list {
+      background-color: colors.$dp-color-white;
+      padding: 8px var.$dp-spaces--lv3 8px var.$dp-spaces--lv2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: auto;
+      border-radius: 3px;
+      border: 1px solid colors.$dp-color-silver;
+      color: colors.$dp-color-grey;
+      transition: all 0.3s ease-in-out;
+
+      span {
+        background-color: colors.$dp-color-grey;
+        color: colors.$dp-color-white;
+        border-radius: 100%;
+        width: 18px;
+        height: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 12px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover {
+        background-color: colors.$dp-color-snow;
+        border: 1px solid colors.$dp-color-silver;
+
+        span {
+          background-color: colors.$dp-color-grey;
+          color: colors.$dp-color-white;
+        }
+      }
+    }
+
+    .dp-tag {
+      background-color: colors.$dp-color-snow;
+      padding: var.$dp-spaces--lv1 var.$dp-spaces--lv1 var.$dp-spaces--lv1
+        var.$dp-spaces--lv2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: auto;
+      border-radius: 3px;
+      border: 1px solid colors.$dp-color-white;
+      transition: all 0.3s ease-in-out;
+
+      .dp-remove-tag {
+        margin-left: var.$dp-spaces--lv2;
+        color: colors.$dp-color-lightgrey;
+        font-size: 12px;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+      }
+
+      &:hover {
+        background-color: colors.$dp-color-snow;
+        border: 1px solid colors.$dp-color-grey;
+
+        .dp-remove-tag {
+          color: colors.$dp-color-grey;
+        }
+      }
+
+      &.dp-recently-add {
+        box-shadow: 0 0 4px 1px colors.$dp-color-green;
+      }
+    }
+
+    &.dp-overlay {
+      opacity: 0.6;
+
+      .dp-tag:hover {
+        border: 1px solid transparent;
+        cursor: default;
+      }
+
+      .dp-remove-tag:hover {
+        border: none;
+        background-color: transparent;
+        cursor: default;
+      }
+
+      .dp-add-list:disabled {
+        background-color: transparent;
+        border: 1px solid colors.$dp-color-grey;
+        color: colors.$dp-color-darkgrey;
+        cursor: default;
+      }
+    }
+  }
+}
