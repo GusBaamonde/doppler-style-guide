@@ -32,8 +32,14 @@ const rulesStyles = {
     MiniCssExtractPlugin.loader,
     // Creates `style` nodes from JS strings
     "css-loader",
-    // Compiles Sass to CSS
-    "sass-loader",
+    {
+      loader: "sass-loader",
+      options: {
+        sassOptions: {
+          includePaths: [path.resolve(__dirname, "./src/assets/scss")],
+        },
+      },
+    },
   ],
 };
 
@@ -49,6 +55,7 @@ module.exports = function (env) {
         env.NODE_ENV === "production"
           ? "static/[name].[contenthash].js"
           : "index.js",
+      assetModuleFilename: "static/media/[hash][ext][query]",
       path: path.resolve(__dirname, "build"),
       publicPath: "",
       clean: true,
