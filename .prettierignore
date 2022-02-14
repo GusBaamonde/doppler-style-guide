@@ -27,3 +27,10 @@ package-lock.json
 *.env.*
 .idea
 *.log
+
+# Ignoring resources
+**/assets/fonts
+**/assets/img
+
+# Ignoring libs
+**/scss/libs
