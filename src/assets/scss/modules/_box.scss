@@ -1,0 +1,20 @@
+/// Box component
+/// We can use the following parameters to customize them $color, $width, $max-width, $min-height
+/// @access private
+/// @author gbaamonde@makingsense.com
+
+@use "core/variables";
+
+@mixin dp-box(
+  $color: "$dp-color-silver",
+  $width: "25%",
+  $max-width: "400px",
+  $min-height: "250px"
+) {
+  border-radius: variables.$dp-border-radius;
+  width: $width;
+  max-width: $max-width;
+  min-height: $min-height;
+  border: 1px solid $color;
+  box-shadow: 0 0 0 4px rgba($color, 0.3);
+}

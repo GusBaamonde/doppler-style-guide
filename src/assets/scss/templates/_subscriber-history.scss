@@ -1,0 +1,221 @@
+////
+/// @access private
+/// @author Gustavo Baamonde
+/// Classes for the Form component
+////
+///
+/// historical subscriber behavior
+///
+
+@use "helpers/colors";
+@use "core/variables";
+@use "core/settings";
+
+.dp-affair {
+  width: 330px;
+  display: inline-block;
+  line-height: variables.$dp-spaces--lv3;
+}
+
+.dp-campaign {
+  padding: variables.$dp-spaces--lv0;
+  width: 370px;
+
+  li {
+    margin-bottom: variables.$dp-spaces--lv1;
+    line-height: variables.$dp-spaces--lv3;
+  }
+
+  .dp-date {
+    font-style: italic;
+  }
+
+  a {
+    position: relative;
+  }
+}
+
+///
+/// Campaign
+///
+
+.dp-title-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: variables.$dp-spaces--lv6;
+
+  h3 {
+    font-weight: settings.$dp-font-weight-bold;
+  }
+
+  a {
+    font-size: variables.$dp-sizing--lvl2;
+  }
+}
+
+///
+/// header table campaign
+///
+
+.dp-header-campaing {
+  padding-left: variables.$dp-spaces--lv4;
+}
+
+.dp-subscriber-info {
+  position: relative;
+  margin: variables.$dp-spaces--lv1 variables.$dp-spaces--lv4
+    variables.$dp-spaces--lv0 variables.$dp-spaces--lv0;
+
+  li {
+    margin-left: 12px;
+  }
+
+  .dp-block-info {
+    color: colors.$dp-color-lightgrey;
+    font-size: variables.$dp-sizing--lvl1;
+    font-style: italic;
+    font-weight: normal;
+    display: block;
+  }
+
+  span {
+    color: colors.$dp-color-grey;
+    font-size: variables.$dp-sizing--lvl2;
+    display: block;
+    margin-top: variables.$dp-spaces--lv1;
+  }
+  a {
+    font-size: variables.$dp-sizing--lvl2;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    border-left: 1px solid colors.$dp-color-grey;
+    top: 0;
+    left: 18px;
+    width: 1px;
+    height: 100%;
+  }
+}
+
+.dp-rate-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.dp-rate-chart {
+  width: 100%;
+  justify-content: space-around;
+}
+
+.dp-circular-chart {
+  display: block;
+  margin: variables.$dp-spaces--lv0;
+  max-width: 100%;
+  height: 120px;
+}
+
+.dp-circle-bg {
+  fill: none;
+  stroke: colors.$dp-color-snow;
+  stroke-width: 1;
+}
+
+.dp-circle {
+  fill: none;
+  stroke-width: 1;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.dp-circular-chart.dp-stroke-violet .dp-circle {
+  stroke: colors.$dp-color-violet;
+}
+
+.dp-text-percentage {
+  fill: colors.$dp-color-darkgrey;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 0.2em;
+  text-anchor: middle;
+  position: relative;
+}
+
+.dp-percentage {
+  fill: colors.$dp-color-darkgrey;
+  font-family: sans-serif;
+  font-size: 0.5em;
+  text-anchor: middle;
+  position: relative;
+}
+
+/// KPI
+
+.dp-kpi-campaign {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 70%;
+  margin-top: variables.$dp-spaces--lv2;
+
+  li {
+    padding-left: variables.$dp-spaces--lv0;
+  }
+
+  .dp-number-campaign {
+    font-size: variables.$dp-sizing--lvl7;
+
+    &::before {
+      content: "%";
+      position: absolute;
+      left: 92px;
+    }
+  }
+
+  .dp-kpi-legend {
+    font-size: variables.$dp-sizing--lvl1;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .dp-kpi-grey {
+    color: colors.$dp-color-grey;
+    &::before {
+      content: "";
+    }
+  }
+}
+
+.dp-cta-links {
+  padding: variables.$dp-spaces--lv5 variables.$dp-spaces--lv0;
+  align-items: center;
+  justify-content: flex-end;
+  display: flex;
+
+  .icon-download {
+    top: -3px;
+    position: relative;
+    color: colors.$dp-color-green;
+  }
+
+  button {
+    font-size: variables.$dp-sizing--lvl1;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: colors.$dp-color-green;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: colors.$dp-color-darkgreen;
+    }
+  }
+}

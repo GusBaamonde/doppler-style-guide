@@ -1,0 +1,56 @@
+/// Breadcrumb Component
+/// @example markup - HTML structure
+/// <nav class="dp-breadcrumb">
+///   <ul>
+///     <li><a href="#">Page link</a></li>
+///     <li><a href="#">Page link</a></li>
+///   </ul>
+/// </nav>
+///
+/// @author gbaamonde@makingsense.com
+
+@use "core/variables";
+@use "helpers/colors";
+
+.dp-library {
+  .dp-breadcrumb {
+    font-size: variables.$dp-sizing--lvl2;
+    padding-bottom: variables.$dp-spaces--lv4;
+
+    a {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    ul {
+      align-items: flex-start;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    li {
+      align-items: center;
+      display: flex;
+      padding: 0 0.5em;
+    }
+
+    li:first-child {
+      padding-left: 0;
+    }
+
+    li:last-child {
+      color: colors.$dp-color-lightgrey;
+    }
+
+    li + li:before {
+      content: ">";
+      height: 10px;
+      color: colors.$dp-color-lightgrey;
+      top: -2px;
+      left: -5px;
+      position: relative;
+    }
+  }
+}

@@ -1,0 +1,259 @@
+////
+/// @access private
+/// @author
+/// Classes for layout Dashboard
+////
+
+@use "core/variables";
+@use "helpers/colors";
+
+.dp-library {
+  .dp-dashboard-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+
+    h2 {
+      display: flex;
+    }
+  }
+  .dp-dashboard-title-link {
+    font-size: variables.$dp-sizing--lvl1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    &::before {
+      width: 15px;
+      height: 16px;
+      margin-right: 5px;
+      background: url("assets/img/dashboard-list-icon-title.svg") no-repeat 0 0;
+      content: "";
+    }
+  }
+  .dp-dashboard-panel {
+    margin-bottom: 80px;
+    position: relative;
+
+    .dp-overlay {
+      position: absolute;
+      background-color: colors.$dp-color-ghostwhite;
+      width: calc(100% - 24px);
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.9;
+      border: 2px solid colors.$dp-color-silver;
+      border-radius: 3px;
+      margin: 0 12px;
+      font-size: 16px;
+      color: colors.$dp-color-darkgrey;
+      display: flex;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .dp-dashboard-kpi {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 2px solid colors.$dp-color-snow;
+      padding: 30px;
+      border-radius: 3px;
+    }
+    .dp-kpi-value {
+      font-size: variables.$dp-sizing--lvl7;
+      line-height: variables.$dp-sizing--lvl7;
+      padding-bottom: variables.$dp-spaces--lv2;
+    }
+    .dp-kpi-title {
+      font-size: variables.$dp-sizing--lvl2;
+      line-height: variables.$dp-sizing--lvl2;
+    }
+    .dp-kpi-period {
+      font-size: variables.$dp-sizing--lvl1;
+      line-height: variables.$dp-sizing--lvl5;
+      text-transform: uppercase;
+    }
+    .dp-bold {
+      font-weight: bold;
+    }
+    &.disabled {
+      .dp-dashboard-icon.deliveries {
+        background-image: url("assets/img/dashboard-deliveries-disabled.svg");
+      }
+      .dp-dashboard-icon.open-rate {
+        background-image: url("assets/img/dashboard-open-rate-disabled.svg");
+      }
+      .dp-dashboard-icon.ctr {
+        background-image: url("assets/img/dashboard-ctr-disabled.svg");
+      }
+      .dp-dashboard-icon.book {
+        background-image: url("assets/img/dashboard-book-disabled.svg");
+      }
+      .dp-dashboard-icon.user-new {
+        background-image: url("assets/img/dashboard-user-new-disabled.svg");
+      }
+      .dp-dashboard-icon.user-removed {
+        background-image: url("assets/img/dashboard-user-removed-disabled.svg");
+      }
+    }
+  }
+  .dp-dashboard-icon {
+    width: 50px;
+    height: auto;
+    display: block;
+    min-height: 50px;
+    margin-bottom: 18px;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &.deliveries {
+      background-image: url("assets/img/dashboard-deliveries.svg");
+    }
+    &.open-rate {
+      background-image: url("assets/img/dashboard-open-rate.svg");
+    }
+    &.ctr {
+      background-image: url("assets/img/dashboard-ctr.svg");
+    }
+    &.book {
+      background-image: url("assets/img/dashboard-book.svg");
+    }
+    &.user-new {
+      background-image: url("assets/img/dashboard-user-new.svg");
+      background-position: center bottom;
+    }
+    &.user-removed {
+      background-image: url("assets/img/dashboard-user-removed.svg");
+      background-position: center bottom;
+    }
+  }
+  .dp-dashboard-icon-title {
+    width: 30px;
+    height: auto;
+    display: inline-block;
+    min-height: 30px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+
+    &.deliveries {
+      background-image: url("assets/img/dashboard-deliveries-icon-title.svg");
+    }
+    &.subscribers {
+      background-image: url("assets/img/dashboard-subscribers-icon-title.svg");
+    }
+    &.dp-learn-with-doppler {
+      background-image: url("assets/img/icon-book.svg");
+    }
+  }
+
+  .dp-icon-steps {
+    width: 30px;
+    height: auto;
+    display: inline-block;
+    min-height: 30px;
+    margin-right: variables.$dp-spaces--lv2;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-image: url("assets/img/icon-pennant.svg");
+  }
+
+  .dp-title-col-postcard {
+    display: flex;
+    align-items: center;
+    margin-top: variables.$dp-spaces--lv6;
+    padding-bottom: variables.$dp-spaces--lv4;
+  }
+  .dp-postcard {
+    padding: variables.$dp-spaces--lv4 variables.$dp-spaces--lv3;
+    border: 2px solid colors.$dp-color-snow;
+    border-radius: 3px;
+    margin-bottom: variables.$dp-spaces--lv4;
+
+    header {
+      display: flex;
+      padding-bottom: variables.$dp-spaces--lv3;
+      align-items: center;
+      flex-shrink: 0;
+
+      h4 {
+        width: 100%;
+
+        a {
+          color: colors.$dp-color-darkgrey;
+
+          &:hover {
+            color: colors.$dp-color-grey;
+          }
+        }
+      }
+    }
+
+    p {
+      font-size: 13px;
+      line-height: 18px;
+      margin-bottom: variables.$dp-spaces--lv2;
+    }
+
+    .dp-iconpostcard {
+      background-repeat: no-repeat;
+      text-indent: -9999px;
+      width: 24px;
+      height: 24px;
+      margin-right: variables.$dp-spaces--lv2;
+      display: block;
+    }
+
+    &.dp-postcard--welcom {
+      .dp-iconpostcard {
+        background-image: url(assets/img/ok-icon.svg);
+      }
+    }
+
+    &.dp-postcard--success {
+      .dp-iconpostcard {
+        background-image: url(assets/img/step-ok.svg);
+      }
+    }
+
+    &.dp-postcard--warning {
+      border: 2px solid colors.$dp-yellowBorder-forFlashcards;
+      .dp-iconpostcard {
+        background-image: url(assets/img/step-warning.svg);
+      }
+    }
+
+    &.dp-postcard--number {
+      border: 2px solid colors.$dp-greenBorder-forFlashcards;
+
+      .dp-iconpostcard {
+        text-indent: initial;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid colors.$dp-color-green;
+        border-radius: 50%;
+        color: colors.$dp-color-green;
+        font-size: 12px;
+        line-height: 13px;
+        width: 27px;
+        height: 24px;
+      }
+    }
+
+    h4 {
+      display: flex;
+      align-items: center;
+      text-transform: none;
+    }
+  }
+
+  // TODO: fix the media-breakpoint block
+  //@include media-breakpoint("ipad") {
+  //  .dp-dashboard-kpi {
+  //    margin: variables.$dp-spaces--lv3 variables.$dp-spaces--lv0;
+  //  }
+  //}
+}

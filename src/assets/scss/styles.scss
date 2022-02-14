@@ -1,0 +1,34 @@
+/// IMPORTS
+///
+/// -> Core
+/// - Main styles. Core content.
+///
+/// -> Libs
+/// - A collection of dependencies
+///
+/// -> Modules
+/// - Every modular/reusable element has its styles defined here.
+///
+/// -> Templates
+/// - Every single file that hold styles for pages and sections.
+///
+/// -> Utilities
+/// -
+
+@use "helpers/colors";
+@use "core/variables";
+@use "core/settings";
+@use "core/reset";
+@use "core/typography";
+@use "helpers/mixins" as mixinsHelper;
+@use "helpers/animations";
+@use "helpers/classes";
+@use "modules/preload";
+@use "modules/mixins";
+@use "modules";
+// TODO: The webfont template no can't transpilate front sass
+//@use "libs/sassy-cast/SassyCast";
+//@use "libs/webfont/compiled/template";
+//@use "libs/webfont/template";
+@use "utilities";
+@use "templates";

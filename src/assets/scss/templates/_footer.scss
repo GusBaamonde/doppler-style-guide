@@ -1,0 +1,58 @@
+////
+/// This is a poster comment.
+/// It will apply annotations to all items from file.
+/// @access private
+/// @group Templates
+/// @author Gustavo Baamonde
+/// Classes for Footer
+////
+
+@use "core/variables";
+@use "core/settings";
+@use "helpers/colors";
+
+.dp-library {
+  .footer-main {
+    box-shadow: 0 -4px 0 0 colors.$dp-color-snow;
+    border-top: 1px solid colors.$dp-color-silver;
+    height: 80px;
+  }
+
+  .footer-wrapper {
+    font-size: 11px;
+    font-family: settings.$dp-font-family;
+    padding-left: variables.$dp-spaces--lv5;
+    padding-right: variables.$dp-spaces--lv5;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .dp-footer {
+    min-height: 80px;
+    box-shadow: 0 -4px 0 0 colors.$dp-color-snow;
+    border-top: 1px solid colors.$dp-color-silver;
+    font-size: variables.$dp-sizing--lvl1;
+    font-family: settings.$dp-font-family;
+    padding: variables.$dp-spaces--lv3;
+    display: flex;
+    align-items: center;
+
+    .dp-text-align {
+      text-align: left;
+    }
+
+    p {
+      font-size: variables.$dp-sizing--lvl1;
+      font-family: settings.$dp-font-family;
+    }
+
+    @media (min-width: 768px) {
+      .dp-text-align {
+        text-align: right;
+      }
+    }
+  }
+}

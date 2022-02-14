@@ -1,0 +1,103 @@
+////
+/// We standardize three modal sizes, small (400px), medium (600px) and large (800px).
+/// @access private
+/// @author Gustavo Baamonde
+/// Classes for the Modal component
+////
+
+@use "core/variables";
+@use "core/settings";
+@use "helpers/colors";
+
+.dp-library {
+  .modal {
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: colors.$dp-bg-overlay;
+  }
+
+  [class*="modal-content--"] {
+    background: colors.$dp-bg-modal;
+    margin: auto;
+    width: 75%;
+    padding: 70px 50px;
+    overflow: hidden;
+    border-radius: 3px;
+    left: 0;
+    position: relative;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    p {
+      font-family: settings.$dp-font-family;
+      margin-bottom: 10px;
+    }
+
+    .modal-title {
+      font-size: variables.$dp-sizing--lvl6;
+      text-align: left;
+      font-family: settings.$dp-font-family;
+      color: colors.$dp-color-darkgrey;
+      font-weight: settings.$dp-font-weight-bold;
+      margin: 0 0 15px;
+    }
+
+    .close {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      width: 20px;
+      height: 20px;
+      opacity: 0.7;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &:after,
+      &:before {
+        content: " ";
+        position: absolute;
+        left: 9px;
+        height: 20px;
+        width: 3px;
+        background-color: colors.$dp-color-lightgrey;
+      }
+
+      &:before {
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .modal-content--small {
+    max-width: 400px;
+  }
+
+  .modal-content--medium {
+    max-width: 600px;
+  }
+
+  .modal-content--large {
+    max-width: 800px;
+  }
+
+  .dp-iconmodal-center {
+    display: flex;
+    margin: 24px auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+}

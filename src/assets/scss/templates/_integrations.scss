@@ -1,0 +1,86 @@
+@use "helpers/colors";
+@use "core/variables";
+@use "core/settings";
+@use "modules/line-break";
+
+.dp-library {
+  .dp-integration {
+    margin-top: 20px;
+
+    @at-root {
+      &__actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: variables.$dp-spaces--lv4;
+      }
+    }
+
+    &--info {
+      margin-top: variables.$dp-spaces--lv4;
+      padding-bottom: variables.$dp-spaces--lv4;
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .button--has-icon {
+          color: colors.$dp-color-lightgrey;
+
+          &.is-spinning {
+            [class*="-icon"] {
+              animation-name: counterspin;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .dp-block {
+    padding: variables.$dp-spaces--lv5 variables.$dp-spaces--lv4;
+
+    time {
+      font-weight: settings.$dp-font-weight-bold;
+    }
+  }
+
+  .dp-block-wlp {
+    padding: variables.$dp-spaces--lv5 variables.$dp-spaces--lv0;
+  }
+
+  .dp-integration__status {
+    .status__data {
+      height: 100%;
+      display: flex;
+      flex: 1;
+      align-items: center;
+    }
+
+    .status__link {
+      height: 100%;
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: flex-start;
+
+      @media (min-width: 768px) {
+        justify-content: flex-end;
+      }
+    }
+
+    img {
+      width: 80px;
+      display: block;
+    }
+
+    p {
+      margin: variables.$dp-spaces--lv0;
+    }
+  }
+
+  hr {
+    @include line-break.dp-hr(colors.$dp-border-grey);
+  }
+}

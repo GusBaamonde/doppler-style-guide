@@ -1,0 +1,235 @@
+////
+/// This is a poster comment.
+/// It will apply annotations to all items from file.
+/// @access private
+/// @author Gustavo Baamonde
+/// Classes for the Images component
+////
+
+@use "core/variables";
+@use "helpers/colors";
+
+.dp-library {
+  @mixin icon-table {
+    width: 20px;
+    height: 17px;
+    display: inline-block;
+    font-size: variables.$dp-sizing--lvl3;
+  }
+
+  @mixin icon-user-table {
+    position: relative;
+    top: -2px;
+    left: 0;
+    font-size: variables.$dp-sizing--lvl2-14;
+    margin-right: variables.$dp-spaces--lv1;
+  }
+
+  [class*="user--"] {
+    position: relative;
+  }
+
+  ///
+  /// Mixin campaign status icons
+  ///
+
+  @mixin icon-campaing($background-color) {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 2px;
+    left: variables.$dp-spaces--lv0;
+    border-radius: 50%;
+    background-color: $background-color;
+  }
+
+  /// placeholder para los iconos
+
+  %states-campaing {
+    padding-left: variables.$dp-spaces--lv3;
+    display: flex;
+    align-items: flex-start;
+    max-width: 200px;
+  }
+
+  .dp-calification {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .icon-star {
+      @include icon-table;
+      color: colors.$dp-color-yellow;
+    }
+
+    .icon-star-filled {
+      @include icon-table;
+      color: colors.$dp-color-silver;
+    }
+
+    .dp-useremail-campaign {
+      margin-right: variables.$dp-spaces--lv3;
+      line-height: 18px;
+      display: block;
+
+      @media screen and (max-width: 320px) {
+        margin-right: variables.$dp-spaces--lv9;
+      }
+    }
+  }
+
+  .dp-username-campaing {
+    font-size: variables.$dp-sizing--lvl2;
+    line-height: 18px;
+    display: block;
+  }
+
+  ///
+  /// Icons for Subscriber History
+  ///
+
+  .dp-subscriber-icon {
+    margin-top: variables.$dp-spaces--lv3;
+    font-size: variables.$dp-sizing--lvl2;
+    font-weight: 600;
+    display: inline-block;
+  }
+
+  .dp-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 200px;
+  }
+
+  .dp-icon-lock {
+    display: flex;
+    align-items: center;
+  }
+
+  // User active
+  .user--active:before {
+    @include icon-user-table;
+    color: colors.$dp-color-green;
+  }
+
+  // User active not associated to lists
+  .user--active-with-no-list:before {
+    @include icon-user-table;
+    color: colors.$dp-color-yellow;
+  }
+
+  // User pending
+  .user--stand-by:before {
+    @include icon-user-table;
+    color: colors.$dp-color-yellow;
+  }
+
+  // User removed client
+  .user--removed-client:before {
+    @include icon-user-table;
+    color: colors.$dp-color-red;
+  }
+
+  // User removed hard bounced
+  .user--removed-hard-bounced:before {
+    @include icon-user-table;
+    color: colors.$dp-color-red;
+  }
+
+  // User removed no openings
+  .user--removed-no-openings:before {
+    @include icon-user-table;
+    color: colors.$dp-color-grey;
+  }
+
+  // User removed soft bounced
+  .user--removed-soft-bounced:before {
+    @include icon-user-table;
+    color: colors.$dp-color-red;
+  }
+
+  // User subscriber removed
+  .user--removed-subscriber:before {
+    @include icon-user-table;
+    color: colors.$dp-color-grey;
+  }
+
+  ///
+  /// campaign status icons
+  ///
+
+  .status--opened {
+    position: relative;
+    @extend %states-campaing;
+
+    &:before {
+      @include icon-campaing(colors.$dp-color-green);
+    }
+  }
+
+  .status--not-opened {
+    position: relative;
+    @extend %states-campaing;
+
+    &:before {
+      @include icon-campaing(colors.$dp-color-grey);
+    }
+  }
+
+  .status--hard-bounced {
+    position: relative;
+    @extend %states-campaing;
+
+    &:before {
+      @include icon-campaing(colors.$dp-color-red);
+    }
+  }
+
+  .status--soft-bounced {
+    position: relative;
+    @extend %states-campaing;
+
+    &:before {
+      @include icon-campaing(colors.$dp-color-yellow);
+    }
+  }
+
+  ///
+  /// icon GDPR
+  ///
+
+  %lock {
+    margin-right: 6px;
+    top: -2px;
+    position: relative;
+  }
+
+  .dp-lock-red {
+    max-width: 200px;
+    color: colors.$dp-color-red;
+
+    &:before {
+      @extend %lock;
+    }
+  }
+
+  .dp-lock-green {
+    max-width: 200px;
+    color: colors.$dp-color-green;
+
+    &:before {
+      @extend %lock;
+    }
+  }
+
+  .dp-lock-grey {
+    max-width: 200px;
+    color: colors.$dp-color-grey;
+
+    &:before {
+      @extend %lock;
+    }
+  }
+}

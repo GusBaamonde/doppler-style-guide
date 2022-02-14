@@ -1,0 +1,264 @@
+////
+/// Layout Doppler plus Plans Form
+/// It will apply annotations to all items from file.
+/// @access private
+/// @author Gustavo Baamonde
+/// Classes for Doppler plus Plans Form
+////
+
+@use "core/variables";
+@use "helpers/colors";
+
+.dp-library {
+  .dp-hide {
+    display: none;
+  }
+
+  .dp-show {
+    display: block;
+  }
+
+  .dp-plans-feature {
+    border: 1px solid colors.$dp-color-silver;
+    padding: variables.$dp-spaces--lv5 variables.$dp-spaces--lv3;
+    margin: variables.$dp-spaces--lv0;
+
+    h4 {
+      font-size: 15px;
+      text-transform: none;
+      font-weight: 700;
+      border-bottom: 1px dashed colors.$dp-color-silver;
+      padding-bottom: variables.$dp-spaces--lv4;
+      margin-bottom: variables.$dp-spaces--lv4;
+    }
+
+    .dp-feature-list {
+      line-height: 20px;
+      font-size: 15px;
+
+      li {
+        margin-bottom: variables.$dp-spaces--lv2;
+        padding-left: 25px;
+        align-items: flex-start;
+        display: flex;
+        position: relative;
+      }
+    }
+  }
+
+  .dp-content-legal p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .dp-wrapper-form-plans {
+    padding: variables.$dp-spaces--lv0 variables.$dp-spaces--lv0
+      variables.$dp-spaces--lv1;
+
+    .field-item {
+      margin: variables.$dp-spaces--lv0 variables.$dp-spaces--lv0
+        variables.$dp-spaces--lv2 variables.$dp-spaces--lv0;
+    }
+
+    .field-item.dp-validate,
+    .field-item.error {
+      margin: variables.$dp-spaces--lv0;
+    }
+
+    h3 {
+      padding-bottom: variables.$dp-spaces--lv5;
+    }
+
+    .dp-wrapper-volume-options {
+      display: inline-block;
+      width: 100%;
+
+      h4 {
+        text-transform: none;
+        padding: variables.$dp-spaces--lv0 variables.$dp-spaces--lv0
+          variables.$dp-spaces--lv2 variables.$dp-spaces--lv0;
+      }
+    }
+
+    .dp-volume-per-month {
+      background: colors.$dp-color-ghostwhite;
+      padding: variables.$dp-spaces--lv2;
+      display: flex;
+      justify-content: space-around;
+
+      li {
+        display: inline-block;
+      }
+
+      .dp-volume-option {
+        margin: variables.$dp-spaces--lv1;
+        display: inline-block;
+        max-width: 170px;
+        height: 30px;
+        position: relative;
+
+        .dp-wrapper-volume-options {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        label {
+          display: flex;
+          cursor: pointer;
+          font-weight: 500;
+          position: relative;
+          overflow: hidden;
+          outline: 0;
+          border: 1px solid transparent;
+          box-shadow: inset 0 0 0 2px transparent;
+
+          &:focus-within {
+            outline: 0;
+            border: 1px solid colors.$dp-color-orange-focus;
+            box-shadow: inset 0 0 0 2px colors.$dp-color-orange-focus;
+          }
+
+          input {
+            position: absolute;
+            left: -9999px;
+
+            &:checked + span {
+              &:before {
+                box-shadow: inset 0 0 0 7px colors.$dp-color-green;
+              }
+            }
+
+            &:disabled + span {
+              &:before {
+                outline: 0;
+                border: 1px solid colors.$dp-color-snow;
+                box-shadow: inset 0 0 0 4px colors.$dp-color-snow;
+              }
+            }
+          }
+
+          span {
+            display: flex;
+            align-items: center;
+            padding: variables.$dp-spaces--lv1;
+            border-radius: 100%;
+            transition: 0.25s ease-in-out;
+
+            &:before {
+              display: flex;
+              flex-shrink: 0;
+              content: "";
+              background-color: colors.$dp-color-white;
+              width: 1.5em;
+              height: 1.5em;
+              border-radius: 100%;
+              margin-right: variables.$dp-spaces--lv1;
+              transition: 0.25s ease;
+              box-shadow: inset 0 0 0 2px colors.$dp-color-lightgrey;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .dp-plans-cta {
+    padding: variables.$dp-spaces--lv2;
+
+    button {
+      text-align: right;
+    }
+  }
+
+  .dp-footer-form {
+    display: flex;
+    justify-content: flex-end;
+    padding: variables.$dp-spaces--lv5 variables.$dp-spaces--lv0;
+    width: 100%;
+  }
+
+  .dp-action {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .dp-wrap-confirmation {
+    padding: variables.$dp-spaces--lv1 variables.$dp-spaces--lv3
+      variables.$dp-spaces--lv1;
+    text-align: right;
+    color: colors.$dp-color-green;
+
+    p {
+      padding-left: variables.$dp-spaces--lv2;
+    }
+  }
+
+  .dp-msj-confirmation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: url(assets/img/ok-message.svg) 0px 0px no-repeat;
+    background-size: 23px;
+    padding-left: 20px;
+
+    img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  /* Form exclusive features */
+
+  .dp-bg-ghostwhite {
+    background: colors.$dp-color-ghostwhite;
+    padding: 18px;
+  }
+  .dp-wrapper-exclusive-features {
+    width: 100%;
+    display: inline-block;
+
+    h4 {
+      text-transform: none;
+      padding: 0 0 12px;
+    }
+
+    .dp-exclusive-features-list {
+      li {
+        width: 100%;
+        cursor: initial;
+      }
+
+      label {
+        display: initial;
+      }
+    }
+  }
+
+  // TODO: fix the media-breakpoint block
+  //@include media-breakpoint("desktop") {
+  //  .dp-forms-plans .field-item--50 {
+  //    width: 100%;
+  //    // Left Column
+  //    &:nth-of-type(odd) {
+  //      padding-right: variables.$dp-spaces--lv0;
+  //    }
+  //  }
+  //}
+  //
+  //@include media-breakpoint("mobilexs") {
+  //  .dp-plans-feature {
+  //    display: none;
+  //  }
+  //}
+}
+
+@media (max-width: 768px) {
+  .dp-wrapper-form-plans .dp-wrapper-volume-options .dp-volume-per-month li {
+    display: block;
+    width: 100%;
+  }
+  .dp-plans-feature {
+    display: none;
+  }
+}

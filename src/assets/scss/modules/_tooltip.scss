@@ -1,0 +1,278 @@
+/// Tooltips Component
+/// @example markup - HTML structure
+/// <p class="dp-tooltip-right">dooplertip <span class="tooltiptext">Tooltip text</span></p>
+/// In order to specify the orientation of the tooltip you can use the:
+/// dp-tooltip-top | dp-tooltip-right | dp-tooltip-bottom | dp-tooltip-left classes if you need it.
+/// @author gbaamonde@makingsense.com
+/// Classes for the tooltip component
+
+@use "core/variables";
+@use "helpers/colors";
+
+.dp-library {
+  .icon-tip-icon {
+    color: colors.$dp-color-darkyellow;
+  }
+
+  @mixin dp-tooltip($font-size-tooltip, $font-color-tooltip) {
+    position: relative;
+    display: inline-block;
+    padding: variables.$dp-spaces--lv0;
+    margin: variables.$dp-spaces--lv0;
+    cursor: pointer;
+
+    .tooltiptext {
+      visibility: hidden;
+      position: absolute;
+      line-height: 1.2em;
+      min-width: 170px;
+      display: inline-block;
+      padding: variables.$dp-spaces--lv2 variables.$dp-spaces--lv1;
+      font-size: variables.$dp-sizing--lvl2;
+      background-color: colors.$dp-color-darkgrey;
+      color: colors.$dp-color-white;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      border-radius: variables.$dp-border-radius;
+      z-index: 100;
+      text-transform: unset;
+      opacity: 0;
+      transition: all 0.4s ease-in-out;
+      transform: translate(-50%, -100%);
+
+      &:after {
+        content: "";
+        position: absolute;
+        border-width: 5px;
+        border-style: solid;
+      }
+    }
+
+    &:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  .dp-tooltip-container {
+    width: auto;
+    position: relative;
+    display: initial;
+    cursor: pointer;
+    text-transform: unset;
+  }
+
+  /// tooltip top
+
+  .dp-tooltip-top {
+    span {
+      max-width: 180px;
+      font-size: variables.$dp-sizing--lvl2;
+      line-height: variables.$dp-spaces--lv3;
+      text-align: center;
+      display: inline-block;
+      font-weight: normal;
+    }
+  }
+
+  .dp-tooltip-top {
+    opacity: 0;
+    //TODO: duplicated code
+    width: max-content;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: variables.$dp-sizing--lvl2;
+    line-height: 15px;
+    padding: variables.$dp-spaces--lv2 variables.$dp-spaces--lv3;
+    border-radius: variables.$dp-border-radius;
+    text-align: center;
+    color: colors.$dp-color-white;
+    background: rgba(51, 51, 51, 0.9);
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    right: 50%;
+    border: 1px solid colors.$dp-color-silver;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    visibility: visible;
+  }
+
+  .dp-tooltip-top:before,
+  .dp-tooltip-top:after {
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid colors.$dp-color-darkgrey;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    right: 50%;
+  }
+
+  .dp-tooltip-container:hover .dp-tooltip-top {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(-50%, -100%);
+  }
+
+  /// tooltip right
+
+  .dp-tooltip-right {
+    @include dp-tooltip(variables.$dp-sizing--lvl1, colors.$dp-color-white);
+
+    .tooltiptext {
+      transform: translate(-50%, -50%);
+      left: 140px;
+      top: 50%;
+
+      &:after {
+        top: 50%;
+        right: 100%;
+        margin-top: -5px;
+        border-color: transparent colors.$dp-color-darkgrey transparent
+          transparent;
+      }
+    }
+  }
+
+  /// tooltip bottom
+
+  .dp-tooltip-bottom {
+    @include dp-tooltip(variables.$dp-sizing--lvl1, colors.$dp-color-white);
+
+    .tooltiptext {
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 60px;
+
+      &:after {
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-color: transparent transparent colors.$dp-color-darkgrey
+          transparent;
+      }
+    }
+  }
+
+  /// tooltip left
+
+  .dp-tooltip-left {
+    @include dp-tooltip(variables.$dp-sizing--lvl1, colors.$dp-color-white);
+
+    .tooltiptext {
+      transform: translate(-140%, -50%);
+      padding: 12px;
+      font-size: 13px;
+      height: auto;
+      text-transform: initial;
+
+      &.transform-left {
+        transform: translate(-105%, -50%);
+      }
+
+      .dp-tooltip-left {
+        opacity: 0;
+        // TODO: duplicate code
+        width: max-content;
+        min-width: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: variables.$dp-sizing--lvl2;
+        line-height: 15px;
+        padding: variables.$dp-spaces--lv2 variables.$dp-spaces--lv3;
+        border-radius: variables.$dp-border-radius;
+        text-align: center;
+        color: colors.$dp-color-white;
+        background: rgba(51, 51, 51, 0.9);
+        transition: all 0.2s ease-in-out;
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        border: 1px solid colors.$dp-color-silver;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        visibility: visible;
+      }
+
+      &:after {
+        top: 50%;
+        left: 100%;
+        margin-top: -5px;
+        border-color: transparent transparent transparent
+          colors.$dp-color-darkgrey;
+      }
+    }
+  }
+
+  /* New Tooltip for charts in webapp*/
+
+  .tabs-wrapper {
+    .dp-tooltip-container {
+      cursor: pointer;
+      position: relative;
+      display: inline-block;
+      text-transform: unset;
+    }
+  }
+  ///
+  /// TODO: delete the dp-tooltip-chart class to use a more generic
+  /// in the next version it is obsolete
+  ///
+
+  .dp-tooltip-chart,
+  .dp-tooltip-block {
+    //TODO: duplicated code
+    opacity: 0;
+    color: colors.$dp-color-darkgrey;
+    width: max-content;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: variables.$dp-sizing--lvl2;
+    line-height: 15px;
+    padding: variables.$dp-spaces--lv2 variables.$dp-spaces--lv3;
+    border-radius: variables.$dp-border-radius;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    border: 1px solid colors.$dp-color-silver;
+    box-shadow: 0 0 0 4px rgba(204, 204, 204, 0.3);
+    transform: translate(-50%, -50%) scale(0.75) rotate(15deg);
+    z-index: -1;
+    visibility: visible;
+
+    @media screen and (max-width: 1365px) {
+      display: none;
+    }
+  }
+
+  .dp-tooltip-chart:before,
+  .dp-tooltip-block:before,
+  .dp-tooltip-chart:after,
+  .dp-tooltip-block:after {
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid rgba(255, 255, 255, 0.9);
+    position: absolute;
+    bottom: -5px;
+    left: 47%;
+  }
+
+  .dp-tooltip-container:hover .dp-tooltip-chart,
+  .dp-tooltip-container:hover .dp-tooltip-block {
+    opacity: 1;
+    z-index: 10;
+    transform: translate(-50%, -100%) scale(1) rotate(0deg);
+  }
+}

@@ -1,0 +1,282 @@
+////
+/// Cards for doppler plus plans
+/// It will apply annotations to all items from file.
+/// @access private
+/// @author Gustavo Baamonde
+/// Classes for Cards Doppler plus
+////
+
+@use "core/variables";
+@use "helpers/colors";
+
+.dp-library {
+  %card {
+    position: relative;
+    width: 296px;
+    min-height: 394px;
+    padding: variables.$dp-spaces--lv5 variables.$dp-spaces--lv2;
+    background: colors.$dp-color-white;
+    flex-wrap: nowrap;
+    border-radius: variables.$dp-border-radius;
+    box-sizing: border-box;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid colors.$dp-color-snow;
+    text-align: center;
+    transition: 0.3s;
+    margin: variables.$dp-spaces--lv0 variables.$dp-spaces--lv2
+      variables.$dp-spaces--lv4;
+    font-family: "proxima-nova";
+    flex: 1;
+
+    &:hover {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    button {
+      display: block;
+      margin: variables.$dp-spaces--lv0 auto;
+    }
+
+    h3 {
+      font-size: 30px;
+      line-height: 30px;
+      margin-bottom: variables.$dp-spaces--lv4;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 70px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    .dp-what-plan {
+      display: block;
+      text-transform: uppercase;
+      margin: 10px variables.$dp-spaces--lv0 variables.$dp-spaces--lv0
+        variables.$dp-spaces--lv0;
+      font-weight: bold;
+      font-size: variables.$dp-sizing--lvl2-14;
+    }
+
+    .dp-calculate-price {
+      display: inline-block;
+      font-weight: bold;
+      margin: 10px variables.$dp-spaces--lv0 variables.$dp-spaces--lv0;
+      font-size: variables.$dp-sizing--lvl2-14;
+    }
+
+    .dp-content-plans {
+      height: 165px;
+      margin-bottom: variables.$dp-spaces--lv1;
+      overflow: hidden;
+    }
+
+    .dp-content-plans-free {
+      height: 165px;
+      overflow: hidden;
+      min-height: 165px;
+      margin-bottom: variables.$dp-spaces--lv1;
+    }
+
+    .dp-current-plan {
+      position: relative;
+      background-color: colors.$dp-color-lightgrey;
+      color: colors.$dp-color-white;
+      border-radius: 3px;
+      font-size: variables.$dp-sizing--lvl2;
+      line-height: 13px;
+      font-weight: bold;
+      padding: 13px 25px;
+      display: inline-block;
+    }
+  }
+
+  .dp-card {
+    @extend %card;
+  }
+
+  .dp-highlighthed {
+    border: 2px solid colors.$dp-violet-doppler-plus;
+  }
+
+  .dp-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 135px;
+    margin: variables.$dp-spaces--lv0 auto;
+    width: 150px;
+    color: colors.$dp-color-darkgrey;
+
+    .dp-time-lapse-top {
+      position: absolute;
+      top: 24px;
+      font-size: 14px;
+    }
+    .dp-time-lapse-bottom {
+      position: absolute;
+      bottom: 24px;
+      font-size: 14px;
+    }
+
+    .dp-amount {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      .dp-plan-currency {
+        position: absolute;
+        left: -42px;
+        top: 18px;
+      }
+    }
+
+    .dp-money-number {
+      font-size: variables.$dp-sizing--lvl9;
+      letter-spacing: -2px;
+      line-height: variables.$dp-spaces--lv9;
+      position: relative;
+    }
+  }
+
+  .dpsg-tit-card {
+    font-size: 12px;
+    width: 285px;
+    text-transform: uppercase;
+  }
+
+  .dp-maximum {
+    border-radius: 3px;
+    background-color: colors.$dp-color-ghostwhite;
+    font-size: 13px;
+    line-height: 13px;
+    font-weight: 300;
+    padding: 13px 25px;
+    display: inline-block;
+  }
+
+  .dp-card-asset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: variables.$dp-spaces--lv0 auto;
+    padding: variables.$dp-spaces--lv3 variables.$dp-spaces--lv5;
+    width: 150px;
+    color: colors.$dp-color-darkgrey;
+  }
+
+  .dp-cta-plan {
+    height: 70px;
+  }
+
+  /// plan detail
+
+  .dp-plan-detail {
+    text-align: left;
+    color: colors.$dp-color-darkgrey;
+    border-top: 1px solid colors.$dp-color-snow;
+    margin-top: variables.$dp-spaces--lv4;
+    padding-top: variables.$dp-spaces--lv4;
+
+    h4 {
+      font-size: 15px;
+      padding-bottom: variables.$dp-spaces--lv1;
+      text-transform: none;
+      font-weight: bold;
+      padding-left: 15px;
+    }
+  }
+
+  .dp-list-detail {
+    line-height: 20px;
+    font-size: 15px;
+
+    li {
+      margin-bottom: variables.$dp-spaces--lv2;
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .dp-tooltip-block {
+      left: -12px;
+    }
+  }
+
+  /// icons card expanded
+
+  %dp-icon-plans {
+    text-transform: uppercase;
+    font-size: 10px;
+    border-radius: 100%;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    position: relative;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dp-icostar {
+    @extend %dp-icon-plans;
+    background: url("assets/img/ico-star.svg") 0 2px no-repeat;
+  }
+
+  .dp-icobd {
+    background-color: colors.$dp-color-violet;
+    color: colors.$dp-color-white;
+    @extend %dp-icon-plans;
+    margin-right: variables.$dp-spaces--lv2;
+    cursor: pointer;
+  }
+
+  .dp-icoag {
+    background-color: colors.$dp-color-iconcm;
+    color: colors.$dp-color-white;
+    @extend %dp-icon-plans;
+    margin-right: variables.$dp-spaces--lv2;
+    padding: variables.$dp-spaces--lv1;
+    cursor: pointer;
+  }
+
+  .dp-icodot {
+    background-color: colors.$dp-color-white;
+    color: colors.$dp-color-darkgrey;
+    font-size: 35px;
+    line-height: 0;
+    border-radius: 100%;
+    padding: variables.$dp-spaces--lv0 2px;
+    text-align: center;
+    margin-right: variables.$dp-spaces--lv2;
+    position: relative;
+    left: 0;
+  }
+
+  .dp-new {
+    background-color: colors.$dp-color-violet;
+    color: colors.$dp-color-white;
+    padding: 3px 5px;
+    border-radius: 3px;
+    font-size: 10px;
+    letter-spacing: 0.6px;
+  }
+  .dp-coming {
+    background-color: #fcedec;
+    color: #ec8a83;
+    border: 1px solid #ec8a83;
+    padding: 4px variables.$dp-spaces--lv1;
+    border-radius: 3px;
+    font-size: 9px;
+    letter-spacing: 0.6px;
+  }
+}

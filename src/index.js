@@ -1,4 +1,4 @@
 import { getJqueryVersion } from "./util";
-import "./styles.scss";
+import "./index.scss";
 
 getJqueryVersion();

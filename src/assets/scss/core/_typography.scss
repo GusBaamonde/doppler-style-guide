@@ -1,0 +1,132 @@
+////
+/// Typography
+/// Init typography basic settings
+/// @group Typography
+////
+
+///
+
+@use "settings";
+@use "variables" as var;
+@use "helpers/colors";
+
+@font-face {
+  font-family: "hand-of-sean";
+  src: url("assets/fonts/HandOfSeanPro-webfont.eot");
+  src: url("assets/fonts/HandOfSeanPro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("assets/fonts/HandOfSeanPro-webfont.woff2") format("woff2"),
+    url("assets/fonts/HandOfSeanPro-webfont.woff") format("woff"),
+    url("assets/fonts/HandOfSeanPro-webfont.ttf") format("truetype");
+  font-weight: settings.$dp-font-weight;
+  font-style: normal;
+  font-display: swap;
+}
+
+.dp-library {
+  body {
+    font-family: settings.$dp-font-family;
+    color: colors.$dp-color-grey;
+  }
+
+  button,
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: settings.$dp-font-weight;
+    color: colors.$dp-color-darkgrey;
+    margin: var.$dp-spaces--lv0;
+  }
+
+  h1 {
+    font-family: settings.$dp-font-family;
+    font-size: 30px;
+    line-height: var.$dp-spaces--lv6;
+    padding-bottom: var.$dp-spaces--lv4;
+    font-weight: settings.$dp-font-weight-bold;
+  }
+
+  h2 {
+    font-size: var.$dp-sizing--lvl6;
+    line-height: var.$dp-spaces--lv5;
+    padding-bottom: var.$dp-spaces--lv2;
+    font-weight: settings.$dp-font-weight-bold;
+  }
+
+  h3 {
+    font-size: var.$dp-sizing--lvl4;
+    line-height: var.$dp-spaces--lv4;
+    padding-bottom: var.$dp-spaces--lv1;
+    font-weight: settings.$dp-font-weight-bold;
+  }
+
+  h4 {
+    font-size: var.$dp-sizing--lvl3;
+    line-height: var.$dp-spaces--lv3;
+    padding-bottom: var.$dp-spaces--lv1;
+    font-weight: settings.$dp-font-weight-bold;
+    text-transform: uppercase;
+  }
+
+  h5 {
+    font-size: var.$dp-sizing--lvl3;
+    line-height: var.$dp-spaces--lv3;
+    padding-bottom: var.$dp-spaces--lv1;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+
+  h6 {
+    font-size: var.$dp-sizing--lvl2;
+    line-height: var.$dp-spaces--lv3;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+
+  strong {
+    font-weight: settings.$dp-font-weight-bold;
+  }
+
+  p {
+    font-size: var.$dp-sizing--lvl3;
+    line-height: var.$dp-spaces--lv4;
+    margin: var.$dp-spaces--lv0;
+  }
+
+  small {
+    font-size: var.$dp-sizing--lvl2;
+    line-height: var.$dp-spaces--lv3;
+    margin: var.$dp-spaces--lv0;
+  }
+
+  a {
+    color: colors.$dp-color-green;
+
+    &:hover {
+      color: colors.$dp-color-darkgreen;
+    }
+  }
+
+  .dp-text {
+    &--cursive {
+      font-family: settings.$dp-font-family-handofsean;
+      font-size: var.$dp-sizing--lvl4;
+      line-height: var.$dp-spaces--lv4;
+    }
+
+    &--italic {
+      font-style: italic;
+    }
+  }
+
+  .dp-uppercase {
+    text-transform: uppercase;
+  }
+}

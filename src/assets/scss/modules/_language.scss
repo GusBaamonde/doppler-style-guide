@@ -1,0 +1,78 @@
+////
+/// Language selector
+/// It will apply annotations to all items from file.
+/// @access private
+/// Classes for the Language selector component
+////
+
+/*
+Language selector
+*/
+
+@use "core/settings";
+@use "core/variables";
+@use "helpers/colors";
+@use "modules/mixins/breakpoints";
+
+.dp-library {
+  .language-selector {
+    height: 34px;
+    width: 63px;
+    margin-bottom: -10px;
+    font-family: settings.$dp-font-family;
+
+    button,
+    a {
+      appearance: none;
+      line-height: 20px;
+      padding: 7px 13px 7px 35px;
+      color: colors.$dp-color-darkgrey;
+      font-size: variables.$dp-sizing--lvl1;
+      font-weight: settings.$dp-font-weight-bold;
+      text-align: right;
+      background-repeat: no-repeat;
+      background-position: 12px center;
+      border-radius: 3px;
+      text-decoration: none;
+
+      &.lang--es {
+        background-image: url(assets/img/flag--spanish.svg);
+      }
+      &.lang--en {
+        background-image: url(assets/img/flag--english.svg);
+      }
+    }
+
+    a[role="menuitem"] {
+      //outline: 0;
+      box-shadow: 0 0 0 1px colors.$dp-color-darkyellow,
+        0 0 0 2px rgba(0, 0, 0, 0.1);
+
+      &:hover,
+      &:focus {
+        background-color: colors.$dp-color-ghostwhite;
+      }
+    }
+
+    button {
+      &:after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-top: 4px solid colors.$dp-color-darkgrey;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 3px;
+      }
+    }
+  }
+
+  @include breakpoints.media-breakpoint("mobilexs") {
+    .language-selector {
+      top: variables.$dp-spaces--lv1;
+    }
+  }
+}
