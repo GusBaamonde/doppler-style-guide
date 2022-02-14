@@ -15,20 +15,20 @@
 /// -> Utilities
 /// -
 
-@import "core/variables";
-@import "helpers/colors";
-@import "core/settings";
-@import "core/reset";
-@import "core/typography";
-@import "helpers/mixins";
-@import "helpers/animations";
-@import "helpers/classes";
-
-@import "modules/mixins";
-
-@import "modules/preload";
-@import "modules";
-//@import 'libs/**/*.scss';
-@import "libs/webfont/compiled/template";
-@import "utilities";
-@import "templates";
+@use "helpers/colors";
+@use "core/variables";
+@use "core/settings";
+@use "core/reset";
+@use "core/typography";
+@use "helpers/mixins" as mixinsHelper;
+@use "helpers/animations";
+@use "helpers/classes";
+@use "modules/preload";
+@use "modules/mixins";
+@use "modules";
+// TODO: The webfont template no can't transpilate front sass
+@use "libs/sassy-cast/SassyCast";
+@use "libs/webfont/compiled/template";
+//@use "libs/webfont/template";
+@use "utilities";
+@use "templates";
