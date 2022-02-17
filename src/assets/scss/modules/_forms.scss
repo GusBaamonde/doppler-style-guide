@@ -12,7 +12,7 @@
 @use "core/variables" as var;
 @use "helpers/colors";
 @use "modules/preload";
-@use "modules/mixins/breakpoints";
+@use "modules/breakpoints";
 
 .dp-library {
   @mixin circle($background-color) {
