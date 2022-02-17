@@ -12,7 +12,7 @@ Language selector
 @use "core/settings";
 @use "core/variables";
 @use "helpers/colors";
-@use "modules/mixins/breakpoints";
+@use "modules/breakpoints";
 
 .dp-library {
   .language-selector {

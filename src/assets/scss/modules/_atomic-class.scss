@@ -8,9 +8,31 @@
 ////
 
 @use "core/variables";
-@use "mixins/breakpoints";
+@use "helpers/mixins";
+@use "modules/breakpoints";
 
 .dp-library {
+  // Variables breackpoints
+
+  $dp-breakpoints: (
+    mobilexs: "max-width: 320px",
+    mobile: "max-width: 480px",
+    ipad: "max-width: 768px",
+    desktop: "max-width: 1024px",
+    hddesktop: "max-width: 1440px",
+  ) !default;
+
+  /* New breakpoints*/
+  @mixin media-breakpoint($breakpoint) {
+    @if map-has-key($dp-breakpoints, $breakpoint) {
+      @media screen and(map-get($dp-breakpoints, $breakpoint)) {
+        @content;
+      }
+    } @else {
+      @error "Breakpoint does not exist";
+    }
+  }
+
   .uppercase {
     text-transform: uppercase;
   }
@@ -46,7 +68,7 @@
     font-size: variables.$dp-sizing--lvl0;
   }
 
-  @include breakpoints.media-breakpoint("mobilexs") {
+  @include media-breakpoint("mobilexs") {
     .icon-registration,
     .logo-doppler-new,
     .logo-doppler-old {
