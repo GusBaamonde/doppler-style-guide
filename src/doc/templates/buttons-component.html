@@ -1,79 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>UI library Doppler - Buttons component</title>
-    <meta name="keywords" content="UI library Doppler - Buttons component" />
-    <meta
-      name="description"
-      content="All buttons used in Doppler, their three sizes and color variants and rounded edges"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="canonical" href="" />
-    <!-- Open Graph metatags -->
-    <meta property="og:title" content="Buttons component" />
-    <meta property="og:type" content="article" />
-    <meta property="og:image" content="Buttons component" />
-    <meta property="og:url" content="Buttons component" />
-    <meta property="og:description" content="Buttons component" />
-    <meta property="og:site_name" content="Buttons component" />
-    <!-- Stylesheets and polyfills -->
-    <!-- Font Proxima Nova -->
-    <link rel="stylesheet" href="https://use.typekit.net/fbq8dbp.css" />
-    <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
-    <!-- Favicons -->
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="144x144"
-      href="https://www.fromdoppler.com/apple-touch-icon-144x144-precomposed.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="114x114"
-      href="https://www.fromdoppler.com/apple-touch-icon-114x114-precomposed.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="72x72"
-      href="https://www.fromdoppler.com/apple-touch-icon-72x72-precomposed.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="57x57"
-      href="https://www.fromdoppler.com/apple-touch-icon-57x57-precomposed.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      href="https://www.fromdoppler.com/apple-touch-icon-precomposed.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="https://www.fromdoppler.com/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="https://www.fromdoppler.com/favicon.ico"
-    />
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://www.fromdoppler.com/favicon.ico"
-    />
+    <%= require('html-loader!/src/doc/templates/partials/_head.html').default %>
   </head>
   <body data-active-menu="3" class="dp-library">
     <!-- Layers -->
     <main role="main" class="dpsg-main-wrap">
-      <!-- build:include partials/_header.html -->
-      This will be replaced by the content of header.html
-      <!-- /build -->
+      <%=
+      require('html-loader!/src/doc/templates/partials/_header.html').default %>
       <!-- header -->
       <div class="dpsg-wrapper">
-        <!-- build:include partials/_navigation.html -->
-        This will be replaced by the content of navigation.html
-        <!-- /build -->
+        <%=
+        require('html-loader!/src/doc/templates/partials/_navigation.html').default
+        %>
         <div class="dpsg-content-wrap">
           <article class="dpsg-content">
             <h3>Botones</h3>
@@ -161,12 +100,7 @@
                     <div class="buttons-card">
                       <button
                         type="button"
-                        class="
-                          dp-button
-                          button-medium
-                          primary-green
-                          button--loading
-                        "
+                        class="dp-button button-medium primary-green button--loading"
                       >
                         Spinner
                       </button>
@@ -240,12 +174,7 @@
                     <div class="buttons-card">
                       <button
                         type="button"
-                        class="
-                          dp-button
-                          button-medium
-                          primary-green
-                          button--loading button--round
-                        "
+                        class="dp-button button-medium primary-green button--loading button--round"
                       >
                         Spinner
                       </button>
@@ -266,12 +195,7 @@
                     <div class="buttons-card">
                       <button
                         type="button"
-                        class="
-                          dp-button
-                          button-medium
-                          primary-green
-                          button--round
-                        "
+                        class="dp-button button-medium primary-green button--round"
                         disabled=""
                       >
                         Button Disabled
@@ -293,12 +217,7 @@
                     <div class="buttons-card">
                       <button
                         type="button"
-                        class="
-                          dp-button
-                          button-medium
-                          primary-green
-                          button--round
-                        "
+                        class="dp-button button-medium primary-green button--round"
                       >
                         Iniciar campaña
                       </button>
@@ -319,12 +238,7 @@
                     <div class="buttons-card">
                       <button
                         type="button"
-                        class="
-                          dp-button
-                          button-medium
-                          secondary-green
-                          button--round
-                        "
+                        class="dp-button button-medium secondary-green button--round"
                       >
                         Iniciar campaña
                       </button>
@@ -345,12 +259,7 @@
                     <div class="buttons-card">
                       <button
                         type="button"
-                        class="
-                          dp-button
-                          button-medium
-                          primary-brown
-                          button--round
-                        "
+                        class="dp-button button-medium primary-brown button--round"
                       >
                         Iniciar campaña
                       </button>
@@ -371,12 +280,7 @@
                     <div class="buttons-card">
                       <button
                         type="button"
-                        class="
-                          dp-button
-                          button-medium
-                          secondary-brown
-                          button--round
-                        "
+                        class="dp-button button-medium secondary-brown button--round"
                       >
                         Iniciar campaña
                       </button>
@@ -415,12 +319,7 @@
                     <div class="buttons-card">
                       <button
                         type="button"
-                        class="
-                          dp-button
-                          button-medium
-                          primary-green
-                          button--centered-loading
-                        "
+                        class="dp-button button-medium primary-green button--centered-loading"
                       ></button>
                       <div class="button-description">
                         <p><strong>Button Preload centrado</strong></p>
@@ -613,22 +512,18 @@
           </article>
         </div>
       </div>
-      <!-- wrapper-container -->
-      <!-- build:include partials/_footer.html -->
-      This will be replaced by the content of footer.html
-      <!-- /build -->
+      <%=
+      require('html-loader!/src/doc/templates/partials/_footer.html').default %>
     </main>
-    <!-- build:js:dist js/app.js -->
-    <script src="./js/main.js"></script>
-    <!-- /build -->
+
     <script>
       dopplerUI.createDoubleSlide(
-        document.getElementById('thumbHour-1'),
-        document.getElementById('thumbHour-2'),
+        document.getElementById("thumbHour-1"),
+        document.getElementById("thumbHour-2")
       );
       dopplerUI.createDoubleSlide(
-        document.getElementById('thumbAnotherHour-1'),
-        document.getElementById('thumbAnotherHour-2'),
+        document.getElementById("thumbAnotherHour-1"),
+        document.getElementById("thumbAnotherHour-2")
       );
     </script>
   </body>

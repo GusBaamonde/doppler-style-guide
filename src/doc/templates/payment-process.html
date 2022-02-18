@@ -1,75 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>UI library Doppler - Payment Process</title>
-    <meta name="keywords" content="UI library Doppler - Payment Process" />
-    <meta name="description" content="Payment Process" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="canonical" href="" />
-    <!-- Open Graph metatags -->
-    <meta property="og:title" content="Payment Process" />
-    <meta property="og:type" content="article" />
-    <meta property="og:image" content="Payment Process" />
-    <meta property="og:url" content="Payment Process" />
-    <meta property="og:description" content="Payment Process" />
-    <meta property="og:site_name" content="Payment Process" />
-    <!-- Stylesheets and polyfills -->
-    <!-- Font Proxima Nova -->
-    <link
-      rel="stylesheet"
-      href="https://use.typekit.net/fbq8dbp.css"
-      disabled
-    />
-    <!-- Styles -->
-    <link
-      rel="stylesheet"
-      media="all"
-      type="text/css"
-      href="./css/styles.css"
-    />
-    <!-- Favicons -->
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="144x144"
-      href="https://www.fromdoppler.com/apple-touch-icon-144x144-precomposed.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="114x114"
-      href="https://www.fromdoppler.com/apple-touch-icon-114x114-precomposed.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="72x72"
-      href="https://www.fromdoppler.com/apple-touch-icon-72x72-precomposed.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="57x57"
-      href="https://www.fromdoppler.com/apple-touch-icon-57x57-precomposed.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      href="https://www.fromdoppler.com/apple-touch-icon-precomposed.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="https://www.fromdoppler.com/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="https://www.fromdoppler.com/favicon.ico"
-    />
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://www.fromdoppler.com/favicon.ico"
-    />
+    <%= require('html-loader!/src/doc/templates/partials/_head.html').default %>
   </head>
-
   <body data-active-menu="36" class="dp-library dp-bg-softgrey">
     <div class="dp-container">
       <div class="dp-rowflex">
@@ -111,7 +44,8 @@
                         <ul class="field-group">
                           <li class="field-item">
                             <ul class="field-group">
-                              <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
+                              <!-- utilizar la clase dp-validate en el li para
+                              mostrar mensajes de validacion -->
                               <li class="field-item field-item--50 dp-p-r">
                                 <label for="name">*Nombre:</label>
                                 <input
@@ -122,15 +56,13 @@
                                   disabled
                                 />
                                 <div
-                                  class="
-                                    wrapper-errors
-                                    dp-message dp-error-form
-                                  "
+                                  class="wrapper-errors dp-message dp-error-form"
                                 >
                                   <p>¡Ouch! Este campo está vacío</p>
                                 </div>
                               </li>
-                              <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
+                              <!-- utilizar la clase dp-validate en el li para mostrar
+                              mensajes de validacion -->
                               <li class="field-item field-item--50">
                                 <label for="lastname">*Apellido:</label>
                                 <input
@@ -141,10 +73,7 @@
                                   disabled
                                 />
                                 <div
-                                  class="
-                                    wrapper-errors
-                                    dp-message dp-error-form
-                                  "
+                                  class="wrapper-errors dp-message dp-error-form"
                                 >
                                   <p>¡Ouch! Este campo está vacío</p>
                                 </div>
@@ -153,7 +82,8 @@
                           </li>
                           <li class="field-item">
                             <ul class="field-group">
-                              <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
+                              <!-- utilizar la clase dp-validate en el li para mostrar
+                              mensajes de validacion -->
                               <li class="field-item field-item--50 dp-p-r">
                                 <label for="address">*Dirección:</label>
                                 <input
@@ -164,15 +94,13 @@
                                   disabled
                                 />
                                 <div
-                                  class="
-                                    wrapper-errors
-                                    dp-message dp-error-form
-                                  "
+                                  class="wrapper-errors dp-message dp-error-form"
                                 >
                                   <p>¡Ouch! Este campo está vacío</p>
                                 </div>
                               </li>
-                              <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
+                              <!-- utilizar la clase dp-validate en el li para mostrar
+                              mensajes de validacion -->
                               <li class="field-item field-item--50">
                                 <label for="city">*Ciudad:</label>
                                 <input
@@ -183,10 +111,7 @@
                                   disabled
                                 />
                                 <div
-                                  class="
-                                    wrapper-errors
-                                    dp-message dp-error-form
-                                  "
+                                  class="wrapper-errors dp-message dp-error-form"
                                 >
                                   <p>¡Ouch! Este campo está vacío</p>
                                 </div>
@@ -195,7 +120,8 @@
                           </li>
                           <li class="field-item">
                             <ul class="field-group">
-                              <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
+                              <!-- utilizar la clase dp-validate en el li para
+                              mostrar mensajes de validacion -->
                               <li class="field-item field-item--50 dp-p-r">
                                 <label for="state-province"
                                   >*Estado/Provincia:</label
@@ -207,10 +133,7 @@
                                   placeholder="Estado / Provincia"
                                 />
                                 <div
-                                  class="
-                                    wrapper-errors
-                                    dp-message dp-error-form
-                                  "
+                                  class="wrapper-errors dp-message dp-error-form"
                                 >
                                   <p>¡Ouch! Este campo está vacío</p>
                                 </div>
@@ -225,10 +148,7 @@
                                   <option value="">Argentina</option>
                                 </select>
                                 <div
-                                  class="
-                                    wrapper-errors
-                                    dp-message dp-error-form
-                                  "
+                                  class="wrapper-errors dp-message dp-error-form"
                                 >
                                   <p>¡Ouch! Este campo está vacío</p>
                                 </div>
@@ -237,7 +157,8 @@
                           </li>
                           <li class="field-item">
                             <ul class="field-group">
-                              <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
+                              <!-- utilizar la clase dp-validate en el li para mostrar
+                              mensajes de validacion -->
                               <li class="field-item field-item--50 dp-p-r">
                                 <label for="postal-code">Código Postal:</label>
                                 <input
@@ -247,15 +168,13 @@
                                   placeholder="Código Postal"
                                 />
                                 <div
-                                  class="
-                                    wrapper-errors
-                                    dp-message dp-error-form
-                                  "
+                                  class="wrapper-errors dp-message dp-error-form"
                                 >
                                   <p>¡Ouch! Este campo está vacío</p>
                                 </div>
                               </li>
-                              <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
+                              <!-- utilizar la clase dp-validate en el li para
+                              mostrar mensajes de validacion -->
                               <li class="field-item field-item--50">
                                 <label for="telephone">*Teléfono:</label>
                                 <input
@@ -265,10 +184,7 @@
                                   placeholder="03516847598"
                                 />
                                 <div
-                                  class="
-                                    wrapper-errors
-                                    dp-message dp-error-form
-                                  "
+                                  class="wrapper-errors dp-message dp-error-form"
                                 >
                                   <p>¡Ouch! Este campo está vacío</p>
                                 </div>
@@ -277,7 +193,8 @@
                           </li>
                           <li class="field-item">
                             <ul class="field-group">
-                              <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
+                              <!-- utilizar la clase dp-validate en el li para
+                              mostrar mensajes de validacion -->
                               <li class="field-item field-item--50 dp-p-r">
                                 <label for="empresa">Empresa:</label>
                                 <input
@@ -288,10 +205,7 @@
                                   class=""
                                 />
                                 <div
-                                  class="
-                                    wrapper-errors
-                                    dp-message dp-error-form
-                                  "
+                                  class="wrapper-errors dp-message dp-error-form"
                                 >
                                   <p>¡Ouch! Este campo está vacío</p>
                                 </div>
@@ -306,10 +220,7 @@
                                   <option value="">Industria</option>
                                 </select>
                                 <div
-                                  class="
-                                    wrapper-errors
-                                    dp-message dp-error-form
-                                  "
+                                  class="wrapper-errors dp-message dp-error-form"
                                 >
                                   <p>¡Ouch! Este campo está vacío</p>
                                 </div>
@@ -366,7 +277,8 @@
                           </li>
                           <li class="field-item">
                             <ul class="field-group">
-                              <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
+                              <!-- utilizar la clase dp-validate en el li para mostrar
+                              mensajes de validacion -->
                               <li class="field-item field-item--50 dp-p-r">
                                 <label for="name-2">*Nombre:</label>
                                 <input
@@ -376,15 +288,13 @@
                                   placeholder="Tu nombre"
                                 />
                                 <div
-                                  class="
-                                    wrapper-errors
-                                    dp-message dp-error-form
-                                  "
+                                  class="wrapper-errors dp-message dp-error-form"
                                 >
                                   <p>¡Ouch! Este campo está vacío</p>
                                 </div>
                               </li>
-                              <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
+                              <!-- utilizar la clase dp-validate en el li para
+                              mostrar mensajes de validacion -->
                               <li class="field-item field-item--50">
                                 <label for="lastname-2">*Apellido:</label>
                                 <input
@@ -394,10 +304,7 @@
                                   placeholder="Tu apellido"
                                 />
                                 <div
-                                  class="
-                                    wrapper-errors
-                                    dp-message dp-error-form
-                                  "
+                                  class="wrapper-errors dp-message dp-error-form"
                                 >
                                   <p>¡Ouch! Este campo está vacío</p>
                                 </div>
@@ -406,7 +313,8 @@
                           </li>
                           <li class="field-item">
                             <ul class="field-group">
-                              <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
+                              <!-- utilizar la clase dp-validate en el li para
+                              mostrar mensajes de validacion -->
                               <li class="field-item field-item--50 dp-p-r">
                                 <label for="address-2">*Dirección:</label>
                                 <input
@@ -416,15 +324,13 @@
                                   placeholder="Dirección"
                                 />
                                 <div
-                                  class="
-                                    wrapper-errors
-                                    dp-message dp-error-form
-                                  "
+                                  class="wrapper-errors dp-message dp-error-form"
                                 >
                                   <p>¡Ouch! Este campo está vacío</p>
                                 </div>
                               </li>
-                              <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
+                              <!-- utilizar la clase dp-validate en el li para
+                              mostrar mensajes de validacion -->
                               <li class="field-item field-item--50">
                                 <label for="city-2">*Ciudad:</label>
                                 <input
@@ -434,10 +340,7 @@
                                   placeholder="Ciudad"
                                 />
                                 <div
-                                  class="
-                                    wrapper-errors
-                                    dp-message dp-error-form
-                                  "
+                                  class="wrapper-errors dp-message dp-error-form"
                                 >
                                   <p>¡Ouch! Este campo está vacío</p>
                                 </div>
@@ -446,7 +349,8 @@
                           </li>
                           <li class="field-item">
                             <ul class="field-group">
-                              <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
+                              <!-- utilizar la clase dp-validate en el li para
+                              mostrar mensajes de validacion -->
                               <li class="field-item field-item--50 dp-p-r">
                                 <label for="state-province-2"
                                   >*Estado/Provincia:</label
@@ -458,10 +362,7 @@
                                   placeholder="Estado / Provincia"
                                 />
                                 <div
-                                  class="
-                                    wrapper-errors
-                                    dp-message dp-error-form
-                                  "
+                                  class="wrapper-errors dp-message dp-error-form"
                                 >
                                   <p>¡Ouch! Este campo está vacío</p>
                                 </div>
@@ -476,10 +377,7 @@
                                   <option value="">Argentina</option>
                                 </select>
                                 <div
-                                  class="
-                                    wrapper-errors
-                                    dp-message dp-error-form
-                                  "
+                                  class="wrapper-errors dp-message dp-error-form"
                                 >
                                   <p>¡Ouch! Este campo está vacío</p>
                                 </div>
@@ -488,7 +386,8 @@
                           </li>
                           <li class="field-item">
                             <ul class="field-group">
-                              <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
+                              <!-- utilizar la clase dp-validate en el li para
+                              mostrar mensajes de validacion -->
                               <li class="field-item field-item--50 dp-p-r">
                                 <label for="postal-code-2"
                                   >Código Postal:</label
@@ -500,15 +399,13 @@
                                   placeholder="Código Postal"
                                 />
                                 <div
-                                  class="
-                                    wrapper-errors
-                                    dp-message dp-error-form
-                                  "
+                                  class="wrapper-errors dp-message dp-error-form"
                                 >
                                   <p>¡Ouch! Este campo está vacío</p>
                                 </div>
                               </li>
-                              <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
+                              <!-- utilizar la clase dp-validate en el li para
+                              mostrar mensajes de validacion -->
                               <li class="field-item field-item--50">
                                 <label for="telephone-2">*Teléfono:</label>
                                 <input
@@ -518,10 +415,7 @@
                                   placeholder="03516847598"
                                 />
                                 <div
-                                  class="
-                                    wrapper-errors
-                                    dp-message dp-error-form
-                                  "
+                                  class="wrapper-errors dp-message dp-error-form"
                                 >
                                   <p>¡Ouch! Este campo está vacío</p>
                                 </div>
@@ -640,10 +534,7 @@
                                     value=""
                                   />
                                   <div
-                                    class="
-                                      wrapper-errors
-                                      dp-message dp-error-form
-                                    "
+                                    class="wrapper-errors dp-message dp-error-form"
                                   >
                                     <p>¡Ouch! Este campo está vacío</p>
                                   </div>
@@ -681,10 +572,7 @@
                                     class="dp-cvv"
                                   />
                                   <div
-                                    class="
-                                      wrapper-errors
-                                      dp-message dp-error-form
-                                    "
+                                    class="wrapper-errors dp-message dp-error-form"
                                   >
                                     <p>¡Ouch! Este campo está vacío</p>
                                   </div>
@@ -870,10 +758,7 @@
                                   </option>
                                 </select>
                                 <div
-                                  class="
-                                    wrapper-errors
-                                    dp-message dp-error-form
-                                  "
+                                  class="wrapper-errors dp-message dp-error-form"
                                 >
                                   <p>¡Ouch! Este campo está vacío</p>
                                 </div>
@@ -887,10 +772,7 @@
                                   placeholder="Ingresa tu Cuit"
                                 />
                                 <div
-                                  class="
-                                    wrapper-errors
-                                    dp-message dp-error-form
-                                  "
+                                  class="wrapper-errors dp-message dp-error-form"
                                 >
                                   <p>¡Ouch! Este campo está vacío</p>
                                 </div>
@@ -906,10 +788,7 @@
                                   placeholder="Responsable Inscripto"
                                 />
                                 <div
-                                  class="
-                                    wrapper-errors
-                                    dp-message dp-error-form
-                                  "
+                                  class="wrapper-errors dp-message dp-error-form"
                                 >
                                   <p>¡Ouch! Este campo está vacío</p>
                                 </div>
@@ -985,10 +864,7 @@
                                     value=""
                                   />
                                   <div
-                                    class="
-                                      wrapper-errors
-                                      dp-message dp-error-form
-                                    "
+                                    class="wrapper-errors dp-message dp-error-form"
                                   >
                                     <p>¡Ouch! Este campo está vacío</p>
                                   </div>
@@ -1026,10 +902,7 @@
                                     class="dp-cvv"
                                   />
                                   <div
-                                    class="
-                                      wrapper-errors
-                                      dp-message dp-error-form
-                                    "
+                                    class="wrapper-errors dp-message dp-error-form"
                                   >
                                     <p>¡Ouch! Este campo está vacío</p>
                                   </div>
@@ -1376,8 +1249,5 @@
       </div>
     </section>
     <!-- container-kpi -->
-    <!-- build:js:dist js/app.js -->
-    <script src="./js/main.js"></script>
-    <!-- /build -->
   </body>
 </html>

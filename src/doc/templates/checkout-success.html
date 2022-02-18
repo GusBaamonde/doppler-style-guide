@@ -1,64 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>UI library Doppler - Checkout Success</title>
-    <meta name="keywords" content="UI library Doppler - Checkout Success" />
-    <meta name="description" content="Checkout Success" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="canonical" href="" />
-    <!-- Open Graph metatags -->
-    <meta property="og:title" content="Checkout Success" />
-    <meta property="og:type" content="article" />
-    <meta property="og:image" content="Checkout Success" />
-    <meta property="og:url" content="Checkout Success" />
-    <meta property="og:description" content="Checkout Success" />
-    <meta property="og:site_name" content="Checkout Success" />
-    <!-- Stylesheets and polyfills -->
-    <!-- Font Proxima Nova -->
-    <link rel="stylesheet" href="https://use.typekit.net/fbq8dbp.css" />
-    <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
-    <!-- Favicons -->
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="144x144"
-      href="https://www.fromdoppler.com/apple-touch-icon-144x144-precomposed.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="114x114"
-      href="https://www.fromdoppler.com/apple-touch-icon-114x114-precomposed.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="72x72"
-      href="https://www.fromdoppler.com/apple-touch-icon-72x72-precomposed.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="57x57"
-      href="https://www.fromdoppler.com/apple-touch-icon-57x57-precomposed.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      href="https://www.fromdoppler.com/apple-touch-icon-precomposed.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="https://www.fromdoppler.com/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="https://www.fromdoppler.com/favicon.ico"
-    />
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://www.fromdoppler.com/favicon.ico"
-    />
+    <%= require('html-loader!/src/doc/templates/partials/_head.html').default %>
   </head>
   <body data-active-menu="41" class="dp-library">
     <div class="dp-container">
@@ -237,8 +180,5 @@
         </div>
       </div>
     </section>
-    <!-- build:js:dist js/app.js -->
-    <script src="./js/main.js"></script>
-    <!-- /build -->
   </body>
 </html>
