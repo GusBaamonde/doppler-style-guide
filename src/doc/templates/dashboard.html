@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= require('html-loader!/src/doc/templates/partials/_head.html').default %>
+  </head>
+  <body data-active-menu="29" class="dp-library">
+    <div class="dp-container">
+      <div class="dp-rowflex">
+        <div class="col-sm-12 m-t-24">
+          <header class="m-b-30">
+            <a
+              href="index.html"
+              class="dp-button button-medium secondary-green button--round"
+            >
+              Back
+            </a>
+          </header>
+        </div>
+      </div>
+    </div>
+
+    <header class="hero-banner">
+      <div class="dp-container">
+        <div class="dp-rowflex">
+          <div class="col-sm-12 col-md-12 col-lg-12">
+            <h2>¡Bienvenido Santiago!</h2>
+          </div>
+          <div class="col-sm-7">
+            <p>
+              Este es tu Tablero de Inicio. Echa un vistazo a tus estadísticas
+              de rendimiento y consejos personalizados.
+            </p>
+          </div>
+        </div>
+        <span class="arrow"></span>
+      </div>
+    </header>
+    <section class="dp-container">
+      <div class="dp-rowflex">
+        <div class="col-lg-8 col-md-12 m-b-24">
+          <div class="dp-dashboard-title">
+            <h2>
+              <span class="dp-dashboard-icon-title deliveries"></span>Mis
+              Campañas
+            </h2>
+            <a href="#" class="dp-dashboard-title-link">CAMPAÑAS ENVIADAS</a>
+          </div>
+          <div class="dp-rowflex dp-dashboard-panel">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="dp-dashboard-kpi">
+                <span class="dp-dashboard-icon deliveries"></span>
+                <span class="dp-kpi-value dp-bold">0</span>
+                <p class="dp-kpi-title dp-bold">Total de Envíos</p>
+                <p class="dp-kpi-period">ULTIMOS 30 DIAS</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="dp-dashboard-kpi">
+                <span class="dp-dashboard-icon open-rate"></span>
+                <span class="dp-kpi-value">0%</span>
+                <p class="dp-kpi-title">Tasa de Apertura</p>
+                <p class="dp-kpi-period">ULTIMOS 30 DIAS</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="dp-dashboard-kpi">
+                <span class="dp-dashboard-icon ctr"></span>
+                <span class="dp-kpi-value">0%</span>
+                <p class="dp-kpi-title">CTR</p>
+                <p class="dp-kpi-period">ULTIMOS 30 DIAS</p>
+              </div>
+            </div>
+            <div class="dp-overlay">
+              <p>
+                Empieza a enviar Campañas para ver tus resultados
+                <a href="#" class="">aquí.</a>
+              </p>
+            </div>
+          </div>
+          <div class="dp-dashboard-title">
+            <h2>
+              <span class="dp-dashboard-icon-title subscribers"></span>Mis
+              Contactos
+            </h2>
+            <a href="#" class="dp-dashboard-title-link">CAMPAÑAS ENVIADAS</a>
+          </div>
+          <div class="dp-rowflex dp-dashboard-panel disabled">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="dp-dashboard-kpi">
+                <span class="dp-dashboard-icon book"></span>
+                <span class="dp-kpi-value dp-bold">21.458</span>
+                <p class="dp-kpi-title dp-bold">Total de Contactos</p>
+                <p class="dp-kpi-period">ULTIMOS 30 DIAS</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="dp-dashboard-kpi">
+                <span class="dp-dashboard-icon user-new"></span>
+                <span class="dp-kpi-value">943</span>
+                <p class="dp-kpi-title">Contactos Nuevos</p>
+                <p class="dp-kpi-period">ULTIMOS 30 DIAS</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="dp-dashboard-kpi">
+                <span class="dp-dashboard-icon user-removed"></span>
+                <span class="dp-kpi-value">32</span>
+                <p class="dp-kpi-title">Contactos Removidos</p>
+                <p class="dp-kpi-period">ULTIMOS 30 DIAS</p>
+              </div>
+            </div>
+          </div>
+          <div class="dp-dashboard-title">
+            <h2>
+              <span class="dp-dashboard-icon-title dp-learn-with-doppler"></span
+              >Aprende con Doppler
+            </h2>
+          </div>
+          <div class="dp-rowflex">
+            <div class="col-sm-12 col-md-6">
+              <div class="dp-carousel" id="carousel1">
+                <div class="dp-carousel-wrapper dp-carousel-orange">
+                  <div class="dp-carousel-content">
+                    <div class="dp-carousel-slide active" data-order="first">
+                      <h3>Último BlogPost</h3>
+                      <p>
+                        ¿Cuáles son las diferencias entre servicio al cliente y
+                        atención al cliente?
+                      </p>
+                      <a
+                        ><span class="ms-icon icon-arrow-next"></span>Ver más</a
+                      >
+                    </div>
+                    <div class="dp-carousel-slide" data-order="second">
+                      <h3>Servicios Adicionales</h3>
+                      <p>
+                        Asesorías, acompañamiento exclusivo, IPs dedicadas o
+                        funcionalidades extra.
+                      </p>
+                      <a
+                        ><span class="ms-icon icon-arrow-next"></span>Ver más</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="dp-carousel-dots">
+                  <input
+                    class="dp-carousel-dot"
+                    checked
+                    type="radio"
+                    value="first"
+                    id="first"
+                    name="carousel1"
+                  />
+                  <input
+                    class="dp-carousel-dot"
+                    type="radio"
+                    value="second"
+                    id="second"
+                    name="carousel1"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <div class="dp-carousel" id="carousel2">
+                <div class="dp-carousel-wrapper dp-carousel-purple">
+                  <div class="dp-carousel-content">
+                    <div class="dp-carousel-slide active" data-order="first">
+                      <h3>Último BlogPost</h3>
+                      <p>
+                        ¿Cuáles son las diferencias entre servicio al cliente y
+                        atención al cliente?
+                      </p>
+                      <a
+                        ><span class="ms-icon icon-arrow-next"></span>Ver más</a
+                      >
+                    </div>
+                    <div class="dp-carousel-slide" data-order="second">
+                      <h3>Servicios Adicionales</h3>
+                      <p>
+                        Asesorías, acompañamiento exclusivo, IPs dedicadas o
+                        funcionalidades extra.
+                      </p>
+                      <a
+                        ><span class="ms-icon icon-arrow-next"></span>Ver más</a
+                      >
+                    </div>
+                    <div class="dp-carousel-slide" data-order="third">
+                      <h3>Último BlogPost</h3>
+                      <p>
+                        ¿Cuáles son las diferencias entre servicio al cliente y
+                        atención al cliente?
+                      </p>
+                      <a
+                        ><span class="ms-icon icon-arrow-next"></span>Ver más</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="dp-carousel-dots">
+                  <input
+                    class="dp-carousel-dot"
+                    checked
+                    type="radio"
+                    value="first"
+                    id="first"
+                    name="carousel2"
+                  />
+                  <input
+                    class="dp-carousel-dot"
+                    type="radio"
+                    value="second"
+                    id="second"
+                    name="carousel2"
+                  />
+                  <input
+                    class="dp-carousel-dot"
+                    type="radio"
+                    value="third"
+                    id="third"
+                    name="carousel2"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-12">
+          <h2 class="dp-title-col-postcard">
+            <span class="dp-icon-steps"></span>Primeros pasos
+          </h2>
+          <div class="dp-postcard dp-postcard--welcom">
+            <header>
+              <span class="dp-iconpostcard"></span>
+              <h4>¡Bienvenido! Ya has creado tu cuenta.</h4>
+            </header>
+            <article>
+              <p>
+                Continua cumpliendo las acciones recomendadas que te enumeramos
+                a continuación para ir subiendo de nivel :)
+              </p>
+            </article>
+          </div>
+          <div class="dp-postcard dp-postcard--number">
+            <header>
+              <span class="dp-iconpostcard">1</span>
+              <h4><a href="#">Crea una lista y añade Contactos</a></h4>
+            </header>
+            <article>
+              <p>
+                ¿Quiénes recibirán tus Campañas? Comienza
+                <a href="#"><strong>creando una Lista</strong></a
+                >. Si no sabes cómo hacerlo
+                <a href="#"><strong>Mira este video tutorial</strong></a
+                >.
+              </p>
+            </article>
+          </div>
+          <div class="dp-postcard dp-postcard--warning">
+            <header>
+              <span class="dp-iconpostcard"></span>
+              <h4><a href="#">Crea tu primer Campaña</a></h4>
+            </header>
+            <article>
+              <p>
+                Continua
+                <a href="#"><strong>creando tu primera Campaña</strong></a
+                >. Tienes tres tipos diferentes para elegir.
+                <a href="#"><strong>Mira este video tutorial</strong></a
+                >.
+              </p>
+            </article>
+          </div>
+          <div class="dp-postcard dp-postcard--number">
+            <header>
+              <span class="dp-iconpostcard">2</span>
+              <h4><a href="#">Configuración de DKIM y SPF</a></h4>
+            </header>
+            <article>
+              <p>
+                Es sumamente importante la configuración del DKIM y el SPF para
+                evitar que tus mails lleguen como
+                <strong>“Correo no deseado”</strong>.
+                <a href="#"><strong>¡Hagámoslo AHORA!</strong></a>
+              </p>
+            </article>
+          </div>
+          <div class="dp-postcard dp-postcard--number">
+            <header>
+              <span class="dp-iconpostcard">3</span>
+              <h4>
+                <a href="#">Realiza tu primer envío y observa los reportes</a>
+              </h4>
+            </header>
+            <article>
+              <p>
+                Envia la campaña que has creado. Puedes revisar el estado de la
+                mismas desde Campañas Enviadas, Campañas Programadas, o
+                Borradores de Campaña
+              </p>
+            </article>
+          </div>
+          <div class="dp-postcard dp-postcard--success">
+            <header>
+              <span class="dp-iconpostcard"></span>
+              <h4>
+                <a href="#">Crea tu primera Campaña</a>
+              </h4>
+            </header>
+            <article>
+              <p>
+                Podras elegir entre <strong>tres tipos de campañas</strong> de
+                acuerdo a tus objetivos de negocio.
+                <a href="#">Pon manos a la obra!</a>
+              </p>
+              <p>
+                ¿Quieres ir mas lejos? Prueba con
+                <strong>Flujos Automatizados de Email y SMS!</strong>
+              </p>
+            </article>
+          </div>
+          <div class="dp-postcard dp-postcard--success">
+            <header>
+              <span class="dp-iconpostcard"></span>
+              <h4><a href="#">Configuración de DKIM y SPF</a></h4>
+            </header>
+            <article>
+              <p>
+                Es sumamente importante la configuración del DKIM y el SPF para
+                evitar que tus mails lleguen como
+                <strong>“Correo no deseado”</strong>.
+                <a href="#"><strong>¡Hagámoslo AHORA!</strong></a>
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <!-- wrapper-reports-box -->
+      </div>
+    </section>
+
+    <!-- container-kpi -->
+  </body>
+</html>

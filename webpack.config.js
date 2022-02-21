@@ -4,6 +4,8 @@ const webpack = require("webpack");
 const DotenvFlow = require("dotenv-flow-webpack");
 const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
 const Dotenv = require("dotenv");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const fs = require("fs");
 
 const mapFileManifest = (file) => {
   if (process.env.NODE_ENV === "development") {
@@ -24,6 +26,23 @@ const serializeManifest = (seed, files, entries) => {
     files: filesSerialized,
     entrypoints: entries.main,
   };
+};
+
+const generateHtmlPlugins = (templateDir) => {
+  const directory = fs.readdirSync(path.resolve(__dirname, templateDir));
+  return directory
+    .filter((item) => /.html$/.test(item))
+    .map((item) => {
+      const parts = item.split(".");
+      const [name, extension] = parts;
+      return new HtmlWebpackPlugin({
+        filename: `${name}.html`,
+        template: path.resolve(
+          __dirname,
+          `${templateDir}/${name}.${extension}`
+        ),
+      });
+    });
 };
 
 const rulesStyles = {
@@ -61,6 +80,7 @@ module.exports = function (env) {
       clean: true,
     },
     plugins: [
+      ...generateHtmlPlugins("./src/doc/templates"),
       new MiniCssExtractPlugin({
         filename: "static/[name].[contenthash].css",
       }),
