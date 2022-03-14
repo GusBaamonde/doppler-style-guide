@@ -507,6 +507,37 @@
                     </div>
                   </div>
                 </div>
+                <div class="col-sm-12 col-md-8 col-lg-6 m-b-12">
+                  <div class="dp-box-shadow dpsg-content-sample">
+                    <div class="dp-button-editor-wrap">
+                      <div class="dp-button-box">
+                        <button
+                          type="button"
+                          class="dp-button button-medium dp-button-exit"
+                          aria-controls="dp-exit-editor"
+                        >
+                          Salir del Editor
+                        </button>
+                        <div class="dp-content-menu">
+                          <ul class="dp-list-exit" id="dp-exit-editor">
+                            <li role="none">
+                              <a role="menuitem">Inicio</a>
+                            </li>
+                            <li role="none">
+                              <a role="menuitem">Campañas</a>
+                            </li>
+                            <li role="none">
+                              <a role="menuitem">Listas</a>
+                            </li>
+                            <li role="none">
+                              <a role="menuitem">Panel de Control</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </article>
@@ -515,7 +546,6 @@
       <%=
       require('html-loader!/src/doc/templates/partials/_footer.html').default %>
     </main>
-
     <script>
       dopplerUI.createDoubleSlide(
         document.getElementById("thumbHour-1"),
