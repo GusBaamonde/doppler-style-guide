@@ -3,6 +3,8 @@
 /// @access private
 /// Classes for the dropdown component
 ////
+@use "core/variables";
+@use "helpers/colors";
 
 .dp-library {
   .dp-c-dropdown {
@@ -35,6 +37,91 @@
       a[role="menuitem"]:focus,
       a[role="menuitem"]:hover {
         //color: white;
+      }
+    }
+  }
+
+  .dp-button-editor-wrap {
+    position: relative;
+    margin: variables.$dp-spaces--lv0;
+
+    .dp-button-box {
+      position: relative;
+    }
+
+    .dp-content-menu {
+      position: absolute;
+      display: none;
+      top: 40px;
+      text-align: left;
+      line-height: variables.$dp-spaces--lv4;
+      overflow: hidden;
+      left: 0;
+      outline: 0;
+      padding: 5px;
+      border-radius: 5px;
+      background-color: colors.$dp-color-white;
+      box-shadow: inset 0 0 0 3px colors.$dp-color-snow,
+        inset 0 0 0 5px colors.$dp-color-orange-focus;
+      z-index: 3;
+    }
+
+    .dp-list-exit {
+      margin: variables.$dp-spaces--lv0;
+      padding: variables.$dp-spaces--lv0;
+      overflow: auto;
+      width: 200px;
+      height: 150px;
+
+      /* Tamaño del scroll */
+      &::-webkit-scrollbar {
+        width: 4px;
+        scrollbar-width: 4px;
+      }
+
+      /* barra thumb de scroll */
+      &::-webkit-scrollbar-thumb {
+        background: colors.$dp-color-silver;
+        border-radius: 4px;
+        right: 10px;
+      }
+
+      &::-webkit-scrollbar-thumb:active {
+        background-color: colors.$dp-color-lightgrey;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background: colors.$dp-color-silver;
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+      }
+
+      /* track de scroll */
+      &::-webkit-scrollbar-track {
+        background: colors.$dp-color-snow;
+        border-radius: 4px;
+      }
+
+      &::-webkit-scrollbar-track:hover,
+      &::-webkit-scrollbar-track:active {
+        background: colors.$dp-color-snow;
+      }
+
+      li {
+        display: block;
+        padding: 6px;
+        font-weight: 300;
+
+        &:hover {
+          background-color: colors.$dp-color-snow;
+        }
+
+        a[role="menuitem"] {
+          cursor: pointer;
+          color: colors.$dp-color-grey;
+          width: 100%;
+          display: block;
+          text-decoration: none;
+        }
       }
     }
   }
