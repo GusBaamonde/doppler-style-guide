@@ -110,17 +110,20 @@
         display: block;
         padding: 6px;
         font-weight: 300;
+        margin-right: 0;
 
         &:hover {
           background-color: colors.$dp-color-snow;
         }
 
-        a[role="menuitem"] {
+        button[role="menuitem"] {
           cursor: pointer;
           color: colors.$dp-color-grey;
           width: 100%;
           display: block;
+          text-align: left;
           text-decoration: none;
+          padding: 5px;
         }
       }
     }
