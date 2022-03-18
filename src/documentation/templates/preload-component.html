@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%=
+    require('html-loader!/src/documentation/templates/partials/_head.html').default
+    %>
+  </head>
+  <body data-active-menu="9" class="dp-library">
+    <!-- Layers -->
+    <main role="main" class="dpsg-main-wrap">
+      <%=
+      require('html-loader!/src/documentation/templates/partials/_header.html').default
+      %>
+      <!-- header -->
+      <div class="dpsg-wrapper">
+        <%=
+        require('html-loader!/src/documentation/templates/partials/_navigation.html').default
+        %>
+        <div class="dpsg-content-wrap">
+          <article class="dpsg-content">
+            <h3>Preload</h3>
+            <p>
+              Nuestro componente Preload es un @mixin que recibe tres
+              parametros, $color, $size y $background pudiendo asi adaptarlo a
+              cualquier entorno que necesitemos.
+            </p>
+            <div class="dp-container">
+              <div class="dp-rowflex">
+                <div class="col-sm-12 col-md-8 col-lg-4 m-b-12">
+                  <div class="wrapper-loading">
+                    <div class="loading-page"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <%=
+      require('html-loader!/src/documentation/templates/partials/_footer.html').default
+      %>
+    </main>
+  </body>
+</html>

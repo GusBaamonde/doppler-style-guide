@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%=
+    require('html-loader!/src/documentation/templates/partials/_head.html').default
+    %>
+  </head>
+  <body data-active-menu="34" class="dp-library">
+    <div class="dp-container">
+      <div class="dp-rowflex">
+        <div class="col-sm-12 m-t-24">
+          <header class="m-b-30">
+            <a
+              href="index.html"
+              class="dp-button button-medium secondary-green button--round"
+            >
+              Back
+            </a>
+          </header>
+        </div>
+      </div>
+    </div>
+
+    <header class="hero-banner">
+      <div class="dp-container">
+        <div class="dp-rowflex">
+          <div class="col-sm-12 col-md-12 col-lg-12">
+            <nav class="dp-breadcrumb">
+              <ul>
+                <li>
+                  <a href="#">Panel de Cotrol</a>
+                </li>
+                <li>Política de Contacto</li>
+              </ul>
+            </nav>
+            <h2>Política de Contacto</h2>
+          </div>
+          <div class="col-lg-7 col-md-7 col-sm-12">
+            <p>
+              Here you'll find all your Subscription Forms including the ones
+              that are in draft, published or with unpublished changes. You
+              currently have 39 Forms. You can create up to
+              <a href="#">HELP.</a>
+            </p>
+          </div>
+        </div>
+        <span class="arrow"></span>
+      </div>
+    </header>
+    <section class="dp-container">
+      <div class="dp-rowflex">
+        <div class="col-lg-6 col-md-12 col-sm-12 m-b-24">
+          <form class="dp-contact-policy-form">
+            <fieldset>
+              <legend>Política de contacto</legend>
+              <ul class="field-group">
+                <li class="field-item">
+                  <div class="dp-switch">
+                    <input
+                      type="checkbox"
+                      id="oneCheck"
+                      checked=""
+                      type="switch"
+                    />
+                    <label for="oneCheck">
+                      <span></span>
+                    </label>
+                  </div>
+                  <label for="switch"
+                    >Limitar la cantidad maxima de envios a un mismo
+                    Suscriptor</label
+                  >
+                </li>
+                <li class="field-item">
+                  <div class="dp-item-block">
+                    <div>
+                      <span>No enviar mas de </span>
+                      <input
+                        type="number"
+                        name="number"
+                        id="correos electrónicos"
+                        placeholder="999"
+                        disabled
+                      />
+                      <span class="m-r-6">emails</span>
+                    </div>
+
+                    <div>
+                      <span> en un período de</span>
+                      <input
+                        type="number"
+                        name="number"
+                        id="dias"
+                        placeholder="30"
+                        class="dp-error-input"
+                      />
+                      <span>días</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="field-item">
+                  <p class="p-heading">
+                    <strong
+                      >Excluir a los Suscriptores pertenecientes a las
+                      siguientes Listas</strong
+                    >
+                  </p>
+                  <p class="m-t-12 m-b-12">
+                    Todos los Suscriptores presentes en las Listas que agregues
+                    a continuación quedarán fuera de la política de contacto que
+                    has configurado previamente, es decir, que siempre recibirán
+                    las Campañas que les envíes. Recuerda que solo puedes
+                    excluir hasta 10 Listas.
+                  </p>
+                </li>
+                <li class="field-item">
+                  <ul class="dp-cloud-tags">
+                    <li>
+                      <span class="dp-tag dp-recently-add"
+                        >Ciencias Naturales<button
+                          type="button"
+                          class="dp-button dp-remove-tag"
+                        >
+                          <i class="ms-icon icon-close"></i></button
+                      ></span>
+                    </li>
+                    <li>
+                      <span class="dp-tag"
+                        >Economía<button
+                          type="button"
+                          class="dp-button dp-remove-tag"
+                        >
+                          <i class="ms-icon icon-close"></i></button
+                      ></span>
+                    </li>
+                    <li>
+                      <span class="dp-tag"
+                        >Ciencias Sociales<button
+                          type="button"
+                          class="dp-button dp-remove-tag"
+                        >
+                          <i class="ms-icon icon-close"></i></button
+                      ></span>
+                    </li>
+                    <li>
+                      <span class="dp-tag"
+                        >Ciencias Antro morfologícas<button
+                          type="button"
+                          class="dp-button dp-remove-tag"
+                        >
+                          <i class="ms-icon icon-close"></i></button
+                      ></span>
+                    </li>
+                    <li>
+                      <span class="dp-tag"
+                        >Teoría de Conjuntos<button
+                          type="button"
+                          class="dp-button dp-remove-tag"
+                        >
+                          <i class="ms-icon icon-close"></i></button
+                      ></span>
+                    </li>
+                    <li>
+                      <button
+                        type="button"
+                        class="dp-button dp-add-list"
+                        id="btn-exclude-list"
+                      >
+                        <span>+</span> Agregar Lista
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        type="button"
+                        class="dp-button dp-add-list"
+                        id="btn-exclude-nolist"
+                      >
+                        <span>+</span> No list
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        type="button"
+                        class="dp-button dp-add-list"
+                        id="btn-error-list"
+                      >
+                        <span>+</span> Error list
+                      </button>
+                    </li>
+                  </ul>
+                </li>
+                <li class="field-item">
+                  <ul class="dp-cloud-tags dp-overlay">
+                    <li>
+                      <span class="dp-tag"
+                        >Ciencias Naturales<button
+                          type="button"
+                          class="dp-button dp-remove-tag"
+                          disabled
+                        >
+                          <i class="ms-icon icon-close"></i></button
+                      ></span>
+                    </li>
+                    <li>
+                      <span class="dp-tag"
+                        >Economía<button
+                          type="button"
+                          class="dp-button dp-remove-tag"
+                          disabled
+                        >
+                          <i class="ms-icon icon-close"></i></button
+                      ></span>
+                    </li>
+                    <li>
+                      <span class="dp-tag"
+                        >Ciencias Sociales<button
+                          type="button"
+                          class="dp-button dp-remove-tag"
+                          disabled
+                        >
+                          <i class="ms-icon icon-close"></i></button
+                      ></span>
+                    </li>
+                    <li>
+                      <span class="dp-tag"
+                        >Ciencias Antro morfologícas<button
+                          type="button"
+                          class="dp-button dp-remove-tag"
+                          disabled
+                        >
+                          <i class="ms-icon icon-close"></i></button
+                      ></span>
+                    </li>
+                    <li>
+                      <span class="dp-tag"
+                        >Teoría de Conjuntos<button
+                          type="button"
+                          class="dp-button dp-remove-tag"
+                          disabled
+                        >
+                          <i class="ms-icon icon-close"></i></button
+                      ></span>
+                    </li>
+                    <li>
+                      <button
+                        type="button"
+                        class="dp-button dp-add-list"
+                        disabled
+                      >
+                        <span>+</span> Agregar Lista
+                      </button>
+                    </li>
+                  </ul>
+                </li>
+                <!-- mensaje de error -->
+                <li class="field-item">
+                  <div class="dp-wrap-message dp-wrap-cancel bounceIn">
+                    <span class="dp-message-icon"></span>
+                    <div class="dp-content-message">
+                      <p>
+                        Puedes configurar hasta
+                        <strong>999 Emails y 30 días</strong> como máximo.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!-- fin del mensaje -->
+                <!-- mensaje de warning -->
+                <li class="field-item">
+                  <div class="dp-wrap-message dp-wrap-warning bounceIn">
+                    <span class="dp-message-icon"></span>
+                    <div class="dp-content-message">
+                      <p>Ten cuidado.</p>
+                    </div>
+                  </div>
+                </li>
+                <!-- fin del mensaje -->
+                <!-- mensaje de info -->
+                <li class="field-item">
+                  <div class="dp-wrap-message dp-wrap-info bounceIn">
+                    <span class="dp-message-icon"></span>
+                    <div class="dp-content-message">
+                      <p>Mensaje informativo</p>
+                    </div>
+                  </div>
+                </li>
+                <!-- fin del mensaje -->
+                <!-- mensaje de confirmacion -->
+                <li class="field-item">
+                  <div class="dp-wrap-message dp-wrap-success bounceIn">
+                    <span class="dp-message-icon"></span>
+                    <div class="dp-content-message">
+                      <p>Cambios guardados con éxito.</p>
+                    </div>
+                  </div>
+                </li>
+                <!-- fin del mensaje -->
+                <li class="field-item"><hr /></li>
+                <li class="field-item">
+                  <button
+                    type="button"
+                    class="dp-button button-medium primary-grey"
+                  >
+                    Atras
+                  </button>
+                  <span class="align-button m-l-24">
+                    <button
+                      type="button"
+                      class="dp-button button-medium primary-green button--loading"
+                      disabled
+                    >
+                      Guardar
+                    </button>
+                  </span>
+                </li>
+              </ul>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- /build -->
+    <div class="modal" id="modal-exclude-list">
+      <div class="modal-content--large dp-modal-exclude-list">
+        <span class="close"></span>
+        <h2 class="modal-title">Excluir Listas de la Política de Contacto</h2>
+        <p>
+          Los Contactos de las Listas que excluyas recibirán todas tus Campañas.
+          <strong>Recuerda que puedes seleccionar hasta 10 Listas.</strong>
+        </p>
+
+        <div class="dp-wrap-message dp-wrap-info">
+          <span class="dp-message-icon"></span>
+          <div class="dp-content-message dp-content-full">
+            <p>
+              Ya has seleccionado el máximo de
+              <strong>10 listas.</strong> Desmarca alguna de las seleccionadas
+              para poder excluir otra.
+            </p>
+          </div>
+        </div>
+        <article class="dp-content-list">
+          <div class="dp-table-scroll-container">
+            <div class="dp-table-scroll">
+              <table
+                class="dp-c-table"
+                aria-label="Selección de listas a excluir de la regla"
+                summary="Selección de listas a excluir de la regla"
+              >
+                <thead>
+                  <tr>
+                    <th>
+                      <a href="#"
+                        ><img src="img/check-grey.svg" alt="check list"
+                      /></a>
+                    </th>
+                    <th>
+                      <a href="#"
+                        >Etiqueta <span class="ms-icon icon-AZ"></span
+                      ></a>
+                    </th>
+                    <th>
+                      <a href="#"
+                        >Nombre de la lista o segmento
+                        <span class="ms-icon icon-AZ"></span
+                      ></a>
+                    </th>
+                    <th>
+                      <a href="#"
+                        >Último envío <span class="ms-icon icon-AZ"></span
+                      ></a>
+                    </th>
+                    <th>
+                      <a href="#"
+                        >suscriptores <span class="ms-icon icon-AZ"></span
+                      ></a>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td aria-label="">
+                      <label class="dp-list-check dp-inputcheck-disabled">
+                        <input type="checkbox" name="" disabled />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label=""></td>
+                    <td aria-label=""><span>MercadoShops (Segmento)</span></td>
+                    <td aria-label="">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+                  <tr>
+                    <td aria-label="Email">
+                      <label class="dp-list-check">
+                        <input type="checkbox" name=" " />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label="Nombre">
+                      <span class="dp-event-label">Eventos</span>
+                    </td>
+                    <td aria-label="Apellido">
+                      <span>MercadoShops (Segmento)</span>
+                    </td>
+                    <td aria-label="Estado de Segmentos">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+                  <tr>
+                    <td aria-label="Email">
+                      <label class="dp-list-check dp-inputcheck-disabled">
+                        <input type="checkbox" name="" disabled />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label="Nombre"></td>
+                    <td aria-label="Apellido">
+                      <span>MercadoShops (Segmento)</span>
+                    </td>
+                    <td aria-label="Estado de Segmentos">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+                  <tr>
+                    <td aria-label="Email">
+                      <label class="dp-list-check dp-inputcheck-disabled">
+                        <input type="checkbox" name="" disabled />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label="Nombre"></td>
+                    <td aria-label="Apellido">
+                      <span>MercadoShops (Segmento)</span>
+                    </td>
+                    <td aria-label="Estado de Segmentos">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+                  <tr>
+                    <td aria-label="Email">
+                      <label class="dp-list-check dp-inputcheck-disabled">
+                        <input type="checkbox" name="" disabled />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label="Nombre"></td>
+                    <td aria-label="Apellido">
+                      <span>MercadoShops (Segmento)</span>
+                    </td>
+                    <td aria-label="Estado de Segmentos">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+                  <tr>
+                    <td aria-label="Email">
+                      <label class="dp-list-check">
+                        <input type="checkbox" name=" " />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label="Nombre"></td>
+                    <td aria-label="Apellido">
+                      <span>MercadoShops (Segmento)</span>
+                    </td>
+                    <td aria-label="Estado de Segmentos">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+                  <tr>
+                    <td aria-label="Email">
+                      <label class="dp-list-check">
+                        <input type="checkbox" name=" " />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label="Nombre">
+                      <span class="dp-event-label">Eventos</span>
+                    </td>
+                    <td aria-label="Apellido">
+                      <span>MercadoShops (Segmento)</span>
+                    </td>
+                    <td aria-label="Estado de Segmentos">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+                  <tr>
+                    <td aria-label="Email">
+                      <label class="dp-list-check">
+                        <input type="checkbox" name=" " />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label="Nombre"></td>
+                    <td aria-label="Apellido">
+                      <span>MercadoShops (Segmento)</span>
+                    </td>
+                    <td aria-label="Estado de Segmentos">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+                  <tr>
+                    <td aria-label="Email">
+                      <label class="dp-list-check">
+                        <input type="checkbox" name=" " />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label="Nombre"></td>
+                    <td aria-label="Apellido">
+                      <span>MercadoShops (Segmento)</span>
+                    </td>
+                    <td aria-label="Estado de Segmentos">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+                  <tr>
+                    <td aria-label="Email">
+                      <label class="dp-list-check">
+                        <input type="checkbox" name=" " />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label="Nombre"></td>
+                    <td aria-label="Apellido">
+                      <span>MercadoShops (Segmento)</span>
+                    </td>
+                    <td aria-label="Estado de Segmentos">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+
+                  <tr>
+                    <td aria-label="Email">
+                      <label class="dp-list-check">
+                        <input type="checkbox" name=" " />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label="Nombre">
+                      <span class="dp-event-label">Eventos</span>
+                    </td>
+                    <td aria-label="Apellido">
+                      <span>MercadoShops (Segmento)</span>
+                    </td>
+                    <td aria-label="Estado de Segmentos">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+
+                  <tr>
+                    <td aria-label="Email">
+                      <label class="dp-list-check">
+                        <input type="checkbox" name=" " />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label="Nombre"></td>
+                    <td aria-label="Apellido">
+                      <span>MercadoShops (Segmento)</span>
+                    </td>
+                    <td aria-label="Estado de Segmentos">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+                  <tr>
+                    <td aria-label="Email">
+                      <label class="dp-list-check">
+                        <input type="checkbox" name=" " />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label="Nombre"></td>
+                    <td aria-label="Apellido">
+                      <span>MercadoShops (Segmento)</span>
+                    </td>
+                    <td aria-label="Estado de Segmentos">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+                  <tr>
+                    <td aria-label="Email">
+                      <label class="dp-list-check">
+                        <input type="checkbox" name=" " />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label="Nombre"></td>
+                    <td aria-label="Apellido">
+                      <span>MercadoShops (Segmento)</span>
+                    </td>
+                    <td aria-label="Estado de Segmentos">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+                  <tr>
+                    <td aria-label="Email">
+                      <label class="dp-list-check">
+                        <input type="checkbox" name=" " />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label="Nombre"></td>
+                    <td aria-label="Apellido">
+                      <span>MercadoShops (Segmento)</span>
+                    </td>
+                    <td aria-label="Estado de Segmentos">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </article>
+        <div class="dp-cta-modal">
+          <button type="button" class="dp-button button-medium primary-grey">
+            Cancelar
+          </button>
+          <button type="button" class="dp-button button-medium primary-green">
+            Confirmar la Selección
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- modal -->
+    <div class="modal" id="modal-exclude-nolist">
+      <div class="modal-content--large dp-modal-nolist">
+        <span class="close"></span>
+        <div class="dp-container">
+          <div class="dp-rowflex">
+            <div class="col-sm-12">
+              <div class="dp-icon-modal"><img src="img/lists.svg" /></div>
+            </div>
+            <div class="col-sm-12">
+              <div class="dp-nolist-content">
+                <h1>¡Parece que no tienes listas creadas!</h1>
+                <p>
+                  Una Base de Datos es el pilar fundamental de toda estrategia
+                  de Email Marketing, comienza creando una lista, elige un
+                  nombre y selecciona la forma que prefieras para agregar
+                  Suscriptores.
+                </p>
+                <span class="dp-cta-paragraph"
+                  >¡Comienza a nutrir tu base contactos!</span
+                >
+                <hr />
+                <div class="dp-cta-modal">
+                  <button
+                    type="button"
+                    class="dp-button button-medium primary-grey"
+                  >
+                    Cancelar
+                  </button>
+                  <button
+                    type="button"
+                    class="dp-button button-medium primary-green"
+                  >
+                    Confirmar la Selección
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal -->
+    <div class="modal" id="modal-error-list">
+      <div class="modal-content--large dp-error-list">
+        <span class="close"></span>
+        <div class="dp-container">
+          <div class="dp-rowflex">
+            <div class="col-sm-12">
+              <div class="dp-nolist-content">
+                <h1>Excluir Listas de la Política de Contacto</h1>
+                <p>
+                  Los Contactos de las Listas que excluyas recibirán todas tus
+                  Campañas.<strong>
+                    Recuerda que puedes seleccionar hasta 10 Listas.</strong
+                  >
+                </p>
+                <div class="dp-wrap-message dp-wrap-cancel">
+                  <span class="dp-message-icon"></span>
+                  <div class="dp-content-message dp-content-full">
+                    <p>
+                      Error al mostrar las Listas. Cierra esta ventana y vuelve
+                      a abrirla desde el botón “Seleccionar Listas”.
+                    </p>
+                  </div>
+                </div>
+                <div class="dp-cta-modal">
+                  <button
+                    type="button"
+                    class="dp-button button-medium primary-grey"
+                  >
+                    Cancelar
+                  </button>
+                  <button
+                    type="button"
+                    class="dp-button button-medium primary-green"
+                  >
+                    Confirmar la Selección
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- container-kpi -->
+  </body>
+</html>
