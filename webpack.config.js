@@ -4,9 +4,6 @@ const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = function (env) {
   const config = commonConfig(env);
-  config.entry = {
-    main: "./src/index.js",
-  };
 
   config.output = {
     filename: "index.js",
@@ -31,7 +28,7 @@ module.exports = function (env) {
     new CopyPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, "src/doc/templates"),
+          from: path.resolve(__dirname, "src/documentation/js"),
           to: path.resolve(__dirname, "dist"),
         },
       ],

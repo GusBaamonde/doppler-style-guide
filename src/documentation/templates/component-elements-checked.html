@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%=
+    require('html-loader!/src/documentation/templates/partials/_head.html').default
+    %>
+  </head>
+  <body data-active-menu="42" class="dp-library">
+    <!-- Layers -->
+    <main role="main" class="dpsg-main-wrap">
+      <%=
+      require('html-loader!/src/documentation/templates/partials/_header.html').default
+      %>
+      <!-- header -->
+      <div class="dpsg-wrapper">
+        <%=
+        require('html-loader!/src/documentation/templates/partials/_navigation.html').default
+        %>
+        <div class="dpsg-content-wrap">
+          <article class="dpsg-content">
+            <h3>Elements checked</h3>
+
+            <hr class="dpsg-break" />
+
+            <div class="dp-container m-t-24 m-b-24">
+              <div class="dp-rowflex">
+                <div class="col-sm-8 col-md-3 m-b-12">
+                  <div class="dp-input--radio">
+                    <label>
+                      <input type="radio" name="radio" />
+                      <span>Radio button</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-8 col-md-3 m-b-12">
+                  <div class="dp-input--radio" checked>
+                    <label>
+                      <input type="radio" name="radio" checked />
+                      <span>Radio button checked</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-8 col-md-3 m-b-12">
+                  <div class="dp-input--radio">
+                    <label>
+                      <input type="radio" name="radio" disabled />
+                      <span>Radio button disabled</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-8 col-md-3 m-b-12">
+                  <div class="dp-input--radio">
+                    <label>
+                      <input type="radio" name="radio" disabled checked />
+                      <span>Radio button disabled checked</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dp-container m-t-24 m-b-24">
+              <div class="dp-rowflex">
+                <div class="col-sm-8 col-md-3 m-b-12">
+                  <input name="" type="checkbox" id="" value="true" /><span
+                    class="checkmark"
+                  ></span>
+                  <label for="" class="p-l-12"> Contenido alternativo</label>
+                  <div class="dp-message dp-error-form">
+                    <p>¡Ouch! Este campo está vacío</p>
+                  </div>
+                </div>
+                <div class="col-sm-8 col-md-3 m-b-12">
+                  <input
+                    name=""
+                    type="checkbox"
+                    id=""
+                    value="true"
+                    checked
+                  /><span class="checkmark"></span>
+                  <label for="" class="p-l-12"> Contenido alternativo</label>
+                  <div class="dp-message dp-error-form">
+                    <p>¡Ouch! Este campo está vacío</p>
+                  </div>
+                </div>
+                <div class="col-sm-8 col-md-3 m-b-12">
+                  <input
+                    name=""
+                    type="checkbox"
+                    id=""
+                    value="true"
+                    disabled
+                  /><span class="checkmark"></span>
+                  <label for="" class="p-l-12"> Contenido alternativo</label>
+                  <div class="dp-message dp-error-form">
+                    <p>¡Ouch! Este campo está vacío</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <%=
+      require('html-loader!/src/documentation/templates/partials/_footer.html').default
+      %>
+    </main>
+  </body>
+</html>

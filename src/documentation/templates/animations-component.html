@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%=
+    require('html-loader!/src/documentation/templates/partials/_head.html').default
+    %>
+  </head>
+  <body data-active-menu="11" class="dp-library">
+    <!-- Layers -->
+    <main role="main" class="dpsg-main-wrap">
+      <%=
+      require('html-loader!/src/documentation/templates/partials/_header.html').default
+      %>
+      <!-- header -->
+      <div class="dpsg-wrapper">
+        <%=
+        require('html-loader!/src/documentation/templates/partials/_navigation.html').default
+        %>
+        <div class="dpsg-content-wrap">
+          <article class="dpsg-content">
+            <h3>Animaciones</h3>
+            <p>No tenemos animaciones disponibles por el momento.</p>
+          </article>
+        </div>
+      </div>
+      <%=
+      require('html-loader!/src/documentation/templates/partials/_footer.html').default
+      %>
+    </main>
+  </body>
+</html>
