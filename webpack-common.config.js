@@ -48,7 +48,7 @@ const generateHtmlPlugins = (templateDir) => {
       const parts = item.split(".");
       const [name, extension] = parts;
       return new HtmlWebpackPlugin({
-        filename: `${name}.html`,
+        filename: `documentation/${name}.html`,
         template: path.resolve(
           __dirname,
           `${templateDir}/${name}.${extension}`
