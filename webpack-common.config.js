@@ -59,7 +59,10 @@ const generateHtmlPlugins = (templateDir) => {
 
 module.exports = function (env) {
   Dotenv.config({
-    path: "./.env." + env.NODE_ENV ? env.NODE_ENV : "development",
+    path: path.resolve(
+      __dirname,
+      `./.env.${env.NODE_ENV ? env.NODE_ENV : "development"}`
+    ),
   });
   return {
     entry: {
