@@ -82,7 +82,17 @@ module.exports = function (env) {
       }),
     ],
     module: {
-      rules: [rulesStyles],
+      rules: [
+        rulesStyles,
+        {
+          test: /_head.html$/,
+          loader: "string-replace-loader",
+          options: {
+            search: "%PUBLIC_URL%",
+            replace: process.env.PUBLIC_URL,
+          },
+        },
+      ],
     },
   };
 };
