@@ -48,7 +48,7 @@ const generateHtmlPlugins = (templateDir) => {
       const parts = item.split(".");
       const [name, extension] = parts;
       return new HtmlWebpackPlugin({
-        filename: `${name}.html`,
+        filename: `documentation/${name}.html`,
         template: path.resolve(
           __dirname,
           `${templateDir}/${name}.${extension}`
@@ -59,7 +59,10 @@ const generateHtmlPlugins = (templateDir) => {
 
 module.exports = function (env) {
   Dotenv.config({
-    path: "./.env." + env.NODE_ENV ? env.NODE_ENV : "development",
+    path: path.resolve(
+      __dirname,
+      `./.env.${env.NODE_ENV ? env.NODE_ENV : "development"}`
+    ),
   });
   return {
     entry: {
@@ -79,7 +82,17 @@ module.exports = function (env) {
       }),
     ],
     module: {
-      rules: [rulesStyles],
+      rules: [
+        rulesStyles,
+        {
+          test: /_head.html$/,
+          loader: "string-replace-loader",
+          options: {
+            search: "%PUBLIC_URL%",
+            replace: process.env.PUBLIC_URL,
+          },
+        },
+      ],
     },
   };
 };

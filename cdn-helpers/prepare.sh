@@ -179,6 +179,7 @@ cp -R "${build}/static/." "${ready}/static"
 cp "${build}/asset-manifest.json" "${ready}/asset-manifest-${canonicalTag}.json"
 
 sed -r -i "s/^\\{/\\{\\n  \"canonicalVersion\": \"${canonicalTag}\",/g" "${ready}/asset-manifest-${canonicalTag}.json"
+find . -regex ".*html$" -exec sed -i "s/asset-manifest.json/asset-manifest-${canonicalTag}.json/g" {} +
 
 if [ -n "${version}" ]
 then
@@ -186,9 +187,13 @@ then
   cp "${ready}/asset-manifest-${canonicalTag}.json" "${ready}/asset-manifest-${versionMayorMinor}.json"
   cp "${ready}/asset-manifest-${canonicalTag}.json" "${ready}/asset-manifest-${versionMayorMinorPatch}.json"
   cp "${ready}/asset-manifest-${canonicalTag}.json" "${ready}/asset-manifest-${versionMayorMinorPatchPre}.json"
+  mkdir "${ready}/documentation/${versionMayor}" -p
+  cp -R "${build}/documentation/." "${ready}/documentation/${versionMayor}"
 fi
 
 if [ -n "${name}" ]
 then
   cp "${ready}/asset-manifest-${canonicalTag}.json" "${ready}/asset-manifest-${name}.json"
+  mkdir "${ready}/documentation/${name}" -p
+  cp -R "${build}/documentation/." "${ready}/documentation/${name}"
 fi
