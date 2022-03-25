@@ -9,7 +9,7 @@ module.exports = function (env) {
     filename: "static/[name].[contenthash].js",
     assetModuleFilename: "static/media/[hash][ext][query]",
     path: path.resolve(__dirname, "build"),
-    publicPath: "",
+    publicPath: "auto",
     clean: true,
   };
 

@@ -9,7 +9,7 @@ module.exports = function (env) {
     filename: "index.js",
     assetModuleFilename: "static/media/[hash][ext][query]",
     path: path.resolve(__dirname, "dist"),
-    publicPath: "",
+    publicPath: "auto",
     clean: true,
   };
 
