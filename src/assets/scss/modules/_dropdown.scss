@@ -116,8 +116,8 @@
           background-color: colors.$dp-color-snow;
         }
 
-        a[role="menuitem"],
-        button[role="menuitem"] {
+        a,
+        button {
           cursor: pointer;
           color: colors.$dp-color-grey;
           width: 100%;
