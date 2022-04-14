@@ -52,7 +52,6 @@
     .dp-content-menu {
       position: absolute;
       display: none;
-      top: 40px;
       text-align: left;
       line-height: variables.$dp-spaces--lv4;
       overflow: hidden;
@@ -70,8 +69,8 @@
       margin: variables.$dp-spaces--lv0;
       padding: variables.$dp-spaces--lv0;
       overflow: auto;
-      width: 200px;
-      height: 150px;
+      width: 100%;
+      max-height: 225px;
 
       /* Tamaño del scroll */
       &::-webkit-scrollbar {
@@ -108,7 +107,6 @@
 
       li {
         display: block;
-        padding: 6px;
         font-weight: 300;
         margin-right: 0;
 
@@ -121,10 +119,16 @@
           cursor: pointer;
           color: colors.$dp-color-grey;
           width: 100%;
+          font-size: variables.$dp-sizing--lvl2;
           display: block;
           text-align: left;
           text-decoration: none;
-          padding: 5px;
+          padding: 10px 20px;
+
+          &:focus {
+            background-color: colors.$dp-color-snow;
+            outline: none;
+          }
         }
       }
     }
