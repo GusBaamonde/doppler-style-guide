@@ -214,7 +214,7 @@
     &.dp-button-exit {
       border: 1px solid colors.$dp-color-silver;
       border-radius: variables.$dp-border-radius;
-      font-size: variables.$dp-sizing--lvl3;
+      font-size: variables.$dp-sizing--lvl2;
       background-color: colors.$dp-color-white;
       display: flex;
       justify-content: center;
@@ -228,18 +228,32 @@
       position: relative;
       right: 3px;
       top: 0px;
-      padding: 12px 18px;
+      padding: 14px 30px 13px 22px;
 
       &:hover,
       &:active {
         background: colors.$dp-color-white;
       }
 
-      &:focus,
-      &.active {
+      &:focus {
         box-shadow: inset 0 0 0 2px colors.$dp-color-orange-focus,
           inset 0 0 0 3px colors.$dp-color-white;
+      }
+
+      &.active {
         background: colors.$dp-color-white;
+      }
+
+      .dp-dropdown-arrow {
+        border-style: solid;
+        height: 0;
+        width: 0;
+        border-width: 6px 5px 0 5px;
+        border-color: #999 transparent transparent transparent;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
       }
     }
   }
