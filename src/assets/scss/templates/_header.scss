@@ -1,16 +1,15 @@
-////
 /// This is a poster comment.
 /// It will apply annotations to all items from file.
 /// @access private
 /// @group Templates
 /// @author Gustavo Baamonde
 /// Classes for Header
-////
 
 @use "helpers/colors";
 @use "core/variables" as var;
 @use "core/settings";
 @use "utilities/ellipsis";
+@use "modules/breakpoints";
 
 .dp-library {
   .header-main {
@@ -457,102 +456,120 @@
     display: none;
   }
 
+  /* New breakpoints*/
+  @mixin media-breakpoint($breakpoint) {
+    @if map-has-key(settings.$dp-breakpoints, $breakpoint) {
+      @media screen and(map-get(settings.$dp-breakpoints, $breakpoint)) {
+        @content;
+      }
+    } @else {
+      @error "Breakpoint does not exist";
+    }
+  }
+
   // TODO: fix the media-breakpoint block
-  //@include media-breakpoint("desktop") {
-  //  .header-main.header-open.dp-header--cm {
-  //    min-height: 70px;
-  //
-  //    .header-wrapper {
-  //      justify-content: flex-end;
-  //    }
-  //  }
-  //
-  //  .dp-header--cm .dp-logo--cm {
-  //    position: absolute;
-  //    margin: var.$dp-spaces--lv2 var.$dp-spaces--lv0 var.$dp-spaces--lv2 var.$dp-spaces--lv8;
-  //  }
-  //
-  //  .header-main.header-open {
-  //    min-height: 70px;
-  //  }
-  //
-  //  .header-main.open {
-  //    .nav-left-main {
-  //      width: 303px;
-  //    }
-  //
-  //    .nav-right-main .icon-close {
-  //      display: flex;
-  //    }
-  //
-  //    .nav-right-main .icon-menu {
-  //      display: none;
-  //    }
-  //  }
-  //
-  //  .desktop-hd-hidden {
-  //    display: flex;
-  //    align-items: center;
-  //    padding: var.$dp-spaces--lv1;
-  //  }
-  //
-  //  .nav-left-main {
-  //    position: absolute;
-  //    right: 0;
-  //    width: 0;
-  //    top: 75px;
-  //    height: calc(100vh - 65px);
-  //    background: colors.$dp-color-white;
-  //    border-left: 1px solid colors.$dp-color-ghostwhite;
-  //    transition: all 0.6s ease;
-  //  }
-  //
-  //  .nav-right-main {
-  //    .icon-close,
-  //    .icon-menu {
-  //      font-size: var.$dp-sizing--lvl2-14;
-  //      width: 30px;
-  //      cursor: pointer;
-  //      color: colors.$dp-color-grey;
-  //    }
-  //
-  //    .icon-close {
-  //      display: none;
-  //    }
-  //  }
-  //
-  //  .menu-main--container {
-  //    overflow: auto;
-  //    height: 100%;
-  //  }
-  //
-  //  .menu-main {
-  //    display: flex;
-  //    width: 300px;
-  //    flex-wrap: wrap;
-  //    z-index: 100;
-  //    margin: 0;
-  //    flex-direction: column;
-  //
-  //    li {
-  //      border-bottom: 1px solid colors.$dp-color-ghostwhite;
-  //      margin-right: 0;
-  //      padding-left: var.$dp-spaces--lv2;
-  //    }
-  //  }
-  //
-  //  .sub-menu {
-  //    display: flex;
-  //    flex-wrap: wrap;
-  //    position: relative;
-  //    top: 0;
-  //
-  //    li {
-  //      width: 100%;
-  //      border: none;
-  //    }
-  //  }
-  //}
+  @include media-breakpoint("desktop") {
+    .header-main.header-open.dp-header--cm {
+      min-height: 70px;
+
+      .header-wrapper {
+        justify-content: flex-end;
+      }
+    }
+
+    .dp-header--cm .dp-logo--cm {
+      position: absolute;
+      margin: var.$dp-spaces--lv2 var.$dp-spaces--lv0 var.$dp-spaces--lv2
+        var.$dp-spaces--lv8;
+    }
+
+    .header-main.header-open {
+      min-height: 70px;
+    }
+
+    .header-main.open {
+      .nav-left-main {
+        width: 303px;
+      }
+
+      .nav-right-main .icon-close {
+        display: flex;
+      }
+
+      .nav-right-main .icon-menu {
+        display: none;
+      }
+    }
+
+    .desktop-hd-hidden {
+      display: flex;
+      align-items: center;
+      padding: var.$dp-spaces--lv1;
+    }
+
+    .nav-left-main {
+      position: absolute;
+      right: 0;
+      width: 0;
+      top: 75px;
+      height: calc(100vh - 65px);
+      background: colors.$dp-color-white;
+      border-left: 1px solid colors.$dp-color-ghostwhite;
+      transition: all 0.6s ease;
+    }
+
+    .nav-right-main {
+      .icon-close,
+      .icon-menu {
+        font-size: var.$dp-sizing--lvl2-14;
+        width: 30px;
+        cursor: pointer;
+        color: colors.$dp-color-grey;
+      }
+
+      .icon-close {
+        display: none;
+      }
+    }
+
+    .menu-main--container {
+      overflow: auto;
+      height: 100%;
+    }
+
+    .menu-main {
+      display: flex;
+      width: 300px;
+      flex-wrap: wrap;
+      z-index: 100;
+      margin: 0;
+      flex-direction: column;
+
+      li {
+        border-bottom: 1px solid colors.$dp-color-ghostwhite;
+        margin-right: 0;
+        padding-left: var.$dp-spaces--lv2;
+      }
+    }
+
+    .sub-menu {
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      top: 0;
+
+      li {
+        width: 100%;
+        border: none;
+      }
+    }
+
+    @media (max-width: 1000px) {
+      .header-main.header-open.sticky {
+        min-height: auto;
+      }
+    }
+  }
 
   .messages-container {
     &.sticky {

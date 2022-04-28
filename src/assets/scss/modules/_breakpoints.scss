@@ -127,6 +127,7 @@
     }
   }
 }
+
 /* New breakpoints*/
 @mixin media-breakpoint($breakpoint) {
   @if map-has-key(settings.$dp-breakpoints, $breakpoint) {
