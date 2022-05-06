@@ -1,13 +1,13 @@
 import $ from "jquery";
 import "./MenuItemLinks";
 import "./PopupMenuLinks";
-import "./dropdown";
+import { Menubutton } from "./dropdown";
 
 $("body")
   .on(
     {
       mouseenter: function () {
-        var submenu = $(this).find(".sub-menu");
+        const submenu = $(this).find(".sub-menu");
 
         if (!$(this).hasClass("submenu-item")) {
           $(".header-main").removeClass("header-open");
@@ -237,17 +237,19 @@ $(() => {
 });
 
 // for all functions use dopplerUI namespace
-var dopplerUI = dopplerUI || {};
-dopplerUI.createDoubleSlide = function (element1, element2) {
+if (!window.dopplerUI) {
+  window.dopplerUI = {};
+}
+window.dopplerUI.createDoubleSlide = function (element1, element2) {
   $(element1).on("input", function () {
-    var label = $(this).attr("data-label");
-    var maxThumb = $(this).parent().find(".thumb-2")[0];
+    const label = $(this).attr("data-label");
+    const maxThumb = $(this).parent().find(".thumb-2")[0];
     this.value = Math.min(this.value, maxThumb.value - 2);
-    var totalSteps = parseInt(this.max) - parseInt(this.min);
-    var percent =
+    const totalSteps = parseInt(this.max) - parseInt(this.min);
+    const percent =
       (100 / totalSteps) * parseInt(this.value) -
       (100 / totalSteps) * parseInt(this.min);
-    var $container = $(this).parent();
+    const $container = $(this).parent();
     $container.find("div[inverse-left]").css("width", percent + "%");
     $container
       .find("div[range]:first,div[sign-one],span[thumb]:first")
@@ -256,14 +258,14 @@ dopplerUI.createDoubleSlide = function (element1, element2) {
   });
 
   $(element2).on("input", function () {
-    var label = $(this).attr("data-label");
-    var minThumb = $(this).parent().find(".thumb-1")[0];
+    const label = $(this).attr("data-label");
+    const minThumb = $(this).parent().find(".thumb-1")[0];
     this.value = Math.max(this.value, minThumb.value - -2);
-    var totalSteps = parseInt(this.max) - parseInt(this.min);
-    var percent =
+    const totalSteps = parseInt(this.max) - parseInt(this.min);
+    const percent =
       (100 / totalSteps) * parseInt(this.value) -
       (100 / totalSteps) * parseInt(this.min);
-    var $container = $(this).parent();
+    const $container = $(this).parent();
     $container.find("div[inverse-right]").css("width", 100 - percent + "%");
     $container.find("div[range]:last").css("right", 100 - percent + "%");
     $container
@@ -272,3 +274,4 @@ dopplerUI.createDoubleSlide = function (element1, element2) {
     $container.find("div[sign-two] span").text(this.value + label);
   });
 };
+window.Menubutton = Menubutton;
