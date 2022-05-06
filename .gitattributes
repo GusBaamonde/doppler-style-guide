@@ -10,6 +10,9 @@
 *.jpg   binary
 *.png   binary
 *.gif   binary
+*.eot   binary
+*.ttf   binary
+*.woff  binary
 
 # JS generated files
 yarn.lock linguist-generated=true
