@@ -52,161 +52,188 @@ $("body")
   });
 
 $(document).on("mouseup", function (e) {
-  var menu = $(".user-menu");
+  const menu = $(".user-menu");
   if (!menu.is(e.target) && menu.has(e.target).length === 0) {
     menu.removeClass("open");
   }
 });
 
-// modals
-var $delayFade = 500;
-//Initialize all modals hidden
-$(".modal").hide();
-$("#btn-exclude-list").click(function () {
-  $("#modal-exclude-list").fadeIn($delayFade);
-});
-$("#btn-exclude-nolist").click(function () {
-  $("#modal-exclude-nolist").fadeIn($delayFade);
-});
-$("#btn-error-list").click(function () {
-  $("#modal-error-list").fadeIn($delayFade);
-});
-$("#btn-modal-large").click(function () {
-  $("#modal-large").fadeIn($delayFade);
-});
-$("#btn-modal-medium").click(function () {
-  $("#modal-medium").fadeIn($delayFade);
-});
-$("#btn-modal-small").click(function () {
-  $("#modal-small").fadeIn($delayFade);
-});
-$(".modal .close").click(function () {
-  $(".modal").fadeOut();
-});
+$(() => {
+  // modals
+  const $delayFade = 500;
+  //Initialize all modals hidden
+  $(".modal").hide();
+  $("#btn-exclude-list").click(function () {
+    $("#modal-exclude-list").fadeIn($delayFade);
+  });
+  $("#btn-exclude-nolist").click(function () {
+    $("#modal-exclude-nolist").fadeIn($delayFade);
+  });
+  $("#btn-error-list").click(function () {
+    $("#modal-error-list").fadeIn($delayFade);
+  });
+  $("#btn-modal-large").click(function () {
+    $("#modal-large").fadeIn($delayFade);
+  });
+  $("#btn-modal-medium").click(function () {
+    $("#modal-medium").fadeIn($delayFade);
+  });
+  $("#btn-modal-small").click(function () {
+    $("#modal-small").fadeIn($delayFade);
+  });
+  $(".modal .close").click(function () {
+    $(".modal").fadeOut();
+  });
 
-// This script is ONLY to DEMONSTRATE how to show and hide password, not use in production
-$(".show-hide").click(function () {
-  $(this).toggleClass("ms-icon icon-hide");
-  var input = $($(this).attr("toggle"));
+  // This script is ONLY to DEMONSTRATE how to show and hide password, not use in production
+  $(".show-hide").click(function () {
+    $(this).toggleClass("ms-icon icon-hide");
+    const input = $($(this).attr("toggle"));
 
-  if (input.attr("type") == "password") {
-    input.attr("type", "text");
-    $("span.content-eye").text("Ocultar");
-    $(this).removeClass("ms-icon icon-view").addClass("ms-icon icon-hide");
-  } else {
-    input.attr("type", "password");
-    $("span.content-eye").text("Mostrar");
-    $(this).removeClass("ms-icon icon-hide").addClass("ms-icon icon-view");
-  }
-});
+    if (input.attr("type") === "password") {
+      input.attr("type", "text");
+      $("span.content-eye").text("Ocultar");
+      $(this).removeClass("ms-icon icon-view").addClass("ms-icon icon-hide");
+    } else {
+      input.attr("type", "password");
+      $("span.content-eye").text("Mostrar");
+      $(this).removeClass("ms-icon icon-hide").addClass("ms-icon icon-view");
+    }
+  });
 
-$(".dp-number-campaign").each(function () {
-  $(this)
-    .prop("Counter", 0)
-    .animate(
-      {
-        Counter: $(this).text(),
-      },
-      {
-        duration: 3500,
-        easing: "swing",
-        step: function (now) {
-          $(this).text(Math.ceil(now).toFixed(1));
+  $(".dp-number-campaign").each(function () {
+    $(this)
+      .prop("Counter", 0)
+      .animate(
+        {
+          Counter: $(this).text(),
         },
-      }
-    );
-});
+        {
+          duration: 3500,
+          easing: "swing",
+          step: function (now) {
+            $(this).text(Math.ceil(now).toFixed(1));
+          },
+        }
+      );
+  });
 
-// module tabs
-$(".tab--item a").each(function (index) {
-  $(this).on("click", function (e) {
+  // module tabs
+  $(".tab--item a").each(function (index) {
+    $(this).on("click", function (e) {
+      e.preventDefault();
+      const $index = index + 1;
+      $(".tab--item a, .tab--content").removeClass("active");
+      $(this).closest(".nav-tabs").attr("data-tab-active", $index);
+      $(this).addClass("active");
+      $(".tab--content:nth-child(" + $index + ")").addClass("active");
+      $(".tab--content .dp-plan-detail").slideUp();
+    });
+  });
+
+  // Doppler plus - Plans details
+  $(".dp-compare-details-plans").on("click", function (e) {
     e.preventDefault();
-    var $index = index + 1;
-    $(".tab--item a, .tab--content").removeClass("active");
-    $(this).closest(".nav-tabs").attr("data-tab-active", $index);
-    $(this).addClass("active");
-    $(".tab--content:nth-child(" + $index + ")").addClass("active");
-    $(".tab--content .dp-plan-detail").slideUp();
+    $(this).toggleClass("dp-open-compare");
+    $(".dp-plan-detail").slideToggle();
+  });
+
+  // Slider sample one
+  $(".progress-bar").each(function (index) {
+    const $max = $(this).find(".range-slider").attr("max");
+    $(this)
+      .find(".range-slider")
+      .on("change input", function () {
+        const $quote = $(this).val(),
+          $progress = ($quote * 100) / $max,
+          $parent = $(this).parent();
+
+        $parent.find(".progress-anchor").css("width", $progress + "%");
+        $(this).attr("data-value", this.value);
+      })
+      .trigger("change");
+  });
+
+  /* nested table | expand results */
+  $(".dp-expand-results").on("click", function (e) {
+    e.preventDefault();
+    $(this).toggleClass("dp-open-results");
+    $(this).closest("tr").next().toggleClass("show");
+  });
+
+  // Tips
+  $(".dp-show-tips").on("click", function () {
+    $(this).closest(".field-item").next(".dp-advice").slideToggle();
+
+    var $showPanelLink = $(this).find(".dp-show-text");
+    if ($(this).find(".icon-close").hasClass("rotation")) {
+      $showPanelLink.html($(this).attr("data-text-hide"));
+    } else {
+      $showPanelLink.html($(this).attr("data-text-show"));
+    }
+    $(this).find(".icon-close").toggleClass("rotation");
+  });
+  // Carousel
+  $(".dp-carousel-dot").change(function () {
+    var slideId = $(this).val();
+    var carrousel = $(this).closest(".dp-carousel").prop("id");
+    $("#" + carrousel + " .dp-carousel-slide").removeClass("active");
+    $(
+      "#" + carrousel + " .dp-carousel-slide[data-order=" + slideId + "]"
+    ).addClass("active");
   });
 });
 
-// Doppler plus - Plans details
-$(".dp-compare-details-plans").on("click", function (e) {
-  e.preventDefault();
-  $(this).toggleClass("dp-open-compare");
-  $(".dp-plan-detail").slideToggle();
-});
-
-// Slider sample one
-$(".progress-bar").each(function (index) {
-  $max = $(this).find(".range-slider").attr("max");
-  $(this)
-    .find(".range-slider")
-    .on("change input", function () {
-      var $quote = $(this).val(),
-        $progress = ($quote * 100) / $max,
-        $parent = $(this).parent();
-
-      $parent.find(".progress-anchor").css("width", $progress + "%");
-      $(this).attr("data-value", this.value);
-    })
-    .trigger("change");
-});
-
 // Content | Custom field | emojis
-$(".dp-bd-box .dp-button-bd").on("click", function () {
-  $(".dp-content-bd").hide();
-  $(".dp-button-bd").removeClass("active");
-  $(this).addClass("active");
-  $(this).parent().find(".dp-content-bd").show();
-});
-
-$(document).on("click", function (e) {
-  var container = $(".dp-content-bd"),
-    button = $(".dp-button-bd");
-
-  if (
-    !$(".dp-content-bd").is(e.target) &&
-    $(".dp-content-bd").has(e.target).length === 0 &&
-    !$(".dp-button-bd").is(e.target) &&
-    $(".dp-button-bd").has(e.target).length === 0
-  ) {
-    container.hide();
+$(() => {
+  $(".dp-bd-box .dp-button-bd").on("click", function () {
+    $(".dp-content-bd").hide();
     $(".dp-button-bd").removeClass("active");
-  }
+    $(this).addClass("active");
+    $(this).parent().find(".dp-content-bd").show();
+  });
+
+  $(document).on("click", function (e) {
+    const $contentBd = $(".dp-content-bd");
+    const buttonBd = $(".dp-button-bd");
+
+    if (
+      !$contentBd.is(e.target) &&
+      $contentBd.has(e.target).length === 0 &&
+      !buttonBd.is(e.target) &&
+      buttonBd.has(e.target).length === 0
+    ) {
+      $contentBd.hide();
+      buttonBd.removeClass("active");
+    }
+  });
 });
 
 // Button Exit editor
-$(".dp-button-box .dp-button-exit").on("click", function () {
-  $(this).toggleClass("active");
-  if ($(this).hasClass("active")) {
-    $(this).parent().find(".dp-content-menu").show();
-  } else {
-    $(this).parent().find(".dp-content-menu").hide();
-  }
-});
+$(() => {
+  $(".dp-button-box .dp-button-exit").on("click", function () {
+    $(this).toggleClass("active");
+    if ($(this).hasClass("active")) {
+      $(this).parent().find(".dp-content-menu").show();
+    } else {
+      $(this).parent().find(".dp-content-menu").hide();
+    }
+  });
 
-$(document).on("click", function (e) {
-  var container = $(".dp-content-menu"),
-    button = $(".dp-button-exit");
+  $(document).on("click", function (e) {
+    const $contentMenu = $(".dp-content-menu");
+    const $buttonExit = $(".dp-button-exit");
 
-  if (
-    !$(".dp-content-menu").is(e.target) &&
-    $(".dp-content-menu").has(e.target).length === 0 &&
-    !$(".dp-button-exit").is(e.target) &&
-    $(".dp-button-exit").has(e.target).length === 0
-  ) {
-    container.hide();
-    $(".dp-button-exit").removeClass("active");
-  }
-});
-
-/* nested table | expand results */
-
-$(".dp-expand-results").on("click", function (e) {
-  e.preventDefault();
-  $(this).toggleClass("dp-open-results");
-  $(this).closest("tr").next().toggleClass("show");
+    if (
+      !$contentMenu.is(e.target) &&
+      $contentMenu.has(e.target).length === 0 &&
+      !$buttonExit.is(e.target) &&
+      $buttonExit.has(e.target).length === 0
+    ) {
+      $contentMenu.hide();
+      $buttonExit.removeClass("active");
+    }
+  });
 });
 
 // for all functions use dopplerUI namespace
