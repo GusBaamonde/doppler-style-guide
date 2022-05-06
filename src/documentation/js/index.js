@@ -3,48 +3,53 @@ import "./MenuItemLinks";
 import "./PopupMenuLinks";
 import "./dropdown";
 
-$("body").on(
-  {
-    mouseenter: function () {
-      var submenu = $(this).find(".sub-menu");
+$("body")
+  .on(
+    {
+      mouseenter: function () {
+        var submenu = $(this).find(".sub-menu");
 
-      if (!$(this).hasClass("submenu-item")) {
-        $(".header-main").removeClass("header-open");
-      }
+        if (!$(this).hasClass("submenu-item")) {
+          $(".header-main").removeClass("header-open");
+        }
 
-      if (submenu[0] && submenu[0].children.length) {
-        $(".header-main").addClass("header-open");
-      } else {
-        $(".sub-menu.open").removeClass("open");
-      }
+        if (submenu[0] && submenu[0].children.length) {
+          $(".header-main").addClass("header-open");
+        } else {
+          $(".sub-menu.open").removeClass("open");
+        }
+      },
+      mouseleave: function () {
+        if ($(".header-main .submenu-item > a.active").length > 0) {
+          $(".header-main").addClass("header-open");
+          $(".header-main .submenu-item > a.active + .sub-menu").addClass(
+            "open"
+          );
+        } else {
+          $(".header-main").removeClass("header-open");
+        }
+      },
     },
-    mouseleave: function () {
-      if ($(".header-main .submenu-item > a.active").length > 0) {
-        $(".header-main").addClass("header-open");
-        $(".header-main .submenu-item > a.active + .sub-menu").addClass("open");
-      } else {
-        $(".header-main").removeClass("header-open");
-      }
-    },
-  },
-  ".menu-main>li"
-);
-
-$("body").on("click", ".user-menu--open", function () {
-  $(this).parent().find(".user-menu").toggleClass("open");
-});
-
-$("body").on("click", "#open-menu", function () {
-  $(".header-main").addClass("open");
-});
-
-$("body").on("click", "#close-menu", function () {
-  $(".header-main").removeClass("open");
-});
-
-$("body").on("click", ".close-user--menu", function () {
-  $(".user-menu").removeClass("open");
-});
+    ".menu-main>li"
+  )
+  .on("click", ".user-menu--open", function () {
+    $(this).parent().find(".user-menu").toggleClass("open");
+  })
+  .on("click", "#open-menu", function () {
+    $(".header-main").addClass("open");
+  })
+  .on("click", "#close-menu", function () {
+    $(".header-main").removeClass("open");
+  })
+  .on("click", ".close-user--menu", function () {
+    $(".user-menu").removeClass("open");
+  })
+  // module accordion
+  .on("click", ".dp-accordion .dp-accordion-thumb", function (e) {
+    e.preventDefault();
+    $(this).parent().toggleClass("active");
+    $(this).parent().find(".dp-accordion-panel").slideToggle();
+  });
 
 $(document).on("mouseup", function (e) {
   var menu = $(".user-menu");
@@ -123,13 +128,6 @@ $(".tab--item a").each(function (index) {
     $(".tab--content:nth-child(" + $index + ")").addClass("active");
     $(".tab--content .dp-plan-detail").slideUp();
   });
-});
-
-// module accordion
-$("body").on("click", ".dp-accordion .dp-accordion-thumb", function (e) {
-  e.preventDefault();
-  $(this).parent().toggleClass("active");
-  $(this).parent().find(".dp-accordion-panel").slideToggle();
 });
 
 // Doppler plus - Plans details
@@ -247,27 +245,3 @@ dopplerUI.createDoubleSlide = function (element1, element2) {
     $container.find("div[sign-two] span").text(this.value + label);
   });
 };
-
-$(".dp-show-tips").on("click", function () {
-  $(this).closest(".field-item").next(".dp-advice").slideToggle();
-
-  var $showPanelLink = $(this).find(".dp-show-text");
-  if ($(this).find(".icon-close").hasClass("rotation")) {
-    $showPanelLink.html($(this).attr("data-text-hide"));
-  } else {
-    $showPanelLink.html($(this).attr("data-text-show"));
-  }
-  $(this).find(".icon-close").toggleClass("rotation");
-});
-
-// Carousel
-$(document).ready(function () {
-  $(".dp-carousel-dot").change(function () {
-    var slideId = $(this).val();
-    var carrousel = $(this).closest(".dp-carousel").prop("id");
-    $("#" + carrousel + " .dp-carousel-slide").removeClass("active");
-    $(
-      "#" + carrousel + " .dp-carousel-slide[data-order=" + slideId + "]"
-    ).addClass("active");
-  });
-});
