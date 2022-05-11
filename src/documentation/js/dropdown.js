@@ -28,7 +28,7 @@
  *       requisite metadata, e.g. role="menuitem".
  *
  */
-var Menubutton = function (domNode) {
+export const Menubutton = function (domNode) {
   this.domNode = domNode;
   this.popupMenu = false;
 
