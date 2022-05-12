@@ -2,6 +2,8 @@ import $ from "jquery";
 import "./MenuItemLinks";
 import "./PopupMenuLinks";
 import { Menubutton } from "./dropdown";
+import { PopupMenuLinks } from "./PopupMenuLinks";
+import { MenuItemLinks } from "./MenuItemLinks";
 
 export const initDopplerUI = function () {
   $("body")
@@ -243,3 +245,5 @@ if (!window.dopplerUI) {
   window.dopplerUI = {};
 }
 window.Menubutton = Menubutton;
+window.PopupMenuLinks = PopupMenuLinks;
+window.MenuItemLinks = MenuItemLinks;

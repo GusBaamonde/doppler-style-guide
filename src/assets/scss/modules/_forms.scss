@@ -310,6 +310,7 @@
 
   input[type="tel"] {
     -moz-appearance: textfield;
+    padding-left: 45px;
 
     &::-webkit-inner-spin-button,
     &::-webkit-outer-spin-button {
@@ -325,8 +326,8 @@
     p,
     button,
     span {
-      font-size: settings.$dp-font-size;
-      color: settings.$dp-font-color;
+      color: colors.$dp-color-red;
+      font-size: var.$dp-sizing--lvl2;
       text-align: left;
       margin: var.$dp-spaces--lv0;
       font-family: settings.$dp-font-family-proximanova;
