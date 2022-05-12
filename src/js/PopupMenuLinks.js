@@ -30,7 +30,7 @@
  *          domNode has responded to a mouseover event with no subsequent
  *          mouseout event having occurred.
  */
-var PopupMenuLinks = function (domNode, controllerObj) {
+export const PopupMenuLinks = function (domNode, controllerObj) {
   var elementChildren,
     msgPrefix = "PopupMenuLinks constructor argument domNode ";
 
