@@ -310,6 +310,7 @@
 
   input[type="tel"] {
     -moz-appearance: textfield;
+    padding-left: 45px;
 
     &::-webkit-inner-spin-button,
     &::-webkit-outer-spin-button {
