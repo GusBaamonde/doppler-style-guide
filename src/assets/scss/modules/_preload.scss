@@ -63,6 +63,11 @@
       justify-content: center;
       @include dp-preloader(colors.$dp-color-lightgrey, 3.3em);
     }
+
+    &.dp-disabled-loading {
+      display: none;
+    }
+
     @keyframes flash {
       from,
       50%,
