@@ -2,3 +2,14 @@
 /// -> Helper classes.
 /// @group Classes
 ///
+
+.dp-library {
+  .dp-hidden-page {
+    opacity: 0;
+
+    &.dp-show-page {
+      opacity: 1;
+      transition: all 0.4s ease-in-out;
+    }
+  }
+}
