@@ -511,7 +511,8 @@
       position: absolute;
       right: 0;
       width: 0;
-      top: 75px;
+      top: 100%;
+      margin-top: 5px;
       height: calc(100vh - 65px);
       background: colors.$dp-color-white;
       border-left: 1px solid colors.$dp-color-ghostwhite;
