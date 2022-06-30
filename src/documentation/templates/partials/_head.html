@@ -60,12 +60,12 @@
 />
 
 <!--Insert style guide using loader-->
-<script src="https://cdn.fromdoppler.com/loader/v1/loader.js"></script>
+<script src="https://cdn.fromdoppler.com/mfe-loader/loader-v2.0.0.js"></script>
 <script type="text/javascript">
   window["style-guide-configuration"] = {
     autoInitialize: true,
   };
 
   const urlManifest = "%PUBLIC_URL%/asset-manifest.json";
-  new AssetServices().load(urlManifest);
+  assetServices.load({ manifestURL: urlManifest });
 </script>
