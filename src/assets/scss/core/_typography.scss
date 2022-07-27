@@ -73,6 +73,9 @@
     padding-bottom: var.$dp-spaces--lv1;
     font-weight: settings.$dp-font-weight-bold;
     text-transform: uppercase;
+    &.dp-crossed-text {
+      text-decoration: line-through;
+    }
   }
 
   h5 {
