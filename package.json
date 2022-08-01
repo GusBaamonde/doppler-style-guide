@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --env NODE_ENV=development",
-    "build": "webpack --config webpack-prod.config.js --env NODE_ENV=production",
+    "build": "yarn build-webpack && yarn build-storybook",
     "test": "echo \"Error: no test specified\" && exit 1",
     "verify-format": "yarn prettier-check && yarn eclint-check",
     "fix-format": "yarn prettier-fix && yarn eclint-fix",
@@ -15,7 +15,8 @@
     "prettier-fix": "prettier --write \"**/**\"",
     "prettier-check": "prettier --check \"**/**\"",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-webpack": "webpack --config webpack-prod.config.js --env NODE_ENV=production",
+    "build-storybook": "build-storybook -o build/documentation/storybook"
   },
   "repository": {
     "type": "git",
