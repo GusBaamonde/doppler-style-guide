@@ -4,7 +4,7 @@
 
 .dp-library {
   @function columns($columns, $total-columns) {
-    @return percentage($columns / $total-columns);
+    @return percentage(calc($columns / $total-columns));
   }
 
   @media screen and (min-width: 320px) {
