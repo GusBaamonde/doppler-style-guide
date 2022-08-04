@@ -1,31 +1,36 @@
 import { html } from "lit-html";
-import { styleMap } from "lit-html/directives/style-map.js";
-import "./button.css";
 
 /**
  * Primary UI component for user interaction
  */
 export const Button = ({
-  primary,
-  backgroundColor = null,
   size,
+  disabled,
+  loading,
+  preloading,
+  color,
   label,
+  rounded,
   onClick,
+  mode,
 }) => {
-  const mode = primary
-    ? "storybook-button--primary"
-    : "storybook-button--secondary";
+  if (preloading) {
+    label = "";
+  }
 
   return html`
     <button
       type="button"
-      class=${[
-        "storybook-button",
-        `storybook-button--${size || "medium"}`,
-        mode,
-      ].join(" ")}
-      style=${styleMap({ backgroundColor })}
-      @click=${onClick}
+      class="${[
+        "dp-button button-big",
+        `${mode}-${color}`,
+        `button-${size || "medium"}`,
+        loading ? "button--loading" : "",
+        rounded ? "button--round" : "",
+        preloading ? "button--centered-loading" : "",
+      ].join(" ")}"
+      @click="${onClick}"
+      .disabled="${disabled}"
     >
       ${label}
     </button>
