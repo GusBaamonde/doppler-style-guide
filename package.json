@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --env NODE_ENV=development",
+    "dev": "concurrently --kill-others \"npm:dev-server-webpack\" \"npm:dev-server-storybook\"",
     "build": "yarn build-webpack && yarn build-storybook",
     "test": "echo \"Error: no test specified\" && exit 1",
     "verify-format": "yarn prettier-check && yarn eclint-check",
@@ -14,7 +14,8 @@
     "eclint-check": "eclint check",
     "prettier-fix": "prettier --write \"**/**\"",
     "prettier-check": "prettier --check \"**/**\"",
-    "storybook": "start-storybook -p 6006",
+    "dev-server-storybook": "start-storybook -p 6006",
+    "dev-server-webpack": "webpack-dev-server --env NODE_ENV=development",
     "build-webpack": "webpack --config webpack-prod.config.js --env NODE_ENV=production",
     "build-storybook": "build-storybook -o build/documentation/storybook"
   },
@@ -41,6 +42,7 @@
     "@storybook/web-components": "^6.5.9",
     "babel": "^6.23.0",
     "babel-loader": "^8.2.5",
+    "concurrently": "^7.3.0",
     "css-loader": "^6.7.1",
     "dotenv": "^16.0.1",
     "dotenv-flow-webpack": "^1.1.0",
