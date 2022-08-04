@@ -18,6 +18,7 @@ module.exports = function (env) {
     historyApiFallback: true,
     static: "./dist",
     port: 3500,
+    headers: { "Access-Control-Allow-Origin": "*" },
   };
   config.watchOptions = {
     ignored: [path.resolve(__dirname, "src"), "./node_modules"],
