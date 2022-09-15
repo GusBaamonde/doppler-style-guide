@@ -9,25 +9,16 @@
     }
 
     &-wrapper {
-      max-width: settings.$dp-wrapper-max-width;
-      margin: 0 auto;
-      width: 100%;
       font-family: settings.$dp-font-family-proximanova;
-
-      .bg-c {
-        right: 0;
-        top: 10%;
-      }
-
-      .bg-b {
-        bottom: -60%;
-        left: 100px;
-      }
+      background-image: url("assets/img/background-pattern-b.svg"),
+        url("assets/img/background-pattern-c.svg");
+      background-position: top right, bottom left;
+      background-repeat: no-repeat;
+      padding-bottom: variables.$dp-spaces--lv5;
     }
 
     &-header {
-      margin: variables.$dp-spaces--lv5 variables.$dp-spaces--lv8;
-      z-index: 100;
+      margin: variables.$dp-spaces--lv5 auto;
     }
 
     &-main {
@@ -37,9 +28,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      min-height: 70vh;
-      padding: variables.$dp-spaces--lv2;
-      z-index: 100;
+      padding: variables.$dp-spaces--lv4;
 
       button {
         color: colors.$dp-color-green;
@@ -65,24 +54,14 @@
     }
 
     &-footer {
-      width: 100%;
       text-align: center;
-      padding-bottom: variables.$dp-spaces--lv5;
-      z-index: 100;
+      padding: variables.$dp-spaces--lv4 variables.$dp-spaces--lv2
+        variables.$dp-spaces--lv5;
+    }
+    @media (max-width: 700px) {
+      &-wrapper {
+        background-image: none;
+      }
     }
   }
-  // TODO: fix the media-breakpoint block
-  //@include media-breakpoint("desktop") {
-  //  .confirmation {
-  //    &-wrapper {
-  //      .bg-c {
-  //        display: none;
-  //      }
-  //
-  //      .bg-b {
-  //        display: none;
-  //      }
-  //    }
-  //  }
-  //}
 }
