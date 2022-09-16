@@ -66,15 +66,21 @@
     width: 140px;
     height: 100px;
     font-size: variables.$dp-sizing--lvl0;
+    margin-bottom: variables.$dp-spaces--lv4;
   }
 
   @include media-breakpoint("mobilexs") {
-    .icon-registration,
     .logo-doppler-new,
     .logo-doppler-old {
       background-size: cover;
       height: 27px;
       width: 116px;
+    }
+
+    .icon-registration {
+      background-size: auto;
+      height: 100px;
+      width: 140px;
     }
   }
 }
