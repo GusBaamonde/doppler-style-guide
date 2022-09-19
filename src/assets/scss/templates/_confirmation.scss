@@ -8,15 +8,6 @@
       font-family: settings.$dp-font-family-proximanova;
     }
 
-    &-wrapper {
-      font-family: settings.$dp-font-family-proximanova;
-      background-image: url("assets/img/background-pattern-b.svg"),
-        url("assets/img/background-pattern-c.svg");
-      background-position: top right, bottom left;
-      background-repeat: no-repeat;
-      padding-bottom: variables.$dp-spaces--lv5;
-    }
-
     &-header {
       margin: variables.$dp-spaces--lv5 auto;
     }
@@ -28,7 +19,13 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: variables.$dp-spaces--lv4;
+      font-family: settings.$dp-font-family-proximanova;
+      background-image: url("assets/img/background-pattern-b.svg"),
+        url("assets/img/background-pattern-c.svg");
+      background-position: top right, bottom left;
+      background-repeat: no-repeat;
+      padding: variables.$dp-spaces--lv4 variables.$dp-spaces--lv4
+        variables.$dp-spaces--lv5;
 
       button {
         color: colors.$dp-color-green;
@@ -59,7 +56,7 @@
         variables.$dp-spaces--lv5;
     }
     @media (max-width: 700px) {
-      &-wrapper {
+      &-main {
         background-image: none;
       }
     }
