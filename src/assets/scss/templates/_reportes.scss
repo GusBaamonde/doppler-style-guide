@@ -64,22 +64,11 @@
   It will be replaced by .hero-banner*/
   .hero-banner,
   .report-filters {
-    background: colors.$dp-color-ghostwhite;
-    border-bottom: 1px solid colors.$dp-color-silver;
-    box-shadow: 0 -4px 0 0 colors.$dp-color-snow inset;
     padding: variables.$dp-spaces--lv9 variables.$dp-spaces--lv0;
     position: relative;
-    margin-bottom: variables.$dp-spaces--lv6;
 
     .arrow {
-      position: absolute;
-      bottom: -68px;
-      left: variables.$dp-spaces--lv2;
-      width: 30px;
-      height: 18px;
-      background-image: url(assets/img/hbanner-triangle.svg);
-      background-repeat: no-repeat;
-      background-position: 0 0;
+      display: none;
     }
   }
 
