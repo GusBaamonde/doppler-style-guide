@@ -131,7 +131,7 @@
 /* New breakpoints*/
 @mixin media-breakpoint($breakpoint) {
   @if map-has-key(settings.$dp-breakpoints, $breakpoint) {
-    @media screen and(map-get(settings.$dp-breakpoints, $breakpoint)) {
+    @media screen and (map-get(settings.$dp-breakpoints, $breakpoint)) {
       @content;
     }
   } @else {
