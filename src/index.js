@@ -15,6 +15,7 @@ import {
   initExitEditorButtonBehavior,
 } from "./js";
 
+// autoInitialize flag is deprecated
 if (window["style-guide-configuration"]?.autoInitialize) {
   window["style-guide-configuration"].initDopplerMenuBehavior = true;
   window["style-guide-configuration"].initUserMenuBehavior = true;
