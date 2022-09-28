@@ -25,7 +25,7 @@
   /* New breakpoints*/
   @mixin media-breakpoint($breakpoint) {
     @if map-has-key($dp-breakpoints, $breakpoint) {
-      @media screen and(map-get($dp-breakpoints, $breakpoint)) {
+      @media screen and (map-get($dp-breakpoints, $breakpoint)) {
         @content;
       }
     } @else {
