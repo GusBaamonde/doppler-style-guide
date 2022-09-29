@@ -5,36 +5,39 @@ import { Menubutton } from "./dropdown";
 import { PopupMenuLinks } from "./PopupMenuLinks";
 import { MenuItemLinks } from "./MenuItemLinks";
 
-export const initDopplerUI = function () {
-  $("body")
-    .on(
-      {
-        mouseenter: function () {
-          const submenu = $(this).find(".sub-menu");
+export const initDopplerMenuBehavior = function () {
+  $("body").on(
+    {
+      mouseenter: function () {
+        const submenu = $(this).find(".sub-menu");
 
-          if (!$(this).hasClass("submenu-item")) {
-            $(".header-main").removeClass("header-open");
-          }
+        if (!$(this).hasClass("submenu-item")) {
+          $(".header-main").removeClass("header-open");
+        }
 
-          if (submenu[0] && submenu[0].children.length) {
-            $(".header-main").addClass("header-open");
-          } else {
-            $(".sub-menu.open").removeClass("open");
-          }
-        },
-        mouseleave: function () {
-          if ($(".header-main .submenu-item > a.active").length > 0) {
-            $(".header-main").addClass("header-open");
-            $(".header-main .submenu-item > a.active + .sub-menu").addClass(
-              "open"
-            );
-          } else {
-            $(".header-main").removeClass("header-open");
-          }
-        },
+        if (submenu[0] && submenu[0].children.length) {
+          $(".header-main").addClass("header-open");
+        } else {
+          $(".sub-menu.open").removeClass("open");
+        }
       },
-      ".menu-main>li"
-    )
+      mouseleave: function () {
+        if ($(".header-main .submenu-item > a.active").length > 0) {
+          $(".header-main").addClass("header-open");
+          $(".header-main .submenu-item > a.active + .sub-menu").addClass(
+            "open"
+          );
+        } else {
+          $(".header-main").removeClass("header-open");
+        }
+      },
+    },
+    ".menu-main>li"
+  );
+};
+
+export const initUserMenuBehavior = function () {
+  $("body")
     .on("click", ".user-menu--open", function () {
       $(this).parent().find(".user-menu").toggleClass("open");
     })
@@ -46,7 +49,11 @@ export const initDopplerUI = function () {
     })
     .on("click", ".close-user--menu", function () {
       $(".user-menu").removeClass("open");
-    })
+    });
+};
+
+export const initAccordionBehavior = function () {
+  $("body")
     // module accordion
     .on("click", ".dp-accordion .dp-accordion-thumb", function (e) {
       e.preventDefault();
@@ -60,7 +67,9 @@ export const initDopplerUI = function () {
       menu.removeClass("open");
     }
   });
+};
 
+export const initModalsBehavior = function () {
   $(() => {
     // modals
     const $delayFade = 500;
@@ -87,7 +96,11 @@ export const initDopplerUI = function () {
     $(".modal .close").click(function () {
       $(".modal").fadeOut();
     });
+  });
+};
 
+export const initDemonstrateBehavior = function () {
+  $(() => {
     // This script is ONLY to DEMONSTRATE how to show and hide password, not use in production
     $(".show-hide").click(function () {
       $(this).toggleClass("ms-icon icon-hide");
@@ -120,7 +133,11 @@ export const initDopplerUI = function () {
           }
         );
     });
+  });
+};
 
+export const initTabsBehavior = function () {
+  $(() => {
     // module tabs
     $(".tab--item a").each(function (index) {
       $(this).on("click", function (e) {
@@ -133,14 +150,22 @@ export const initDopplerUI = function () {
         $(".tab--content .dp-plan-detail").slideUp();
       });
     });
+  });
+};
 
+export const initDopplerPlusBehavior = function () {
+  $(() => {
     // Doppler plus - Plans details
     $(".dp-compare-details-plans").on("click", function (e) {
       e.preventDefault();
       $(this).toggleClass("dp-open-compare");
       $(".dp-plan-detail").slideToggle();
     });
+  });
+};
 
+export const initSliderBehavior = function () {
+  $(() => {
     // Slider sample one
     $(".progress-bar").each(function (index) {
       const $max = $(this).find(".range-slider").attr("max");
@@ -156,14 +181,22 @@ export const initDopplerUI = function () {
         })
         .trigger("change");
     });
+  });
+};
 
+export const initNestedTableBehavior = function () {
+  $(() => {
     /* nested table | expand results */
     $(".dp-expand-results").on("click", function (e) {
       e.preventDefault();
       $(this).toggleClass("dp-open-results");
       $(this).closest("tr").next().toggleClass("show");
     });
+  });
+};
 
+export const initTipsBehavior = function () {
+  $(() => {
     // Tips
     $(".dp-show-tips").on("click", function () {
       $(this).closest(".field-item").next(".dp-advice").slideToggle();
@@ -176,6 +209,11 @@ export const initDopplerUI = function () {
       }
       $(this).find(".icon-close").toggleClass("rotation");
     });
+  });
+};
+
+export const initCarouselBehavior = function () {
+  $(() => {
     // Carousel
     $(".dp-carousel-dot").change(function () {
       var slideId = $(this).val();
@@ -186,7 +224,9 @@ export const initDopplerUI = function () {
       ).addClass("active");
     });
   });
+};
 
+export const initDropdownButtonBehavior = function () {
   // Content | Custom field | emojis
   $(() => {
     $(".dp-bd-box .dp-button-bd").on("click", function () {
@@ -211,7 +251,9 @@ export const initDopplerUI = function () {
       }
     });
   });
+};
 
+export const initExitEditorButtonBehavior = function () {
   // Button Exit editor
   $(() => {
     $(".dp-button-box .dp-button-exit").on("click", function () {
