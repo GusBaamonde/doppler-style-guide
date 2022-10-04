@@ -72,6 +72,12 @@
     }
   }
 
+  .hero-banner--center {
+    padding: variables.$dp-spaces--lv9 variables.$dp-spaces--lv0;
+    position: relative;
+    text-align: center;
+  }
+
   .report-wrapper {
     max-width: settings.$dp-wrapper-max-width;
     margin: 0 auto;
