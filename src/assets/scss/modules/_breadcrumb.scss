@@ -15,7 +15,9 @@
 .dp-library {
   .dp-breadcrumb {
     font-size: variables.$dp-sizing--lvl2;
-    padding-bottom: variables.$dp-spaces--lv4;
+    padding-bottom: variables.$dp-spaces--lv0;
+    position: relative;
+    top: -30px;
 
     a {
       align-items: center;
@@ -52,10 +54,5 @@
       left: -5px;
       position: relative;
     }
-  }
-
-  .dp-breadcrumb-b-0 {
-    padding-bottom: 0;
-    margin-bottom: 0;
   }
 }

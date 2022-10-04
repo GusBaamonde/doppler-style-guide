@@ -64,7 +64,8 @@
   It will be replaced by .hero-banner*/
   .hero-banner,
   .report-filters {
-    padding: variables.$dp-spaces--lv9 variables.$dp-spaces--lv0;
+    padding: variables.$dp-spaces--lv9 variables.$dp-spaces--lv0
+      variables.$dp-spaces--lv5;
     position: relative;
 
     .arrow {
@@ -73,7 +74,8 @@
   }
 
   .hero-banner--center {
-    padding: variables.$dp-spaces--lv9 variables.$dp-spaces--lv0;
+    padding: variables.$dp-spaces--lv9 variables.$dp-spaces--lv0
+      variables.$dp-spaces--lv5;
     position: relative;
     text-align: center;
   }
