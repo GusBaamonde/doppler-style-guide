@@ -777,4 +777,10 @@
       }
     }
   }
+
+  /*Align dropdown in doppler old */
+  .align-end-dropdown {
+    display: flex;
+    justify-content: end;
+  }
 }
