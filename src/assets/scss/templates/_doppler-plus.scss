@@ -28,18 +28,18 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+  }
 
-    .dp-tit-plans {
-      text-align: center;
-      font-size: variables.$dp-sizing--lvl9;
-      line-height: variables.$dp-sizing--lvl10;
-      font-weight: bold;
-      font-family: "proxima-nova";
-      letter-spacing: -1px;
-      max-width: 430px;
-      padding: variables.$dp-spaces--lv9 variables.$dp-spaces--lv0;
-      margin: variables.$dp-spaces--lv0 auto;
-    }
+  .dp-tit-plans {
+    text-align: center;
+    font-size: variables.$dp-sizing--lvl9;
+    line-height: variables.$dp-sizing--lvl10;
+    font-weight: bold;
+    font-family: "proxima-nova";
+    letter-spacing: -1px;
+    max-width: 430px;
+    padding: variables.$dp-spaces--lv9 variables.$dp-spaces--lv0;
+    margin: variables.$dp-spaces--lv0 auto;
   }
 
   .dp-white-page {
