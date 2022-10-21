@@ -43,7 +43,7 @@
     &-slide {
       position: relative;
       display: none;
-      min-height: 205px;
+      min-height: 180px;
       padding: variables.$dp-spaces--lv3;
       animation: fade-slide 1s;
 
@@ -62,7 +62,7 @@
       }
 
       @include breakpoints.media-breakpoint("mobile") {
-        min-height: 300px;
+        min-height: 220px;
       }
 
       h3 {
@@ -83,8 +83,7 @@
 
       a {
         position: absolute;
-        bottom: 12px;
-        right: 20px;
+        bottom: 18px;
         padding-right: variables.$dp-spaces--lv4;
         display: inherit;
         font-size: variables.$dp-sizing--lvl3;
