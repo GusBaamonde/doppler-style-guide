@@ -10,3 +10,18 @@
     transition: all 0.5s ease-in-out;
   }
 }
+
+/// class for doppler old
+
+#content-wrapper.dp-content-wrapper {
+  width: 1260px;
+  display: block;
+  margin: 0 auto;
+  min-height: auto;
+  padding: 0 0 30px;
+  position: relative;
+
+  .grayPanel-box {
+    width: 100%;
+  }
+}
