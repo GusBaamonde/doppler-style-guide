@@ -12,6 +12,7 @@
 }
 
 /// class for doppler old
+///
 
 #content-wrapper.dp-content-wrapper {
   width: 1260px;
@@ -23,5 +24,81 @@
 
   .grayPanel-box {
     width: 100%;
+  }
+
+  /* campaign filter fix */
+
+  .dp-table-filters {
+    padding-bottom: 24px;
+  }
+
+  .dp-widthauto {
+    width: auto;
+  }
+
+  .dp-width-auto {
+    width: auto;
+  }
+
+  /* Select List */
+
+  #searchFilters,
+  .searchCampaignLists-container {
+    a {
+      color: #666;
+    }
+  }
+
+  .selectList-button,
+  .labelManager-button {
+    height: 38px;
+    padding: 12px 0 0 12px;
+    width: 51px;
+  }
+
+  .selectList-Container ul li:first-child,
+  .labelManager-whitespace {
+    height: 10px;
+    margin: -15px 0 0 -3px;
+    width: 53px;
+  }
+
+  .selectList-Container ul,
+  .labelManager-actions {
+    margin: 6px 0 0 -1px;
+    padding: 6px 6px 6px 2px;
+  }
+
+  .selectList-links {
+    font-size: 13px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0;
+    padding: 6px 6px 6px 6px;
+    height: auto;
+  }
+
+  /* Label Manager */
+  .labelManager-actions {
+    padding: 12px;
+    width: 216px;
+  }
+
+  .labelManager-whitespace {
+    margin: -22px 0 0 -13px;
+  }
+
+  input.searchLabel,
+  #searchLabelText.searchLabel {
+    padding-left: 36px;
+  }
+
+  /* Search */
+  .searchCampaignLists-container {
+    display: block;
+    padding-bottom: 0px;
+  }
+  .searchText-container input.search-CampaignLists {
+    padding-left: 36px;
   }
 }
