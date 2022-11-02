@@ -157,6 +157,8 @@
       opacity: 0.4;
     }
 
+    // Prefer using disabled element property
+    // The class dp-button-disabled should only be used when using disabled property is not an option
     &.dp-button-disabled {
       pointer-events: none;
       opacity: 0.4;
