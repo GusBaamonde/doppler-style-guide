@@ -157,6 +157,13 @@
       opacity: 0.4;
     }
 
+    // Prefer using disabled element property
+    // The class dp-button-disabled should only be used when using disabled property is not an option
+    &.dp-button-disabled {
+      pointer-events: none;
+      opacity: 0.4;
+    }
+
     &.button--has-icon {
       border: 1px solid colors.$dp-border-grey;
       border-radius: variables.$dp-border-radius;
