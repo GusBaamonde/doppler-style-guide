@@ -157,6 +157,11 @@
       opacity: 0.4;
     }
 
+    &.dp-button-disabled {
+      pointer-events: none;
+      opacity: 0.4;
+    }
+
     &.button--has-icon {
       border: 1px solid colors.$dp-border-grey;
       border-radius: variables.$dp-border-radius;
