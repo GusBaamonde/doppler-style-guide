@@ -44,6 +44,27 @@
     }
   }
 
+  .dp-table-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+      margin: 0;
+    }
+  }
+
+  .delete {
+    float: none;
+    vertical-align: auto;
+  }
+
+  .editlnk {
+    float: none;
+    height: 17px;
+    margin-right: auto;
+  }
+
   .dp-widthauto {
     width: auto;
   }
