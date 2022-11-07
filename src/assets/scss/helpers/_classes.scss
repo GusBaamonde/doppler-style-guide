@@ -30,13 +30,21 @@
 
   .dp-table-filters {
     padding-bottom: 24px;
+
+    .dp-btn-group-select {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0 0;
+    }
+
+    .main_buttons_green_small,
+    .main_buttons_grey_small {
+      margin: 0 6px 0 0;
+    }
   }
 
   .dp-widthauto {
-    width: auto;
-  }
-
-  .dp-width-auto {
     width: auto;
   }
 

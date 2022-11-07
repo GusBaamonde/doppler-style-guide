@@ -19,6 +19,7 @@
     text-decoration: none;
     border: none;
     appearance: none;
+    cursor: pointer;
     font-family: settings.$dp-font-family-proximanova;
     border-radius: variables.$dp-border-radius;
     font-weight: settings.$dp-font-weight-bold;
@@ -84,6 +85,10 @@
           background-color: colors.$dp-color-darkgreen;
           color: colors.$dp-color-white;
         }
+
+        &:focus {
+          color: colors.$dp-color-white;
+        }
       }
 
       &grey {
@@ -92,6 +97,10 @@
 
         &:hover {
           background-color: colors.$dp-color-darkgrey;
+          color: colors.$dp-color-white;
+        }
+
+        &:focus {
           color: colors.$dp-color-white;
         }
       }
