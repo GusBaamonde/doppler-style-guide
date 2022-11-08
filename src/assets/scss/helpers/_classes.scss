@@ -2,6 +2,11 @@
 /// -> Helper classes.
 /// @group Classes
 ///
+///
+
+@use "core/variables";
+@use "helpers/colors";
+@use "helpers/mixins";
 
 .dp-hidden-page {
   &.dp-show-page {
@@ -13,6 +18,18 @@
 
 /// class for doppler old
 ///
+///
+
+/* links templates */
+#content-wrapper
+  .section--templates
+  .hover-actions
+  a.button-outline--white:hover {
+  opacity: 0.6;
+  color: colors.$dp-color-white;
+}
+
+/* class*/
 
 #content-wrapper.dp-content-wrapper {
   width: 100%;
@@ -26,9 +43,16 @@
     width: 100%;
   }
 
-  .dp-library .grid th a:hover {
-    color: #fff;
+  .dp-content-wrapper .grayPanel-box .grid th a:hover {
+    color: colors.$dp-color-white;
     font-weight: bold;
+  }
+
+  .main_buttons_gray_bigger {
+    color: colors.$dp-color-white;
+    &:hover {
+      color: colors.$dp-color-white;
+    }
   }
 
   /* campaign filter fix */
