@@ -48,9 +48,10 @@
 #content-wrapper.dp-content-wrapper {
   width: 100%;
   display: block;
-  margin: 0 auto;
+  margin: variables.$dp-spaces--lv0 auto;
   min-height: auto;
-  padding: 0 0 30px;
+  padding: variables.$dp-spaces--lv0 variables.$dp-spaces--lv0
+    variables.$dp-spaces--lv5;
   position: relative;
 
   .grayPanel-box {
@@ -72,28 +73,31 @@
   /* campaign filter fix */
 
   .dp-table-filters {
-    padding-bottom: 24px;
+    padding-bottom: variables.$dp-spaces--lv4;
 
     .dp-btn-group-select {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 12px 0 0;
+      padding: variables.$dp-spaces--lv2 variables.$dp-spaces--lv0
+        variables.$dp-spaces--lv0;
     }
 
     .main_buttons_green_small,
     .main_buttons_grey_small {
-      margin: 0 6px 0 0;
+      margin: variables.$dp-spaces--lv0 variables.$dp-spaces--lv1
+        variables.$dp-spaces--lv0 variables.$dp-spaces--lv0;
     }
   }
 
   .dp-table-actions {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    width: 100%;
 
     a {
-      margin: 0;
+      margin-right: variables.$dp-spaces--lv1;
     }
   }
 
@@ -117,14 +121,15 @@
   #searchFilters,
   .searchCampaignLists-container {
     a {
-      color: #666;
+      color: colors.$dp-color-grey;
     }
   }
 
   .selectList-button,
   .labelManager-button {
     height: 38px;
-    padding: 12px 0 0 12px;
+    padding: variables.$dp-spaces--lv2 variables.$dp-spaces--lv0
+      variables.$dp-spaces--lv0 variables.$dp-spaces--lv2;
     width: 51px;
   }
 
@@ -138,7 +143,8 @@
   .selectList-Container ul,
   .labelManager-actions {
     margin: 6px 0 0 -1px;
-    padding: 6px 6px 6px 2px;
+    padding: variables.$dp-spaces--lv1 variables.$dp-spaces--lv1
+      variables.$dp-spaces--lv1 2px;
   }
 
   .selectList-links {
@@ -146,13 +152,13 @@
     font-weight: bold;
     display: block;
     margin-bottom: 0;
-    padding: 6px 6px 6px 6px;
+    padding: variables.$dp-spaces--lv1;
     height: auto;
   }
 
   /* Label Manager */
   .labelManager-actions {
-    padding: 12px;
+    padding: variables.$dp-spaces--lv2;
     width: 216px;
   }
 
@@ -162,15 +168,15 @@
 
   input.searchLabel,
   #searchLabelText.searchLabel {
-    padding-left: 36px;
+    padding-left: variables.$dp-spaces--lv6;
   }
 
   /* Search */
   .searchCampaignLists-container {
     display: block;
-    padding-bottom: 0px;
+    padding-bottom: variables.$dp-spaces--lv0;
   }
   .searchText-container input.search-CampaignLists {
-    padding-left: 36px;
+    padding-left: variables.$dp-spaces--lv6;
   }
 }
