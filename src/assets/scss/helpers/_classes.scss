@@ -2,11 +2,181 @@
 /// -> Helper classes.
 /// @group Classes
 ///
+///
+
+@use "core/variables";
+@use "helpers/colors";
+@use "helpers/mixins";
 
 .dp-hidden-page {
   &.dp-show-page {
     opacity: 1;
     visibility: visible;
     transition: all 0.5s ease-in-out;
+  }
+}
+
+/* Fix Campaigns Scheduled links colors */
+
+.dp-library a.main_buttons_green_big,
+.dp-library a.main_buttons_green_small {
+  color: colors.$dp-color-white;
+}
+
+.dp-library a.main_buttons_green_big:hover,
+.dp-library a.main_buttons_green_small:hover,
+.dp-library a.main_buttons_green_big:active,
+.dp-library a.main_buttons_green_small:active {
+  color: colors.$dp-color-white;
+}
+
+/// class for doppler old
+///
+///
+
+/* links templates */
+#content-wrapper
+  .section--templates
+  .hover-actions
+  a.button-outline--white:hover {
+  opacity: 0.6;
+  color: colors.$dp-color-white;
+}
+
+/* class*/
+
+#content-wrapper.dp-content-wrapper {
+  width: 100%;
+  display: block;
+  margin: variables.$dp-spaces--lv0 auto;
+  min-height: auto;
+  padding: variables.$dp-spaces--lv0 variables.$dp-spaces--lv0
+    variables.$dp-spaces--lv5;
+  position: relative;
+
+  .grayPanel-box {
+    width: 100%;
+  }
+
+  .dp-content-wrapper .grayPanel-box .grid th a:hover {
+    color: colors.$dp-color-white;
+    font-weight: bold;
+  }
+
+  .main_buttons_gray_bigger {
+    color: colors.$dp-color-white;
+    &:hover {
+      color: colors.$dp-color-white;
+    }
+  }
+
+  /* campaign filter fix */
+
+  .dp-table-filters {
+    padding-bottom: variables.$dp-spaces--lv4;
+
+    .dp-btn-group-select {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: variables.$dp-spaces--lv2 variables.$dp-spaces--lv0
+        variables.$dp-spaces--lv0;
+    }
+
+    .main_buttons_green_small,
+    .main_buttons_grey_small {
+      margin: variables.$dp-spaces--lv0 variables.$dp-spaces--lv1
+        variables.$dp-spaces--lv0 variables.$dp-spaces--lv0;
+    }
+  }
+
+  .dp-table-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+
+    a {
+      margin-right: variables.$dp-spaces--lv1;
+    }
+  }
+
+  .delete {
+    float: none;
+    vertical-align: auto;
+  }
+
+  .editlnk {
+    float: none;
+    height: 17px;
+    margin-right: auto;
+  }
+
+  .dp-widthauto {
+    width: auto;
+  }
+
+  /* Select List */
+
+  #searchFilters,
+  .searchCampaignLists-container {
+    a {
+      color: colors.$dp-color-grey;
+    }
+  }
+
+  .selectList-button,
+  .labelManager-button {
+    height: 38px;
+    padding: variables.$dp-spaces--lv2 variables.$dp-spaces--lv0
+      variables.$dp-spaces--lv0 variables.$dp-spaces--lv2;
+    width: 51px;
+  }
+
+  .selectList-Container ul li:first-child,
+  .labelManager-whitespace {
+    height: 10px;
+    margin: -15px 0 0 -3px;
+    width: 53px;
+  }
+
+  .selectList-Container ul,
+  .labelManager-actions {
+    margin: 6px 0 0 -1px;
+    padding: variables.$dp-spaces--lv1 variables.$dp-spaces--lv1
+      variables.$dp-spaces--lv1 2px;
+  }
+
+  .selectList-links {
+    font-size: 13px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0;
+    padding: variables.$dp-spaces--lv1;
+    height: auto;
+  }
+
+  /* Label Manager */
+  .labelManager-actions {
+    padding: variables.$dp-spaces--lv2;
+    width: 216px;
+  }
+
+  .labelManager-whitespace {
+    margin: -22px 0 0 -13px;
+  }
+
+  input.searchLabel,
+  #searchLabelText.searchLabel {
+    padding-left: variables.$dp-spaces--lv6;
+  }
+
+  /* Search */
+  .searchCampaignLists-container {
+    display: block;
+    padding-bottom: variables.$dp-spaces--lv0;
+  }
+  .searchText-container input.search-CampaignLists {
+    padding-left: variables.$dp-spaces--lv6;
   }
 }
