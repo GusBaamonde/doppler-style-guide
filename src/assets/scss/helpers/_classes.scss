@@ -16,6 +16,20 @@
   }
 }
 
+/* Fix Campaigns Scheduled links colors */
+
+.dp-library a.main_buttons_green_big,
+.dp-library a.main_buttons_green_small {
+  color: colors.$dp-color-white;
+}
+
+.dp-library a.main_buttons_green_big:hover,
+.dp-library a.main_buttons_green_small:hover,
+.dp-library a.main_buttons_green_big:active,
+.dp-library a.main_buttons_green_small:active {
+  color: colors.$dp-color-white;
+}
+
 /// class for doppler old
 ///
 ///
