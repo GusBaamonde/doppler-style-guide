@@ -16,7 +16,20 @@
   }
 }
 
-/* Fix Campaigns Scheduled links colors */
+/* fix in create templates button color in old doppler */
+
+.dp-library a.button--primary,
+.dp-library a.button--primary {
+  background: colors.$dp-color-green;
+  color: colors.$dp-color-white;
+}
+.dp-library a.button--primary:hover,
+.dp-library a.button--primary:active {
+  background: colors.$dp-color-darkgreen;
+  color: colors.$dp-color-white;
+}
+
+/* Fix Campaigns Scheduled links colors in old doppler */
 
 .dp-library a.main_buttons_green_big,
 .dp-library a.main_buttons_green_small {
@@ -30,9 +43,7 @@
   color: colors.$dp-color-white;
 }
 
-/// class for doppler old
-///
-///
+/// class for doppler old ///
 
 /* links templates */
 #content-wrapper
