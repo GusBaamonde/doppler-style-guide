@@ -190,4 +190,35 @@
   .searchText-container input.search-CampaignLists {
     padding-left: variables.$dp-spaces--lv6;
   }
+
+  /* create campaign */
+
+  .noResultsLists-container {
+    width: 100%;
+  }
+  .emptySection-container {
+    display: flex;
+    width: 100%;
+    height: 233px;
+    align-items: center;
+    justify-content: center;
+    padding-top: variables.$dp-spaces--lv5;
+
+    &:first-child {
+      content: "";
+      position: absolute;
+      border-right: 1px solid colors.$dp-color-silver;
+      width: 1px;
+      height: 100%;
+      top: variables.$dp-spaces--lv5;
+    }
+
+    .subSection {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 50%;
+      align-items: center;
+    }
+  }
 }
