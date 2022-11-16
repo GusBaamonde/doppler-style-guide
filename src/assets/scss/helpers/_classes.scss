@@ -16,6 +16,23 @@
   }
 }
 
+/* Fix incorrect focus display in Jquery selectBox plugin classes */
+
+.selectBox-dropdown:focus {
+  box-shadow: 0 0 0 2px #e58900;
+}
+.selectBox-menuShowing {
+  box-shadow: 0 0 0 2px #e58900;
+}
+
+.selectBox-dropdown.selectBox-menuShowing {
+  box-shadow: 0 0 0 2px #e58900;
+}
+
+.dp-library input.selectBox-input:focus {
+  box-shadow: none;
+}
+
 /* fix in create templates button color in old doppler */
 
 .dp-library a.button--primary,
