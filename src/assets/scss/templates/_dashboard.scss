@@ -319,8 +319,11 @@
         left: -24px;
       }
 
-      &:last-child::before {
-        border-left: none;
+      &:last-child {
+        padding-bottom: variables.$dp-spaces--lv0;
+        &::before {
+          border-left: none;
+        }
       }
     }
 
