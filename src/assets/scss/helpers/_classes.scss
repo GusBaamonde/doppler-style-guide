@@ -16,6 +16,12 @@
   }
 }
 
+/* For all table links */
+.grid th a:hover {
+  color: #fff;
+  font-weight: bold;
+}
+
 /* Fix incorrect focus display in Jquery selectBox plugin classes */
 
 .selectBox-dropdown:focus {
@@ -86,16 +92,16 @@
     width: 100%;
   }
 
-  .dp-content-wrapper .grayPanel-box .grid th a:hover {
-    color: colors.$dp-color-white;
-    font-weight: bold;
-  }
-
   .main_buttons_gray_bigger {
     color: colors.$dp-color-white;
     &:hover {
       color: colors.$dp-color-white;
     }
+  }
+
+  .grayPanel-box .grid th a:hover {
+    color: colors.$dp-color-white;
+    font-weight: bold;
   }
 
   /* campaign filter fix */
@@ -145,6 +151,10 @@
   }
 
   /* Select List */
+
+  #searchForm .selectBox.filter {
+    color: #666;
+  }
 
   #searchFilters,
   .searchCampaignLists-container {
@@ -204,7 +214,8 @@
     display: block;
     padding-bottom: variables.$dp-spaces--lv0;
   }
-  .searchText-container input.search-CampaignLists {
+  .searchText-container input.search-CampaignLists,
+  .searchText-container .search {
     padding-left: variables.$dp-spaces--lv6;
   }
 
@@ -261,6 +272,34 @@
       padding-left: 2px;
       width: 48%;
     }
+  }
+
+  /* List mastersubscriber */
+
+  .searchGeneralLists-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    #exportList,
+    #excelbutton {
+      line-height: initial;
+      padding-top: 3px;
+      width: 130px;
+    }
+  }
+
+  #masterSubscriberForm a.selectBox {
+    width: 16%;
+    color: #666;
+  }
+
+  #masterSubscriberForm .searchMasterSubscribers-container {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 
   /* Date range selection */
