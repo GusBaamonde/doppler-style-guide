@@ -276,6 +276,33 @@
 
   /* List mastersubscriber */
 
+  .dp-emptycardlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    padding: 54px 0;
+  }
+
+  .dp-bordercardlist {
+    &::after {
+      position: absolute;
+      content: "";
+      border: 1px solid colors.$dp-color-silver;
+      height: 70%;
+      left: 0;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      border: 1px solid colors.$dp-color-silver;
+      height: 70%;
+      right: 0;
+    }
+  }
+
   .searchGeneralLists-container {
     display: flex;
     align-items: center;
