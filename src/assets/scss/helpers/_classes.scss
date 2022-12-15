@@ -366,4 +366,26 @@
       text-decoration: underline;
     }
   }
+
+  #dopplerTip-importList {
+    color: colors.$dp-color-white;
+  }
+
+  .saveAndCancel-container,
+  .nav-button-bar {
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+
+      li {
+        margin-left: variables.$dp-spaces--lv2;
+      }
+
+      #importButton {
+        padding: 0;
+        min-width: 160px;
+      }
+    }
+  }
 }
