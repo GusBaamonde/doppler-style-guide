@@ -56,13 +56,16 @@
         color: colors.$dp-color-brown;
         font-weight: settings.$dp-font-weight-bold;
         text-transform: uppercase;
-        font-size: variables.$dp-sizing--lvl3;
+        /* Agregar variables de fonts-size cuando se modifiquen a rem */
+        font-size: 16px;
       }
 
       .content-subtitle {
         margin: variables.$dp-spaces--lv0;
         font-family: settings.$dp-font-family-proximanova;
         font-style: italic;
+        /* Agregar variables de fonts-size cuando se modifiquen a rem */
+        font-size: 16px;
 
         a {
           font-weight: settings.$dp-font-weight-bold;
@@ -86,21 +89,24 @@
         margin-bottom: variables.$dp-spaces--lv7;
 
         p {
-          font-size: variables.$dp-font-size-rpgd;
-          line-height: variables.$dp-line-height-rpgd;
+          /* Agregar variables de fonts-size cuando se modifiquen a rem */
+          font-size: 16px;
+          line-height: 24px;
           font-family: settings.$dp-font-family-proximanova;
         }
       }
 
       footer {
         p {
-          font-size: variables.$dp-sizing--lvl2;
+          /* Agregar variables de fonts-size cuando se modifiquen a rem */
+          font-size: 16px;
         }
       }
     }
 
     .feature-panel {
       flex: 4;
+      background-color: colors.$dp-color-lightgrey;
 
       .content-img {
         margin: variables.$dp-spaces--lv0;
