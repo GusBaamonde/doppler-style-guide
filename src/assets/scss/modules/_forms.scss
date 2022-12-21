@@ -14,6 +14,9 @@
 @use "modules/preload";
 @use "modules/breakpoints";
 
+$dp-fontsize-base: 16px;
+$dp-label-fontsize-base: 14px;
+
 .dp-library {
   @mixin circle($background-color) {
     &::before {
@@ -48,6 +51,7 @@
       bottom: var.$dp-spaces--lv1;
       display: block;
       width: 4px;
+      top: 5px;
       height: 7px;
       border: solid $check-color;
       border-width: 0 2px 2px 0;
@@ -128,7 +132,7 @@
   .checkmark {
     position: absolute;
     left: 0;
-    /*top: 1px;*/
+    top: 1px;
     height: 16px;
     width: 16px;
     border: 1px solid colors.$dp-color-silver;
@@ -233,7 +237,7 @@
     width: 14px;
     left: 0;
     height: 14px;
-    /*top: 1px;*/
+    top: 1px;
 
     &:focus {
       outline: 3px solid colors.$dp-color-orange-focus;
@@ -394,6 +398,12 @@
     background-repeat: no-repeat;
     font-family: settings.$dp-font-family-proximanova;
 
+    p,
+    span {
+      /* TODO: Agregar variables de fonts-size cuando se modifiquen a rem */
+      font-size: $dp-fontsize-base;
+    }
+
     button,
     a {
       text-decoration: underline;
@@ -450,7 +460,8 @@
 
     .password-message {
       margin: var.$dp-spaces--lv0;
-      font-size: var.$dp-sizing--lvl2;
+      /* TODO: Agregar variables de fonts-size cuando se modifiquen a rem */
+      font-size: $dp-fontsize-base;
       font-family: settings.$dp-font-family-proximanova;
     }
 
@@ -509,15 +520,52 @@
   .signup-form {
     margin-top: var.$dp-spaces--lv6;
 
+    .dp-items-accept {
+      label {
+        /* TODO: Agregar variables de fonts-size cuando se modifiquen a rem */
+        font-size: $dp-fontsize-base;
+        margin-bottom: 0;
+      }
+    }
+
     input,
     label {
       font-family: settings.$dp-font-family-proximanova;
+      font-size: $dp-label-fontsize-base;
+    }
+
+    input {
+      /* TODO: Agregar variables de fonts-size cuando se modifiquen a rem */
+      font-size: $dp-fontsize-base;
+    }
+
+    .error .wrapper-errors.dp-error-form p,
+    .error .wrapper-errors.dp-error-form span,
+    .error .wrapper-errors p,
+    .error .wrapper-errors span {
+      /* TODO: Agregar variables de fonts-size cuando se modifiquen a rem */
+      font-size: $dp-fontsize-base;
+    }
+
+    .primary-green {
+      /* TODO: Agregar variables de fonts-size cuando se modifiquen a rem */
+      font-size: $dp-fontsize-base;
     }
   }
   /* login form */
 
   .login-form {
     margin-top: var.$dp-spaces--lv6;
+
+    label {
+      /* Agregar variables de fonts-size cuando se modifiquen a rem */
+      font-size: $dp-label-fontsize-base;
+    }
+
+    input {
+      /* TODO: Agregar variables de fonts-size cuando se modifiquen a rem */
+      font-size: $dp-fontsize-base;
+    }
 
     .legend {
       font-size: var.$dp-sizing--lvl2;
@@ -526,21 +574,64 @@
       font-style: italic;
       font-weight: settings.$dp-font-weight-light;
     }
+
+    .error .wrapper-errors p,
+    .error .wrapper-errors span,
+    .error .wrapper-errors button {
+      /* TODO: Agregar variables de fonts-size cuando se modifiquen a rem */
+      font-size: $dp-fontsize-base;
+    }
+
+    .primary-green {
+      /* TODO: Agregar variables de fonts-size cuando se modifiquen a rem */
+      font-size: $dp-fontsize-base;
+    }
   }
 
   .forgot-link {
     display: block;
     margin: var.$dp-spaces--lv4 var.$dp-spaces--lv0;
-    font-size: var.$dp-sizing--lvl2;
     font-style: italic;
     font-family: settings.$dp-font-family-proximanova;
     position: relative;
+    /* TODO: Agregar variables de fonts-size cuando se modifiquen a rem */
+    font-size: $dp-fontsize-base;
   }
 
   /* forgot password form */
 
   .forgot-pass {
     margin-top: var.$dp-spaces--lv6;
+
+    label {
+      /* TODO: Agregar variables de fonts-size cuando se modifiquen a rem */
+      font-size: $dp-label-fontsize-base;
+    }
+
+    input {
+      /* TODO: Agregar variables de fonts-size cuando se modifiquen a rem */
+      font-size: $dp-fontsize-base;
+    }
+
+    .dp-error p,
+    .dp-ok-message p,
+    .dp-warning-message p {
+      /* TODO: Agregar variables de fonts-size cuando se modifiquen a rem */
+      font-size: $dp-fontsize-base;
+    }
+
+    .primary-green {
+      /* TODO: Agregar variables de fonts-size cuando se modifiquen a rem */
+      font-size: $dp-fontsize-base;
+    }
+
+    .dp-message.dp-error-form p,
+    .dp-message.dp-error-form a,
+    .dp-message.dp-error-form span,
+    .dp-message.dp-error-form button {
+      /* TODO: Agregar variables de fonts-size cuando se modifiquen a rem */
+      font-size: $dp-fontsize-base;
+    }
   }
 
   .triangle-right {
