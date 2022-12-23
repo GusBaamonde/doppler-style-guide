@@ -215,8 +215,13 @@
     padding-bottom: variables.$dp-spaces--lv0;
   }
   .searchText-container input.search-CampaignLists,
-  .searchText-container .search {
+  .searchText-container .search,
+  .searchText-container #searchText {
     padding-left: variables.$dp-spaces--lv6;
+  }
+
+  #searchForm .selectBox.filter {
+    color: inherit;
   }
 
   /* create campaign */
@@ -385,6 +390,28 @@
       #importButton {
         padding: 0;
         min-width: 160px;
+      }
+    }
+  }
+
+  /* segment */
+
+  .option-buttonBar {
+    float: none;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    #excelbutton {
+      height: 40px;
+      display: flex;
+      align-items: center;
+      width: auto;
+      justify-content: center;
+      margin-left: 12px;
+
+      .excelbutton {
+        top: 2px;
       }
     }
   }
