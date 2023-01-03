@@ -2,6 +2,10 @@
 @use "core/settings";
 @use "helpers/colors";
 
+$dp-paragraph--dark: #212121;
+$dp-paragraph--size-20: 20px;
+$dp-paragraph--base: 16px;
+
 .dp-library {
   .confirmation {
     p {
@@ -10,6 +14,14 @@
 
     &-header {
       margin: variables.$dp-spaces--lv5 auto;
+      width: 100%;
+
+      .logo-doppler-new {
+        background-image: url("assets/img/doppler-logo-new.svg");
+        background-position: top left;
+        background-repeat: no-repeat;
+        margin-left: 30px;
+      }
     }
 
     &-main {
@@ -20,12 +32,16 @@
       align-items: center;
       text-align: center;
       font-family: settings.$dp-font-family-proximanova;
-      background-image: url("assets/img/background-pattern-b.svg"),
-        url("assets/img/background-pattern-c.svg");
-      background-position: top right, bottom left;
+      background-image: url("assets/img/background-pattern-c.png");
+      background-position: 100% 0px;
       background-repeat: no-repeat;
-      padding: variables.$dp-spaces--lv4 variables.$dp-spaces--lv4
-        variables.$dp-spaces--lv5;
+      min-height: 100vh;
+
+      h1 {
+        font-size: 40px;
+        color: $dp-paragraph--dark;
+        margin-bottom: variables.$dp-spaces--lv5;
+      }
 
       button {
         color: colors.$dp-color-green;
@@ -34,30 +50,186 @@
           text-decoration: underline;
         }
       }
+
+      .dp-content-message {
+        p {
+          text-align: left;
+          font-size: 16px;
+          line-height: 16px;
+        }
+      }
     }
 
     &-article {
-      max-width: 550px;
       margin-bottom: variables.$dp-spaces--lv5;
+      height: 100%;
+      flex: 1;
+      min-width: 300px;
+      max-width: 600px;
+
+      p {
+        font-size: $dp-paragraph--size-20;
+        line-height: 42px;
+        color: $dp-paragraph--dark;
+      }
+
+      .dp-paragraph-grey {
+        color: colors.$dp-color-grey;
+      }
+
+      a {
+        font-weight: 600;
+        color: colors.$dp-color-darkgreen;
+        text-decoration: underline;
+
+        &:hover {
+          color: colors.$dp-color-green;
+        }
+      }
+
+      .link-green {
+        font-weight: 600;
+        color: colors.$dp-color-darkgreen;
+        text-decoration: underline;
+
+        &:hover {
+          color: colors.$dp-color-green;
+        }
+      }
 
       h2 {
         font-family: settings.$dp-font-family-proximanova;
-        font-weight: settings.$dp-font-weight-bold;
+        font-weight: normal;
+        color: $dp-paragraph--dark;
       }
 
       .text-italic {
         font-size: variables.$dp-sizing--lvl2;
       }
+
+      .dp-divisor-line {
+        margin: variables.$dp-spaces--lv5 variables.$dp-spaces--lv0;
+        width: 100%;
+        height: 2px;
+        display: block;
+
+        .dp-line {
+          width: 57px;
+          height: 2px;
+          display: block;
+          background-color: colors.$dp-color-silver;
+          margin: variables.$dp-spaces--lv0 auto;
+        }
+      }
+
+      .dp-icons-content {
+        margin: variables.$dp-spaces--lv10 variables.$dp-spaces--lv0;
+        width: 100%;
+        height: 20px;
+        display: block;
+
+        .dp-icons-divisor {
+          width: 14px;
+          margin: 0 auto;
+          height: 30px;
+          display: flex;
+          position: relative;
+          transform: rotate(45deg);
+        }
+
+        .dp-rectangle {
+          width: 30px;
+          height: 15px;
+          border: 1px solid;
+          display: block;
+
+          &--violet {
+            background-color: #d1afce;
+            width: 4px;
+            height: 20px;
+            display: block;
+            margin-right: 3px;
+            border-radius: 5px;
+          }
+
+          &--orange {
+            background-color: #fac237;
+            width: 4px;
+            height: 20px;
+            display: block;
+            border-radius: 5px;
+            position: absolute;
+            right: 3px;
+            top: -6px;
+          }
+        }
+      }
     }
 
     &-footer {
       text-align: center;
-      padding: variables.$dp-spaces--lv4 variables.$dp-spaces--lv2
-        variables.$dp-spaces--lv5;
+      padding: 65px 0 0;
+      width: 100%;
+      height: 106px;
+      background-color: #fff;
+      background-image: url("assets/img/background-pattern-e.png");
+      background-position: top;
+      background-repeat: repeat-x;
+      font-size: 16px;
+
+      p {
+        height: 84px;
+        display: block;
+        width: 100%;
+        padding: 30px 0;
+        font-size: $dp-paragraph--base;
+        color: colors.$dp-color-darkgrey;
+        background-color: colors.$dp-color-ghostwhite;
+      }
+
+      a {
+        color: colors.$dp-color-darkgreen;
+      }
     }
     @media (max-width: 700px) {
       &-main {
         background-image: none;
+      }
+
+      &-header {
+        .logo-doppler-new {
+          background-image: url("assets/img/iso-mobile.png");
+          background-position: top left;
+          background-repeat: no-repeat;
+          margin-left: 30px;
+        }
+      }
+
+      &-article {
+        h1 {
+          font-size: 24px;
+          font-weight: 700;
+          color: $dp-paragraph--dark;
+          line-height: 28px;
+          margin-bottom: variables.$dp-spaces--lv3;
+        }
+        p {
+          font-size: 16px;
+          line-height: 20px;
+          padding: 0 25px;
+        }
+      }
+
+      &-footer {
+        p {
+          height: 84px;
+          display: block;
+          width: 100%;
+          margin: 0 auto;
+          max-width: 376px;
+          min-width: 312px;
+          padding: 30px 12px;
+        }
       }
     }
   }
