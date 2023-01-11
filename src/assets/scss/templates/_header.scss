@@ -209,8 +209,17 @@
       color: colors.$dp-color-silver;
     }
 
-    .active {
+    .icon-notification,
+    .icon-header-help {
       color: colors.$dp-color-lightgrey;
+
+      &:hover {
+        color: colors.$dp-color-silver;
+      }
+    }
+
+    .active {
+      /*color: colors.$dp-color-lightgrey;*/
       cursor: pointer;
     }
 
