@@ -218,8 +218,16 @@
       }
     }
 
+    .iconapp-notification {
+      color: colors.$dp-color-lightgrey;
+      font-size: 22px;
+
+      &:hover {
+        color: colors.$dp-color-silver;
+      }
+    }
+
     .active {
-      /*color: colors.$dp-color-lightgrey;*/
       cursor: pointer;
     }
 
