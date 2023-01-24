@@ -143,7 +143,6 @@
   .editlnk {
     float: none;
     height: 17px;
-    margin-right: auto;
   }
 
   .dp-widthauto {
@@ -414,5 +413,9 @@
         top: 2px;
       }
     }
+  }
+
+  .labelManager-labelLists label {
+    width: 75%;
   }
 }

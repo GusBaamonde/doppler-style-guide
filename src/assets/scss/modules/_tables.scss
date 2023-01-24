@@ -353,10 +353,17 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    width: 100%;
 
     a {
       color: colors.$dp-color-darkgrey;
       margin: variables.$dp-spaces--lv0 3px;
+    }
+
+    .excelbutton {
+      position: relative;
+      top: 2px;
+      right: 0px;
     }
   }
 
