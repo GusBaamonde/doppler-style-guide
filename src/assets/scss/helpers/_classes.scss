@@ -90,6 +90,7 @@
 
   .grayPanel-box {
     width: 100%;
+    min-height: 538px;
   }
 
   .main_buttons_gray_bigger {
@@ -225,8 +226,26 @@
 
   /* create campaign */
 
+  #updateFiltering p.noResults-message {
+    color: #2b1f00;
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    text-align: center;
+  }
+
   .noResultsLists-container {
     width: 100%;
+
+    p.noResults-message {
+      color: #2b1f00;
+      font-size: 24px;
+      line-height: 1.2;
+      margin-bottom: 40px;
+      margin-top: 10px;
+      text-align: center;
+    }
   }
   .emptySection-container {
     display: flex;
@@ -242,6 +261,10 @@
       justify-content: center;
       width: 50%;
       align-items: center;
+
+      a {
+        color: colors.$dp-color-white;
+      }
     }
   }
 
