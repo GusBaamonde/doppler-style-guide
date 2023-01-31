@@ -88,9 +88,18 @@
     variables.$dp-spaces--lv5;
   position: relative;
 
+  #EditList .grayPanel-box {
+    min-height: 100%;
+  }
+
+  .saveAndCancel-container {
+    min-height: 200px;
+    max-height: 400px;
+  }
+
   .grayPanel-box {
     width: 100%;
-    min-height: 538px;
+    min-height: 580px;
   }
 
   .main_buttons_gray_bigger {
