@@ -131,10 +131,8 @@ $dp-label-fontsize-base: 14px;
 
   .checkmark {
     position: absolute;
-    left: 0;
-    top: 1px;
-    height: 16px;
-    width: 16px;
+    height: 18px;
+    width: 18px;
     border: 1px solid colors.$dp-color-silver;
     border-radius: var.$dp-border-radius;
     background-color: colors.$dp-color-white;
@@ -144,8 +142,8 @@ $dp-label-fontsize-base: 14px;
       content: "";
       position: absolute;
       left: 5px;
-      /*top: 1px;*/
-      width: 5px;
+      top: 1px;
+      width: 7px;
       height: 10px;
       border: solid colors.$dp-color-white;
       border-width: 0 3px 3px 0;
@@ -234,22 +232,18 @@ $dp-label-fontsize-base: 14px;
   input[type="checkbox"] {
     cursor: pointer;
     position: absolute;
-    width: 14px;
-    left: 0;
-    height: 14px;
-    top: 1px;
+    width: 18px;
+    height: 18px;
 
     &:focus {
       outline: 3px solid colors.$dp-color-orange-focus;
       outline-offset: 0;
-      top: 2px;
-      left: 1px;
     }
 
     &:checked {
       & ~ .checkmark {
-        border-color: colors.$dp-color-green;
-        background-color: colors.$dp-color-green;
+        border-color: colors.$dp-color-darkgreen;
+        background-color: colors.$dp-color-darkgreen;
 
         &:after {
           display: block;
