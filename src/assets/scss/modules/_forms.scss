@@ -649,10 +649,27 @@ $dp-label-fontsize-base: 14px;
       border-bottom: 3px solid transparent;
     }
   }
+
+  @media screen and (max-width: 425px) {
+    .login-form,
+    .signup-form,
+    .forgot-pass {
+      margin-top: var.$dp-spaces--lv5;
+
+      .dp-button {
+        width: 100%;
+      }
+    }
+  }
+
   @include breakpoints.media-breakpoint("mobilexs") {
     .login-form,
     .signup-form {
       margin-top: var.$dp-spaces--lv5;
+
+      .dp-button {
+        width: 100%;
+      }
     }
   }
 
