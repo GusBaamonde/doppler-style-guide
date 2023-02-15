@@ -5,6 +5,19 @@
   --dp-color-white: #ffffff;
   --dp-color-yellow: #fab221;
   --dp-color-darkyellow: #e58900;
+  /* New state colors for form elements for accessibility */
+  --dp-color-text-label: #212121;
+  --dp-color-disabled-checkbox: #cccccc;
+  --dp-color-focus-checkbox: #ffdc95;
+  --dp-color-hover-checkbox: #e5e5e5;
+  --dp-color-default-checkbox: #838370;
+  --dp-color-error-border-checkbox: #a63a33;
+  --dp-color-content-error: #a63a33;
+  --dp-color-error-fill-checkbox: #ffd7d7;
+  --dp-color-disable-border-checkbox: #cccccc;
+  --dp-color-disable-fill-checkbox: #f2f2f2;
+  --dp-color-ok-checkbox: #008046;
+  --dp-color-white: #ffffff;
 }
 
 $dp-color-white: #ffffff;

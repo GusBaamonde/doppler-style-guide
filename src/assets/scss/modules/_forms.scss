@@ -13,6 +13,7 @@
 @use "helpers/colors";
 @use "modules/preload";
 @use "modules/breakpoints";
+@use "core/typography";
 
 $dp-fontsize-base: 16px;
 $dp-label-fontsize-base: 14px;
@@ -131,8 +132,10 @@ $dp-label-fontsize-base: 14px;
 
   .checkmark {
     position: absolute;
-    height: 18px;
-    width: 18px;
+    left: 0;
+    top: 1px;
+    height: 16px;
+    width: 16px;
     border: 1px solid colors.$dp-color-silver;
     border-radius: var.$dp-border-radius;
     background-color: colors.$dp-color-white;
@@ -142,8 +145,8 @@ $dp-label-fontsize-base: 14px;
       content: "";
       position: absolute;
       left: 5px;
-      top: 1px;
-      width: 7px;
+      /*top: 1px;*/
+      width: 5px;
       height: 10px;
       border: solid colors.$dp-color-white;
       border-width: 0 3px 3px 0;
@@ -232,18 +235,22 @@ $dp-label-fontsize-base: 14px;
   input[type="checkbox"] {
     cursor: pointer;
     position: absolute;
-    width: 18px;
-    height: 18px;
+    width: 14px;
+    left: 0;
+    height: 14px;
+    top: 1px;
 
     &:focus {
       outline: 3px solid colors.$dp-color-orange-focus;
       outline-offset: 0;
+      top: 2px;
+      left: 1px;
     }
 
     &:checked {
       & ~ .checkmark {
-        border-color: colors.$dp-color-darkgreen;
-        background-color: colors.$dp-color-darkgreen;
+        border-color: colors.$dp-color-green;
+        background-color: colors.$dp-color-green;
 
         &:after {
           display: block;
@@ -304,6 +311,176 @@ $dp-label-fontsize-base: 14px;
       color: colors.$dp-color-grey;
       cursor: default;
     }
+  }
+
+  /* NEW Elements checked AWA (Accessibility for Web Applications) */
+
+  .dp-check-awa {
+    z-index: 0;
+    position: relative;
+    display: inline-block;
+    font-family: var(--dp-fontfamily-awa);
+    font-size: var(--dp-fontsize-awa);
+    line-height: var(--dp-fontlineheight-awa);
+  }
+
+  /* Input */
+  .dp-check-awa > input {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    z-index: -1;
+    position: absolute;
+    left: -10px;
+    top: -8px;
+    display: block;
+    margin: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    box-shadow: none;
+    outline: none;
+    opacity: 0;
+    transform: scale(1);
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.2s;
+  }
+
+  /* Span */
+  .dp-check-awa > span {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    color: var(--dp-color-text-label);
+    font-weight: 600;
+  }
+
+  /* Box */
+  .dp-check-awa > span::before {
+    content: "";
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 3px 11px 3px 1px;
+    border: solid 2px var(--dp-color-default-checkbox); /* Safari */
+    border-radius: 2px;
+    width: 18px;
+    height: 18px;
+    vertical-align: top;
+    transition: border-color 0.2s, background-color 0.2s;
+  }
+
+  /* Checkmark */
+  .dp-check-awa > span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 2px;
+    width: 10px;
+    height: 5px;
+    border: solid 2px transparent;
+    border-right: none;
+    border-top: none;
+    transform: translate(3px, 4px) rotate(-45deg);
+  }
+
+  /* Checked, Indeterminate */
+  .dp-check-awa > input:checked,
+  .dp-check-awa > input:indeterminate {
+    background-color: var(--dp-color-focus-checkbox);
+  }
+
+  .dp-check-awa > input:checked + span::before,
+  .dp-check-awa > input:indeterminate + span::before {
+    border-color: var(--dp-color-ok-checkbox);
+    background-color: var(--dp-color-ok-checkbox);
+  }
+
+  .dp-check-awa > input:checked + span::after,
+  .dp-check-awa > input:indeterminate + span::after {
+    border-color: var(--dp-color-white);
+  }
+
+  .dp-check-awa > input:indeterminate + span::after {
+    border-left: none;
+    transform: translate(4px, 3px);
+  }
+
+  /* Hover, Focus */
+  .dp-check-awa:hover > input {
+    opacity: 0.9;
+    background-color: var(--dp-color-focus-checkbox);
+    left: -10px;
+    top: -8px;
+  }
+
+  .dp-check-awa > input:focus {
+    opacity: 0.5;
+    left: -10px;
+    top: -8px;
+    outline: 3px solid var(--dp-color-focus-checkbox);
+    background-color: var(--dp-color-focus-checkbox);
+    box-shadow: none;
+    border: none;
+  }
+
+  .dp-check-awa:hover > input:focus {
+    opacity: 0.9;
+    left: -10px;
+    top: -8px;
+    outline: 3px solid var(--dp-color-focus-checkbox);
+  }
+
+  /* Active */
+  .dp-check-awa > input:active {
+    opacity: 1;
+    transform: scale(0);
+    transition: transform 0s, opacity 0s;
+  }
+
+  /* Disabled */
+  .dp-check-awa > input:disabled {
+    opacity: 0;
+    color: var(--dp-color-disabled-checkbox);
+  }
+
+  .dp-check-awa > input:disabled + span {
+    color: var(--dp-color-disabled-checkbox);
+    cursor: initial;
+    font-weight: 400;
+  }
+
+  .dp-check-awa > input:disabled + span::before {
+    border-color: currentColor;
+  }
+
+  .dp-check-awa > input:checked:disabled + span::before,
+  .dp-check-awa > input:indeterminate:disabled + span::before {
+    border-color: transparent;
+    background-color: currentColor;
+  }
+
+  /* validate checkbox*/
+
+  .error .dp-check-awa > input {
+    opacity: 0.9;
+    background-color: var(--dp-color-error-fill-checkbox);
+    left: -10px;
+    top: -8px;
+    border: none;
+  }
+
+  .error .dp-check-awa > span::before {
+    content: "";
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 3px 11px 3px 1px;
+    border: solid 2px var(--dp-color-error-border-checkbox); /* Safari */
+    border-radius: 2px;
+    width: 18px;
+    height: 18px;
+    vertical-align: top;
+    transition: border-color 0.2s, background-color 0.2s;
   }
 
   input[type="tel"] {
