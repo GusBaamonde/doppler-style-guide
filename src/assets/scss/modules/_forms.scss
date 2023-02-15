@@ -315,24 +315,26 @@ $dp-label-fontsize-base: 14px;
 
   /* NEW Elements checked AWA (Accessibility for Web Applications) */
 
-  .dp-check-awa {
+  [role="checkbox"] {
     z-index: 0;
     position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    height: 40px;
     font-family: var(--dp-fontfamily-awa);
     font-size: var(--dp-fontsize-awa);
     line-height: var(--dp-fontlineheight-awa);
   }
 
   /* Input */
-  .dp-check-awa > input {
+  [role="checkbox"] > input {
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
     z-index: -1;
     position: absolute;
     left: -10px;
-    top: -8px;
+    top: 0px;
     display: block;
     margin: 0;
     border-radius: 50%;
@@ -347,16 +349,16 @@ $dp-label-fontsize-base: 14px;
   }
 
   /* Span */
-  .dp-check-awa > span {
+  [role="checkbox"] > span {
     display: inline-block;
     width: 100%;
     cursor: pointer;
     color: var(--dp-color-text-label);
-    font-weight: 600;
+    font-weight: 400;
   }
 
   /* Box */
-  .dp-check-awa > span::before {
+  [role="checkbox"] > span::before {
     content: "";
     display: inline-block;
     box-sizing: border-box;
@@ -370,11 +372,11 @@ $dp-label-fontsize-base: 14px;
   }
 
   /* Checkmark */
-  .dp-check-awa > span::after {
+  [role="checkbox"] > span::after {
     content: "";
     display: block;
     position: absolute;
-    top: 4px;
+    top: 12px;
     left: 2px;
     width: 10px;
     height: 5px;
@@ -385,92 +387,93 @@ $dp-label-fontsize-base: 14px;
   }
 
   /* Checked, Indeterminate */
-  .dp-check-awa > input:checked,
-  .dp-check-awa > input:indeterminate {
+  [role="checkbox"] > input:checked,
+  [role="checkbox"] > input:indeterminate {
     background-color: var(--dp-color-focus-checkbox);
   }
 
-  .dp-check-awa > input:checked + span::before,
-  .dp-check-awa > input:indeterminate + span::before {
+  [role="checkbox"] > input:checked + span::before,
+  [role="checkbox"] > input:indeterminate + span::before {
     border-color: var(--dp-color-ok-checkbox);
     background-color: var(--dp-color-ok-checkbox);
   }
 
-  .dp-check-awa > input:checked + span::after,
-  .dp-check-awa > input:indeterminate + span::after {
+  [role="checkbox"] > input:checked + span::after,
+  [role="checkbox"] > input:indeterminate + span::after {
     border-color: var(--dp-color-white);
   }
 
-  .dp-check-awa > input:indeterminate + span::after {
+  [role="checkbox"] > input:indeterminate + span::after {
     border-left: none;
     transform: translate(4px, 3px);
   }
 
   /* Hover, Focus */
-  .dp-check-awa:hover > input {
-    opacity: 0.9;
+  [role="checkbox"]:hover > input {
+    opacity: 0.7;
     background-color: var(--dp-color-focus-checkbox);
     left: -10px;
-    top: -8px;
+    top: 0px;
   }
 
-  .dp-check-awa > input:focus {
-    opacity: 0.5;
+  [role="checkbox"] > input:focus {
+    opacity: 0.7;
     left: -10px;
-    top: -8px;
+    top: 0px;
     outline: 3px solid var(--dp-color-focus-checkbox);
     background-color: var(--dp-color-focus-checkbox);
     box-shadow: none;
     border: none;
   }
 
-  .dp-check-awa:hover > input:focus {
-    opacity: 0.9;
+  [role="checkbox"]:hover > input:focus {
+    opacity: 0.7;
     left: -10px;
-    top: -8px;
+    top: 0px;
     outline: 3px solid var(--dp-color-focus-checkbox);
   }
 
   /* Active */
-  .dp-check-awa > input:active {
+  [role="checkbox"] > input:active {
     opacity: 1;
     transform: scale(0);
     transition: transform 0s, opacity 0s;
   }
 
   /* Disabled */
-  .dp-check-awa > input:disabled {
+  [role="checkbox"] > input:disabled {
     opacity: 0;
     color: var(--dp-color-disabled-checkbox);
   }
 
-  .dp-check-awa > input:disabled + span {
+  [role="checkbox"] > input:disabled + span {
     color: var(--dp-color-disabled-checkbox);
     cursor: initial;
-    font-weight: 400;
+    font-weight: 300;
   }
 
-  .dp-check-awa > input:disabled + span::before {
-    border-color: currentColor;
+  [role="checkbox"] > input:disabled + span::before {
+    border-color: var(--dp-color-disabled-checkbox);
+    background-color: var(--dp-color-disable-fill-checkbox);
   }
 
-  .dp-check-awa > input:checked:disabled + span::before,
-  .dp-check-awa > input:indeterminate:disabled + span::before {
+  [role="checkbox"] > input:checked:disabled + span::before,
+  [role="checkbox"] > input:indeterminate:disabled + span::before {
     border-color: transparent;
-    background-color: currentColor;
+    background-color: var(--dp-color-default-checkbox);
   }
 
   /* validate checkbox*/
 
-  .error .dp-check-awa > input {
+  .error [role="checkbox"] > input {
     opacity: 0.9;
     background-color: var(--dp-color-error-fill-checkbox);
     left: -10px;
-    top: -8px;
+    top: 0px;
     border: none;
   }
 
-  .error .dp-check-awa > span::before {
+  .error [role="checkbox"] > span::before {
     content: "";
     display: inline-block;
     box-sizing: border-box;
@@ -482,6 +485,8 @@ $dp-label-fontsize-base: 14px;
     vertical-align: top;
     transition: border-color 0.2s, background-color 0.2s;
   }
+
+  /* input phone */
 
   input[type="tel"] {
     -moz-appearance: textfield;

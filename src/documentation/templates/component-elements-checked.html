@@ -21,133 +21,127 @@
             <h3>Elements checked</h3>
 
             <hr class="dpsg-break" />
-
-            <div class="dp-container m-t-24 m-b-24">
-              <div class="dp-rowflex">
-                <div class="col-sm-8 col-md-3 m-b-12">
-                  <div class="dp-input--radio">
-                    <label>
-                      <input type="radio" name="radio" />
-                      <span>Radio button</span>
-                    </label>
-                  </div>
-                </div>
-                <div class="col-sm-8 col-md-3 m-b-12">
-                  <div class="dp-input--radio" checked>
-                    <label>
-                      <input type="radio" name="radio" checked />
-                      <span>Radio button checked</span>
-                    </label>
-                  </div>
-                </div>
-                <div class="col-sm-8 col-md-3 m-b-12">
-                  <div class="dp-input--radio">
-                    <label>
-                      <input type="radio" name="radio" disabled />
-                      <span>Radio button disabled</span>
-                    </label>
-                  </div>
-                </div>
-                <div class="col-sm-8 col-md-3 m-b-12">
-                  <div class="dp-input--radio">
-                    <label>
-                      <input type="radio" name="radio" disabled checked />
-                      <span>Radio button disabled checked</span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="dp-container m-t-24 m-b-48">
-              <div class="dp-rowflex">
-                <div class="col-sm-8 col-md-3 m-b-12">
-                  <input name="" type="checkbox" id="" value="true" /><span
-                    class="checkmark"
-                  ></span>
-                  <label for="" class="p-l-12"> Contenido alternativo</label>
-                  <div class="dp-message dp-error-form">
-                    <p>¡Ouch! Este campo está vacío</p>
-                  </div>
-                </div>
-                <div class="col-sm-8 col-md-3 m-b-12">
-                  <input
-                    name=""
-                    type="checkbox"
-                    id=""
-                    value="true"
-                    checked
-                  /><span class="checkmark"></span>
-                  <label for="" class="p-l-12"> Contenido alternativo</label>
-                  <div class="dp-message dp-error-form">
-                    <p>¡Ouch! Este campo está vacío</p>
-                  </div>
-                </div>
-                <div class="col-sm-8 col-md-3 m-b-12">
-                  <input
-                    name=""
-                    type="checkbox"
-                    id=""
-                    value="true"
-                    disabled
-                  /><span class="checkmark"></span>
-                  <label for="" class="p-l-12"> Contenido alternativo</label>
-                  <div class="dp-message dp-error-form">
-                    <p>¡Ouch! Este campo está vacío</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <form class="dp-container">
+              <fieldset class="dp-rowflex">
+                <ul class="field-group">
+                  <li class="field-item col-sm-4 m-b-12">
+                    <div class="dp-input--radio">
+                      <label>
+                        <input type="radio" name="radio" />
+                        <span>Radio button</span>
+                      </label>
+                    </div>
+                  </li>
+                  <li class="field-item col-sm-4 m-b-12">
+                    <div class="dp-input--radio" checked>
+                      <label>
+                        <input type="radio" name="radio" checked />
+                        <span>Radio button checked</span>
+                      </label>
+                    </div>
+                  </li>
+                  <li class="field-item col-sm-4 m-b-12">
+                    <div class="dp-input--radio">
+                      <label>
+                        <input type="radio" name="radio" disabled />
+                        <span>Radio button disabled</span>
+                      </label>
+                    </div>
+                  </li>
+                  <li class="field-item col-sm-4 m-b-12">
+                    <div class="dp-input--radio">
+                      <label>
+                        <input type="radio" name="radio" disabled checked />
+                        <span>Radio button disabled checked</span>
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </fieldset>
+            </form>
+            <h3 class="m-t-48">Checkbox old</h3>
+            <hr class="dpsg-break" />
+            <form class="dp-container">
+              <fieldset class="dp-rowflex">
+                <ul class="field-group">
+                  <li class="field-item col-sm-4 m-b-12">
+                    <input name="" type="checkbox" id="" value="true" /><span
+                      class="checkmark"
+                    ></span>
+                    <label for="" class="p-l-12"> Contenido alternativo</label>
+                    <div class="dp-message dp-error-form">
+                      <p>¡Ouch! Este campo está vacío</p>
+                    </div>
+                  </li>
+                  <li class="field-item col-sm-4 m-b-12">
+                    <input
+                      name=""
+                      type="checkbox"
+                      id=""
+                      value="true"
+                      checked
+                    /><span class="checkmark"></span>
+                    <label for="" class="p-l-12"> Contenido alternativo</label>
+                    <div class="dp-message dp-error-form">
+                      <p>¡Ouch! Este campo está vacío</p>
+                    </div>
+                  </li>
+                  <li class="field-item col-sm-4 m-b-12">
+                    <input
+                      name=""
+                      type="checkbox"
+                      id=""
+                      value="true"
+                      disabled
+                    /><span class="checkmark"></span>
+                    <label for="" class="p-l-12"> Contenido alternativo</label>
+                    <div class="dp-message dp-error-form">
+                      <p>¡Ouch! Este campo está vacío</p>
+                    </div>
+                  </li>
+                </ul>
+              </fieldset>
+            </form>
             <h3 class="m-t-48">
               NEW Elements checked AWA (Accessibility for Web Applications)
             </h3>
             <hr class="dpsg-break" />
-
-            <div class="dp-container m-t-24 m-b-24">
-              <div class="dp-rowflex">
-                <div class="col-sm-8 col-md-3 m-b-12">
-                  <label class="dp-check-awa">
-                    <input type="checkbox" />
-                    <span>Checkbox default</span>
-                  </label>
-                </div>
-                <div class="col-sm-8 col-md-3 m-b-12">
-                  <label class="dp-check-awa">
-                    <input type="checkbox" checked />
-                    <span>Checkbox checked</span>
-                  </label>
-                </div>
-                <div class="col-sm-8 col-md-3 m-b-12">
-                  <label class="dp-check-awa">
-                    <input type="checkbox" disabled />
-                    <span>Checkbox disabled</span>
-                  </label>
-                </div>
-              </div>
-            </div>
-
-            <div class="dp-container m-t-24 m-b-24">
-              <div class="dp-rowflex">
-                <div class="col-sm-8 col-md-3 m-b-12">
-                  <label class="dp-check-awa">
-                    <input type="checkbox" />
-                    <span>Checkbox hover</span>
-                  </label>
-                </div>
-                <div class="col-sm-8 col-md-3 m-b-12">
-                  <ul class="field-group dp-items-accept">
-                    <li
-                      class="field-item field-item__checkbox label--policy error"
-                    >
-                      <label class="dp-check-awa">
-                        <input type="checkbox" />
-                        <span>Checkbox error</span>
-                      </label>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            <form class="dp-container">
+              <fieldset class="dp-rowflex">
+                <ul class="field-group">
+                  <li class="field-item col-sm-4 m-b-12">
+                    <label role="checkbox">
+                      <input type="checkbox" />
+                      <span>Checkbox default</span>
+                    </label>
+                  </li>
+                  <li class="field-item col-sm-4 m-b-12">
+                    <label role="checkbox">
+                      <input type="checkbox" checked />
+                      <span>Checkbox checked</span>
+                    </label>
+                  </li>
+                  <li class="field-item col-sm-4 m-b-12">
+                    <label role="checkbox">
+                      <input type="checkbox" disabled />
+                      <span>Checkbox disabled</span>
+                    </label>
+                  </li>
+                  <li class="field-item col-sm-4 m-b-12">
+                    <label role="checkbox">
+                      <input type="checkbox" />
+                      <span>Checkbox hover</span>
+                    </label>
+                  </li>
+                  <li class="field-item col-sm-4 m-b-12 error">
+                    <label role="checkbox">
+                      <input type="checkbox" />
+                      <span>Checkbox error</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </form>
           </article>
         </div>
       </div>
