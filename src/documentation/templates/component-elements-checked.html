@@ -133,11 +133,22 @@
                       <span>Checkbox hover</span>
                     </label>
                   </li>
-                  <li class="field-item col-sm-4 m-b-12 error">
-                    <label role="checkbox">
+                  <li class="field-item col-sm-4 m-b-12">
+                    <label
+                      role="checkbox"
+                      aria-invalid="true"
+                      aria-errormessage="errmsj1"
+                    >
                       <input type="checkbox" />
-                      <span>Checkbox error</span>
+                      <span
+                        >Checkbox error o algo mas largo como una politica de
+                        privacidad</span
+                      >
                     </label>
+                    <p id="errmsj1" class="dp-errormessage">
+                      ¡Ouch! Este checkbox no esta tildado. quizas algo mas
+                      largo como dos lineas
+                    </p>
                   </li>
                 </ul>
               </fieldset>
