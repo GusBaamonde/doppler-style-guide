@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%=
+    require('html-loader!/src/documentation/templates/partials/_head.html').default
+    %>
+  </head>
+  <body data-active-menu="44" class="dp-library">
+    <!-- Layers -->
+    <main role="main" class="dpsg-main-wrap">
+      <%=
+      require('html-loader!/src/documentation/templates/partials/_header.html').default
+      %>
+      <!-- header -->
+      <div class="dpsg-wrapper">
+        <%=
+        require('html-loader!/src/documentation/templates/partials/_navigation.html').default
+        %>
+        <div class="dpsg-content-wrap">
+          <article class="dpsg-content">
+            <h3 class="m-t-48">
+              Accessible inputs (Accessibility for Web Applications)
+            </h3>
+
+            <hr class="dpsg-break" />
+
+            <form class="dp-container">
+              <fieldset class="dp-rowflex">
+                <ul class="field-group">
+                  <li class="field-item col-sm-12 m-b-12 awa-form">
+                    <label
+                      for="name"
+                      class="labelcontrol"
+                      aria-disabled="false"
+                      data-required="true"
+                    >
+                      Name
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Your Name"
+                        aria-required="true"
+                        aria-invalid="false"
+                        aria-placeholder="Your Name"
+                      />
+                      <div class="assistance-wrap">
+                        <span>Assistive text</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="field-item col-sm-4 m-b-12 awa-form">
+                    <!-- <label for="lastname" aria-label="text-input">
+                      Name
+                      <input
+                        type="text"
+                        id="lastname"
+                        name="lastname"
+                        placeholder="Last name"
+                        aria-invalid="false"
+                      />
+                    </label> -->
+                  </li>
+                  <li class="field-item col-sm-4 m-b-12">
+                    <!-- <label for="email">Nombre de Usuario: </label>
+                    <input
+                      name="email"
+                      type="text"
+                      id="email"
+                      placeholder="¡Psst! Es tu Email"
+                      value=""
+                    /> -->
+                  </li>
+                  <!-- <li class="field-item col-sm-4 m-b-12">
+                    <label role="checkbox">
+                      <input type="checkbox" disabled />
+                      <span>Checkbox disabled</span>
+                    </label>
+                  </li>
+                  <li class="field-item col-sm-4 m-b-12">
+                    <label role="checkbox">
+                      <input type="checkbox" />
+                      <span>Checkbox hover</span>
+                    </label>
+                  </li>
+                  <li class="field-item col-sm-4 m-b-12">
+                    <label
+                      role="checkbox"
+                      aria-invalid="true"
+                      aria-errormessage="errmsj1"
+                    >
+                      <input type="checkbox" />
+                      <span
+                        >Checkbox error o algo mas largo como una politica de
+                        privacidad</span
+                      >
+                    </label>
+                    <p id="errmsj1" class="dp-errormessage">
+                      ¡Ouch! Este checkbox no esta tildado. quizas algo mas
+                      largo como dos lineas
+                    </p>
+                  </li> -->
+                </ul>
+              </fieldset>
+            </form>
+          </article>
+        </div>
+      </div>
+      <%=
+      require('html-loader!/src/documentation/templates/partials/_footer.html').default
+      %>
+    </main>
+  </body>
+</html>

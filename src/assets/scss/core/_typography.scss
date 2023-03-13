@@ -12,9 +12,11 @@
 
 /* Fonts AWA for accessibility*/
 :root {
-  --dp-fontsize-awa: 16px;
+  --dp-fontsize-awa: 1rem; /*16px*/
   --dp-fontfamily-awa: "proxima-nova", Helvetica, Arial, sans-serif;
-  --dp-fontlineheight-awa: 24px;
+  --dp-fontlineheight-awa: 1.5rem; /*24px*/
+  --dp-fontsize-base: 1rem; /*16px*/
+  --dp-label-fontsize-base: 0.9rem; /*14px*/
 }
 
 @font-face {
