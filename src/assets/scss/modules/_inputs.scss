@@ -1,0 +1,369 @@
+////
+/// It will apply annotations to all items from file.
+/// @access private
+/// @author Gustavo Baamonde
+/// Classes for the Form component
+////
+
+/// Accessible inputs
+///
+
+@use "core/settings";
+@use "core/variables" as var;
+@use "helpers/colors";
+@use "modules/preload";
+@use "modules/breakpoints";
+@use "core/typography";
+
+/* NEW Elements checked AWA (Accessibility for Web Applications) */
+
+.awa-form {
+  label[role="checkbox"] {
+    z-index: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    font-family: typography.$dp-fontfamily-awa;
+    font-size: typography.$dp-fontsize-awa;
+    line-height: typography.$dp-fontlineheight-awa;
+  }
+
+  /* Input */
+  label[role="checkbox"] > input {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    z-index: -1;
+    position: absolute;
+    left: -10px;
+    top: 0px;
+    display: block;
+    margin: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    box-shadow: none;
+    outline: none;
+    opacity: 0;
+    transform: scale(1);
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.2s;
+  }
+
+  /* Span */
+  label[role="checkbox"] > span {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    color: colors.$dp-color-text-label;
+    font-weight: 400;
+  }
+
+  /* Box */
+  label[role="checkbox"] > span::before {
+    content: "";
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 3px 11px 3px 1px;
+    border: solid 2px colors.$dp-color-default-checkbox; /* Safari */
+    border-radius: 2px;
+    width: auto;
+    min-width: 18px;
+    max-width: 29px;
+    height: 18px;
+    vertical-align: top;
+    transition: border-color 0.2s, background-color 0.2s;
+  }
+
+  /* Checkmark */
+  label[role="checkbox"] > span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 2px;
+    width: 10px;
+    height: 5px;
+    border: solid 2px transparent;
+    border-right: none;
+    border-top: none;
+    transform: translate(3px, 4px) rotate(-45deg);
+  }
+
+  /* Checked, Indeterminate */
+  label[role="checkbox"] > input:checked,
+  label[role="checkbox"] > input:indeterminate {
+    background-color: colors.$dp-color-focus-checkbox;
+  }
+
+  label[role="checkbox"] > input:checked + span::before,
+  label[role="checkbox"] > input:indeterminate + span::before {
+    border-color: colors.$dp-color-ok-checkbox;
+    background-color: colors.$dp-color-ok-checkbox;
+  }
+
+  label[role="checkbox"] > input:checked + span::after,
+  label[role="checkbox"] > input:indeterminate + span::after {
+    border-color: colors.$dp-color-white;
+  }
+
+  label[role="checkbox"] > input:indeterminate + span::after {
+    border-left: none;
+    transform: translate(4px, 3px);
+  }
+
+  /* Hover, Focus */
+  label[role="checkbox"]:hover > input {
+    opacity: 0.7;
+    background-color: colors.$dp-color-focus-checkbox;
+    left: -10px;
+    top: 0px;
+  }
+
+  label[role="checkbox"] > input:focus {
+    opacity: 0.7;
+    left: -10px;
+    top: 0px;
+    outline: 3px solid colors.$dp-color-focus-checkbox;
+    background-color: colors.$dp-color-focus-checkbox;
+    box-shadow: none;
+    border: none;
+  }
+
+  label[role="checkbox"]:hover > input:focus {
+    opacity: 0.7;
+    left: -10px;
+    top: 0px;
+    outline: 3px solid colors.$dp-color-focus-checkbox;
+  }
+
+  /* Active */
+  label[role="checkbox"] > input:active {
+    opacity: 1;
+    transform: scale(0);
+    transition: transform 0s, opacity 0s;
+  }
+
+  /* Disabled */
+  label[role="checkbox"] > input:disabled {
+    opacity: 0;
+    color: colors.$dp-color-disabled-checkbox;
+  }
+
+  label[role="checkbox"] > input:disabled + span {
+    color: colors.$dp-color-disabled-checkbox;
+    cursor: initial;
+    font-weight: 300;
+  }
+
+  label[role="checkbox"] > input:disabled + span::before {
+    border-color: colors.$dp-color-disabled-checkbox;
+    background-color: colors.$dp-color-disable-fill-checkbox;
+  }
+
+  label[role="checkbox"] > input:checked:disabled + span::before,
+  label[role="checkbox"] > input:indeterminate:disabled + span::before {
+    border-color: transparent;
+    background-color: colors.$dp-color-default-checkbox;
+  }
+
+  /* validate checkbox*/
+
+  label[aria-invalid="true"] + .dp-errormessage {
+    display: flex;
+    align-items: center;
+    color: colors.$dp-color-content-error;
+    font-size: typography.$dp-label-fontsize-base;
+    line-height: 16px;
+    margin-top: var.$dp-spaces--lv2;
+  }
+
+  label[aria-invalid="true"]:hover > input {
+    opacity: 0.7;
+    background-color: colors.$dp-color-error-fill-checkbox;
+    left: -10px;
+    top: 0px;
+  }
+
+  label[aria-invalid="true"] > input:focus {
+    opacity: 0.7;
+    left: -10px;
+    top: 0px;
+    outline: 3px solid colors.$dp-color-error-fill-checkbox;
+    background-color: colors.$dp-color-error-fill-checkbox;
+    box-shadow: none;
+    border: none;
+  }
+
+  label[aria-invalid="true"] + .dp-errormessage::before {
+    content: "";
+    position: relative;
+    transition: all;
+    min-width: 24px;
+    max-width: 29px;
+    width: auto;
+    height: 18px;
+    background: url(assets/img/error-form.svg) no-repeat 0 0;
+    display: inline-block;
+    margin-right: 6px;
+  }
+
+  [aria-invalid="true"] ~ .dp-errormessage {
+    visibility: visible;
+  }
+  [aria-invalid="false"] ~ .dp-errormessage {
+    visibility: hidden;
+  }
+
+  label[aria-invalid="true"] > input {
+    opacity: 0.9;
+    background-color: colors.$dp-color-error-fill-checkbox;
+    left: -10px;
+    top: 0px;
+    border: none;
+  }
+
+  label[aria-invalid="true"] > span::before {
+    content: "";
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 3px 11px 3px 1px;
+    border: solid 2px colors.$dp-color-error-border-checkbox; /* Safari */
+    border-radius: 2px;
+    width: auto;
+    min-width: 18px;
+    max-width: 29px;
+    height: 18px;
+    vertical-align: top;
+    transition: border-color 0.2s, background-color 0.2s;
+  }
+
+  label[aria-invalid="true"] > input:checked + span::before,
+  label[aria-invalid="true"] > input:indeterminate + span::before {
+    border-color: colors.$dp-color-error-border-checkbox;
+    background-color: colors.$dp-color-error-fill-checkbox;
+  }
+
+  label[aria-invalid="true"] > input:checked + span::after,
+  label[aria-invalid="true"] > input:indeterminate + span::after {
+    border-color: colors.$dp-color-content-error;
+  }
+
+  label[aria-invalid="true"] > span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 2px;
+    width: 10px;
+    height: 5px;
+    border: solid 2px transparent;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    transform: translate(3px, 4px) rotate(0deg);
+  }
+
+  ///
+  /// Inputs AWA
+  ///
+
+  .labelcontrol {
+    font-size: typography.$dp-label-fontsize-base;
+    line-height: 16px;
+    font-weight: 600;
+    color: colors.$dp-color-text-label;
+    position: relative;
+  }
+
+  .labelcontrol input[type="text"] {
+    border: 1px solid colors.$dp-color-border-input;
+    background-color: colors.$dp-color-white;
+    color: colors.$dp-color-text-input;
+    padding: 12px 6px;
+    font-size: typography.$dp-fontsize-base;
+    line-height: 24px;
+    margin-top: 6px;
+    box-shadow: 0 0 0 1px colors.$dp-color-white;
+  }
+
+  /// Label Required
+
+  .labelcontrol[data-required="true"]::before {
+    content: ("*");
+    display: inline-block;
+    width: 5px;
+    font-size: typography.$dp-fontsize-base;
+    line-height: 12px;
+    color: colors.$dp-color-content-error;
+  }
+
+  .labelcontrol[data-required="false"]::before {
+    display: none;
+  }
+
+  /// User support text
+
+  .assistance-wrap {
+    display: flex;
+    align-items: center;
+
+    span {
+      font-size: typography.$dp-label-fontsize-base;
+      line-height: 16px;
+      font-weight: normal;
+      padding: 6px 0;
+      font-family: typography.$dp-fontfamily-awa;
+      color: colors.$dp-color-assistive-text;
+    }
+  }
+
+  /// Placeholder
+
+  .labelcontrol input[type="text"]::placeholder {
+    color: colors.$dp-color-text-input;
+    font-style: normal;
+  }
+
+  /// Focus
+
+  .labelcontrol input[type="text"]:focus {
+    outline: none;
+    border: 2px solid colors.$dp-color-darkyellow;
+    box-shadow: 0 0 0 1px colors.$dp-color-darkyellow;
+  }
+
+  /// Disabled
+
+  .labelcontrol[aria-disabled="true"] {
+    color: colors.$dp-color-lightgrey;
+  }
+
+  .labelcontrol[aria-disabled="true"] > input:disabled {
+    border: 1px solid colors.$dp-color-disable-border-checkbox;
+    background-color: colors.$dp-color-disable-fill-checkbox;
+    color: colors.$dp-color-lightgrey;
+    background: none;
+  }
+
+  .labelcontrol[aria-disabled="true"] > input:disabled + .assistance-wrap span {
+    color: colors.$dp-color-lightgrey;
+  }
+
+  /// Validate
+
+  .labelcontrol input[aria-invalid="true"] {
+    border: 2px solid colors.$dp-color-error-border;
+    box-shadow: out 0 0 0 2px colors.$dp-color-error-border;
+    content: "";
+    position: relative;
+    background: url(assets/img/error-form.svg) no-repeat 0 0;
+    background-position: right 0.5em center;
+  }
+
+  .labelcontrol input[aria-invalid="true"] + .assistance-wrap span {
+    color: colors.$dp-color-content-error;
+  }
+}
