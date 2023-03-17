@@ -273,12 +273,13 @@
   .labelcontrol {
     font-size: typography.$dp-label-fontsize-base;
     line-height: 16px;
+    width: 100%;
     font-weight: 600;
     color: colors.$dp-color-text-label;
     position: relative;
   }
 
-  .labelcontrol input[type="text"] {
+  %input-type {
     border: 1px solid colors.$dp-color-border-input;
     background-color: colors.$dp-color-white;
     color: colors.$dp-color-text-input;
@@ -287,6 +288,18 @@
     line-height: 24px;
     margin-top: 6px;
     box-shadow: 0 0 0 2px colors.$dp-color-white;
+  }
+
+  .labelcontrol input[type="text"] {
+    @extend %input-type;
+  }
+
+  .labelcontrol input[type="tel"] {
+    @extend %input-type;
+  }
+
+  .labelcontrol input[type="email"] {
+    @extend %input-type;
   }
 
   /// Label Required
@@ -302,6 +315,10 @@
 
   .labelcontrol[data-required="false"]::before {
     display: none;
+  }
+
+  .labelcontrol[data-required="true"][aria-disabled="true"]::before {
+    color: colors.$dp-color-lightgrey;
   }
 
   /// User support text
@@ -327,9 +344,31 @@
     font-style: normal;
   }
 
+  .labelcontrol input[type="email"]::placeholder {
+    color: colors.$dp-color-text-input;
+    font-style: normal;
+  }
+
+  .labelcontrol input[type="tel"]::placeholder {
+    color: colors.$dp-color-text-input;
+    font-style: normal;
+  }
+
   /// Focus
 
   .labelcontrol input[type="text"]:focus {
+    outline: none;
+    border: 1px solid colors.$dp-color-darkyellow;
+    box-shadow: 0 0 0 2px colors.$dp-color-darkyellow;
+  }
+
+  .labelcontrol input[type="email"]:focus {
+    outline: none;
+    border: 1px solid colors.$dp-color-darkyellow;
+    box-shadow: 0 0 0 2px colors.$dp-color-darkyellow;
+  }
+
+  .labelcontrol input[type="tel"]:focus {
     outline: none;
     border: 1px solid colors.$dp-color-darkyellow;
     box-shadow: 0 0 0 2px colors.$dp-color-darkyellow;
@@ -345,7 +384,6 @@
     border: 1px solid colors.$dp-color-disable-border-checkbox;
     background-color: colors.$dp-color-disable-fill-checkbox;
     color: colors.$dp-color-lightgrey;
-    background: none;
   }
 
   .labelcontrol[aria-disabled="true"] > input:disabled + .assistance-wrap span {
@@ -378,13 +416,7 @@
   }
 
   .labelpassword input[type="password"] {
-    border: 1px solid colors.$dp-color-border-input;
-    background-color: colors.$dp-color-white;
-    color: colors.$dp-color-text-input;
-    padding: 12px 6px;
-    font-size: typography.$dp-fontsize-base;
-    line-height: typography.$dp-fontlineheight-awa;
-    box-shadow: 0 0 0 2px colors.$dp-color-white;
+    @extend %input-type;
   }
 
   /// Label Required
@@ -487,6 +519,13 @@
 
     /// Message success validation
 
+    %message-validation {
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      margin-right: var.$dp-spaces--lv1;
+      display: inline-block;
+    }
+
     .dp-message--success {
       margin-right: var.$dp-spaces--lv1;
       color: colors.$dp-color-darkgreen;
@@ -497,11 +536,8 @@
       content: "";
       width: 11px;
       height: 9px;
-      display: inline-block;
+      @extend %message-validation;
       background-image: url(assets/img/accent-mark.svg);
-      background-repeat: no-repeat;
-      background-position: 0 0;
-      margin-right: var.$dp-spaces--lv1;
     }
 
     /// Message Denied validation
@@ -516,11 +552,8 @@
       content: "";
       width: 8px;
       height: 8px;
-      display: inline-block;
+      @extend %message-validation;
       background-image: url(assets/img/denied.svg);
-      background-repeat: no-repeat;
-      background-position: 0 0;
-      margin-right: var.$dp-spaces--lv1;
     }
 
     /// Message Secure validation
@@ -534,11 +567,8 @@
       content: "";
       width: 11px;
       height: 9px;
-      display: inline-block;
+      @extend %message-validation;
       background-image: url(assets/img/accent-mark.svg);
-      background-repeat: no-repeat;
-      background-position: 0 0;
-      margin-right: var.$dp-spaces--lv1;
     }
   }
 }
