@@ -267,7 +267,7 @@
   }
 
   ///
-  /// Inputs AWA
+  /// Inputs Text AWA
   ///
 
   .labelcontrol {
@@ -286,7 +286,7 @@
     font-size: typography.$dp-fontsize-base;
     line-height: 24px;
     margin-top: 6px;
-    box-shadow: 0 0 0 1px colors.$dp-color-white;
+    box-shadow: 0 0 0 2px colors.$dp-color-white;
   }
 
   /// Label Required
@@ -331,8 +331,8 @@
 
   .labelcontrol input[type="text"]:focus {
     outline: none;
-    border: 2px solid colors.$dp-color-darkyellow;
-    box-shadow: 0 0 0 1px colors.$dp-color-darkyellow;
+    border: 1px solid colors.$dp-color-darkyellow;
+    box-shadow: 0 0 0 2px colors.$dp-color-darkyellow;
   }
 
   /// Disabled
@@ -365,5 +365,180 @@
 
   .labelcontrol input[aria-invalid="true"] + .assistance-wrap span {
     color: colors.$dp-color-content-error;
+  }
+
+  /// Label Password AWA
+
+  .labelpassword {
+    font-size: typography.$dp-label-fontsize-base;
+    line-height: 16px;
+    font-weight: 600;
+    color: colors.$dp-color-text-label;
+    position: relative;
+  }
+
+  .labelpassword input[type="password"] {
+    border: 1px solid colors.$dp-color-border-input;
+    background-color: colors.$dp-color-white;
+    color: colors.$dp-color-text-input;
+    padding: 12px 6px;
+    font-size: typography.$dp-fontsize-base;
+    line-height: typography.$dp-fontlineheight-awa;
+    box-shadow: 0 0 0 2px colors.$dp-color-white;
+  }
+
+  /// Label Required
+
+  .labelpassword[data-required="true"]::before {
+    content: ("*");
+    display: inline-block;
+    width: 5px;
+    font-size: typography.$dp-fontsize-base;
+    line-height: typography.$dp-linheight-small;
+    color: colors.$dp-color-content-error;
+  }
+
+  .labelpassword[data-required="false"]::before {
+    display: none;
+  }
+
+  /// Placeholder
+
+  .labelpassword input[type="password"]::placeholder {
+    color: colors.$dp-color-text-input;
+    font-style: normal;
+  }
+
+  /// Focus
+
+  .labelpassword input[type="password"]:focus {
+    outline: none;
+    border: 1px solid colors.$dp-color-darkyellow;
+    box-shadow: 0 0 0 2px colors.$dp-color-darkyellow;
+  }
+
+  /// Invalidate
+
+  .labelpassword input[aria-invalid="true"] {
+    border: 2px solid colors.$dp-color-error-border;
+    box-shadow: out 0 0 0 2px colors.$dp-color-error-border;
+  }
+
+  /* Eyed Icon button */
+
+  .labelpassword .dp-wrap-eyed {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    height: 100%;
+    margin-top: var.$dp-spaces--lv1;
+  }
+
+  .labelpassword .dp-wrap-eyed .show-hide {
+    font-weight: normal;
+    font-style: normal;
+    color: colors.$dp-color-grey;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    padding: var.$dp-spaces--lv1;
+    position: absolute;
+    right: var.$dp-spaces--lv1;
+  }
+
+  .labelpassword .dp-wrap-eyed .icon-hide:before,
+  .labelpassword .dp-wrap-eyed .icon-view:before {
+    position: relative;
+    top: var.$dp-spaces--lv0;
+  }
+
+  /* Validations and password messages */
+
+  .wrapper-password {
+    display: block;
+    margin-top: var.$dp-spaces--lv1;
+
+    .password-message {
+      margin: var.$dp-spaces--lv0;
+      font-size: typography.$dp-label-fontsize-base;
+      font-weight: 400;
+      line-height: typography.$dp-linheight-text-validations;
+      font-family: settings.$dp-font-family-proximanova;
+    }
+
+    /// Message Default validation
+
+    .dp-message--default {
+      margin-right: var.$dp-spaces--lv1;
+      color: colors.$dp-color-grey;
+      display: inline-block;
+    }
+
+    .dp-message--default::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      display: inline-block;
+      border-radius: 100%;
+      background-color: colors.$dp-color-grey;
+      margin-right: var.$dp-spaces--lv1;
+    }
+
+    /// Message success validation
+
+    .dp-message--success {
+      margin-right: var.$dp-spaces--lv1;
+      color: colors.$dp-color-darkgreen;
+      display: inline-block;
+    }
+
+    .dp-message--success::before {
+      content: "";
+      width: 11px;
+      height: 9px;
+      display: inline-block;
+      background-image: url(assets/img/accent-mark.svg);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      margin-right: var.$dp-spaces--lv1;
+    }
+
+    /// Message Denied validation
+
+    .dp-message--denied {
+      margin-right: var.$dp-spaces--lv1;
+      color: colors.$dp-color-content-error;
+      display: inline-block;
+    }
+
+    .dp-message--denied::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      display: inline-block;
+      background-image: url(assets/img/denied.svg);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      margin-right: var.$dp-spaces--lv1;
+    }
+
+    /// Message Secure validation
+
+    .dp-message--secure {
+      margin-right: var.$dp-spaces--lv1;
+      color: colors.$dp-color-darkgreen;
+    }
+
+    .dp-message--secure::before {
+      content: "";
+      width: 11px;
+      height: 9px;
+      display: inline-block;
+      background-image: url(assets/img/accent-mark.svg);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      margin-right: var.$dp-spaces--lv1;
+    }
   }
 }
