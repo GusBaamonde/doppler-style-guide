@@ -5,22 +5,22 @@ import { html } from "lit-html";
  */
 export const Inputs = ({ disabled, label, labelRequired, isError }) => {
   return html`
-    <div class="awa-form" style="width:250px;">
+    <div class="awa-form" style="width:350px;">
       <label
-        for="name"
+        for="tel"
         class="labelcontrol"
         aria-disabled="${disabled}"
         data-required="${labelRequired}"
       >
         ${label}
         <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Your Name"
+          type="tel"
+          id="tel"
+          name="tel"
+          placeholder="Your Phone"
           aria-required="true"
           aria-invalid="${isError}"
-          aria-placeholder="Your Name"
+          aria-placeholder="Your Phone"
           .disabled="${disabled}"
         />
         <div class="assistance-wrap">
