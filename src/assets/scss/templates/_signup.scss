@@ -11,6 +11,7 @@
 @use "core/variables";
 @use "core/settings";
 @use "modules/breakpoints";
+@use "core/typography";
 
 .dp-library {
   .panel-wrapper {
@@ -56,21 +57,21 @@
         color: colors.$dp-color-brown;
         font-weight: settings.$dp-font-weight-bold;
         text-transform: uppercase;
-        /* Agregar variables de fonts-size cuando se modifiquen a rem */
-        font-size: 16px;
+        font-size: typography.$dp-fontsize-awa;
       }
 
       .content-subtitle {
         margin: variables.$dp-spaces--lv0;
         font-family: settings.$dp-font-family-proximanova;
-        font-style: italic;
-        /* Agregar variables de fonts-size cuando se modifiquen a rem */
-        font-size: 16px;
+        font-size: typography.$dp-fontsize-awa;
+        line-height: typography.$dp-fontlineheight-awa;
+        color: colors.$dp-color-text-label;
 
         a {
-          font-weight: settings.$dp-font-weight-bold;
-          text-transform: uppercase;
-          font-style: normal;
+          text-decoration: underline;
+          font-family: settings.$dp-font-family-proximanova;
+          color: colors.$dp-color-darkgreen;
+          font-weight: 600;
         }
       }
 
@@ -89,17 +90,28 @@
         margin-bottom: variables.$dp-spaces--lv7;
 
         p {
-          /* Agregar variables de fonts-size cuando se modifiquen a rem */
-          font-size: 16px;
-          line-height: 24px;
+          font-size: typography.$dp-fontsize-awa;
+          line-height: typography.$dp-fontlineheight-awa;
           font-family: settings.$dp-font-family-proximanova;
+        }
+
+        a {
+          text-decoration: underline;
+          color: colors.$dp-color-darkgreen;
+          font-weight: 600;
         }
       }
 
       footer {
         p {
-          /* Agregar variables de fonts-size cuando se modifiquen a rem */
-          font-size: 16px;
+          font-size: typography.$dp-fontsize-awa;
+          line-height: typography.$dp-fontlineheight-awa;
+        }
+
+        a {
+          text-decoration: underline;
+          color: colors.$dp-color-darkgreen;
+          font-weight: 600;
         }
       }
     }
