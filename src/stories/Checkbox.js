@@ -12,7 +12,7 @@ export const Checkbox = ({
 }) => {
   return html`
   <div class="awa-form">
-    <label role="checkbox" aria-invalid="${isError}" aria-errormessage="errmsj1">
+    <label class="dp-label-checkbox" aria-invalid="${isError}" aria-errormessage="errmsj1">
         <input type="checkbox" .disabled="${disabled}" .checked="${checked}"></input>
         <span>${label}</span>
     </label>

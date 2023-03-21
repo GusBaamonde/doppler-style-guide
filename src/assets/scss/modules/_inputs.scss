@@ -18,7 +18,7 @@
 /* NEW Elements checked AWA (Accessibility for Web Applications) */
 
 .awa-form {
-  label[role="checkbox"] {
+  label.dp-label-checkbox {
     z-index: 0;
     position: relative;
     display: flex;
@@ -30,7 +30,7 @@
   }
 
   /* Input */
-  label[role="checkbox"] > input {
+  label.dp-label-checkbox > input {
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -52,7 +52,7 @@
   }
 
   /* Span */
-  label[role="checkbox"] > span {
+  label.dp-label-checkbox > span {
     display: flex;
     align-items: center;
     width: 100%;
@@ -62,7 +62,7 @@
   }
 
   /* Box */
-  label[role="checkbox"] > span::before {
+  label.dp-label-checkbox > span::before {
     content: "";
     display: inline-block;
     box-sizing: border-box;
@@ -78,7 +78,7 @@
   }
 
   /* Checkmark */
-  label[role="checkbox"] > span::after {
+  label.dp-label-checkbox > span::after {
     content: "";
     display: block;
     position: absolute;
@@ -93,36 +93,36 @@
   }
 
   /* Checked, Indeterminate */
-  label[role="checkbox"] > input:checked,
-  label[role="checkbox"] > input:indeterminate {
+  label.dp-label-checkbox > input:checked,
+  label.dp-label-checkbox > input:indeterminate {
     background-color: colors.$dp-color-focus-checkbox;
   }
 
-  label[role="checkbox"] > input:checked + span::before,
-  label[role="checkbox"] > input:indeterminate + span::before {
+  label.dp-label-checkbox > input:checked + span::before,
+  label.dp-label-checkbox > input:indeterminate + span::before {
     border-color: colors.$dp-color-ok-checkbox;
     background-color: colors.$dp-color-ok-checkbox;
   }
 
-  label[role="checkbox"] > input:checked + span::after,
-  label[role="checkbox"] > input:indeterminate + span::after {
+  label.dp-label-checkbox > input:checked + span::after,
+  label.dp-label-checkbox > input:indeterminate + span::after {
     border-color: colors.$dp-color-white;
   }
 
-  label[role="checkbox"] > input:indeterminate + span::after {
+  label.dp-label-checkbox > input:indeterminate + span::after {
     border-left: none;
     transform: translate(4px, 3px);
   }
 
   /* Hover, Focus */
-  label[role="checkbox"]:hover > input {
+  label.dp-label-checkbox:hover > input {
     opacity: 0.7;
     background-color: colors.$dp-color-focus-checkbox;
     left: -10px;
     top: 0px;
   }
 
-  label[role="checkbox"] > input:focus {
+  label.dp-label-checkbox > input:focus {
     opacity: 0.7;
     left: -10px;
     top: 0px;
@@ -132,7 +132,7 @@
     border: none;
   }
 
-  label[role="checkbox"]:hover > input:focus {
+  label.dp-label-checkbox:hover > input:focus {
     opacity: 0.7;
     left: -10px;
     top: 0px;
@@ -140,31 +140,31 @@
   }
 
   /* Active */
-  label[role="checkbox"] > input:active {
+  label.dp-label-checkbox > input:active {
     opacity: 1;
     transform: scale(0);
     transition: transform 0s, opacity 0s;
   }
 
   /* Disabled */
-  label[role="checkbox"] > input:disabled {
+  label.dp-label-checkbox > input:disabled {
     opacity: 0;
     color: colors.$dp-color-disabled-checkbox;
   }
 
-  label[role="checkbox"] > input:disabled + span {
+  label.dp-label-checkbox > input:disabled + span {
     color: colors.$dp-color-disabled-checkbox;
     cursor: initial;
     font-weight: 300;
   }
 
-  label[role="checkbox"] > input:disabled + span::before {
+  label.dp-label-checkbox > input:disabled + span::before {
     border-color: colors.$dp-color-disabled-checkbox;
     background-color: colors.$dp-color-disable-fill-checkbox;
   }
 
-  label[role="checkbox"] > input:checked:disabled + span::before,
-  label[role="checkbox"] > input:indeterminate:disabled + span::before {
+  label.dp-label-checkbox > input:checked:disabled + span::before,
+  label.dp-label-checkbox > input:indeterminate:disabled + span::before {
     border-color: transparent;
     background-color: colors.$dp-color-default-checkbox;
   }
