@@ -27,6 +27,14 @@
     font-family: typography.$dp-fontfamily-awa;
     font-size: typography.$dp-fontsize-awa;
     line-height: typography.$dp-fontlineheight-awa;
+    margin-bottom: var.$dp-spaces--lv0;
+  }
+
+  label.dp-label-checkbox a {
+    text-decoration: underline;
+    font-family: settings.$dp-font-family-proximanova;
+    color: colors.$dp-color-darkgreen;
+    font-weight: 600;
   }
 
   /* Input */
@@ -53,8 +61,8 @@
 
   /* Span */
   label.dp-label-checkbox > span {
-    display: flex;
-    align-items: center;
+    display: inline-block;
+
     width: 100%;
     cursor: pointer;
     color: colors.$dp-color-text-label;
@@ -177,7 +185,6 @@
     color: colors.$dp-color-content-error;
     font-size: typography.$dp-label-fontsize-base;
     line-height: 16px;
-    margin-top: var.$dp-spaces--lv2;
   }
 
   label[aria-invalid="true"]:hover > input {
