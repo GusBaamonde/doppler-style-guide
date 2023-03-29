@@ -20,7 +20,7 @@
     width: 100%;
     left: 0;
     top: 0;
-    z-index: 100;
+    z-index: settings.$header-main-overlay;
     display: flex;
     line-height: 1.2;
     font-family: settings.$dp-font-family;
