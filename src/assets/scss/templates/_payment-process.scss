@@ -398,7 +398,7 @@
   .dp-hiring-summary {
     border: 1px solid colors.$dp-color-silver;
     padding: variables.$dp-spaces--lv5 variables.$dp-spaces--lv3
-      variables.$dp-spaces--lv7;
+      variables.$dp-spaces--lv0;
     margin: variables.$dp-spaces--lv0;
     border-bottom: none;
     position: relative;
@@ -479,7 +479,8 @@
     }
 
     .dp-total-purchase {
-      padding: variables.$dp-spaces--lv4 variables.$dp-spaces--lv0;
+      padding: variables.$dp-spaces--lv4 variables.$dp-spaces--lv0
+        variables.$dp-spaces--lv2 variables.$dp-spaces--lv0;
 
       li {
         display: flex;
@@ -490,19 +491,19 @@
         line-height: 36px;
       }
 
-      .dp-money {
-        font-size: variables.$dp-sizing--lvl4;
-        line-height: 24px;
-        font-weight: 700;
-        margin-right: variables.$dp-spaces--lv1;
-      }
-
-      .dp-renewal {
+      .dp-taxes-excluded {
         font-size: variables.$dp-sizing--lvl1;
         font-weight: normal;
         line-height: 15px;
         margin-top: variables.$dp-spaces--lv4;
         color: colors.$dp-color-grey;
+      }
+
+      .dp-money {
+        font-size: variables.$dp-sizing--lvl4;
+        line-height: 24px;
+        font-weight: 700;
+        margin-right: variables.$dp-spaces--lv1;
       }
 
       button[aria-label="buy"] {
@@ -514,6 +515,20 @@
         padding-left: variables.$dp-sizing--lvl0;
       }
     }
+  }
+
+  .dp-renewal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: variables.$dp-spaces--lv3;
+    border: 1px solid colors.$dp-color-silver;
+    font-size: variables.$dp-sizing--lvl2;
+    font-weight: normal;
+    line-height: 15px;
+    color: colors.$dp-color-darkgrey;
+    background-color: colors.$dp-color-ghostwhite;
+    min-height: 70px;
   }
 
   .dp-hr-summary {
@@ -543,15 +558,15 @@
       background: linear-gradient(
           -45deg,
           transparent 33.33%,
-          colors.$dp-color-white 33.33%,
-          colors.$dp-color-white 66.66%,
+          colors.$dp-color-ghostwhite 33.33%,
+          colors.$dp-color-ghostwhite 66.66%,
           transparent 66.66%
         ),
         linear-gradient(
           45deg,
           transparent 33.33%,
-          colors.$dp-color-white 33.33%,
-          colors.$dp-color-white 66.66%,
+          colors.$dp-color-ghostwhite 33.33%,
+          colors.$dp-color-ghostwhite 66.66%,
           transparent 66.66%
         );
       background-size: 20px 60px;
@@ -562,7 +577,7 @@
     &::before {
       content: "";
       position: absolute;
-      height: 140%;
+      height: 133%;
       left: 0;
       width: 100%;
       display: block;
