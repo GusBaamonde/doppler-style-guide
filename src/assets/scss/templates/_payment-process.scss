@@ -513,6 +513,11 @@
       button[aria-label="secure payment"] {
         font-weight: normal;
         padding-left: variables.$dp-sizing--lvl0;
+        color: colors.$dp-color-darkgrey;
+        display: flex;
+        .dpicon {
+          margin-right: variables.$dp-spaces--lv1;
+        }
       }
     }
   }
