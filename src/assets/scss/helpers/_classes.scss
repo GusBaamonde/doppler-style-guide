@@ -106,11 +106,16 @@
     min-height: 580px;
   }
 
-  .main_buttons_gray_bigger {
+  a.main_buttons_gray_bigger,
+  a.main_buttons_gray_small {
     color: colors.$dp-color-white;
     &:hover {
       color: colors.$dp-color-white;
     }
+  }
+
+  a.main_buttons_gray_small .gray.excelbutton {
+    vertical-align: initial;
   }
 
   .grayPanel-box .grid th a:hover {
