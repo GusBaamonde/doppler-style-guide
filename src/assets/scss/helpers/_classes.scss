@@ -66,6 +66,18 @@
   color: colors.$dp-color-white;
 }
 
+.statusSchueduledCampaignColumn {
+  span.processingMessage {
+    width: max-content;
+
+    label {
+      width: auto;
+      font-weight: normal;
+      display: contents;
+    }
+  }
+}
+
 /// class for doppler old ///
 
 /* links templates */
