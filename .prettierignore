@@ -34,3 +34,6 @@ package-lock.json
 
 # Ignoring libs
 **/scss/libs
+
+*.groovy
+
