@@ -7,6 +7,7 @@ export const Header = ({
   accountState,
   hasDopplerLogo,
   clientManagerContent,
+  label,
 }) => {
   let messages = null;
   let content = null;
@@ -115,9 +116,9 @@ export const Header = ({
           <nav class="nav-right-main">
             <ul class="nav-right-main--list">
               <li>
-                <span class="user-menu--open active">
-                  <span class="ms-icon icon-notification"></span
-                ></span>
+              <a rel="noreferrer" class="user-menu--open active iconapp-notification">
+                Notification
+              </a>
                 <div class="user-menu helper--right dp-notifications">
                   <div class="dp-msj-notif" dp-dynamic-html="notification">
                     <strong>NUEVO: Comportamiento en Sitio</strong>
@@ -133,12 +134,12 @@ export const Header = ({
                 </div>
               </li>
               <li>
-                <a href="#"><span class="ms-icon icon-header-help"></span></a>
+              <a rel="noreferrer" class="dp-link-help">Ayuda</a>
               </li>
               <li>
-                <a class="user-menu--open">
-                <span class="user-avatar">GB</span></a
-                >
+              <a rel="noreferrer" class="user-menu--open">
+              <span class="dp-avatar-user">${label}</span>
+            </a>
                 <div class="user-menu">
                   <!--open-->
                   <header>

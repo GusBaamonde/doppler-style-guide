@@ -199,7 +199,7 @@
     align-items: stretch;
 
     & > li {
-      margin: var.$dp-spaces--lv0 var.$dp-spaces--lv2;
+      margin-right: var.$dp-spaces--lv3;
       position: relative;
       align-items: center;
       display: flex;
@@ -221,22 +221,73 @@
       color: colors.$dp-color-silver;
     }
 
-    .icon-notification,
-    .icon-header-help {
-      color: colors.$dp-color-lightgrey;
+    .iconapp-notification,
+    .dp-link-help {
+      padding: 6px;
+      border-radius: 3px;
+      font-size: typography.$dp-fontsize-small;
+      color: colors.$dp-color-grey;
+      display: flex;
+      align-items: center;
+    }
+
+    .dp-avatar-user {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: block;
+      max-width: 175px;
+      min-width: 30px;
+      font-size: typography.$dp-fontsize-small;
+      color: colors.$dp-color-grey;
 
       &:hover {
-        color: colors.$dp-color-silver;
+        color: colors.$dp-color-lightgrey;
       }
     }
 
-    .iconapp-notification {
-      color: colors.$dp-color-lightgrey;
-      font-size: 22px;
+    .iconapp-notification::before {
+      content: "";
+      border-radius: 3px;
+      background-color: colors.$dp-color-ghostwhite;
+      background-image: url(assets/img/bell-notification.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 24px;
+      width: 24px;
+      position: relative;
+      display: block;
+      margin-right: 6px;
+    }
 
-      &:hover {
-        color: colors.$dp-color-silver;
-      }
+    .dp-link-help::before {
+      content: "";
+      border-radius: 3px;
+      background-color: colors.$dp-color-ghostwhite;
+      background-image: url(assets/img/help.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 24px;
+      width: 24px;
+      position: relative;
+      display: block;
+      margin-right: var.$dp-spaces--lv1;
+    }
+
+    .dp-avatar-user::before {
+      content: "";
+      border-radius: 3px;
+      background-color: colors.$dp-color-darkgreen;
+      background-image: url(assets/img/User.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 24px;
+      width: 24px;
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: var.$dp-spaces--lv1;
+      cursor: pointer;
     }
 
     .active {
