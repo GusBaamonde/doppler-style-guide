@@ -1,7 +1,7 @@
 import "./index.scss";
 import {
   initDopplerMenuBehavior,
-  initUserMenuBehavior,
+  initUserMenuBehavior_DEPRECATED,
   initAccordionBehavior,
   initModalsBehavior,
   initDemonstrateBehavior,
@@ -18,7 +18,9 @@ import {
 // autoInitialize flag is deprecated
 if (window["style-guide-configuration"]?.autoInitialize) {
   window["style-guide-configuration"].initDopplerMenuBehavior = true;
-  window["style-guide-configuration"].initUserMenuBehavior = true;
+  // This flag is only useful for documentation, it is incompatible with
+  // Menu MFE and should be moved out of the JS bundle
+  window["style-guide-configuration"].initUserMenuBehavior_DEPRECATED = false;
   window["style-guide-configuration"].initAccordionBehavior = true;
   window["style-guide-configuration"].initModalsBehavior = true;
   window["style-guide-configuration"].initDemonstrateBehavior = true;
@@ -35,8 +37,10 @@ if (window["style-guide-configuration"]?.autoInitialize) {
 if (window["style-guide-configuration"]?.initDopplerMenuBehavior) {
   initDopplerMenuBehavior();
 }
-if (window["style-guide-configuration"]?.initUserMenuBehavior) {
-  initUserMenuBehavior();
+// This flag is only useful for documentation, it is incompatible with
+// Menu MFE and should be moved out of the JS bundle
+if (window["style-guide-configuration"]?.initUserMenuBehavior_DEPRECATED) {
+  initUserMenuBehavior_DEPRECATED();
 }
 if (window["style-guide-configuration"]?.initAccordionBehavior) {
   initAccordionBehavior();
