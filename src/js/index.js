@@ -36,7 +36,9 @@ export const initDopplerMenuBehavior = function () {
   );
 };
 
-export const initUserMenuBehavior = function () {
+// This flag is only useful for documentation, it is incompatible with
+// Menu MFE and should be moved out of the JS bundle
+export const initUserMenuBehavior_DEPRECATED = function () {
   $("body")
     .on("click", ".user-menu--open", function () {
       $(this).parent().find(".user-menu").toggleClass("open");
