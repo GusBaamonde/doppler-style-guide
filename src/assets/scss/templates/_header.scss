@@ -223,7 +223,7 @@
 
     .iconapp-notification,
     .dp-link-help {
-      padding: 6px;
+      padding: var.$dp-spaces--lv0;
       border-radius: 3px;
       font-size: typography.$dp-fontsize-small;
       color: colors.$dp-color-grey;
