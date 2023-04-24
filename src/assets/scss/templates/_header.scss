@@ -240,6 +240,7 @@
       min-width: 30px;
       font-size: typography.$dp-fontsize-small;
       color: colors.$dp-color-grey;
+      cursor: pointer;
 
       &:hover {
         color: colors.$dp-color-lightgrey;
