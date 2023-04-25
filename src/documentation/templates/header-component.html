@@ -19,12 +19,14 @@
           </header>
         </div>
 
-        <header class="header-main header-open dp-header--cm">
+        <header class="header-main header-open">
+          <!-- uncomment this block to see the client manager space, logo with image or space to write
+            dp-header--cm
           <div class="dp-logo--cm">
-            <!--<img src="https://via.placeholder.com/180x50">--><span
+            <img src="https://via.placeholder.com/180x50"><span
               >YourCompanyName/Logo</span
             >
-          </div>
+          </div>-->
           <div class="header-wrapper">
             <div class="logo">
               <span class="ms-icon icon-doppler-logo"></span>
@@ -66,12 +68,12 @@
             <nav class="nav-right-main">
               <ul class="nav-right-main--list">
                 <li>
-                  <a
-                    href="#"
+                  <span
                     class="user-menu--open active iconapp-notification"
+                    title="Notificaciones"
                   >
                     Notification
-                  </a>
+                  </span>
                   <div class="user-menu helper--right dp-notifications">
                     <div class="dp-msj-notif" dp-dynamic-html="notification">
                       <strong>NUEVO: Comportamiento en Sitio</strong>
@@ -87,13 +89,21 @@
                   </div>
                 </li>
                 <li>
-                  <a href="#" rel="noreferrer" class="dp-link-help"> Ayuda </a>
+                  <a
+                    href="#"
+                    rel="noreferrer"
+                    class="dp-link-help"
+                    title="Ayuda"
+                  >
+                    Ayuda
+                  </a>
                 </li>
                 <li>
-                  <a href="#" class="user-menu--open">
-                    <span class="dp-avatar-user">Lorem ipsum vulputate</span>
-                  </a>
-
+                  <span
+                    class="user-menu--open dp-avatar-user"
+                    title="Nombre de usuario"
+                    >Lorem ipsum vulputate</span
+                  >
                   <div class="user-menu">
                     <!--open-->
                     <header>
