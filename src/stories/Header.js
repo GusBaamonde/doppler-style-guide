@@ -116,9 +116,9 @@ export const Header = ({
           <nav class="nav-right-main">
             <ul class="nav-right-main--list">
               <li>
-              <a rel="noreferrer" class="user-menu--open active iconapp-notification">
+              <span class="user-menu--open active iconapp-notification" title="Notificaciones">
                 Notification
-              </a>
+              </span>
                 <div class="user-menu helper--right dp-notifications">
                   <div class="dp-msj-notif" dp-dynamic-html="notification">
                     <strong>NUEVO: Comportamiento en Sitio</strong>
@@ -134,12 +134,10 @@ export const Header = ({
                 </div>
               </li>
               <li>
-              <a rel="noreferrer" class="dp-link-help">Ayuda</a>
+              <a rel="noreferrer" class="dp-link-help" title="Ayuda">Ayuda</a>
               </li>
               <li>
-              <a rel="noreferrer" class="user-menu--open">
-              <span class="dp-avatar-user">${label}</span>
-            </a>
+              <span class="dp-avatar-user user-menu--open" title="Nombre de Usuario">${label}</span>
                 <div class="user-menu">
                   <!--open-->
                   <header>

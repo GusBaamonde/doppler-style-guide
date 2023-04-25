@@ -236,11 +236,15 @@
       text-overflow: ellipsis;
       overflow: hidden;
       display: block;
-      max-width: 175px;
+      max-width: 195px;
       min-width: 30px;
       font-size: typography.$dp-fontsize-small;
       color: colors.$dp-color-grey;
       cursor: pointer;
+      background-image: url(assets/img/Triangle.svg);
+      background-repeat: no-repeat;
+      background-position: right 8px;
+      padding-right: 18px;
 
       &:hover {
         color: colors.$dp-color-lightgrey;
@@ -354,7 +358,6 @@
 
   .user-menu {
     background: colors.$dp-color-white;
-    border-bottom: 3px solid colors.$dp-border-grey;
     border-left: 1px solid colors.$dp-border-grey;
     border-right: 1px solid colors.$dp-border-grey;
     border-top: 3px solid colors.$dp-color-default;
@@ -368,6 +371,9 @@
     visibility: hidden;
     opacity: 0;
     transition: all 0.3s ease;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+      rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 
     &.helper--right {
       right: -12px;
@@ -648,13 +654,29 @@
       }
     }
 
-    @media (max-width: 1000px) {
+    @media screen and (max-width: 1000px) {
       .header-main.header-open.sticky {
         min-height: auto;
       }
     }
   }
 
+  @media screen and (max-width: 1230px) {
+    .iconapp-notification,
+    .dp-link-help {
+      text-indent: -1000em;
+    }
+
+    .nav-right-main--list .dp-avatar-user {
+      text-indent: -1000em;
+      display: flex;
+      background: none;
+    }
+
+    .nav-right-main--list .dp-avatar-user::before {
+      margin: 0;
+    }
+  }
   .messages-container {
     &.sticky {
       position: fixed;
