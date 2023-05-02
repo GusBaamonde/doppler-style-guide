@@ -459,6 +459,7 @@
                             </div>
                           </li>
                           <li class="field-item field-item--50 dp-p-r">
+                            <!-- Read mode -->
                             <p>Tu factura será enviada a:</p>
                             <ul class="dp-cloud-tags dp-overlay">
                               <li>
@@ -486,6 +487,68 @@
                               ></span
                               >Editar o agregar destinatarios
                             </button>
+
+                            <hr class="dp-h-divider m-t-30 m-b-30" />
+
+                            <!-- Edit mode -->
+                            <p>Tu factura será enviada a:</p>
+                            <div class="dp-add-tags">
+                              <fieldset>
+                                <legend>Agregar destinatario</legend>
+                                <ul class="field-group">
+                                  <li class="field-item">
+                                    <input
+                                      type="email"
+                                      name="email"
+                                      id="email"
+                                      placeholder="Agregar cuenta de Google"
+                                      class="dp--dashed"
+                                    />
+                                    <button
+                                      type="button"
+                                      class="dp-button dp-more-tag"
+                                    >
+                                      +
+                                    </button>
+                                  </li>
+                                </ul>
+                              </fieldset>
+                              <ul class="dp-cloud-tags">
+                                <li>
+                                  <span class="dp-tag"
+                                    >mdirago@makingsense.com<button
+                                      type="button"
+                                      class="dp-button dp-remove-tag"
+                                    >
+                                      <i class="ms-icon icon-close"></i></button
+                                  ></span>
+                                </li>
+                                <li>
+                                  <span class="dp-tag"
+                                    >jcampos@makingsense.com<button
+                                      type="button"
+                                      class="dp-button dp-remove-tag"
+                                    >
+                                      <i class="ms-icon icon-close"></i></button
+                                  ></span>
+                                </li>
+                                <li>
+                                  <span class="dp-tag"
+                                    >jhoffman@makingsense.com<button
+                                      type="button"
+                                      class="dp-button dp-remove-tag"
+                                    >
+                                      <i class="ms-icon icon-close"></i></button
+                                  ></span>
+                                </li>
+                              </ul>
+                              <button
+                                type="button"
+                                class="dp-button button-medium secondary-green m-t-12"
+                              >
+                                Confirmar edición
+                              </button>
+                            </div>
                           </li>
                           <li class="field-item">
                             <div class="dp-buttons-actions m-t-12">
