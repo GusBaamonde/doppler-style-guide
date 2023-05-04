@@ -203,6 +203,39 @@
           margin-left: variables.$dp-spaces--lv5;
           width: auto;
         }
+
+        .dp-cloud-tags {
+          display: inline-block;
+          min-inline-size: min-content;
+          li {
+            display: block;
+            padding: variables.$dp-spaces--lv0;
+            margin-bottom: variables.$dp-spaces--lv2;
+            span {
+              display: flex;
+            }
+          }
+
+          li:last-child {
+            margin-bottom: variables.$dp-spaces--lv0;
+          }
+        }
+
+        button[aria-label="edit or add recipients"] {
+          display: flex;
+          align-items: center;
+        }
+
+        .dp-add-tags {
+          margin-top: variables.$dp-spaces--lv0;
+          .field-item {
+            margin-bottom: variables.$dp-spaces--lv2;
+          }
+
+          .field-item:first-child {
+            padding-top: 0;
+          }
+        }
       }
 
       /* radio */
