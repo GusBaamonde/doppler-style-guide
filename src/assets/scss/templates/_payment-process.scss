@@ -10,6 +10,26 @@
     .dp-accordion {
       padding-top: variables.$dp-spaces--lv0;
 
+      .dp-steps-payment-process {
+        padding: variables.$dp-spaces--lv4 variables.$dp-spaces--lv0
+          variables.$dp-spaces--lv0 variables.$dp-spaces--lv0;
+        .dp-accordion-thumb {
+          padding-left: variables.$dp-spaces--lv4;
+        }
+        .dp-accordion-panel {
+          padding-bottom: variables.$dp-spaces--lv0;
+          .dp-form-fields {
+            padding-left: variables.$dp-spaces--lv4;
+            padding-right: variables.$dp-spaces--lv4;
+          }
+          .dp-footer-button {
+            padding: variables.$dp-spaces--lv4;
+            background-color: colors.$dp-color-ghostwhite;
+            border-top: 1px solid colors.$dp-color-silver;
+          }
+        }
+      }
+
       li {
         border: 1px solid colors.$dp-color-silver;
         background-color: colors.$dp-color-white;
