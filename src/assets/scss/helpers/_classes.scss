@@ -5,6 +5,7 @@
 ///
 
 @use "core/variables";
+@use "core/typography";
 @use "helpers/colors";
 @use "helpers/mixins";
 
@@ -470,5 +471,66 @@
 
   .labelManager-labelLists label {
     width: 75%;
+  }
+}
+
+/* Save indicator Editor Unlayer */
+
+.dp-save-indicator {
+  position: relative;
+  padding-left: 25px;
+  font-size: typography.$dp-fontsize-base;
+  line-height: typography.$dp-lineheight-medium;
+  color: colors.$dp-color-darkgrey;
+  min-width: 24px;
+  width: auto;
+  height: 24px;
+}
+
+.dp-save-indicator.state-idle::before,
+.dp-save-indicator.state-saved::before {
+  content: "";
+  background-image: url(assets/img/Saved.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 24px;
+  height: 24px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -1px;
+}
+
+.dp-save-indicator.state-error::before,
+.dp-save-indicator.state-pending::before,
+.dp-save-indicator.state-saving::before {
+  content: "";
+  background-image: url(assets/img/Saving.svg);
+  background-repeat: no-repeat;
+  background-position: 0 2px;
+  width: 24px;
+  height: 24px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+.dp-save-indicator.state-error span,
+.dp-save-indicator.state-pending span,
+.dp-save-indicator.state-saving span {
+  animation: flash 2s ease-in-out infinite;
+}
+
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
   }
 }
