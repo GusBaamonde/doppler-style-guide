@@ -534,3 +534,101 @@
     opacity: 0;
   }
 }
+
+/* Undo - Redo Editor Unlayer */
+
+.dp-undoredo-wrap {
+  display: flex;
+  align-items: center;
+  padding: 0 42px;
+}
+
+.dp-arrow-undo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #ccc;
+  margin-right: 6px;
+  background: colors.$dp-color-ghostwhite;
+  padding: 6px;
+  width: 40px;
+  height: 40px;
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    background-color: colors.$dp-color-snow;
+    border: 1px solid colors.$dp-color-silver;
+    box-shadow: rgba(50, 50, 93, 0.2) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.2) 0px 1px 3px -1px;
+  }
+
+  &:active {
+    background-color: colors.$dp-color-snow;
+    border: 1px solid colors.$dp-color-lightgrey;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.4;
+    border: 1px solid #ccc;
+  }
+
+  &::before {
+    content: "";
+    position: relative;
+    display: block;
+    background-image: url(assets/img/btn-undo.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 16px 16px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.dp-arrow-redo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #ccc;
+  margin-right: 12px;
+  background: colors.$dp-color-ghostwhite;
+  padding: 6px;
+  width: 40px;
+  height: 40px;
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    background-color: colors.$dp-color-snow;
+    border: 1px solid colors.$dp-color-silver;
+    box-shadow: rgba(50, 50, 93, 0.2) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.2) 0px 1px 3px -1px;
+  }
+
+  &:active {
+    background-color: colors.$dp-color-snow;
+    border: 1px solid colors.$dp-color-lightgrey;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    border: 1px solid #ccc;
+    opacity: 0.4;
+  }
+
+  &::before {
+    content: "";
+    position: relative;
+    display: block;
+    background-image: url(assets/img/btn-redo.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 16px 16px;
+    width: 16px;
+    height: 16px;
+  }
+}
