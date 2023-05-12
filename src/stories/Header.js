@@ -60,8 +60,6 @@ export const Header = ({
   }
 
   return html`
-<!-- Font Proxima Nova -->
-<link rel="stylesheet" href="https://use.typekit.net/fbq8dbp.css" />
 <section class="dp-container-fluid">
     <div class="dp-rowflex">
     ${messages}

@@ -13,6 +13,7 @@ import {
   initCarouselBehavior,
   initDropdownButtonBehavior,
   initExitEditorButtonBehavior,
+  initFonts,
 } from "./js";
 
 // autoInitialize flag is deprecated
@@ -74,4 +75,8 @@ if (window["style-guide-configuration"]?.initDropdownButtonBehavior) {
 }
 if (window["style-guide-configuration"]?.initExitEditorButtonBehavior) {
   initExitEditorButtonBehavior();
+}
+
+if (window["style-guide-configuration"]?.initFonts) {
+  initFonts();
 }

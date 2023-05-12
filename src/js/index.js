@@ -4,6 +4,7 @@ import "./PopupMenuLinks";
 import { Menubutton } from "./dropdown";
 import { PopupMenuLinks } from "./PopupMenuLinks";
 import { MenuItemLinks } from "./MenuItemLinks";
+export { initFonts } from "./initFonts";
 
 export const initDopplerMenuBehavior = function () {
   $("body").on(
