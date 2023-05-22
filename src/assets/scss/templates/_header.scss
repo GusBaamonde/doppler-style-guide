@@ -210,10 +210,6 @@
     transition: all 0.3s 1s;
     background: colors.$dp-color-white;
 
-  &.open {
-    display: flex;
-  }
-
     li {
       margin-right: var.$dp-spaces--lv4;
       padding: 0 10px 0 0;
@@ -235,16 +231,7 @@
       font-weight: settings.$dp-font-weight-bold;
       padding-bottom: 11px;
     }
-}
-
-.menu-main li:hover .dp-submenu-mobile {
-  display: flex;
-  visibility: visible;
-  opacity: 1;
-  transition: all 2s 1s ease;
-  z-index: 100;
-  width: 100%;
-}
+  }
 
   /* --------------------------- */
 
