@@ -11,7 +11,9 @@ export const initDopplerMenuBehavior = function () {
     {
       mouseenter: function () {
         const submenu = $(this).find(".sub-menu");
-
+        if (!submenu.length) {
+          return;
+        }
         if (!$(this).hasClass("submenu-item")) {
           $(".header-main").removeClass("header-open");
         }
@@ -23,7 +25,7 @@ export const initDopplerMenuBehavior = function () {
         }
       },
       mouseleave: function () {
-        if ($(".header-main .submenu-item > a.active").length > 0) {
+        if ($(".header-main .submenu-item > a.active + .sub-menu").length > 0) {
           $(".header-main").addClass("header-open");
           $(".header-main .submenu-item > a.active + .sub-menu").addClass(
             "open"
