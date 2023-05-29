@@ -186,6 +186,34 @@
                       largo como dos lineas
                     </p>
                   </li> -->
+                  <li class="field-item col-sm-6 m-b-12 m-t-36">
+                    <label
+                      id="drop-zone"
+                      for="pdf"
+                      class="dp-label-dropfile"
+                      data-dropfile="*Constancia de situación fiscal"
+                      data-legend="Debe ser menor a 25 megas"
+                      aria-disabled="false"
+                      aria-invalid="false"
+                    >
+                      <span class="dp-drop-placeholder"
+                        >Arrastrar archivo aquí o</span
+                      >
+                      <input
+                        type="file"
+                        id="pdf"
+                        accept="application/pdf"
+                        hidden
+                        onchange="console.log('se seleccionaron')"
+                      />
+                      <span
+                        role="button"
+                        class="dp-button button-small secondary-green"
+                      >
+                        Cargar archivo
+                      </span>
+                    </label>
+                  </li>
                 </ul>
               </fieldset>
             </form>
