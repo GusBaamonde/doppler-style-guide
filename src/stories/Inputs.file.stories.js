@@ -19,4 +19,6 @@ Default.args = {
   disabled: false,
   isError: false,
   label: "*Constancia de situación fiscal",
+  labelLegend: "Debe ser menor a 25 megas",
+  labelPlaceholder: "Arrastrar archivo aquí o",
 };

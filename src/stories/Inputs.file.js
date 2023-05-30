@@ -3,7 +3,13 @@ import { html } from "lit-html";
 /**
  * Primary UI component for user interaction
  */
-export const Inputs = ({ disabled, label, isError }) => {
+export const Inputs = ({
+  disabled,
+  label,
+  labelPlaceholder,
+  labelLegend,
+  isError,
+}) => {
   return html`
     <div class="awa-form m-t-42" style="width:450px;">
       <label
@@ -11,11 +17,11 @@ export const Inputs = ({ disabled, label, isError }) => {
         for="pdf"
         class="dp-label-dropfile"
         data-dropfile="${label}"
-        data-legend="Debe ser menor a 25 megas"
+        data-legend="${labelLegend}"
         aria-disabled="${disabled}"
         aria-invalid="${isError}"
       >
-        <span class="dp-drop-placeholder">Arrastrar archivo aquí o</span>
+        <span class="dp-drop-placeholder">${labelPlaceholder}</span>
         <input
           type="file"
           id="pdf"
