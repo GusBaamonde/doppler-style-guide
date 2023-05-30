@@ -93,6 +93,28 @@
     max-width: 800px;
   }
 
+  [class*="modal-content--"].modal-content--full {
+    background: #f7f7f7;
+    padding: 50px 50px 20px;
+    overflow: hidden;
+    border-radius: 3px;
+    position: relative;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    height: calc(100% - 40px);
+    width: calc(100% - 40px);
+    margin: unset;
+    transform: unset;
+
+    .close {
+      position: absolute;
+      right: 20px;
+      top: 10px;
+    }
+  }
+
   .dp-iconmodal-center {
     display: flex;
     margin: 24px auto;
