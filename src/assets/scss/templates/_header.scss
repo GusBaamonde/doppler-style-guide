@@ -168,7 +168,7 @@
     background: colors.$dp-color-white;
 
     &.open {
-      display: flex;
+      display: none;
     }
 
     li {
@@ -194,8 +194,16 @@
     }
   }
 
-  .menu-main li:hover .sub-menu {
+  .menu-main li:hover .dp-submenu-desktop {
     display: flex;
+    visibility: visible;
+    opacity: 1;
+    transition: all 2s 1s ease;
+    z-index: 100;
+  }
+
+  .menu-main li:hover .sub-menu {
+    display: none;
     visibility: visible;
     opacity: 1;
     transition: all 2s 1s ease;
@@ -315,6 +323,9 @@
   @media screen and (max-width: 1024px) {
     .dp-submenu-desktop {
       display: none;
+    }
+    .menu-main li:hover .sub-menu {
+      display: block;
     }
   }
 
