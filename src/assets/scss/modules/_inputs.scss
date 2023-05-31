@@ -582,115 +582,96 @@
   /* Input file PDF */
 
   .dp-label-dropfile {
-    position: relative;
-    display: flex;
-    align-items: center;
-    border: 1px dashed colors.$dp-color-green;
-    border-radius: var.$dp-border-radius;
-    padding: var.$dp-spaces--lv2;
-    cursor: pointer;
+    font-size: 13px;
 
-    &::before {
-      content: attr(data-dropfile);
-      color: colors.$dp-color-grey;
-      font-size: typography.$dp-label-fontsize-base;
-      line-height: 18px;
-      top: -24px;
-      left: 0;
-      position: absolute;
-      text-align: center;
+    input[type="file"] {
+      width: 100%;
+      height: 100%;
+      border: 1px dashed colors.$dp-color-green;
+      border-radius: var.$dp-border-radius;
+      padding: var.$dp-spaces--lv2;
+      cursor: pointer;
+      color: colors.$dp-color-darkgrey;
+      margin-top: var.$dp-spaces--lv1;
+      font-size: 13px;
+      line-height: 30px;
     }
 
-    &::after {
-      content: attr(data-legend);
-      font-size: typography.$dp-label-fontsize-base;
-      line-height: 18px;
-      bottom: -24px;
-      right: 0;
-      position: absolute;
-      font-style: italic;
-      font-weight: normal;
-      line-height: 18px;
-      font-size: var.$dp-sizing--lvl2-14;
-      color: colors.$dp-color-lightgrey;
-    }
-
-    &:hover,
-    &:active {
+    input[type="file"]:active,
+    input[type="file"]:hover {
       background: colors.$dp-greenBackground-forWords;
     }
 
-    .dp-drop-placeholder {
-      margin-right: var.$dp-spaces--lv2;
-      font-weight: normal;
-      color: colors.$dp-color-darkgrey;
+    input[type="file"]::-webkit-file-upload-button,
+    input[type="file"]::file-selector-button {
+      color: colors.$dp-color-darkgreen;
+      border: 1px solid colors.$dp-color-darkgreen;
+      background-color: colors.$dp-color-white;
+      display: inline-block;
+      font-size: 13px;
+      text-align: center;
+      text-decoration: none;
+      appearance: none;
+      cursor: pointer;
+      font-family: "proxima-nova", Helvetica, Arial, sans-serif;
+      border-radius: 3px;
+      letter-spacing: 0.6px;
+      transition: all 0.35s ease;
+      margin-right: var.$dp-spaces--lv3;
+      -webkit-appearance: button;
+      font: inherit;
+      min-width: 150px;
     }
 
-    .dp-button.secondary-green {
-      background: colors.$dp-color-white;
+    .assistance-wrap span {
+      font-size: 13px;
+      color: colors.$dp-color-lightgrey;
+      font-style: italic;
     }
-  }
-
-  .dp-label-dropfile[aria-invalid="true"] {
-    border: 1px dashed colors.$dp-color-error-border;
-    box-shadow: out 0 0 0 2px colors.$dp-color-error-border;
   }
 
   /// Disabled
 
-  .dp-label-dropfile[aria-disabled="true"] {
+  .dp-label-dropfile[aria-disabled="true"] input[type="file"] {
     border: 1px dashed colors.$dp-color-disabled-checkbox;
     color: colors.$dp-color-lightgrey;
     pointer-events: none;
+  }
 
-    .dp-drop-placeholder {
-      color: colors.$dp-color-lightgrey;
-    }
+  .dp-label-dropfile[aria-disabled="true"] input[type="file"]:active,
+  .dp-label-dropfile[aria-disabled="true"] input[type="file"]:hover {
+    background-color: #eaeaea;
+  }
 
-    .dp-button.secondary-green {
-      border: 1px solid colors.$dp-color-disabled-checkbox;
-      color: colors.$dp-color-disabled-checkbox;
-      box-shadow: none;
-    }
-
-    &:hover,
-    &:active {
-      background: colors.$dp-color-white;
-    }
+  .dp-label-dropfile[aria-disabled="true"]
+    input[type="file"]::-webkit-file-upload-button,
+  .dp-label-dropfile[aria-disabled="true"]
+    input[type="file"]::file-selector-button {
+    pointer-events: none;
+    color: colors.$dp-color-lightgrey;
+    border: 1px solid colors.$dp-color-disabled-checkbox;
   }
 
   /// Error
 
   .dp-label-dropfile[aria-invalid="true"] {
+    color: colors.$dp-color-content-error;
+
+    input[type="file"]::-webkit-file-upload-button,
+    input[type="file"]::file-selector-button {
+      color: colors.$dp-color-content-error;
+      border: 1px solid colors.$dp-color-error-border;
+      background-color: colors.$dp-color-white;
+    }
+    .assistance-wrap span {
+      font-size: 13px;
+      color: colors.$dp-color-content-error;
+    }
+  }
+  .dp-label-dropfile[aria-invalid="true"] input[type="file"] {
     border: 1px dashed colors.$dp-color-error-border;
     color: colors.$dp-color-content-error;
     background: url(assets/img/error-form.svg) no-repeat 0 0;
     background-position: right 0.5em center;
-
-    &::after,
-    &::before {
-      color: colors.$dp-color-content-error;
-    }
-
-    .dp-drop-placeholder {
-      color: colors.$dp-color-content-error;
-    }
-
-    .dp-button.secondary-green {
-      border: 1px solid colors.$dp-color-error-border;
-      color: colors.$dp-color-content-error;
-      box-shadow: none;
-    }
-
-    &:hover,
-    &:active {
-      background: colors.$dp-color-white;
-      background: url(assets/img/error-form.svg) no-repeat 0 0;
-      background-position: right 0.5em center;
-    }
-  }
-
-  label.dp-label-dropfile[aria-invalid="true"] > span::before {
-    display: none;
   }
 }

@@ -157,61 +157,18 @@
                       value=""
                     /> -->
                   </li>
-                  <!-- <li class="field-item col-sm-4 m-b-12">
-                    <label role="checkbox">
-                      <input type="checkbox" disabled />
-                      <span>Checkbox disabled</span>
-                    </label>
-                  </li>
-                  <li class="field-item col-sm-4 m-b-12">
-                    <label role="checkbox">
-                      <input type="checkbox" />
-                      <span>Checkbox hover</span>
-                    </label>
-                  </li>
-                  <li class="field-item col-sm-4 m-b-12">
-                    <label
-                      role="checkbox"
-                      aria-invalid="true"
-                      aria-errormessage="errmsj1"
-                    >
-                      <input type="checkbox" />
-                      <span
-                        >Checkbox error o algo mas largo como una politica de
-                        privacidad</span
-                      >
-                    </label>
-                    <p id="errmsj1" class="dp-errormessage">
-                      ¡Ouch! Este checkbox no esta tildado. quizas algo mas
-                      largo como dos lineas
-                    </p>
-                  </li> -->
                   <li class="field-item col-sm-6 m-b-12 m-t-36">
                     <label
-                      id="drop-zone"
-                      for="pdf"
-                      class="dp-label-dropfile"
-                      data-dropfile="*Constancia de situación fiscal"
-                      data-legend="Debe ser menor a 25 megas"
+                      class="dp-label-dropfile m-t-54"
+                      for="file"
                       aria-disabled="false"
-                      aria-invalid="false"
+                      aria-invalid="true"
                     >
-                      <span class="dp-drop-placeholder"
-                        >Arrastrar archivo aquí o</span
-                      >
-                      <input
-                        type="file"
-                        id="pdf"
-                        accept="application/pdf"
-                        hidden
-                        onchange="console.log('se seleccionaron')"
-                      />
-                      <span
-                        role="button"
-                        class="dp-button button-small secondary-green"
-                      >
-                        Cargar archivo
-                      </span>
+                      *Constancia de situación fiscal
+                      <input type="file" id="file" name="file" />
+                      <div class="assistance-wrap">
+                        <span>Debe ser menor a 25 megas</span>
+                      </div>
                     </label>
                   </li>
                 </ul>
