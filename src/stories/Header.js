@@ -69,7 +69,7 @@ export const Header = ({
         <div class="dp-logo--cm">
           ${content}
         </div>
-        <div class="header-wrapper">
+        <div class="header-wrapper dp-shadow-bottom">
           <div class="logo" style="display:${
             hasDopplerLogo ? "block" : "none"
           }">
@@ -83,7 +83,7 @@ export const Header = ({
               <li><a href="#">Inicio</a></li>
                 <li class="submenu-item">
                   <a href="#" class="active">Campañas</a>
-                  <ul class="sub-menu sub-campaings open">
+                  <ul class="dp-submenu-mobile sub-campaings open demo-current-submenu">
                     <li><a href="#" class="active">Borradores</a></li>
                     <li><a href="#">Programadas</a></li>
                     <li><a href="#">Enviadas</a></li>
@@ -93,7 +93,7 @@ export const Header = ({
                 </li>
                 <li class="submenu-item">
                   <a href="#">Listas</a>
-                  <ul class="sub-menu sub-list">
+                  <ul class="dp-submenu-mobile sub-list">
                     <li><a href="#">Listas principales</a></li>
                     <li><a href="#">Segmentos</a></li>
                     <li><a href="#">Subscriptores</a></li>
@@ -198,6 +198,14 @@ export const Header = ({
           <!-- nav-right-main -->
         </div>
         <!-- header-wrapper -->
+        <div class="dp-submenu-desktop">
+            <ul>
+              <li><a href="#" class="dp-active">Borradores</a></li>
+              <li><a href="#">Programadas</a></li>
+              <li><a href="#">Enviadas</a></li>
+              <li><a href="#">Test A/B</a></li>
+            </ul>
+          </div>
       </header>
     </div>
   </section>
