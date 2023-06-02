@@ -641,8 +641,12 @@
 /* Unlayer Custom Media Gallery */
 
 .dp-library .dp-image-gallery {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+
   .dp-image-gallery-content {
-    height: calc(100% - 81px);
+    flex: 1;
     overflow-y: auto;
     overflow-x: hidden;
   }
