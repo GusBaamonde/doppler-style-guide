@@ -645,6 +645,10 @@
   height: 100%;
   flex-direction: column;
 
+  .dp-image-gallery-header {
+    padding-bottom: 18px;
+  }
+
   .dp-image-gallery-content {
     flex: 1;
     overflow-y: auto;
