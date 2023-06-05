@@ -162,12 +162,27 @@
                       class="dp-label-dropfile m-t-54"
                       for="file"
                       aria-disabled="false"
-                      aria-invalid="true"
+                      aria-invalid="false"
                     >
                       *Constancia de situación fiscal
+                      <div class="dp-inputfile-overlay">
+                        <span class="dp-namefile">Archivolalala.pdf</span>
+                        <div class="dp-btns-overlay">
+                          <a
+                            class="dp-download-pdf"
+                            href="https://mycom.pdf"
+                            download="ejemplo.pdf"
+                            target="_blank"
+                            >Descargar</a
+                          >
+                          <button class="dp-delete-pdf" type="button">
+                            Eliminar
+                          </button>
+                        </div>
+                      </div>
                       <input type="file" id="file" name="file" />
                       <div class="assistance-wrap">
-                        <span>Debe ser menor a 25 megas</span>
+                        <p>Debe ser PDF menor a 25 megas</p>
                       </div>
                     </label>
                   </li>

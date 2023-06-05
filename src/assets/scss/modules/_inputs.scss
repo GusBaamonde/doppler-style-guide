@@ -334,6 +334,7 @@
     display: flex;
     align-items: center;
 
+    p,
     span {
       font-size: typography.$dp-label-fontsize-base;
       line-height: 16px;
@@ -393,7 +394,8 @@
     color: colors.$dp-color-lightgrey;
   }
 
-  .labelcontrol[aria-disabled="true"] > input:disabled + .assistance-wrap span {
+  .labelcontrol[aria-disabled="true"] > input:disabled + .assistance-wrap span,
+  .labelcontrol[aria-disabled="true"] > input:disabled + .assistance-wrap p {
     color: colors.$dp-color-lightgrey;
   }
 
@@ -408,7 +410,8 @@
     background-position: right 0.5em center;
   }
 
-  .labelcontrol input[aria-invalid="true"] + .assistance-wrap span {
+  .labelcontrol input[aria-invalid="true"] + .assistance-wrap span,
+  .labelcontrol input[aria-invalid="true"] + .assistance-wrap p {
     color: colors.$dp-color-content-error;
   }
 
@@ -584,12 +587,81 @@
   .dp-label-dropfile {
     font-size: 13px;
 
+    .dp-inputfile-overlay {
+      display: none;
+    }
+
+    .dp-inputfile-overlay {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 12px;
+      background-color: colors.$dp-color-white;
+      width: 100%;
+      height: 61px;
+      margin-top: 6px;
+      border-radius: 3px;
+      border: 1px solid colors.$dp-color-silver;
+    }
+
+    .dp-btns-overlay {
+      display: flex;
+    }
+
+    .dp-namefile {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: block;
+      max-width: 190px;
+      min-width: 30px;
+      font-weight: normal;
+      font-size: 0.9rem;
+      color: #666;
+      height: 24px;
+      line-height: 24px;
+      padding-left: 30px;
+      cursor: pointer;
+      background-image: url(assets/img/picture_as_pdf.svg);
+      background-repeat: no-repeat;
+      background-position: left top;
+      padding-right: 18px;
+    }
+
+    %button-inputfile {
+      background-repeat: no-repeat;
+      background-position: center;
+      font-size: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      padding: 6px;
+      box-shadow: rgba(255, 255, 255, 0) 0px 0px 0px 30px;
+      transition: box-shadow 0.4s ease 0s;
+    }
+
+    .dp-download-pdf {
+      background-image: url(assets/img/Downloading.svg);
+      @extend %button-inputfile;
+    }
+
+    .dp-delete-pdf {
+      background-image: url(assets/img/Delete.svg);
+      @extend %button-inputfile;
+    }
+
+    .dp-download-pdf:hover,
+    .dp-delete-pdf:hover {
+      box-shadow: rgba(149, 157, 165, 0.5) 0 0 0 0;
+    }
+
     input[type="file"] {
       width: 100%;
       height: 100%;
       border: 1px dashed colors.$dp-color-green;
       border-radius: var.$dp-border-radius;
-      padding: var.$dp-spaces--lv2;
+      padding: var.$dp-spaces--lv2 var.$dp-spaces--lv5 var.$dp-spaces--lv2
+        var.$dp-spaces--lv2;
       cursor: pointer;
       color: colors.$dp-color-darkgrey;
       margin-top: var.$dp-spaces--lv1;
@@ -617,13 +689,14 @@
       border-radius: 3px;
       letter-spacing: 0.6px;
       transition: all 0.35s ease;
-      margin-right: var.$dp-spaces--lv3;
+      margin-right: var.$dp-spaces--lv2;
       -webkit-appearance: button;
       font: inherit;
-      min-width: 150px;
+      min-width: 130px;
     }
 
-    .assistance-wrap span {
+    .assistance-wrap span,
+    .assistance-wrap p {
       font-size: 13px;
       color: colors.$dp-color-lightgrey;
       font-style: italic;
@@ -663,7 +736,8 @@
       border: 1px solid colors.$dp-color-error-border;
       background-color: colors.$dp-color-white;
     }
-    .assistance-wrap span {
+    .assistance-wrap span,
+    .assistance-wrap p {
       font-size: 13px;
       color: colors.$dp-color-content-error;
     }
