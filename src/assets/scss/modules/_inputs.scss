@@ -429,6 +429,17 @@
     @extend %input-type;
   }
 
+  .labelpassword
+    input[type="password"][aria-invalid="true"]
+    + .assistance-wrap
+    span,
+  .labelpassword
+    input[type="password"][aria-invalid="true"]
+    + .assistance-wrap
+    p {
+    color: colors.$dp-color-content-error;
+  }
+
   /// Label Required
 
   .labelpassword[data-required="true"]::before {
@@ -471,10 +482,9 @@
   .labelpassword .dp-wrap-eyed {
     display: flex;
     flex-direction: column;
-    align-items: end;
     justify-content: center;
     height: 100%;
-    margin-top: var.$dp-spaces--lv1;
+    position: relative;
   }
 
   .labelpassword .dp-wrap-eyed .show-hide {
@@ -487,6 +497,7 @@
     padding: var.$dp-spaces--lv1;
     position: absolute;
     right: var.$dp-spaces--lv1;
+    top: 10px;
   }
 
   .labelpassword .dp-wrap-eyed .icon-hide:before,

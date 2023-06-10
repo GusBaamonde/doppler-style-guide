@@ -28,6 +28,9 @@ export const Inputs = ({ disabled, label, labelRequired, isError }) => {
             aria-invalid="${isError}"
             aria-placeholder="Your Password"
           />
+          <div class="assistance-wrap">
+            <span>Assistive text</span>
+          </div>
         </div>
         <div class="wrapper-password">
           <p class="password-message">
