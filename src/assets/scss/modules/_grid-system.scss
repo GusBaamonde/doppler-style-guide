@@ -113,4 +113,13 @@
     height: 100%;
     padding: variables.$dp-spaces--lv3;
   }
+
+  .dp-rowflex {
+    // Row's elements with fixed width
+    .col-fixed--240 {
+      max-width: 240px;
+    }
+
+    // TODO: Consider adding more fixed widths, for example by 60px
+  }
 }
