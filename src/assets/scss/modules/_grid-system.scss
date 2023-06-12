@@ -115,6 +115,11 @@
   }
 
   .dp-rowflex {
+    // Row's element that takes all the space available
+    .col-flex--1 {
+      flex: 1;
+    }
+
     // Row's elements with fixed width
     .col-fixed--240 {
       max-width: 240px;
