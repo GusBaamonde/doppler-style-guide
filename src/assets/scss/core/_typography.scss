@@ -141,6 +141,14 @@ $dp-lineheight-medium: 1.5rem; /*24px*/
     }
   }
 
+  .dp--italic {
+    font-style: italic;
+  }
+
+  .dp--text-underline {
+    text-decoration: underline;
+  }
+
   .dp-uppercase {
     text-transform: uppercase;
   }
