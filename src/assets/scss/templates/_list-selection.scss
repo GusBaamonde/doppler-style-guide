@@ -24,6 +24,10 @@
         top: auto;
         right: 24px;
       }
+
+      select {
+        text-overflow: ellipsis;
+      }
     }
   }
 
