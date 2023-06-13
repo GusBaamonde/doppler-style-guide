@@ -55,4 +55,21 @@
       }
     }
   }
+
+  .dp-wrap-isologo--small {
+    display: flex;
+    position: relative;
+    padding-left: 30px;
+  }
+
+  .dp-wrap-isologo--small::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    left: 0px;
+    top: -1px;
+    position: absolute;
+    background-image: url(assets/img/iso-doppler.svg);
+    background-repeat: no-repeat;
+  }
 }
