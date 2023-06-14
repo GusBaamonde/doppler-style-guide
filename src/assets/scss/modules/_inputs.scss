@@ -506,6 +506,9 @@
     color: colors.$dp-color-content-error;
   }
 
+  .labelpassword input:not([type="checkbox"]) {
+    @extend %input-type;
+  }
   /// Label Required
 
   .labelpassword[data-required="true"]::before {
