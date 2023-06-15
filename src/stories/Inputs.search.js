@@ -9,7 +9,10 @@ export const Inputs = ({ disabled, label, isError }) => {
       <label for="search" class="labelcontrol" aria-disabled="${disabled}">
         ${label}
         <div class="dp-wrap-search">
-          <button class="dp-button button-medium dp-button--search">
+          <button
+            class="dp-button button-medium dp-button--search"
+            .disabled="${disabled}"
+          >
             <span class="ms-icon icon-search" aria-hidden="true"></span>
           </button>
           <input
