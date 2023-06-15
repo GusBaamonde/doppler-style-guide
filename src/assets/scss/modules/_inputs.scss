@@ -322,6 +322,7 @@
     font-size: typography.$dp-fontsize-base;
     line-height: 12px;
     color: colors.$dp-color-content-error;
+    margin-right: 3px;
   }
 
   .labelcontrol[data-required="false"]::before {
@@ -332,11 +333,26 @@
     color: colors.$dp-color-lightgrey;
   }
 
+  .labelcontrol[aria-disabled="true"]
+    .dp-wrap-search
+    > input[type="search"]:disabled {
+    border: 1px solid colors.$dp-color-disable-border-checkbox;
+    background-color: colors.$dp-color-disable-fill-checkbox;
+    color: colors.$dp-color-lightgrey;
+  }
+
+  .labelcontrol[aria-disabled="true"] .dp-wrap-search > .dp-button--search {
+    background-color: colors.$dp-color-disable-fill-checkbox;
+    color: colors.$dp-color-text-input;
+    opacity: inherit;
+  }
+
   /* AWA search */
 
   .dp-wrap-search.dp-bg-search input {
     padding-left: 36px;
     border: 1px solid #838370;
+    font-size: typography.$dp-fontsize-awa;
   }
   .dp-wrap-search.dp-bg-search::before {
     content: "";
@@ -442,6 +458,12 @@
     box-shadow: 0 0 0 2px colors.$dp-color-darkyellow;
   }
 
+  .dp-select select:focus {
+    outline: none;
+    border: 1px solid colors.$dp-color-darkyellow;
+    box-shadow: 0 0 0 2px colors.$dp-color-darkyellow;
+  }
+
   /// Disabled
 
   .labelcontrol[aria-disabled="true"] {
@@ -509,6 +531,10 @@
   .labelpassword input:not([type="checkbox"]) {
     @extend %input-type;
   }
+
+  .labelcontrol input:not([type="checkbox"]) {
+    @extend %input-type;
+  }
   /// Label Required
 
   .labelpassword[data-required="true"]::before {
@@ -518,6 +544,7 @@
     font-size: typography.$dp-fontsize-base;
     line-height: typography.$dp-linheight-small;
     color: colors.$dp-color-content-error;
+    margin-right: 3px;
   }
 
   .labelpassword[data-required="false"]::before {
@@ -829,43 +856,66 @@
     background-position: right 0.5em center;
   }
 
-  /* Select */
+  /* Select Dropdown */
 
-  .dropdown-arrow {
-    border-style: solid;
-    height: 0;
-    width: 0;
-    border-width: 7px 5.5px 0 5.5px;
-    border-color: colors.$dp-color-lightgrey transparent transparent transparent;
-    position: absolute;
-    right: 15px;
-    top: 2.5em;
-    z-index: 10;
-    pointer-events: none;
+  .labelcontrol .dp-select {
+    position: relative;
+    margin-top: 6px;
   }
 
-  select {
-    height: 40px;
-    color: colors.$dp-color-grey;
-    border: 1px solid colors.$dp-color-silver;
-    width: 100%;
-    background-color: colors.$dp-color-white;
-    border-radius: var.$dp-border-radius;
-    font-size: var.$dp-sizing--lvl2;
-    padding: 0 40px 0 10px;
-    text-align: left;
-    line-height: 40px;
-    cursor: pointer;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
-  }
+  .dp-select {
+    position: relative;
+    margin-top: 0px;
 
-  select:disabled {
-    background-color: colors.$dp-color-snow;
-    border: 1px solid colors.$dp-color-silver;
-    color: colors.$dp-color-grey;
-    cursor: default;
+    .dropdown-arrow {
+      border-style: solid;
+      height: 0;
+      width: 0;
+      border-width: 7px 5.5px 0 5.5px;
+      border-color: colors.$dp-color-border-input transparent transparent
+        transparent;
+      position: absolute;
+      right: 15px;
+      top: 17px;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    select {
+      height: 40px;
+      color: colors.$dp-color-text-input;
+      border: 1px solid colors.$dp-color-border-input;
+      width: 100%;
+      background-color: colors.$dp-color-white;
+      border-radius: var.$dp-border-radius;
+      font-size: typography.$dp-fontsize-base;
+      padding: 0 40px 0 10px;
+      text-align: left;
+      line-height: 36px;
+      cursor: pointer;
+      text-overflow: ellipsis;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    }
+
+    select:disabled {
+      background-color: colors.$dp-color-snow;
+      border: 1px solid colors.$dp-color-silver;
+      color: colors.$dp-color-grey;
+      cursor: default;
+    }
+
+    select[aria-invalid="true"] {
+      color: colors.$dp-color-content-error;
+      border: 2px solid colors.$dp-color-error-border;
+      background-color: colors.$dp-color-white;
+    }
+
+    select[aria-invalid="true"] + .assistance-wrap p,
+    select[aria-invalid="true"] + .assistance-wrap span {
+      color: colors.$dp-color-content-error;
+    }
   }
 }

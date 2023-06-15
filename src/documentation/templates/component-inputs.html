@@ -32,8 +32,7 @@
                       for="search"
                       class="labelcontrol"
                       aria-disabled="false"
-                    >
-                      Busqueda avanzada
+                      >Busqueda avanzada
                       <div class="dp-wrap-search">
                         <button
                           class="dp-button button-medium dp-button--search"
@@ -71,8 +70,7 @@
                       class="labelcontrol"
                       aria-disabled="false"
                       data-required="true"
-                    >
-                      Name
+                      >Name
                       <input
                         type="text"
                         id="name"
@@ -89,18 +87,23 @@
                   </li>
                   <li class="field-item col-sm-8 m-b-12">
                     <label
-                      for="email"
+                      for="list-selection"
                       class="labelcontrol"
                       aria-disabled="false"
                       data-required="true"
-                      >Label select
+                      >Lista de seleccion
                       <div class="dp-select">
                         <span class="dropdown-arrow"></span>
-                        <select id="range_time" class="" name="Último mes">
-                          <option value="">Último mes</option>
-                          <option value="">Último mes</option>
-                          <option value="">Último mes</option>
-                          <option value="">Último mes</option>
+                        <select
+                          id="list-selection"
+                          class=""
+                          name="list-selection"
+                          aria-invalid="false"
+                        >
+                          <option value="">item list</option>
+                          <option value="">item list</option>
+                          <option value="">item list</option>
+                          <option value="">item list</option>
                         </select>
                         <div class="assistance-wrap">
                           <span>Assistive text</span>
@@ -109,13 +112,23 @@
                     </label>
                   </li>
                   <li class="field-item col-sm-8 m-b-12">
+                    <div class="dp-select">
+                      <span class="dropdown-arrow"></span>
+                      <select id="list-gallery" class="" name="list-gallery">
+                        <option value="">item gallery</option>
+                        <option value="">item gallery</option>
+                        <option value="">item gallery</option>
+                        <option value="">item gallery</option>
+                      </select>
+                    </div>
+                  </li>
+                  <li class="field-item col-sm-8 m-b-12">
                     <label
                       for="email"
                       class="labelcontrol"
                       aria-disabled="false"
                       data-required="true"
-                    >
-                      Email
+                      >Email
                       <input
                         type="email"
                         id="email"
@@ -136,8 +149,7 @@
                       class="labelcontrol"
                       aria-disabled="false"
                       data-required="true"
-                    >
-                      Teléfono
+                      >Teléfono
                       <input
                         type="tel"
                         id="tel"
@@ -157,8 +169,7 @@
                       for="password"
                       class="labelpassword"
                       data-required="true"
-                    >
-                      Contraseña:
+                      >Contraseña:
                       <div class="dp-wrap-eyed">
                         <button
                           id="see"
