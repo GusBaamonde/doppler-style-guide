@@ -13,18 +13,20 @@ export const Inputs = ({ disabled, label, labelRequired, isError }) => {
         data-required="${labelRequired}"
       >
         ${label}
-        <input
-          type="tel"
-          id="tel"
-          name="tel"
-          placeholder="Your Phone"
-          aria-required="true"
-          aria-invalid="${isError}"
-          aria-placeholder="Your Phone"
-          .disabled="${disabled}"
-        />
-        <div class="assistance-wrap">
-          <span>Assistive text</span>
+        <div class="iti iti--allow-dropdown">
+          <input
+            type="tel"
+            id="tel"
+            name="tel"
+            placeholder="Your Phone"
+            aria-required="true"
+            aria-invalid="${isError}"
+            aria-placeholder="Your Phone"
+            .disabled="${disabled}"
+          />
+          <div class="assistance-wrap">
+            <span>Assistive text</span>
+          </div>
         </div>
       </label>
     </div>
