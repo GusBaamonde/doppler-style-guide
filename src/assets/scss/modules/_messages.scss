@@ -6,17 +6,18 @@
 /// We have four message styles for our users: .dp-msj-error, .dp-msj-succes, .dp-msj-warning, .dp-msj-user
 /// @author gbaamonde@makingsense.com
 
-@use "core/variables";
+@use "core/variables" as var;
 @use "core/settings";
 @use "helpers/colors";
+@use "core/typography";
 
 .dp-library {
   @mixin dp-messages($color: "", $border-color: "", $background: "") {
-    font-size: variables.$dp-sizing--lvl2;
+    font-size: var.$dp-sizing--lvl2;
     display: inline-block;
     width: 100%;
-    padding: variables.$dp-spaces--lv2;
-    margin: variables.$dp-spaces--lv1 0;
+    padding: var.$dp-spaces--lv2;
+    margin: var.$dp-spaces--lv1 0;
     color: $color;
     border-color: $border-color;
     border-style: solid;
@@ -87,7 +88,7 @@
     border-radius: 3px;
     align-items: center;
     justify-content: flex-start;
-    padding: variables.$dp-spaces--lv3;
+    padding: var.$dp-spaces--lv3;
     position: relative;
     overflow: hidden;
 
@@ -106,11 +107,11 @@
     }
 
     .dp-content-message {
-      padding-left: variables.$dp-spaces--lv2;
+      padding-left: var.$dp-spaces--lv2;
       width: 100%;
 
       p {
-        font-size: variables.$dp-sizing--lvl2;
+        font-size: var.$dp-sizing--lvl2;
         line-height: 18px;
       }
     }
@@ -125,12 +126,12 @@
       justify-content: space-between;
 
       p {
-        padding-right: variables.$dp-spaces--lv4;
-        margin-bottom: variables.$dp-spaces--lv0;
+        padding-right: var.$dp-spaces--lv4;
+        margin-bottom: var.$dp-spaces--lv0;
       }
 
       .dp-message-link {
-        margin-top: variables.$dp-spaces--lv0;
+        margin-top: var.$dp-spaces--lv0;
         min-width: 154px;
       }
     }
@@ -139,9 +140,9 @@
       text-transform: uppercase;
       color: colors.$dp-color-darkgrey;
       text-decoration: underline;
-      font-size: variables.$dp-sizing--lvl2;
+      font-size: var.$dp-sizing--lvl2;
       text-align: right;
-      margin-top: variables.$dp-spaces--lv2;
+      margin-top: var.$dp-spaces--lv2;
       display: inline-block;
     }
   }
@@ -196,6 +197,62 @@
     .dp-message-icon {
       background-image: url(assets/img/message-advice.svg);
       background-repeat: no-repeat;
+    }
+  }
+
+  /* Message Editor Unlayer */
+
+  .dp-wrapper-message {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dp-box-message {
+    max-width: 550px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+
+    h1 {
+      text-align: center;
+      font-family: typography.$dp-fontfamily-awa;
+      font-size: var.$dp-sizing--lvl7;
+      line-height: 42px;
+      color: colors.$dp-color-grey;
+      font-weight: 600;
+    }
+
+    h3 {
+      text-align: center;
+      font-family: typography.$dp-fontfamily-awa;
+      font-size: var.$dp-sizing--lvl6;
+      line-height: 36px;
+      color: colors.$dp-color-grey;
+      font-weight: 400;
+    }
+
+    p {
+      text-align: center;
+      font-family: typography.$dp-fontfamily-awa;
+    }
+
+    .dp-img-icon {
+      max-width: 150px;
+      max-height: 160px;
+      overflow: hidden;
+      margin-bottom: var.$dp-spaces--lv4;
+      background-color: transparent;
+
+      img {
+        width: 100%;
+        display: block;
+      }
     }
   }
 }
