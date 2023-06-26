@@ -24,9 +24,9 @@ export const Inputs = ({ disabled, label, labelRequired, isError }) => {
             aria-placeholder="Your Phone"
             .disabled="${disabled}"
           />
-          <div class="assistance-wrap">
-            <span>Assistive text</span>
-          </div>
+        </div>
+        <div class="assistance-wrap">
+          <span>Assistive text</span>
         </div>
       </label>
     </div>

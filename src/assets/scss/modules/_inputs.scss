@@ -518,6 +518,11 @@
     color: colors.$dp-color-content-error;
   }
 
+  .assistance-wrap.assistance-error span,
+  .assistance-wrap.assistance-error p {
+    color: colors.$dp-color-content-error;
+  }
+
   /// Label Password AWA
 
   .labelpassword {
