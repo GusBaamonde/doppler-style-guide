@@ -19,6 +19,10 @@
     height: 100%;
     overflow: auto;
     background: colors.$dp-bg-overlay;
+
+    &.bg-opacity--50 {
+      background: colors.$dp-bg-overlay-50;
+    }
   }
 
   [class*="modal-content--"] {
@@ -78,6 +82,10 @@
       &:after {
         transform: rotate(-45deg);
       }
+    }
+
+    &.p-all--20 {
+      padding: 20px;
     }
   }
 
