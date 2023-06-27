@@ -290,10 +290,10 @@
     border: 1px solid colors.$dp-color-border-input;
     background-color: colors.$dp-color-white;
     color: colors.$dp-color-text-input;
-    padding: 12px 6px;
+    padding: var.$dp-spaces--lv2 var.$dp-spaces--lv1;
     font-size: typography.$dp-fontsize-base;
     line-height: 24px;
-    margin-top: 6px;
+    margin-top: var.$dp-spaces--lv1;
     box-shadow: 0 0 0 2px colors.$dp-color-white;
   }
 
@@ -303,6 +303,7 @@
 
   .labelcontrol input[type="tel"] {
     @extend %input-type;
+    padding-left: 45px;
   }
 
   .labelcontrol input[type="email"] {
@@ -311,6 +312,10 @@
 
   .labelcontrol input[type="search"] {
     @extend %input-type;
+  }
+
+  .labelcontrol .iti {
+    margin-top: var.$dp-spaces--lv1;
   }
 
   /// Label Required
@@ -493,6 +498,16 @@
   }
 
   .labelcontrol
+    .iti--allow-dropdown
+    input[aria-invalid="true"]
+    + .assistance-wrap
+    span,
+  .labelcontrol
+    .iti--allow-dropdown
+    input[aria-invalid="true"]
+    + .assistance-wrap
+    p,
+  .labelcontrol
     .dp-wrap-search
     input[aria-invalid="true"]
     + .assistance-wrap
@@ -500,6 +515,11 @@
   .labelcontrol .dp-wrap-search input[aria-invalid="true"] + .assistance-wrap p,
   .labelcontrol input[aria-invalid="true"] + .assistance-wrap span,
   .labelcontrol input[aria-invalid="true"] + .assistance-wrap p {
+    color: colors.$dp-color-content-error;
+  }
+
+  .assistance-wrap.assistance-error span,
+  .assistance-wrap.assistance-error p {
     color: colors.$dp-color-content-error;
   }
 
