@@ -133,6 +133,22 @@
         }
       }
 
+      &grey {
+        background: transparent;
+        color: colors.$dp-color-grey;
+        box-shadow: inset 0 0 0 1px colors.$dp-color-grey;
+
+        &:hover {
+          background: colors.$dp-color-grey-brightness;
+        }
+
+        &:focus {
+          box-shadow: inset 0 0 0 2px colors.$dp-color-orange-focus,
+            inset 0 0 0 3px colors.$dp-color-white;
+          background: colors.$dp-color-grey-brightness;
+        }
+      }
+
       &brown {
         background: transparent;
         color: colors.$dp-color-brown;
