@@ -123,6 +123,29 @@
     }
   }
 
+  [class*="modal-content--"].modal-content--error {
+    background-color: colors.$dp-color-red-brightness;
+    border: 1px solid colors.$dp-color-red;
+
+    h2::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      left: 0;
+      top: 5px;
+      padding-top: 10px;
+      background-image: url("assets/img/message-cancel-icon.svg");
+      background-repeat: no-repeat;
+    }
+
+    h2 {
+      padding-left: variables.$dp-spaces--lv5;
+      position: relative;
+    }
+  }
+
   .dp-iconmodal-center {
     display: flex;
     margin: 24px auto;
