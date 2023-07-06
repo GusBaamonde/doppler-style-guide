@@ -25,7 +25,8 @@ $dp-lineheight-medium: 1.5rem; /*24px*/
 @font-face {
   font-family: "hand-of-sean";
   src: url("assets/fonts/HandOfSeanPro-webfont.eot");
-  src: url("assets/fonts/HandOfSeanPro-webfont.eot?#iefix")
+  src:
+    url("assets/fonts/HandOfSeanPro-webfont.eot?#iefix")
       format("embedded-opentype"),
     url("assets/fonts/HandOfSeanPro-webfont.woff2") format("woff2"),
     url("assets/fonts/HandOfSeanPro-webfont.woff") format("woff"),

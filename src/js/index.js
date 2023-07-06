@@ -28,14 +28,14 @@ export const initDopplerMenuBehavior = function () {
         if ($(".header-main .submenu-item > a.active + .sub-menu").length > 0) {
           $(".header-main").addClass("header-open");
           $(".header-main .submenu-item > a.active + .sub-menu").addClass(
-            "open"
+            "open",
           );
         } else {
           $(".header-main").removeClass("header-open");
         }
       },
     },
-    ".menu-main>li"
+    ".menu-main>li",
   );
 };
 
@@ -135,7 +135,7 @@ export const initDemonstrateBehavior = function () {
             step: function (now) {
               $(this).text(Math.ceil(now).toFixed(1));
             },
-          }
+          },
         );
     });
   });
@@ -225,7 +225,7 @@ export const initCarouselBehavior = function () {
       var carrousel = $(this).closest(".dp-carousel").prop("id");
       $("#" + carrousel + " .dp-carousel-slide").removeClass("active");
       $(
-        "#" + carrousel + " .dp-carousel-slide[data-order=" + slideId + "]"
+        "#" + carrousel + " .dp-carousel-slide[data-order=" + slideId + "]",
       ).addClass("active");
     });
   });

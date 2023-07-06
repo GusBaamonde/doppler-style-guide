@@ -1,7 +1,8 @@
 @font-face {
   font-family: "icon-font";
   src: url("assets/fonts/icon-font.eot?1644345418015");
-  src: url("assets/fonts/icon-font.eot?#iefix") format("embedded-opentype"),
+  src:
+    url("assets/fonts/icon-font.eot?#iefix") format("embedded-opentype"),
     url("assets/fonts/icon-font.woff2?1644345418015") format("woff2"),
     url("assets/fonts/icon-font.woff?1644345418015") format("woff"),
     url("assets/fonts/icon-font.ttf?1644345418015") format("truetype"),
