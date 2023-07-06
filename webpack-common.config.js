@@ -52,7 +52,7 @@ const generateHtmlPlugins = (templateDir) => {
         filename: `documentation/${name}.html`,
         template: path.resolve(
           __dirname,
-          `${templateDir}/${name}.${extension}`
+          `${templateDir}/${name}.${extension}`,
         ),
       });
     });
@@ -62,7 +62,7 @@ module.exports = function (env) {
   Dotenv.config({
     path: path.resolve(
       __dirname,
-      `./.env.${env.NODE_ENV ? env.NODE_ENV : "development"}`
+      `./.env.${env.NODE_ENV ? env.NODE_ENV : "development"}`,
     ),
   });
   return {

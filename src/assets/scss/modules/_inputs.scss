@@ -56,7 +56,9 @@
     opacity: 0;
     transform: scale(1);
     pointer-events: none;
-    transition: opacity 0.3s, transform 0.2s;
+    transition:
+      opacity 0.3s,
+      transform 0.2s;
   }
 
   /* Span */
@@ -82,7 +84,9 @@
     max-width: 29px;
     height: 18px;
     vertical-align: top;
-    transition: border-color 0.2s, background-color 0.2s;
+    transition:
+      border-color 0.2s,
+      background-color 0.2s;
   }
 
   /* Checkmark */
@@ -151,7 +155,9 @@
   label.dp-label-checkbox > input:active {
     opacity: 1;
     transform: scale(0);
-    transition: transform 0s, opacity 0s;
+    transition:
+      transform 0s,
+      opacity 0s;
   }
 
   /* Disabled */
@@ -244,7 +250,9 @@
     max-width: 29px;
     height: 18px;
     vertical-align: top;
-    transition: border-color 0.2s, background-color 0.2s;
+    transition:
+      border-color 0.2s,
+      background-color 0.2s;
   }
 
   label[aria-invalid="true"] > input:checked + span::before,

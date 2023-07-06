@@ -50,7 +50,7 @@ export const PopupMenuLinks = function (domNode, controllerObj) {
     var menuitem = childElement.firstElementChild;
     if (menuitem && menuitem.tagName !== "A") {
       throw new Error(
-        msgPrefix + "has descendant elements that are not A elements."
+        msgPrefix + "has descendant elements that are not A elements.",
       );
     }
     childElement = childElement.nextElementSibling;
@@ -183,7 +183,7 @@ PopupMenuLinks.prototype.setFocusToNextItem = function (currentItem) {
 
 PopupMenuLinks.prototype.setFocusByFirstCharacter = function (
   currentItem,
-  char
+  char,
 ) {
   var start,
     index,

@@ -66,7 +66,7 @@ Menubutton.prototype.init = function () {
   // initialize pop up menus
 
   var popupMenu = document.getElementById(
-    this.domNode.getAttribute("aria-controls")
+    this.domNode.getAttribute("aria-controls"),
   );
 
   if (popupMenu) {

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <%=
@@ -219,7 +219,10 @@
       <section class="feature-panel">
         <div
           class="feature-panel--bg"
-          style="background-image: urL('img/violet-yellow.png'); color: #fff"
+          style="
+            background-image: urL(&quot;img/violet-yellow.png&quot;);
+            color: #fff;
+          "
         >
           <article class="feature-content">
             <h6>Email automation</h6>
@@ -274,12 +277,12 @@
         initialCountry: "auto",
         hiddenInput: "full_phone",
         geoIpLookup: function (callback) {
-          $.get("https://ipinfo.io", function () {}, "jsonp").always(function (
-            resp
-          ) {
-            var countryCode = resp && resp.country ? resp.country : "ar";
-            callback(countryCode);
-          });
+          $.get("https://ipinfo.io", function () {}, "jsonp").always(
+            function (resp) {
+              var countryCode = resp && resp.country ? resp.country : "ar";
+              callback(countryCode);
+            },
+          );
         },
         utilsScript: "../js/main.js",
       });

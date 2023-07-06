@@ -568,13 +568,16 @@
 %active-undoredo {
   background-color: colors.$dp-color-snow;
   border: 1px solid colors.$dp-color-lightgrey;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  box-shadow:
+    rgba(0, 0, 0, 0.12) 0px 1px 3px,
+    rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 %hover-undoredo {
   background-color: colors.$dp-color-snow;
   border: 1px solid colors.$dp-color-silver;
-  box-shadow: rgba(50, 50, 93, 0.2) 0px 2px 5px -1px,
+  box-shadow:
+    rgba(50, 50, 93, 0.2) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.2) 0px 1px 3px -1px;
 }
 
@@ -588,7 +591,9 @@
   &:active {
     background-color: colors.$dp-color-snow;
     border: 1px solid colors.$dp-color-lightgrey;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    box-shadow:
+      rgba(0, 0, 0, 0.12) 0px 1px 3px,
+      rgba(0, 0, 0, 0.24) 0px 1px 2px;
   }
 
   &:disabled {
@@ -618,7 +623,9 @@
   &:active {
     background-color: colors.$dp-color-snow;
     border: 1px solid colors.$dp-color-lightgrey;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    box-shadow:
+      rgba(0, 0, 0, 0.12) 0px 1px 3px,
+      rgba(0, 0, 0, 0.24) 0px 1px 2px;
   }
 
   &:disabled {
@@ -715,7 +722,8 @@
       width: 1.4em;
       height: 1.4em;
       background-color: #fafafa;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+      box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.05),
         inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
       border: solid 1px #838370;
 
