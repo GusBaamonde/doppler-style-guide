@@ -45,7 +45,8 @@ Language selector
 
     a[role="menuitem"] {
       //outline: 0;
-      box-shadow: 0 0 0 1px colors.$dp-color-darkyellow,
+      box-shadow:
+        0 0 0 1px colors.$dp-color-darkyellow,
         0 0 0 2px rgba(0, 0, 0, 0.1);
 
       &:hover,

@@ -60,7 +60,8 @@
       padding: 5px;
       border-radius: 5px;
       background-color: colors.$dp-color-white;
-      box-shadow: inset 0 0 0 3px colors.$dp-color-snow,
+      box-shadow:
+        inset 0 0 0 3px colors.$dp-color-snow,
         inset 0 0 0 5px colors.$dp-color-orange-focus;
       z-index: 3;
     }

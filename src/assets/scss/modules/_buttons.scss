@@ -127,7 +127,8 @@
         }
 
         &:focus {
-          box-shadow: inset 0 0 0 2px colors.$dp-color-orange-focus,
+          box-shadow:
+            inset 0 0 0 2px colors.$dp-color-orange-focus,
             inset 0 0 0 3px colors.$dp-color-white;
           background: colors.$dp-color-green-brightness;
         }
@@ -143,7 +144,8 @@
         }
 
         &:focus {
-          box-shadow: inset 0 0 0 2px colors.$dp-color-orange-focus,
+          box-shadow:
+            inset 0 0 0 2px colors.$dp-color-orange-focus,
             inset 0 0 0 3px colors.$dp-color-white;
           background: colors.$dp-color-grey-brightness;
         }
@@ -159,7 +161,8 @@
         }
 
         &:focus {
-          box-shadow: inset 0 0 0 2px colors.$dp-color-orange-focus,
+          box-shadow:
+            inset 0 0 0 2px colors.$dp-color-orange-focus,
             inset 0 0 0 3px colors.$dp-color-white;
           background: colors.$dp-color-brown-brightness;
         }
@@ -237,7 +240,8 @@
 
       &:focus,
       &.active {
-        box-shadow: inset 0 0 0 2px colors.$dp-color-orange-focus,
+        box-shadow:
+          inset 0 0 0 2px colors.$dp-color-orange-focus,
           inset 0 0 0 3px colors.$dp-color-white;
         background: colors.$dp-color-white;
       }
@@ -268,7 +272,8 @@
       }
 
       &:focus {
-        box-shadow: inset 0 0 0 2px colors.$dp-color-orange-focus,
+        box-shadow:
+          inset 0 0 0 2px colors.$dp-color-orange-focus,
           inset 0 0 0 3px colors.$dp-color-white;
       }
 
@@ -295,7 +300,8 @@
 
   .dp-button:focus {
     outline: none;
-    box-shadow: inset 0 0 0 2px colors.$dp-color-orange-focus,
+    box-shadow:
+      inset 0 0 0 2px colors.$dp-color-orange-focus,
       inset 0 0 0 3px colors.$dp-color-white;
   }
 

@@ -273,7 +273,8 @@
         color: colors.$dp-color-darkgreen;
         background-color: colors.$dp-color-ghostwhite;
         border-radius: variables.$dp-border-radius;
-        box-shadow: variables.$dp-spaces--lv0 variables.$dp-spaces--lv0 1px
+        box-shadow:
+          variables.$dp-spaces--lv0 variables.$dp-spaces--lv0 1px
             rgba(86, 86, 86, 0.3),
           variables.$dp-spaces--lv0 3px 5px rgba(86, 86, 86, 0.2);
         transition: 0.3s;
@@ -281,7 +282,8 @@
           color: colors.$dp-color-darkgrey;
         }
         &:hover {
-          box-shadow: variables.$dp-spaces--lv0 variables.$dp-spaces--lv0 1px
+          box-shadow:
+            variables.$dp-spaces--lv0 variables.$dp-spaces--lv0 1px
               rgba(86, 86, 86, 0.35),
             0px 3px 5px rgba(86, 86, 86, 0.35);
         }
