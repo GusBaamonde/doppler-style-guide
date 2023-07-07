@@ -15,7 +15,7 @@ export const Inputs = ({ disabled, label, labelRequired, isError }) => {
         ${label}
         <div class="iti iti--allow-dropdown">
           <input
-            type="tel"
+            type="number"
             id="tel"
             name="tel"
             placeholder="Your Phone"
