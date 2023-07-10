@@ -312,6 +312,18 @@
   .labelcontrol input[type="tel"] {
     @extend %input-type;
     padding-left: 45px;
+    appearance: none;
+  }
+
+  .labelcontrol input[type="number"] {
+    @extend %input-type;
+    padding-left: 45px;
+    appearance: none;
+  }
+
+  .labelcontrol input[type="number"]::-webkit-inner-spin-button,
+  .labelcontrol input[type="number"]::-webkit-outer-spin-button {
+    display: none;
   }
 
   .labelcontrol input[type="email"] {
@@ -433,6 +445,11 @@
     font-style: normal;
   }
 
+  .labelcontrol input[type="number"]::placeholder {
+    color: colors.$dp-color-text-input;
+    font-style: normal;
+  }
+
   .labelcontrol input[type="tel"]::placeholder {
     color: colors.$dp-color-text-input;
     font-style: normal;
@@ -447,6 +464,12 @@
   }
 
   .labelcontrol input[type="email"]:focus {
+    outline: none;
+    border: 1px solid colors.$dp-color-darkyellow;
+    box-shadow: 0 0 0 2px colors.$dp-color-darkyellow;
+  }
+
+  .labelcontrol input[type="number"]:focus {
     outline: none;
     border: 1px solid colors.$dp-color-darkyellow;
     box-shadow: 0 0 0 2px colors.$dp-color-darkyellow;
