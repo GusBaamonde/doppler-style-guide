@@ -868,7 +868,7 @@
       span {
         display: flex;
         align-items: center;
-        padding: var.$dp-spaces--lv1;
+        padding: var.$dp-spaces--lv2;
         border-radius: 100%;
         transition: 0.25s ease-in-out;
 
@@ -880,12 +880,133 @@
           width: 1.5em;
           height: 1.5em;
           border-radius: 100%;
-          margin-right: var.$dp-spaces--lv1;
+          margin-right: var.$dp-spaces--lv2;
           transition: 0.25s ease;
           box-shadow: inset 0 0 0 2px colors.$dp-color-lightgrey;
         }
       }
     }
+  }
+
+  /* Selected */
+
+  .dp-input--radio.dp-checkout-radio-selected {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    display: block;
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow:
+        rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+
+    label {
+      border: 2px solid colors.$dp-color-darkgrey;
+      border-radius: 3px;
+      padding: 0px;
+      display: inherit;
+      margin-bottom: 0;
+      font-size: 16px;
+      color: colors.$dp-color-text;
+
+      span {
+        padding: 18px 12px;
+      }
+    }
+
+    .dp-footer--radio {
+      border-top: 1px solid colors.$dp-color-darkgrey;
+      padding-top: 6px;
+      padding-left: 48px;
+      padding-bottom: 6px;
+
+      p {
+        font-size: 14px;
+        margin: 0 auto;
+        color: colors.$dp-color-darkgrey;
+      }
+    }
+  }
+
+  /* Notselected*/
+
+  .dp-input--radio.dp-checkout-radio-notselected {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    display: block;
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow:
+        rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+
+    label {
+      border: 2px solid colors.$dp-color-snow;
+      border-radius: 3px;
+      padding: 0px;
+      display: inherit;
+      margin-bottom: 0;
+      font-size: 16px;
+      color: colors.$dp-color-grey;
+
+      span {
+        padding: 18px 12px;
+      }
+    }
+
+    .dp-footer--radio {
+      border-top: 1px solid colors.$dp-color-snow;
+      padding-top: 6px;
+      padding-left: 48px;
+      background-color: colors.$dp-color-snow;
+      padding-bottom: 6px;
+
+      p {
+        font-size: 14px;
+        margin: 0 auto;
+        color: colors.$dp-color-grey;
+      }
+    }
+  }
+
+  [class*="dp-label-discount-"] {
+    position: absolute;
+    font-size: 12px;
+    width: 110px;
+    height: 20px;
+    font-weight: 600;
+    align-items: center;
+    display: flex;
+    border-radius: 12px;
+    justify-content: center;
+    top: -8px;
+    right: 3%;
+    z-index: 1;
+    background-image: url(assets/img/discount.svg);
+    background-repeat: no-repeat;
+    background-position: 18px 4px;
+    padding-left: 12px;
+    color: colors.$dp-color-darkgrey;
+  }
+
+  .dp-label-discount-25 {
+    background-color: #f2b322;
+  }
+
+  .dp-label-discount-15 {
+    background-color: #f8d990;
+  }
+
+  .dp-label-discount-5 {
+    background-color: #fcf0d4;
   }
 
   /*Align dropdown in doppler old */
