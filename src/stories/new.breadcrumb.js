@@ -11,17 +11,12 @@ export const Inputs = ({}) => {
           <a href="#" class="dp-bc--active">Inicio</a>
         </li>
         <li>
-          <span class="dp-arrow dp-arrow--right"></span>
           <a href="#"> Configuración</a>
         </li>
         <li>
-          <span class="dp-arrow dp-arrow--right"></span>
           <a href="#"> Panel de control</a>
         </li>
-        <li>
-          <span class="dp-arrow dp-arrow--right"></span>
-          Integraciones y preferencias avanzadas
-        </li>
+        <li>Integraciones y preferencias avanzadas</li>
       </ul>
     </nav>
   `;
