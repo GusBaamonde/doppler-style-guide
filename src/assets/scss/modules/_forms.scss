@@ -898,12 +898,6 @@
     display: block;
     transition: all 0.3s ease;
 
-    &:hover {
-      box-shadow:
-        rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    }
-
     label {
       border: 2px solid colors.$dp-color-darkgrey;
       border-radius: 3px;
@@ -913,8 +907,46 @@
       font-size: 16px;
       color: colors.$dp-color-text;
 
+      &:hover {
+        box-shadow:
+          rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+          rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      }
+
       span {
         padding: 18px 12px;
+      }
+
+      &:disabled + span {
+        &:before {
+          outline: 0;
+          border: 1px solid colors.$dp-color-snow;
+          box-shadow: inset 0 0 0 4px colors.$dp-color-snow;
+        }
+      }
+
+      &:disabled:checked + span {
+        &:before {
+          outline: 0;
+          border: 1px solid colors.$dp-color-snow;
+          box-shadow: inset 0 0 0 3px colors.$dp-color-snow;
+          background: colors.$dp-color-silver;
+        }
+      }
+    }
+
+    label[aria-disabled="true"] {
+      border: 2px solid colors.$dp-color-snow;
+      color: colors.$dp-color-snow;
+
+      &:hover {
+        box-shadow: none;
+        cursor: auto;
+      }
+
+      .dp-footer--radio {
+        border-top: 1px solid colors.$dp-color-snow;
+        color: colors.$dp-color-snow;
       }
     }
 
@@ -942,12 +974,6 @@
     display: block;
     transition: all 0.3s ease;
 
-    &:hover {
-      box-shadow:
-        rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    }
-
     label {
       border: 2px solid colors.$dp-color-snow;
       border-radius: 3px;
@@ -957,8 +983,29 @@
       font-size: 16px;
       color: colors.$dp-color-grey;
 
+      &:hover {
+        box-shadow:
+          rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+          rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      }
+
       span {
         padding: 18px 12px;
+      }
+    }
+
+    label[aria-disabled="true"] {
+      border: 2px solid colors.$dp-color-snow;
+      color: colors.$dp-color-snow;
+
+      &:hover {
+        box-shadow: none;
+        cursor: auto;
+      }
+
+      .dp-footer--radio {
+        border-top: 1px solid colors.$dp-color-snow;
+        color: colors.$dp-color-snow;
       }
     }
 
