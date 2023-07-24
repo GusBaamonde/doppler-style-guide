@@ -357,7 +357,8 @@
     .range-slider {
       -webkit-appearance: none;
       width: 100%;
-      height: $range-track-height;
+      /*height: $range-track-height;*/
+      height: 7px;
       border: 1px solid colors.$dp-color-silver;
       border-radius: 5px;
       background: transparent;
@@ -366,7 +367,7 @@
       margin: 0;
       position: relative;
       bottom: 5px;
-      z-index: 1;
+      /*z-index: 1;*/
 
       // Range Handle
 
@@ -435,6 +436,87 @@
       }
     }
   }
+
+
+  /* slider calculate your plan component */
+
+
+  .dp-purchase-process--slider {
+    width: 100%;
+    padding: 18px 0 18px;
+    position: relative;
+    background: transparent;
+
+
+    .range-slider {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 7px;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      background: transparent;
+      outline: none;
+      padding: 0;
+      margin: 0;
+      position: relative;
+      bottom: 5px;
+      border: 1px solid #212121;
+  }
+
+  .range-slider::-webkit-slider-thumb {
+      appearance: none;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: 1px solid black;
+      background: #33ad73;
+      cursor: pointer;
+      transition: background 0.15s ease-in-out;
+      position: relative;
+      z-index: 100;
+    }
+
+    .progress-anchor {
+      border-radius: 5px;
+      content: "";
+      background: #33ad73;
+      background-color:#E0F8EE;
+      position: relative;
+      width: 0;
+      height: 8px;
+      bottom: 17px;
+      border: 1px solid #212121;
+    }
+
+    ul.datalist {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 7.5px;
+      margin-top: -8px;
+      font-size: 11px;
+
+      li {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 2px;
+        background: #cccccc;
+        height: 6px;
+        line-height: 40px;
+        margin: 0 0 20px 0;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .dp-calculate-plan {
+
+  }
+
+
+
+  /* ***************** */
 
   .dp-wrap-subscription {
     padding: variables.$dp-spaces--lv4 variables.$dp-spaces--lv0
