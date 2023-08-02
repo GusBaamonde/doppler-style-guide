@@ -59,7 +59,7 @@
     "dotenv": "16.3.1",
     "dotenv-flow-webpack": "1.1.0",
     "eclint": "2.8.1",
-    "lit-html": "2.7.5",
+    "lit-html": "2.8.0",
     "prettier": "3.0.0",
     "process": "0.11.10",
     "webpack-cli": "5.1.4",
