@@ -169,6 +169,27 @@
       }
     }
 
+    /* Tertiary */
+
+    &.cta {
+      &Tertiary {
+        background-color: colors.$dp-color-white;
+        color: colors.$dp-color-darkgrey;
+        border: 1px solid colors.$dp-color-tertiary;
+        font-weight: normal;
+
+        &:hover {
+          background-color: colors.$dp-color-ghostwhite;
+          color: colors.$dp-color-darkgrey;
+          border: 1px solid colors.$dp-color-grey;
+        }
+
+        &:focus {
+          color: colors.$dp-color-darkgrey;
+        }
+      }
+    }
+
     &.link- {
       &green {
         color: colors.$dp-color-green;
