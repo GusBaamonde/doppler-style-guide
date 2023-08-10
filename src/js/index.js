@@ -261,18 +261,21 @@ export const initDropdownButtonBehavior = function () {
 export const initExitEditorButtonBehavior = function () {
   // Button Exit editor
   $(() => {
-    $(".dp-button-box .dp-button-exit").on("click", function () {
-      $(this).toggleClass("active");
-      if ($(this).hasClass("active")) {
-        $(this).parent().find(".dp-content-menu").show();
-      } else {
-        $(this).parent().find(".dp-content-menu").hide();
-      }
-    });
+    $(".dp-button-box .dp-button-exit, .dp-button-box .dp-button-dropdown").on(
+      "click",
+      function () {
+        $(this).toggleClass("active");
+        if ($(this).hasClass("active")) {
+          $(this).parent().find(".dp-content-menu").show();
+        } else {
+          $(this).parent().find(".dp-content-menu").hide();
+        }
+      },
+    );
 
     $(document).on("click", function (e) {
       const $contentMenu = $(".dp-content-menu");
-      const $buttonExit = $(".dp-button-exit");
+      const $buttonExit = $(".dp-button-exit, .dp-button-dropdown");
 
       if (
         !$contentMenu.is(e.target) &&
