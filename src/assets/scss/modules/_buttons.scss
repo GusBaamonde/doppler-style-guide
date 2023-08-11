@@ -11,6 +11,7 @@
 @use "helpers/colors";
 @use "helpers/mixins";
 @use "modules/preload";
+@use "core/typography";
 
 @mixin dp-button() {
   .dp-button {
@@ -187,6 +188,18 @@
         &:focus {
           color: colors.$dp-color-darkgrey;
         }
+
+        &.button--loading {
+          @include preload.dp-preloader(colors.$dp-color-silver, 1.5em);
+          padding-left: 3em;
+          position: relative;
+          display: flex;
+          align-items: center;
+
+          &:after {
+            left: 1em;
+          }
+        }
       }
     }
 
@@ -308,6 +321,68 @@
         width: 0;
         border-width: 6px 5px 0 5px;
         border-color: #999 transparent transparent transparent;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &.dp-button-dropdown {
+      border: 1px solid colors.$dp-color-border-input;
+      border-radius: variables.$dp-border-radius;
+      background-color: colors.$dp-color-white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 2px;
+      align-items: center;
+      justify-content: center;
+      font-family: typography.$dp-fontfamily-awa;
+      font-weight: normal;
+      color: colors.$dp-color-darkgrey;
+      height: 34px;
+      position: relative;
+      right: 3px;
+      top: 0px;
+
+      &.button-big {
+        padding-left: 18px;
+        padding-right: 30px;
+      }
+
+      &.button-medium {
+        padding-left: 18px;
+        padding-right: 30px;
+      }
+
+      &.button-small {
+        padding-left: 18px;
+        padding-right: 30px;
+      }
+
+      &:hover,
+      &:active {
+        background: colors.$dp-color-white;
+      }
+
+      &:focus {
+        box-shadow:
+          inset 0 0 0 2px colors.$dp-color-orange-focus,
+          inset 0 0 0 3px colors.$dp-color-white;
+      }
+
+      &.active {
+        background: colors.$dp-color-white;
+      }
+
+      .dp-dropdown-arrow {
+        border-style: solid;
+        height: 0;
+        width: 0;
+        border-width: 6px 5px 0 5px;
+        border-color: colors.$dp-color-darkgrey transparent transparent
+          transparent;
         position: absolute;
         right: 10px;
         top: 50%;
