@@ -1,5 +1,6 @@
 @use "helpers/colors";
 @use "core/variables";
+@use "core/typography";
 
 .dp-library {
   &.dp-bg-softgrey {
@@ -757,5 +758,227 @@
     width: 100%;
     padding: variables.$dp-spaces--lv2;
     margin: variables.$dp-spaces--lv0 auto;
+  }
+
+  /* New Shoppong card */
+
+  .dp-shoppong-card {
+    border: 1px solid colors.$dp-color-silver;
+    padding: variables.$dp-spaces--lv0;
+    border-bottom: none;
+    border-radius: 3px;
+    position: relative;
+    background-color: colors.$dp-color-white;
+    border-top: 7px colors.$dp-color-text solid;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    button {
+      width: 100%;
+      font-weight: normal;
+      font-size: typography.$dp-fontsize-awa;
+    }
+
+    .dp-secure-payment {
+      width: auto;
+      padding-left: variables.$dp-spaces--lv0;
+      color: colors.$dp-color-text;
+
+      &:hover {
+        color: colors.$dp-color-grey;
+      }
+
+      .iconapp-padlock {
+        top: -3px;
+        position: relative;
+        margin-right: variables.$dp-spaces--lv1;
+      }
+    }
+
+    hr {
+      border-top: 1px solid colors.$dp-color-text;
+      margin: variables.$dp-spaces--lv2 variables.$dp-spaces--lv0;
+    }
+
+    header {
+      height: 60px;
+      background-color: colors.$dp-color-ghostwhite;
+      display: flex;
+      align-items: center;
+      padding: variables.$dp-spaces--lv0 variables.$dp-spaces--lv3;
+    }
+
+    section {
+      padding: variables.$dp-spaces--lv3 variables.$dp-spaces--lv3
+        variables.$dp-spaces--lv0;
+
+      h4 {
+        font-size: typography.$dp-fontsize-awa;
+        line-height: typography.$dp-lineheight-medium;
+        font-weight: normal;
+        text-transform: inherit;
+      }
+
+      .dp-payment-frequency {
+        border: 1px solid colors.$dp-color-snow;
+        width: 100%;
+        border-radius: 30px;
+        height: 42px;
+        display: flex;
+        align-items: center;
+        margin-top: variables.$dp-spaces--lv3;
+
+        li {
+          position: relative;
+          justify-content: center;
+          width: 25%;
+          display: flex;
+          font-size: typography.$dp-fontsize-awa;
+          line-height: typography.$dp-lineheight-medium;
+          border-radius: 30px;
+
+          p {
+            padding: variables.$dp-spaces--lv1 14px;
+            position: relative;
+            color: colors.$dp-color-grey;
+          }
+        }
+
+        li.dp-active {
+          border: 2px solid colors.$dp-color-text;
+          z-index: 3;
+          background-color: colors.$dp-color-greenbg;
+
+          p {
+            font-weight: 700;
+            color: colors.$dp-color-darkgrey;
+          }
+        }
+
+        .dp-discount {
+          position: absolute;
+          background-color: colors.$dp-color-onrangebg;
+          color: colors.$dp-color-darkgrey;
+          font-size: 11px;
+          line-height: 14px;
+          border-radius: 30px;
+          top: -15px;
+          padding: 3px 6px;
+          z-index: 5;
+          right: 0;
+        }
+      }
+
+      .dp-plan-box {
+        min-height: 150px;
+        padding: variables.$dp-spaces--lv2;
+        margin-bottom: variables.$dp-spaces--lv3;
+        position: relative;
+
+        .dp-icon-close {
+          background-image: url(assets/img/icon-close.svg);
+          background-position: center;
+          position: absolute;
+          width: 12px;
+          height: 12px;
+          top: 6px;
+          right: 6px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: variables.$dp-spaces--lv2;
+          border-radius: 100%;
+          box-shadow: rgba(255, 255, 255, 0) 0px 0px 0px 30px;
+          transition: box-shadow 0.4s ease 0s;
+
+          &:hover {
+            box-shadow: rgba(149, 157, 165, 0.5) 0 0 0 0;
+          }
+        }
+
+        h4 {
+          font-size: 20px;
+          line-height: 24px;
+          font-weight: 800;
+          color: colors.$dp-color-text;
+        }
+
+        .dp-purchase-items li {
+          line-height: 24px;
+        }
+
+        .dp-mark {
+          background-image: url(assets/img/Check-black.svg);
+          background-position: center left;
+          padding-left: variables.$dp-spaces--lv3;
+          background-repeat: no-repeat;
+          display: inline-block;
+          width: 100%;
+        }
+
+        .dp-discount {
+          background-image: url(assets/img/discount.svg);
+          background-position: center left;
+          padding-left: variables.$dp-spaces--lv2;
+          background-repeat: no-repeat;
+          display: inline-block;
+        }
+
+        .dp-strike {
+          text-decoration: line-through;
+          color: colors.$dp-color-grey;
+        }
+
+        .dp-items-result {
+          li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: colors.$dp-color-darkgrey;
+          }
+        }
+      }
+
+      .dp-plan-box:nth-child(even) {
+        background-color: colors.$dp-color-greenbg;
+      }
+
+      .dp-plan-box:nth-child(odd) {
+        background-color: #f2edfd;
+      }
+    }
+
+    .dp-total-purchase {
+      font-size: 32px;
+      line-height: 42px;
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      margin-top: variables.$dp-spaces--lv5;
+      margin-bottom: variables.$dp-spaces--lv4;
+    }
+
+    footer {
+      background-color: colors.$dp-color-ghostwhite;
+      overflow: hidden;
+      padding: variables.$dp-spaces--lv3 variables.$dp-spaces--lv9
+        variables.$dp-spaces--lv3;
+      border-top: 1px solid colors.$dp-color-silver;
+      margin-top: variables.$dp-spaces--lv3;
+
+      ul {
+        list-style: disc;
+        font-size: typography.$dp-fontsize-awa;
+        line-height: typography.$dp-lineheight-medium;
+
+        li {
+          margin-bottom: variables.$dp-spaces--lv4;
+        }
+
+        a {
+          text-decoration: underline;
+          font-style: italic;
+        }
+      }
+    }
   }
 }
