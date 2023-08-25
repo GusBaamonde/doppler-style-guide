@@ -8,6 +8,7 @@
 
 @use "core/variables";
 @use "helpers/colors";
+@use "core/typography";
 
 .dp-library {
   %card {
@@ -99,6 +100,154 @@
 
   .dp-card {
     @extend %card;
+  }
+
+  /* Card with border ========*/
+
+  .dp-card-with-border {
+    @extend %card;
+    border-top: 6px solid colors.$dp-color-text;
+    padding: variables.$dp-spaces--lv5 variables.$dp-spaces--lv0;
+
+    /* Ribbon Card new */
+    .dp-ribbon span {
+      color: colors.$dp-color-text;
+    }
+
+    .dp-ribbon-top-right {
+      top: -16px;
+      right: -10px;
+    }
+
+    .dp-ribbon-top-right::after {
+      bottom: 33px;
+      right: 0px;
+    }
+
+    .dp-ribbon-top-right::before {
+      top: 0px;
+      left: 33px;
+      background-color: colors.$dp-color-text;
+    }
+
+    .dp-ribbon-orange::before {
+      border: 5px solid colors.$dp-color-darkgrey;
+    }
+
+    .dp-ribbon-orange::after {
+      border: 5px solid colors.$dp-color-darkgrey;
+    }
+
+    &.dp-card-disabled {
+      background-color: colors.$dp-color-ghostwhite;
+      border-top: 1px solid colors.$dp-color-silver;
+      color: colors.$dp-color-grey;
+
+      h3 {
+        color: colors.$dp-color-grey;
+      }
+      p {
+        color: colors.$dp-color-grey;
+      }
+
+      button {
+        text-transform: none;
+      }
+
+      .dp-border {
+        border-top: 1px solid colors.$dp-color-lightgrey;
+      }
+    }
+
+    h3 {
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: variables.$dp-spaces--lv0;
+      text-transform: none;
+      text-align: left;
+      display: inherit;
+      height: auto;
+      color: colors.$dp-color-text;
+    }
+
+    .dp-content-plans {
+      padding: variables.$dp-spaces--lv0 variables.$dp-spaces--lv4;
+    }
+
+    .dp-ta-left {
+      text-align: left;
+    }
+
+    .dp-price {
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      align-items: baseline;
+      height: 100px;
+      margin: variables.$dp-spaces--lv0;
+      width: 100%;
+      padding: variables.$dp-spaces--lv0 variables.$dp-spaces--lv4;
+      color: colors.$dp-color-darkgrey;
+
+      span {
+        font-weight: bold;
+      }
+    }
+
+    .dp-button {
+      width: 100%;
+      text-transform: none;
+    }
+
+    .dp-border {
+      border-top: 1px solid colors.$dp-color-text;
+      width: 100%;
+      position: relative;
+      margin: variables.$dp-spaces--lv5 variables.$dp-spaces--lv0;
+    }
+
+    .dp-whatcan {
+      padding: variables.$dp-spaces--lv3;
+      text-align: left;
+
+      a {
+        color: #008060;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      h4 {
+        text-transform: none;
+        margin-bottom: variables.$dp-spaces--lv4;
+        color: colors.$dp-color-darkgrey;
+      }
+
+      ul {
+        margin-bottom: variables.$dp-spaces--lv4;
+      }
+
+      li {
+        font-size: typography.$dp-fontsize-awa;
+        line-height: typography.$dp-fontlineheight-awa;
+        color: colors.$dp-color-grey;
+        margin-bottom: variables.$dp-spaces--lv3;
+        padding-left: variables.$dp-spaces--lv4;
+        display: flex;
+        align-items: center;
+
+        &::before {
+          content: "";
+          background-image: url(assets/img/Check-black.svg);
+          height: 12px;
+          width: 13px;
+          position: absolute;
+          left: 18px;
+          background-position: center center;
+        }
+      }
+    }
   }
 
   .dp-highlighthed {
