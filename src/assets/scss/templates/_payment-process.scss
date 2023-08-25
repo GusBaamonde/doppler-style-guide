@@ -980,5 +980,32 @@
         }
       }
     }
+
+    .dp-accordion {
+      padding: 0;
+
+      li {
+        padding: 0;
+      }
+
+      .dp-accordion-thumb {
+        display: inline-block;
+        font-weight: normal;
+        width: 100%;
+
+        &::before {
+          right: 0;
+          left: inherit;
+        }
+      }
+
+      .dp-accordion-panel {
+        padding: 6px 0;
+      }
+    }
+
+    .awa-form {
+      padding: 0 3px;
+    }
   }
 }
