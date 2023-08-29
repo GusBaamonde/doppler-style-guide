@@ -42,6 +42,26 @@
     margin: variables.$dp-spaces--lv0 auto;
   }
 
+  /* ========================= */
+
+  .dp-tit-center--big {
+    text-align: center;
+    font-size: variables.$dp-sizing--lvl9;
+    line-height: variables.$dp-sizing--lvl10;
+    font-weight: bold;
+    font-family: "proxima-nova";
+    letter-spacing: -1px;
+    padding: variables.$dp-spaces--lv3 variables.$dp-spaces--lv0;
+    margin: variables.$dp-spaces--lv0 auto;
+  }
+
+  .dp-p-w-50 {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  /* ========================= */
+
   .dp-white-page {
     background-color: colors.$dp-color-white;
     flex: 1;
@@ -52,7 +72,7 @@
     display: flex;
     flex-direction: inherit;
     flex-wrap: nowrap;
-    width: fit-content;
+    /*width: fit-content;*/
     max-width: 1260px;
 
     p {
@@ -78,14 +98,16 @@
     .dp-align-center {
       margin: variables.$dp-spaces--lv0 auto;
       display: flex;
-      flex-direction: column;
+      flex-direction: inherit;
+      flex-wrap: wrap;
     }
   }
 
   .dp-header-text {
     display: flex;
     flex-direction: column;
-    margin-bottom: variables.$dp-spaces--lv5;
+    margin-bottom: variables.$dp-spaces--lv6;
+    width: 100%;
   }
 
   .dp-tit--functionalities {
@@ -251,6 +273,69 @@
 
     .dp-button {
       margin: variables.$dp-spaces--lv4 variables.$dp-spaces--lv0;
+    }
+  }
+
+  .dp-banner-payment-methods {
+    width: 70%;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    padding: variables.$dp-spaces--lv3 variables.$dp-spaces--lv5;
+    margin: variables.$dp-spaces--lv5 auto variables.$dp-spaces--lv7;
+    border-radius: 50px;
+    justify-content: space-between;
+    background-color: colors.$dp-color-white;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+
+    h4 {
+      text-transform: none;
+      display: flex;
+      align-items: center;
+      padding: variables.$dp-spaces--lv0;
+
+      &::before {
+        content: "";
+        background-image: url("assets/img/NewPayment.svg");
+        background-repeat: no-repeat;
+        width: 27px;
+        height: 27px;
+        margin-right: variables.$dp-spaces--lv1;
+        display: block;
+        float: left;
+      }
+    }
+
+    span {
+      border: 1px solid colors.$dp-color-snow;
+      border-radius: 3px;
+      width: 100px;
+      height: 42px;
+      display: block;
+    }
+
+    .dp-mercado {
+      background-image: url("assets/img/mercado.svg");
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    .dp-visa {
+      background-image: url("assets/img/Visa_Brandmark_Blue.svg");
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    .dp-mastercard {
+      background-image: url("assets/img/Mastercard.svg");
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    .dp-american {
+      background-image: url("assets/img/American-Express.svg");
+      background-position: center center;
+      background-repeat: no-repeat;
     }
   }
 
