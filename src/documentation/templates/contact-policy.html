@@ -72,30 +72,42 @@
                   >
                 </li>
                 <li class="field-item">
-                  <div class="dp-item-block">
-                    <div>
-                      <span>No enviar mas de </span>
+                  <div class="dp-item-block awa-form">
+                    <label
+                      for="name"
+                      class="labelcontrol"
+                      aria-disabled="false"
+                    >
+                      No enviar mas de
                       <input
                         type="number"
                         name="number"
                         id="correos electrónicos"
+                        aria-placeholder="999"
+                        aria-invalid="false"
+                        aria-disabled="false"
                         placeholder="999"
                         disabled
                       />
-                      <span class="m-r-6">emails</span>
-                    </div>
-
-                    <div>
-                      <span> en un período de</span>
+                      emails en un período de
                       <input
                         type="number"
                         name="number"
                         id="dias"
+                        aria-placeholder="30"
                         placeholder="30"
-                        class="dp-error-input"
+                        aria-invalid="false"
+                        aria-disabled="true"
                       />
-                      <span>días</span>
-                    </div>
+                      días
+                      <!-- add class "show" message -->
+                      <div class="dp-textmessage">
+                        <span
+                          >Assisted text for field validations in this
+                          component</span
+                        >
+                      </div>
+                    </label>
                   </div>
                 </li>
                 <li class="field-item">
@@ -299,7 +311,7 @@
                 <li class="field-item">
                   <button
                     type="button"
-                    class="dp-button button-medium primary-grey"
+                    class="dp-button button-medium ctaTertiary"
                   >
                     Atras
                   </button>
