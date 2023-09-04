@@ -727,15 +727,11 @@
 
   .dp-contact-policy-form {
     .field-item {
-      margin-bottom: var.$dp-spaces--lv4;
+      margin-bottom: var.$dp-spaces--lv3;
     }
     .dp-item-block {
       display: flex;
       flex-wrap: wrap;
-
-      div {
-        margin-bottom: var.$dp-spaces--lv5;
-      }
     }
 
     .dp-switch {
@@ -743,7 +739,7 @@
       position: relative;
       top: var.$dp-spaces--lv1;
       left: var.$dp-spaces--lv0;
-      margin-bottom: var.$dp-spaces--lv4;
+      margin-bottom: var.$dp-spaces--lv0;
     }
 
     .dp-switch input[type="checkbox"]:focus {
@@ -752,16 +748,19 @@
 
     label {
       width: auto;
+      font-size: 16px;
+      font-weight: normal;
+      color: #212121;
     }
 
     input {
       display: inline-block;
-      width: 40px;
+      width: 46px;
       padding: var.$dp-spaces--lv1;
       margin-left: var.$dp-spaces--lv1;
       margin-right: var.$dp-spaces--lv1;
       text-align: center;
-      color: colors.$dp-color-grey;
+      color: colors.$dp-color-text-input;
 
       &::placeholder {
         color: colors.$dp-color-lightgrey;
@@ -772,8 +771,44 @@
       background-color: colors.$dp-color-snow;
     }
 
-    .dp-error-input {
-      border: 1px solid colors.$dp-color-red;
+    .labelcontrol input[type="number"] {
+      padding-left: var.$dp-spaces--lv1;
+      appearance: none;
+    }
+
+    .labelcontrol input[aria-invalid="true"] {
+      border: 2px solid colors.$dp-color-content-error;
+      box-shadow: out 0 0 0 2px colors.$dp-color-content-error;
+      content: "";
+      position: relative;
+      background: none;
+      background-position: right -1.5em center;
+      padding-left: var.$dp-spaces--lv1;
+    }
+
+    .dp-textmessage {
+      display: none;
+
+      &.show {
+        display: flex;
+        align-items: center;
+        color: colors.$dp-color-content-error;
+        font-size: 14px;
+        margin-top: var.$dp-spaces--lv2;
+        background: url(assets/img/error-form.svg) no-repeat left center;
+      }
+
+      span,
+      p {
+        padding-left: var.$dp-spaces--lv4;
+        padding-top: 3px;
+      }
+    }
+
+    .labelcontrol[aria-disabled="true"] > input:disabled {
+      border: 1px solid colors.$dp-color-silver;
+      background-color: colors.$dp-color-ghostwhite;
+      color: colors.$dp-color-lightgrey;
     }
 
     [type="number"]::-webkit-inner-spin-button,
