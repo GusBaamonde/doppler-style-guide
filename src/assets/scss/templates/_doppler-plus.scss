@@ -288,7 +288,7 @@
     background-color: colors.$dp-color-white;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 
-    h4 {
+    .dp-tit-payment-methods {
       text-transform: none;
       display: flex;
       align-items: center;
@@ -303,6 +303,23 @@
         margin-right: variables.$dp-spaces--lv1;
         display: block;
         float: left;
+      }
+    }
+
+    .dp-tit-transfer {
+      display: flex;
+      align-items: center;
+      text-transform: none;
+      display: flex;
+      align-items: center;
+      padding: variables.$dp-spaces--lv0;
+
+      span {
+        font-size: 26px;
+        width: auto;
+        height: auto;
+        margin-right: 6px;
+        border: none;
       }
     }
 
