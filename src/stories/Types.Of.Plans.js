@@ -205,12 +205,15 @@ export const Inputs = ({ disabled }) => {
                 </div>
               </div>
               <div class="dp-banner-payment-methods">
-                <h4>Métodos de pago</h4>
+                <h4 class="dp-tit-payment-methods">Métodos de pago</h4>
                 <span class="dp-mercado"></span>
                 <span class="dp-visa"></span>
                 <span class="dp-mastercard"></span>
                 <span class="dp-american"></span>
-                <a href="#">Ver más</a>
+                <h4 class="dp-tit-transfer">
+                  <span class="dpicon iconapp-card-accepted"></span
+                  >Transferencia
+                </h4>
               </div>
               <div class="dp-align-center dp-header-text">
                 <h1 class="dp-tit-center--big">
