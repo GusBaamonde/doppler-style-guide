@@ -416,5 +416,9 @@
       width: 24px;
       height: 16px;
     }
+
+    tr:last-child {
+      border-bottom: none;
+    }
   }
 }
