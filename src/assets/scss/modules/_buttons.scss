@@ -437,6 +437,20 @@
       left: 1px;
     }
 
+    input[type="checkbox"]:disabled
+      + label[aria-disabled="true"]
+      span:last-child {
+      background-color: colors.$dp-color-ghostwhite;
+      cursor: text;
+    }
+
+    input[type="checkbox"]:disabled
+      + label[aria-disabled="true"]
+      span:last-child::before {
+      background-color: colors.$dp-color-silver;
+      cursor: text;
+    }
+
     label {
       display: flex;
       align-items: center;
