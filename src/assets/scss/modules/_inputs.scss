@@ -524,7 +524,7 @@
     box-shadow: out 0 0 0 2px colors.$dp-color-error-border;
     content: "";
     position: relative;
-    background: #fff url(assets/img/error-form.svg) no-repeat 0 0;
+    background-image: #fff url(assets/img/error-form.svg) no-repeat 0 0;
     background-position: right 0.5em center;
   }
 

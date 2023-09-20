@@ -217,6 +217,24 @@ export const initTipsBehavior = function () {
   });
 };
 
+//Promocode
+export const initPromoCodeBehavior = function () {
+  $(() => {
+    // Tips
+    $(".dp-show-promocode").on("click", function () {
+      $(this).next(".dp-form-promocode").slideToggle();
+
+      var $showPanelLink = $(this).find(".dp-show-text");
+      if ($(this).find(".icon-close").hasClass("rotation")) {
+        $showPanelLink.html($(this).attr("data-text-hide"));
+      } else {
+        $showPanelLink.html($(this).attr("data-text-show"));
+      }
+      $(this).find(".icon-close").toggleClass("rotation");
+    });
+  });
+};
+
 export const initCarouselBehavior = function () {
   $(() => {
     // Carousel

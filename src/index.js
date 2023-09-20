@@ -10,6 +10,7 @@ import {
   initSliderBehavior,
   initNestedTableBehavior,
   initTipsBehavior,
+  initPromoCodeBehavior,
   initCarouselBehavior,
   initDropdownButtonBehavior,
   initExitEditorButtonBehavior,
@@ -30,6 +31,7 @@ if (window["style-guide-configuration"]?.autoInitialize) {
   window["style-guide-configuration"].initSliderBehavior = true;
   window["style-guide-configuration"].initNestedTableBehavior = true;
   window["style-guide-configuration"].initTipsBehavior = true;
+  window["style-guide-configuration"].initPromoCodeBehavior = true;
   window["style-guide-configuration"].initCarouselBehavior = true;
   window["style-guide-configuration"].initDropdownButtonBehavior = true;
   window["style-guide-configuration"].initExitEditorButtonBehavior = true;
@@ -66,6 +68,9 @@ if (window["style-guide-configuration"]?.initNestedTableBehavior) {
 }
 if (window["style-guide-configuration"]?.initTipsBehavior) {
   initTipsBehavior();
+}
+if (window["style-guide-configuration"]?.initPromoCodeBehavior) {
+  initPromoCodeBehavior();
 }
 if (window["style-guide-configuration"]?.initCarouselBehavior) {
   initCarouselBehavior();
