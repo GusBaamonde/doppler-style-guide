@@ -931,7 +931,7 @@
     position: relative;
     margin: 0;
     display: block;
-    transition: all 3s ease-in-out;
+    transition: all 2s ease-in-out;
 
     label {
       border: 2px solid colors.$dp-color-darkgrey;
@@ -955,8 +955,8 @@
 
       &:hover {
         box-shadow:
-          rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-          rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          rgba(0, 0, 0, 0.16) 0px 3px 6px,
+          rgba(0, 0, 0, 0.23) 0px 3px 6px;
       }
 
       span {
@@ -1017,6 +1017,46 @@
     }
   }
 
+  .dp-input--radio {
+    &:hover {
+      .dp-show-info {
+        transition: all 0.3s ease-in-out;
+        box-shadow:
+          rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+          rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+        top: 36px;
+        position: relative;
+        background-color: #e0f8ee;
+        color: colors.$dp-color-black;
+
+        &:before {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 0;
+          height: 0;
+          top: -24px;
+          left: 42px;
+          border-right: 12px solid transparent;
+          border-top: 12px solid transparent;
+          border-left: 12px solid transparent;
+          border-bottom: 12px solid #e0f8ee;
+        }
+      }
+    }
+
+    .dp-show-info {
+      display: block;
+      top: 0px;
+      position: relative;
+      color: colors.$dp-color-grey;
+      border-radius: 4px;
+      padding: 18px 16px;
+      text-decoration: none;
+      z-index: 0;
+    }
+  }
+
   /* Notselected*/
 
   .dp-input--radio.dp-checkout-radio-notselected {
@@ -1050,8 +1090,8 @@
         border: 2px solid colors.$dp-color-darkgrey;
         color: colors.$dp-color-text;
         box-shadow:
-          rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-          rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          rgba(0, 0, 0, 0.16) 0px 3px 6px,
+          rgba(0, 0, 0, 0.23) 0px 3px 6px;
 
         .dp-footer--radio {
           border-top: 1px solid colors.$dp-color-darkgrey;
