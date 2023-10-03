@@ -417,6 +417,10 @@
       height: 16px;
     }
 
+    td:first-child {
+      width: 250px;
+    }
+
     tr:last-child {
       border-bottom: none;
     }
