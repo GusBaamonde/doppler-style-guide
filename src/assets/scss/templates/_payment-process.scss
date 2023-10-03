@@ -1097,6 +1097,10 @@
           line-height: 24px;
           position: relative;
 
+          &:hover {
+            color: #212121;
+          }
+
           .dp-discount {
             position: absolute;
             background-color: colors.$dp-color-onrangebg;
@@ -1109,6 +1113,28 @@
             padding: 3px 6px;
             z-index: 5;
             right: 0;
+          }
+
+          .dp-btn-delete {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -4px;
+            top: 0;
+            padding: 11px;
+            border-radius: 100%;
+            box-shadow: rgba(255, 255, 255, 0) 0px 0px 0px 30px;
+            transition: box-shadow 0.4s ease 0s;
+
+            &:hover {
+              box-shadow: rgba(149, 157, 165, 0.5) 0 0 0 0;
+            }
+
+            &::before {
+              position: absolute;
+              top: 3px;
+              right: 5px;
+            }
           }
         }
 

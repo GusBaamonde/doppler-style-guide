@@ -93,6 +93,14 @@ export const Inputs = ({}) => {
             <li>
               <p class="dp-mark dp-strike">Incluye hasta 5.000 contactos</p>
             </li>
+            <li>
+              <p class="dp-mark">Promocode eliminar</p>
+              <button
+                type="button"
+                class="dp-btn-delete dpicon iconapp-delete"
+                title="borrar"
+              ></button>
+            </li>
             <li><p class="dp-mark">Incluye hasta 5.000 contactos</p></li>
             <li>
               <p class="dp-mark">
