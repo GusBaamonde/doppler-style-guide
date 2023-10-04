@@ -1,9 +1,8 @@
 const commonConfig = require("./webpack-common.config");
 const path = require("path");
-
+var mode = process.env.NODE_ENV || "development";
 module.exports = function (env) {
   const config = commonConfig(env);
-
   config.output = {
     filename: "index.js",
     assetModuleFilename: "static/media/[hash][ext][query]",
@@ -11,9 +10,8 @@ module.exports = function (env) {
     publicPath: "auto",
     clean: true,
   };
-
-  config.mode = "development";
-  config.devtool = "inline-source-map";
+  config.mode = mode;
+  config.devtool = mode === "development" ? "inline-source-map" : false;
   config.devServer = {
     historyApiFallback: true,
     static: "./dist",
@@ -23,6 +21,5 @@ module.exports = function (env) {
   config.watchOptions = {
     ignored: [path.resolve(__dirname, "src"), "./node_modules"],
   };
-
   return config;
 };
