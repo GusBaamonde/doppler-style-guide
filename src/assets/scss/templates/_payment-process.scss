@@ -1006,39 +1006,21 @@
       }
 
       .dp-payment-frequency {
-        border: 1px solid colors.$dp-color-snow;
+        margin: variables.$dp-spaces--lv3 variables.$dp-spaces--lv0;
+        position: relative;
         width: 100%;
-        border-radius: 30px;
         height: 42px;
+        border-radius: 30px;
         display: flex;
-        align-items: center;
-        margin-top: variables.$dp-spaces--lv3;
 
-        li {
-          position: relative;
-          justify-content: center;
-          width: 25%;
-          display: flex;
-          font-size: typography.$dp-fontsize-awa;
-          line-height: typography.$dp-lineheight-medium;
+        &:before {
+          content: "";
+          position: absolute;
+          border: 1px solid colors.$dp-color-silver;
+          display: inline-block;
+          width: 100%;
+          height: 100%;
           border-radius: 30px;
-
-          p {
-            padding: variables.$dp-spaces--lv1 14px;
-            position: relative;
-            color: colors.$dp-color-grey;
-          }
-        }
-
-        li.dp-active {
-          border: 2px solid colors.$dp-color-text;
-          z-index: 3;
-          background-color: colors.$dp-color-greenbg;
-
-          p {
-            font-weight: 700;
-            color: colors.$dp-color-darkgrey;
-          }
         }
 
         .dp-discount {
@@ -1048,13 +1030,99 @@
           font-size: 11px;
           line-height: 14px;
           border-radius: 30px;
-          top: -15px;
+          top: -12px;
           padding: 3px 6px;
           z-index: 5;
-          right: 0;
+          right: variables.$dp-spaces--lv0;
+        }
+
+        button {
+          line-height: 50px;
+          width: auto;
+          height: 100%;
+          font-size: 16px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          z-index: 1;
+          text-decoration: none;
+          text-align: center;
+          color: colors.$dp-color-text;
+          cursor: pointer;
+          width: auto;
+          padding: variables.$dp-spaces--lv0 15px;
+
+          &:disabled {
+            color: colors.$dp-color-lightgrey;
+            cursor: default;
+          }
+        }
+
+        .animation {
+          position: absolute;
+          height: 100%;
+          top: variables.$dp-spaces--lv0;
+          z-index: 0;
+          transition: all 0.5s ease 0s;
+          border-radius: 8px;
+        }
+
+        .dp-frequency-annual,
+        button:nth-child(1):hover ~ .animation {
+          width: 70px;
+          left: variables.$dp-spaces--lv0;
+          background-color: colors.$dp-color-greenbg;
+          border: 2px solid colors.$dp-color-text;
+          border-radius: 30px;
+        }
+
+        .dp-frequency-biannual,
+        button:nth-child(2):hover ~ .animation {
+          width: 99px;
+          left: 70px;
+          background-color: colors.$dp-color-greenbg;
+          border: 2px solid colors.$dp-color-text;
+          border-radius: 30px;
+        }
+
+        .dp-frequency-quarterly,
+        button:nth-child(3):hover ~ .animation {
+          width: 98px;
+          left: 170px;
+          background-color: colors.$dp-color-greenbg;
+          border: 2px solid colors.$dp-color-text;
+          border-radius: 30px;
+        }
+
+        .dp-frequency-monthly,
+        button:nth-child(4):hover ~ .animation {
+          width: 89px;
+          left: 268px;
+          background-color: colors.$dp-color-greenbg;
+          border: 2px solid colors.$dp-color-text;
+          border-radius: 30px;
+        }
+
+        button:nth-child(1):disabled .dp-discount,
+        button:nth-child(2):disabled .dp-discount,
+        button:nth-child(3):disabled .dp-discount,
+        button:nth-child(4):disabled .dp-discount {
+          background-color: colors.$dp-color-silver;
+          color: colors.$dp-color-white;
+        }
+
+        button:nth-child(1):disabled:hover ~ .animation,
+        button:nth-child(2):disabled:hover ~ .animation,
+        button:nth-child(3):disabled:hover ~ .animation,
+        button:nth-child(4):disabled:hover ~ .animation {
+          background-color: colors.$dp-color-snow;
+          border: 2px solid colors.$dp-color-silver;
+          border-radius: 30px;
         }
       }
 
+      /* ================================================================================ */
       .dp-plan-box {
         min-height: 150px;
         padding: variables.$dp-spaces--lv2;
@@ -1094,7 +1162,7 @@
           position: relative;
 
           &:hover {
-            color: #212121;
+            color: colors.$dp-color-text;
           }
 
           .dp-discount {
@@ -1207,115 +1275,4 @@
       }
     }
   }
-
-  /* --------------------------------
-Component
--------------------------------- */
-  /*
-.morph-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 1px;
-  width: 1px;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s;
-  transform-origin: left top;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-}
-
-.morph-bg--visible {
-  opacity: 1;
-}
-
-.morph-bg--has-transition {
-  transition: 0.3s;
-  will-change: transform, border-radius, height, width;
-}
-
-/* --------------------------------
-
-Demo style
-
--------------------------------- */
-  /*
-.demo-morph-bg-paragraph {
-  font-size: 0.9375rem;
-  color: hsl(240, 4%, 65%);
-}
-
-.demo-morph-bg-list {
-  display: inline-flex;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.demo-morph-bg-link {
-  display: block;
-  padding: 0.75rem 1rem;
-  color: hsl(230, 13%, 9%);
-  text-decoration: none;
-  font-weight: medium;
-}
-
-.demo-morph-bg-target {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  pointer-events: none;
-}
-
-.demo-morph-bg-button {
-  border-radius: 50em;
-  font-weight: medium;
-  cursor: pointer;
-  color: hsl(230, 13%, 9%);
-  padding: 0.7rem 0.7rem;
-}
-
-.demo-morph-bg-1 {
-  background-color: hsl(250, 84%, 54%);
-}
-
-.demo-morph-bg-2 {
-  background-color: hsl(240, 4%, 90%);
-}
-
-/* --------------------------------
-
-Utilities
-
--------------------------------- */
-
-  /* .cd-block {
-  display: block;
-}
-
-.dp-wrap-frequency {
-  position: relative;
-}
-
-.cd-z-index-1 {
-  z-index: 1;
-}
-
-.cd-z-index-2 {
-  z-index: 2;
-}
-
-.cd-margin-bottom-sm {
-  margin-bottom: 1.5rem;
-}
-
-.cd-margin-bottom-xl {
-  margin-bottom: 4.5rem;
-}
-
-.cd-text-center {
-  text-align: center;
-} */
 }
