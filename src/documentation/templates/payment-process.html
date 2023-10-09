@@ -1365,19 +1365,23 @@
             </header>
             <section>
               <h4>Frecuencia de pago</h4>
-              <ul class="dp-payment-frequency">
-                <li>
-                  <p>Anual<span class="dp-discount">-25%</span></p>
-                </li>
-                <li>
-                  <p>Semestral<span class="dp-discount">-15%</span></p>
-                </li>
-                <li>
-                  <p>Trimestral<span class="dp-discount">-5%</span></p>
-                </li>
-                <li class="dp-active"><p>Mensual</p></li>
-              </ul>
+              <nav class="dp-payment-frequency">
+                <button type="button" disabled>
+                  Anual<span class="dp-discount">-25%</span>
+                </button>
+                <button type="button">
+                  Semestral<span class="dp-discount">-15%</span>
+                </button>
+                <button type="button" disabled>
+                  Trimestral<span class="dp-discount">-5%</span>
+                </button>
+                <button type="button">Mensual</button>
+                <div class="animation dp-frequency-monthly"></div>
+                <!-- class active = dp-frequency-annual - dp-frequency-biannual -
+                  dp-frequency-quarterly - dp-frequency-monthly -->
+              </nav>
             </section>
+            <!-- </section> -->
             <section class="dp-promocode">
               <a
                 class="dp-show-promocode"

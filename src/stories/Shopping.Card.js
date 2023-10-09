@@ -5,24 +5,27 @@ import { html } from "lit-html";
  */
 export const Inputs = ({}) => {
   return html`
-    <div class="dp-shopping-card m-t-42" style="width: 430px">
+    <div class="dp-shopping-card m-t-42" style="width: 396px">
       <header>
         <h3>Resumen de compra</h3>
       </header>
       <section>
         <h4>Frecuencia de pago</h4>
-        <ul class="dp-payment-frequency">
-          <li>
-            <p>Anual<span class="dp-discount">-25%</span></p>
-          </li>
-          <li>
-            <p>Semestral<span class="dp-discount">-15%</span></p>
-          </li>
-          <li class="dp-active">
-            <p>Trimestral<span class="dp-discount">-5%</span></p>
-          </li>
-          <li><p>Mensual</p></li>
-        </ul>
+        <nav class="dp-payment-frequency">
+          <button type="button" disabled>
+            Anual<span class="dp-discount">-25%</span>
+          </button>
+          <button type="button" disabled>
+            Semestral<span class="dp-discount">-15%</span>
+          </button>
+          <button type="button">
+            Trimestral<span class="dp-discount">-5%</span>
+          </button>
+          <button type="button">Mensual</button>
+          <div class="animation dp-frequency-monthly"></div>
+          <!-- class active = dp-frequency-annual - dp-frequency-biannual -
+          dp-frequency-quarterly - dp-frequency-monthly -->
+        </nav>
       </section>
       <section class="dp-promocode">
         <a
