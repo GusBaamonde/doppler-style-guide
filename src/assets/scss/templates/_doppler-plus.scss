@@ -354,6 +354,36 @@
       background-position: center center;
       background-repeat: no-repeat;
     }
+
+    .dp-bank {
+      width: 140px;
+      display: flex;
+      font-weight: bold;
+      text-align: center;
+      align-items: center;
+      color: #2c326e;
+      border: none;
+
+      .dpicon.iconapp-bank {
+        font-size: 34px;
+        color: #005fcf;
+        border: none;
+        height: 35px;
+        line-height: 35px;
+        display: flex;
+
+        span {
+          border: none;
+          height: 30px;
+          line-height: 16px;
+          padding: 0 3px;
+          font-size: 16px;
+          font-weight: bold;
+          color: #2c326e;
+          font-family: "proxima-nova", helvetica, arial, sans-serif;
+        }
+      }
+    }
   }
 
   /* Doppler plus calculator */
