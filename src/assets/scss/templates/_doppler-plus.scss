@@ -837,4 +837,18 @@
       margin-bottom: variables.$dp-spaces--lv0;
     }
   }
+
+  .dp-anchor-features {
+    border: 1px solid;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    li {
+      width: 15%;
+      text-align: center;
+    }
+  }
 }
