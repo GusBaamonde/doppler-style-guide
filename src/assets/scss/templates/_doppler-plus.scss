@@ -278,8 +278,8 @@
 
   .dp-banner-payment-methods {
     width: 70%;
-    height: 72px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     padding: variables.$dp-spaces--lv3 variables.$dp-spaces--lv5;
     margin: variables.$dp-spaces--lv5 auto variables.$dp-spaces--lv7;
@@ -356,28 +356,31 @@
     }
 
     .dp-bank {
-      width: 140px;
+      width: 142px;
       display: flex;
       font-weight: bold;
       text-align: center;
       align-items: center;
       color: #2c326e;
-      border: none;
+      border: 1px solid colors.$dp-color-snow;
+      padding: 0 12px 0 0px;
 
       .dpicon.iconapp-bank {
-        font-size: 34px;
+        font-size: 28px;
         color: #005fcf;
         border: none;
         height: 35px;
         line-height: 35px;
         display: flex;
+        align-items: center;
+        margin: auto;
 
         span {
           border: none;
           height: 30px;
-          line-height: 16px;
-          padding: 0 3px;
-          font-size: 16px;
+          line-height: 14px;
+          padding: 3px 3px;
+          font-size: 14px;
           font-weight: bold;
           color: #2c326e;
           font-family: "proxima-nova", helvetica, arial, sans-serif;
