@@ -840,15 +840,81 @@
 
   .dp-anchor-features {
     border: 1px solid;
-    height: 50px;
+
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 
     li {
-      width: 15%;
       text-align: center;
+    }
+
+    %icon-feature {
+      background-repeat: no-repeat;
+      width: 53px;
+      height: 50px;
+      display: block;
+    }
+
+    .dp-icon-automation {
+      @extend %icon-feature;
+      background-image: url(assets/img/automation-shop.svg);
+      background-size: cover;
+    }
+
+    .dp-icon-campaing {
+      @extend %icon-feature;
+      background-image: url(assets/img/classic-campaign.svg);
+    }
+
+    .dp-icon-integrations {
+      @extend %icon-feature;
+      background-image: url(assets/img/integrations.svg);
+    }
+
+    .dp-icon-editor {
+      @extend %icon-feature;
+      background-image: url(assets/img/editor.svg);
+    }
+
+    .dp-icon-forms {
+      @extend %icon-feature;
+      background-image: url(assets/img/forms.svg);
+    }
+
+    .dp-icon-omnicanalidad {
+      @extend %icon-feature;
+      background-image: url(assets/img/comunication.svg);
+    }
+
+    .dp-icon-reports {
+      @extend %icon-feature;
+      background-image: url(assets/img/reports.svg);
+    }
+
+    .dp-icon-segmentation {
+      @extend %icon-feature;
+      background-image: url(assets/img/segmentation.svg);
+    }
+
+    .icon-card {
+      font-weight: bold;
+      padding: 1em;
+      text-align: right;
+      color: #181a1a;
+      box-shadow: 0 1px 5px #00000099;
+      border-radius: 10px;
+      background-size: cover;
+      position: relative;
+      perspective: 2500px;
+      transition: all 0.5s;
+
+      .icon-card:hover {
+        transform: perspective(900px) translateY(-5%) rotateX(25deg)
+          translateZ(0);
+        box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+      }
     }
   }
 }
