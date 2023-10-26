@@ -472,6 +472,64 @@
   .labelManager-labelLists label {
     width: 75%;
   }
+
+  /* Edit segment */
+
+  .subtitle-edit-text {
+    margin: 0;
+    text-align: left;
+  }
+
+  .reports-segment {
+    width: 100%;
+  }
+
+  .buttonsSection-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main_buttons_green_big,
+  .main_buttons_green_big_next {
+    background-color: #33ad73;
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 11px;
+    padding: 16px 35px;
+    height: 45px;
+    width: auto;
+  }
+
+  .main_buttons_green_big_next:disabled {
+    pointer-events: none;
+    opacity: 0.4;
+  }
+}
+
+#searchFormLinks {
+  .dp-btn-group-select {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: variables.$dp-spaces--lv2 variables.$dp-spaces--lv0
+      variables.$dp-spaces--lv0;
+
+    .main_buttons_green_small {
+      background-color: #33ad73;
+      color: #fff;
+    }
+  }
+
+  .main_buttons_green_small,
+  .main_buttons_grey_small {
+    margin: variables.$dp-spaces--lv0 variables.$dp-spaces--lv1
+      variables.$dp-spaces--lv0 variables.$dp-spaces--lv0;
+  }
+}
+
+a.selectBox {
+  color: #666;
 }
 
 /* Save indicator Editor Unlayer */
