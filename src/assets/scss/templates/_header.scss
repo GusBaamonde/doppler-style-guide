@@ -846,3 +846,25 @@
     }
   }
 }
+
+/* Styles for Beamer - remember to delete */
+
+.beamerAnnouncementSnippet {
+  width: 335px !important;
+  font-family: proxima-nova, helvetica, arial, sans-serif !important;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.6) !important;
+}
+
+.beamerAnnouncementSnippetContent {
+  background-color: #ffed99 !important;
+  padding: 20px !important;
+}
+
+.beamerAnnouncementSnippetTitle {
+  color: #333 !important;
+}
+
+.beamerAnnouncementSnippetText {
+  padding: 6px 0 0 !important;
+  color: #333 !important;
+}
