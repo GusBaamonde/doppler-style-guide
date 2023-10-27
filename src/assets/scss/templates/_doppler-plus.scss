@@ -837,4 +837,104 @@
       margin-bottom: variables.$dp-spaces--lv0;
     }
   }
+
+  .dp-anchor-features {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+
+    li {
+      text-align: center;
+      margin: 0 12px;
+    }
+
+    .dp-achor-card {
+      box-shadow: rgba(255, 255, 255, 0) 0px 0px 0px 30px;
+      transition: box-shadow 0.4s ease 0s;
+      padding: 12px;
+      border-radius: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        box-shadow: rgba(149, 157, 165, 0.4) 0 0 0 0;
+      }
+
+      span {
+        display: block;
+      }
+    }
+
+    %icon-feature {
+      background-repeat: no-repeat;
+      width: 53px;
+      height: 50px;
+      display: block;
+    }
+
+    .dp-icon-automation {
+      @extend %icon-feature;
+      background-image: url(assets/img/automation-shop.svg);
+      background-size: cover;
+    }
+
+    .dp-icon-campaing {
+      @extend %icon-feature;
+      background-image: url(assets/img/classic-campaign.svg);
+    }
+
+    .dp-icon-integrations {
+      @extend %icon-feature;
+      background-image: url(assets/img/integrations.svg);
+    }
+
+    .dp-icon-editor {
+      @extend %icon-feature;
+      background-image: url(assets/img/editor.svg);
+    }
+
+    .dp-icon-forms {
+      @extend %icon-feature;
+      background-image: url(assets/img/forms.svg);
+    }
+
+    .dp-icon-omnicanalidad {
+      @extend %icon-feature;
+      background-image: url(assets/img/comunication.svg);
+      background-position: 0 -8px;
+    }
+
+    .dp-icon-reports {
+      @extend %icon-feature;
+      background-image: url(assets/img/reports.svg);
+    }
+
+    .dp-icon-segmentation {
+      @extend %icon-feature;
+      background-image: url(assets/img/segmentation.svg);
+    }
+
+    .icon-card {
+      font-weight: bold;
+      padding: 1em;
+      color: #181a1a;
+      border-radius: 10px;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      position: relative;
+
+      &[data-text-anchor]::before {
+        content: attr(data-text-anchor);
+        color: #008046;
+        display: block;
+        position: relative;
+        top: 64px;
+      }
+    }
+  }
 }
