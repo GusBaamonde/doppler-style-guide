@@ -111,8 +111,10 @@
       width: 100%;
 
       p {
-        font-size: var.$dp-sizing--lvl2;
-        line-height: 18px;
+        font-size: typography.$dp-fontsize-awa;
+        line-height: 24px;
+        font-family: typography.$dp-fontfamily-awa;
+        color: colors.$dp-color-darkgrey;
       }
     }
 
@@ -133,17 +135,19 @@
       .dp-message-link {
         margin-top: var.$dp-spaces--lv0;
         min-width: 154px;
+        text-align: right;
       }
     }
 
     .dp-message-link {
-      text-transform: uppercase;
       color: colors.$dp-color-darkgrey;
       text-decoration: underline;
-      font-size: var.$dp-sizing--lvl2;
-      text-align: right;
+      text-align: left;
       margin-top: var.$dp-spaces--lv2;
       display: inline-block;
+      font-size: typography.$dp-fontsize-awa;
+      line-height: 24px;
+      font-family: typography.$dp-fontfamily-awa;
     }
   }
 
