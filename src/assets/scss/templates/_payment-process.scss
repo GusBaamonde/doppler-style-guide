@@ -1275,4 +1275,23 @@
       }
     }
   }
+
+  .dp-first-order-title {
+    font-size: 36px;
+    line-height: 48px;
+    color: colors.$dp-color-text;
+    font-family: typography.$dp-fontfamily-awa;
+  }
+
+  .dp-second-order-title {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 800;
+    color: colors.$dp-color-text;
+    font-family: typography.$dp-fontfamily-awa;
+
+    .dpicon {
+      color: #7945e3;
+    }
+  }
 }
