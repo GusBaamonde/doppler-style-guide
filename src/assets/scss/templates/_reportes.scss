@@ -293,4 +293,67 @@
       }
     }
   }
+
+  .wrapper-llm-chat {
+    padding: 24px;
+    background-color: #fff;
+    margin: 24px;
+    display: flex;
+    height: 100%;
+    border: 1px solid #cccccc;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    .message-history {
+    }
+
+    .message-ai {
+      background-color: #e0f8ee;
+      padding: 12px;
+      text-align: left;
+      border-radius: 6px;
+    }
+
+    .message-human {
+      background-color: #f2edfd;
+      padding: 12px;
+      text-align: right;
+      border-radius: 6px;
+    }
+
+    .new-message {
+      form {
+        .new-message-input {
+          border: 1px solid #838370;
+          background-color: #ffffff;
+          color: #838370;
+          padding: 12px 6px;
+          font-size: 1rem;
+          line-height: 24px;
+          margin-top: 6px;
+          box-shadow: 0 0 0 2px #ffffff;
+          margin-bottom: 24px;
+        }
+
+        .new-messages-send-button {
+          display: inline-block;
+          text-align: center;
+          text-decoration: none;
+          border: none;
+          appearance: none;
+          cursor: pointer;
+          font-family: "proxima-nova", Helvetica, Arial, sans-serif;
+          border-radius: 3px;
+          font-weight: 700;
+          letter-spacing: 0.6px;
+          transition: all 0.35s ease;
+          font-size: 1rem;
+          line-height: 16px;
+          padding: 13px 25px;
+          background-color: #33ad73;
+          color: #ffffff;
+        }
+      }
+    }
+  }
 }
