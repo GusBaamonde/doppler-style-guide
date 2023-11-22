@@ -319,9 +319,19 @@
       padding: 12px;
       text-align: right;
       border-radius: 6px;
+      margin: 12px 0;
+    }
+
+    .message-waiting {
+      background-color: #e0f8ee;
+      padding: 12px;
+      text-align: left;
+      border-radius: 6px;
     }
 
     .new-message {
+      padding-top: 24px;
+
       form {
         .new-message-input {
           border: 1px solid #838370;
@@ -332,7 +342,7 @@
           line-height: 24px;
           margin-top: 6px;
           box-shadow: 0 0 0 2px #ffffff;
-          margin-bottom: 24px;
+          margin-bottom: 6px;
         }
 
         .new-messages-send-button {
