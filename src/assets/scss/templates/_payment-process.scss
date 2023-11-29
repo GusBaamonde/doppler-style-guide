@@ -1294,4 +1294,37 @@
       color: #7945e3;
     }
   }
+
+  /* New Summary */
+
+  .dp-tit-plan-purchased {
+    text-transform: none;
+    font-weight: 600;
+    margin: 24px 0 0 0;
+    padding: 0;
+  }
+
+  .dp-purchase-summary-list {
+    background-color: colors.$dp-color-ghostwhite;
+    padding: 24px 12px;
+    display: flex;
+    align-items: center;
+    margin: 6px 0 18px 0;
+
+    li {
+      width: 33%;
+      display: inline-block;
+      line-height: 30px;
+      padding-left: 12px;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+
+    span {
+      font-size: 14px;
+      color: #666666;
+    }
+  }
 }
