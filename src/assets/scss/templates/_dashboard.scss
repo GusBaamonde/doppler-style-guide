@@ -360,4 +360,44 @@
   .dp-campaign-steps {
     padding: variables.$dp-spaces--lv5 variables.$dp-spaces--lv0;
   }
+
+  /* Assisted Sales */
+
+  .dp-wrapper-as-kpi {
+    margin: 30px 0;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    li {
+    }
+
+    .dp-kpi-card {
+      display: flex;
+      align-items: center;
+      border: 1px solid #e7e5dc;
+      border-radius: 3px;
+      padding: 12px 24px 12px 12px;
+    }
+
+    .dp-assisted-sales-icon {
+      color: #b58fc1;
+      font-size: 38px;
+      width: 48px;
+      margin-right: 12px;
+    }
+
+    .dp-assisted-sales-text {
+      h3 {
+        padding: 0;
+      }
+
+      span {
+        font-size: 15px;
+      }
+    }
+  }
 }
