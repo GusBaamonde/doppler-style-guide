@@ -99,6 +99,17 @@
         background-image: url("assets/img/dashboard-user-removed-disabled.svg");
       }
     }
+
+    .dp-iconkpi {
+      color: #b58fc1;
+      font-size: 54px;
+      margin-bottom: 12px;
+    }
+    .dp-iconkpi--disabled {
+      color: #ccc;
+      font-size: 54px;
+      margin-bottom: 12px;
+    }
   }
   .dp-dashboard-icon {
     width: 50px;
