@@ -165,6 +165,39 @@ export const Inputs = ({}) => {
           </div>
         </div>
       </section>
+      <section class="dp-h-divider">
+        <div class="dp-next-bills">
+          <ul class="dp-accordion">
+            <li class="">
+              <a class="dp-accordion-thumb">Proximas facturas</a>
+              <div class="dp-accordion-panel" style="display: none;">
+                <div class="dp-accordion-content">
+                  <div class="dp-plan-box">
+                    <h4>Plan chat</h4>
+                    <hr />
+                    <ul class="dp-items-result">
+                      <li>
+                        <p>12/05/2024</p>
+                        <span>US$136,80*</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="dp-plan-box">
+                    <h4>Plan marketing</h4>
+                    <hr />
+                    <ul class="dp-items-result">
+                      <li>
+                        <p>17/10/2023</p>
+                        <span>US$45*</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
       <footer>
         <ul>
           <li>
