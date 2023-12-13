@@ -340,6 +340,22 @@
     }
   }
 
+  /* table responsive assisted sales */
+
+  .dp-wrapp-assisted-sales {
+    .dp-table-responsive {
+      overflow-x: auto;
+      overflow-y: hidden;
+      width: 100%;
+      padding-bottom: variables.$dp-spaces--lv4;
+
+      @media screen and (min-width: 1025px) {
+        overflow-x: scroll;
+        overflow-y: hidden;
+      }
+    }
+  }
+
   .dp-blocked-list {
     display: flex;
     align-items: center;
