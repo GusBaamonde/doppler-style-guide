@@ -350,7 +350,7 @@
       padding-bottom: variables.$dp-spaces--lv4;
 
       @media screen and (min-width: 1025px) {
-        overflow-x: scroll;
+        overflow-x: hidden;
         overflow-y: hidden;
       }
     }
