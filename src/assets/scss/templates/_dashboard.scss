@@ -415,4 +415,10 @@
       }
     }
   }
+
+  .dp-wrap-table {
+    min-height: 357px;
+    max-height: 357px;
+    overflow-y: auto;
+  }
 }
