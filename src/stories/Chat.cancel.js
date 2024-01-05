@@ -15,6 +15,17 @@ export const Chat = ({}) => {
           </ul>
         </header>
         <div data-testid="CollectionPage" class="dp-chat">
+          <div class="message-history closed-chat">
+            <div class="message message-ai">
+              <p>Bienvenido, soy SebAI de Doppler, ¿Cómo puedo ayudarte?</p>
+            </div>
+            <div class="message message-human">
+              <p>hola</p>
+            </div>
+            <div class="message message-ai">
+              <p>Hola, ¿en qué puedo ayudarte hoy?</p>
+            </div>
+          </div>
           <div class="message-history open-chat">
             <div class="message message-ai">
               <p>Bienvenido, soy SebAI de Doppler, ¿Cómo puedo ayudarte?</p>
@@ -84,17 +95,6 @@ export const Chat = ({}) => {
             </div>
             <div class="message message-human">
               <p>y tenes mas alternativas?</p>
-            </div>
-            <div class="message-history closed-chat">
-              <div class="message message-ai">
-                <p>Bienvenido, soy SebAI de Doppler, ¿Cómo puedo ayudarte?</p>
-              </div>
-              <div class="message message-human">
-                <p>hola</p>
-              </div>
-              <div class="message message-ai">
-                <p>Hola, ¿en qué puedo ayudarte hoy?</p>
-              </div>
             </div>
             <div class="message message-waiting">. . .</div>
           </div>
