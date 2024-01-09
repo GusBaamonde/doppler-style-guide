@@ -1114,7 +1114,6 @@
 
         button {
           line-height: 50px;
-          width: auto;
           height: 100%;
           font-size: 16px;
           display: flex;
@@ -1166,6 +1165,124 @@
         button:nth-child(3):hover ~ .animation {
           width: 98px;
           left: 170px;
+          background-color: colors.$dp-color-greenbg;
+          border: 2px solid colors.$dp-color-text;
+          border-radius: 30px;
+        }
+
+        .dp-frequency-monthly,
+        button:nth-child(4):hover ~ .animation {
+          width: 89px;
+          left: 268px;
+          background-color: colors.$dp-color-greenbg;
+          border: 2px solid colors.$dp-color-text;
+          border-radius: 30px;
+        }
+
+        button:nth-child(1):disabled .dp-discount,
+        button:nth-child(2):disabled .dp-discount,
+        button:nth-child(3):disabled .dp-discount,
+        button:nth-child(4):disabled .dp-discount {
+          background-color: colors.$dp-color-silver;
+          color: colors.$dp-color-white;
+        }
+
+        button:nth-child(1):disabled:hover ~ .animation,
+        button:nth-child(2):disabled:hover ~ .animation,
+        button:nth-child(3):disabled:hover ~ .animation,
+        button:nth-child(4):disabled:hover ~ .animation {
+          background-color: colors.$dp-color-snow;
+          border: 2px solid colors.$dp-color-silver;
+          border-radius: 30px;
+        }
+      }
+
+      /* Payment frequency en */
+
+      .dp-payment-frequency-en {
+        margin: variables.$dp-spaces--lv3 variables.$dp-spaces--lv0;
+        position: relative;
+        width: 100%;
+        height: 42px;
+        border-radius: 30px;
+        display: flex;
+
+        &:before {
+          content: "";
+          position: absolute;
+          border: 1px solid colors.$dp-color-silver;
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          border-radius: 30px;
+        }
+
+        .dp-discount {
+          position: absolute;
+          background-color: colors.$dp-color-onrangebg;
+          color: colors.$dp-color-darkgrey;
+          font-size: 11px;
+          line-height: 14px;
+          border-radius: 30px;
+          top: -12px;
+          padding: 3px 6px;
+          z-index: 5;
+          right: variables.$dp-spaces--lv0;
+        }
+
+        button {
+          line-height: 50px;
+          height: 100%;
+          font-size: 16px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          z-index: 1;
+          text-decoration: none;
+          text-align: center;
+          color: colors.$dp-color-text;
+          cursor: pointer;
+          width: 100%;
+          padding: variables.$dp-spaces--lv0 15px;
+
+          &:disabled {
+            color: colors.$dp-color-lightgrey;
+            cursor: default;
+          }
+        }
+
+        .animation {
+          position: absolute;
+          height: 100%;
+          top: variables.$dp-spaces--lv0;
+          z-index: 0;
+          transition: all 0.5s ease 0s;
+          border-radius: 8px;
+        }
+
+        .dp-frequency-annual,
+        button:nth-child(1):hover ~ .animation {
+          width: 84px;
+          left: variables.$dp-spaces--lv0;
+          background-color: colors.$dp-color-greenbg;
+          border: 2px solid colors.$dp-color-text;
+          border-radius: 30px;
+        }
+
+        .dp-frequency-biannual,
+        button:nth-child(2):hover ~ .animation {
+          width: 100px;
+          left: 80px;
+          background-color: colors.$dp-color-greenbg;
+          border: 2px solid colors.$dp-color-text;
+          border-radius: 30px;
+        }
+
+        .dp-frequency-quarterly,
+        button:nth-child(3):hover ~ .animation {
+          width: 98px;
+          left: 175px;
           background-color: colors.$dp-color-greenbg;
           border: 2px solid colors.$dp-color-text;
           border-radius: 30px;
