@@ -9,6 +9,7 @@
 @use "core/variables";
 @use "helpers/colors";
 @use "helpers/mixins";
+@use "core/typography";
 
 .dp-library {
   $range-width: 100% !default;
@@ -937,5 +938,57 @@
         top: 64px;
       }
     }
+  }
+
+  /* Plan Chat */
+
+  .dp-boxgrey {
+    background-color: colors.$dp-color-ghostwhite;
+    border-radius: 3px;
+    margin-top: variables.$dp-spaces--lv4;
+    padding: variables.$dp-spaces--lv3 variables.$dp-spaces--lv4;
+    position: relative;
+
+    .dp-items-plan {
+      margin: variables.$dp-spaces--lv2 variables.$dp-spaces--lv0;
+      li {
+        margin-bottom: variables.$dp-spaces--lv2;
+      }
+    }
+
+    .dp-ico--ok {
+      background-image: url(assets/img/Check-black.svg);
+      background-repeat: no-repeat;
+      width: 24px;
+      height: 16px;
+    }
+
+    .dp-price {
+      color: colors.$dp-color-darkgrey;
+      display: block;
+      width: 230px;
+      height: auto;
+      position: absolute;
+      right: -24px;
+      top: 54px;
+
+      h2 {
+        padding: variables.$dp-spaces--lv0;
+      }
+
+      span {
+        font-size: typography.$dp-fontsize-base;
+        color: colors.$dp-color-grey;
+      }
+      .dp-line-through {
+        text-decoration: line-through;
+      }
+    }
+  }
+  .dp-reminder {
+    font-style: italic;
+    color: colors.$dp-color-grey;
+    display: block;
+    margin: variables.$dp-spaces--lv3 variables.$dp-spaces--lv0;
   }
 }
