@@ -433,12 +433,40 @@
       height: 16px;
     }
 
+    // extra cost
+
+    .ico-extra-cost {
+      background-image: url(assets/img/ico-extra-cost.svg);
+      background-repeat: no-repeat;
+      width: 24px;
+      height: 15px;
+    }
+
     td:first-child {
       width: 250px;
     }
 
     tr:last-child {
       border-bottom: none;
+    }
+  }
+
+  .dp-table-description-plan {
+    border: none;
+
+    td {
+      width: 50%;
+      padding: 18px 12px;
+
+      .dp-table-results {
+        width: 100%;
+      }
+    }
+
+    .dp-additional-cost {
+      li {
+        padding-bottom: 6px;
+      }
     }
   }
 }
