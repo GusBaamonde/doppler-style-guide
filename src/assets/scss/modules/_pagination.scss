@@ -8,6 +8,7 @@
 
 @use "core/variables";
 @use "helpers/colors";
+@use "core/typography";
 
 .dp-library {
   %pagination-link {
@@ -95,6 +96,215 @@
         top: 4px;
         position: absolute;
         left: 8px;
+      }
+    }
+  }
+
+  /* Steper - Plan chat */
+
+  .dp-container-steper {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+
+    .dp-steper {
+      counter-reset: step;
+      margin: 60px auto;
+    }
+
+    .dp-steper li {
+      float: left;
+      width: 170px;
+      height: 30px;
+      position: relative;
+      text-align: center;
+    }
+
+    .dp-steper li.active::before {
+      border-color: colors.$dp-color-darkgreen;
+      background: colors.$dp-color-green;
+    }
+
+    .dp-steper li:before {
+      width: 30px;
+      height: 30px;
+      border: 3px solid colors.$dp-color-darkgreen;
+      display: block;
+      margin: 0 auto 10px auto;
+      border-radius: 50%;
+      line-height: 27px;
+      text-align: center;
+    }
+
+    .dp-steper li:before {
+      content: "";
+      width: 30px;
+      height: 30px;
+      border: 3px solid colors.$dp-color-lightgrey;
+      display: block;
+      margin: 0 auto 10px auto;
+      border-radius: 50%;
+      line-height: 27px;
+      background: colors.$dp-color-ghostwhite;
+      text-align: center;
+    }
+
+    .dp-steper li:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background: colors.$dp-color-lightgrey;
+      top: 15px;
+      left: -50%;
+      z-index: -1;
+    }
+
+    .dp-steper li:first-child:after {
+      content: none;
+    }
+
+    .dp-steper li:last-child {
+      content: none;
+    }
+
+    .dp-steper li.active:after {
+      background: colors.$dp-color-darkgreen;
+    }
+
+    span {
+      position: relative;
+      text-align: center;
+      top: -70px;
+      color: colors.$dp-color-text;
+    }
+
+    span.dpicon {
+      position: absolute;
+      top: -34px;
+      width: 100%;
+      font-size: 28px;
+      text-align: center;
+      color: colors.$dp-color-silver;
+    }
+
+    .dp-steper li.active .dpicon {
+      color: colors.$dp-color-green;
+    }
+  }
+
+  /* Steper counter */
+
+  .dp-container-steper {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+
+    .dp-steper-counter {
+      counter-reset: step;
+      margin: 60px auto;
+    }
+
+    .dp-steper-counter li {
+      float: left;
+      width: 170px;
+      height: 30px;
+      position: relative;
+      text-align: center;
+    }
+
+    .dp-steper-counter li.active::before {
+      border-color: colors.$dp-color-darkgreen;
+      background: colors.$dp-color-green;
+      color: white;
+    }
+
+    .dp-steper-counter li:before {
+      content: "1";
+      width: 30px;
+      height: 30px;
+      border: 2px solid #bebebe;
+      display: block;
+      margin: 0 auto 10px auto;
+      border-radius: 50%;
+      line-height: 27px;
+      background: colors.$dp-color-white;
+      color: #bebebe;
+      text-align: center;
+    }
+
+    .dp-steper-counter li:before {
+      content: counter(step);
+      counter-increment: step;
+      width: 30px;
+      height: 30px;
+      border: 3px solid colors.$dp-color-lightgrey;
+      display: block;
+      margin: 0 auto 10px auto;
+      border-radius: 50%;
+      line-height: 27px;
+      background: colors.$dp-color-ghostwhite;
+      color: colors.$dp-color-grey;
+      text-align: center;
+    }
+
+    .dp-steper-counter li:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background: colors.$dp-color-lightgrey;
+      top: 15px;
+      left: -50%;
+      z-index: -1;
+    }
+
+    .dp-steper-counter li:first-child:after {
+      content: none;
+    }
+
+    .dp-steper-counter li:last-child {
+      content: none;
+    }
+
+    .dp-steper-counter li.active:after {
+      background: colors.$dp-color-darkgreen;
+    }
+
+    span {
+      position: relative;
+      text-align: center;
+      top: -70px;
+      color: colors.$dp-color-text;
+    }
+
+    /* step active */
+
+    span.step-active {
+      background-color: colors.$dp-color-greenbg;
+      position: absolute;
+      padding: variables.$dp-spaces--lv2;
+      color: colors.$dp-color-text;
+      border-radius: 100%;
+      top: -5px;
+      left: 65px;
+      z-index: -2;
+      width: 40px;
+      height: 40px;
+      animation: pulse-animation 1s infinite;
+
+      @keyframes pulse-animation {
+        0% {
+          box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+        }
+        50% {
+          box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        100% {
+          box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+        }
       }
     }
   }
