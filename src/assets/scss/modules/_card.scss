@@ -183,14 +183,39 @@
       flex-direction: column;
       justify-content: end;
       align-items: baseline;
-      height: 100px;
+      height: auto;
       margin: variables.$dp-spaces--lv0;
       width: 100%;
       padding: variables.$dp-spaces--lv0 variables.$dp-spaces--lv4;
       color: colors.$dp-color-darkgrey;
 
+      .dp-secondary-blue {
+        background-color: colors.$dp-color-blue;
+        color: colors.$dp-color-white;
+
+        &:hover {
+          background-color: #4c82d7;
+        }
+      }
+
       span {
         font-weight: bold;
+      }
+
+      .dp-discount-price-arg {
+        font-size: 14px;
+        line-height: 24px;
+        color: colors.$dp-color-blue;
+        text-decoration: line-through;
+      }
+
+      .dp-off {
+        font-size: 14px;
+        color: #669df3;
+        font-weight: normal;
+        display: grid;
+        margin: 6px auto 0;
+        line-height: 18px;
       }
     }
 
