@@ -183,18 +183,18 @@
       flex-direction: column;
       justify-content: end;
       align-items: baseline;
-      height: auto;
+      height: 160px;
       margin: variables.$dp-spaces--lv0;
       width: 100%;
       padding: variables.$dp-spaces--lv0 variables.$dp-spaces--lv4;
       color: colors.$dp-color-darkgrey;
 
       .dp-secondary-blue {
-        background-color: colors.$dp-color-blue;
+        background-color: #2e71ea;
         color: colors.$dp-color-white;
 
         &:hover {
-          background-color: #4c82d7;
+          background-color: #2a75db;
         }
       }
 
@@ -205,13 +205,13 @@
       .dp-discount-price-arg {
         font-size: 14px;
         line-height: 24px;
-        color: colors.$dp-color-blue;
+        color: #2e71ea;
         text-decoration: line-through;
       }
 
       .dp-off {
         font-size: 14px;
-        color: #669df3;
+        color: #2e71ea;
         font-weight: normal;
         display: grid;
         margin: 6px auto 0;
