@@ -1112,6 +1112,19 @@
           right: variables.$dp-spaces--lv0;
         }
 
+        .dp-discount-arg {
+          position: absolute;
+          background-color: #2e71ea;
+          color: colors.$dp-color-darkgrey;
+          font-size: 11px;
+          line-height: 14px;
+          border-radius: 30px;
+          top: -12px;
+          padding: 3px 6px;
+          z-index: 5;
+          right: variables.$dp-spaces--lv0;
+        }
+
         button {
           line-height: 50px;
           height: 100%;
@@ -1187,6 +1200,16 @@
           color: colors.$dp-color-white;
         }
 
+        /* discount arg */
+
+        button:nth-child(1):disabled .dp-discount-arg,
+        button:nth-child(2):disabled .dp-discount-arg,
+        button:nth-child(3):disabled .dp-discount-arg,
+        button:nth-child(4):disabled .dp-discount-arg {
+          background-color: colors.$dp-color-silver;
+          color: colors.$dp-color-white;
+        }
+
         button:nth-child(1):disabled:hover ~ .animation,
         button:nth-child(2):disabled:hover ~ .animation,
         button:nth-child(3):disabled:hover ~ .animation,
@@ -1220,6 +1243,19 @@
         .dp-discount {
           position: absolute;
           background-color: colors.$dp-color-onrangebg;
+          color: colors.$dp-color-darkgrey;
+          font-size: 11px;
+          line-height: 14px;
+          border-radius: 30px;
+          top: -12px;
+          padding: 3px 6px;
+          z-index: 5;
+          right: variables.$dp-spaces--lv0;
+        }
+
+        .dp-discount-arg {
+          position: absolute;
+          background-color: #2e71ea;
           color: colors.$dp-color-darkgrey;
           font-size: 11px;
           line-height: 14px;
@@ -1313,6 +1349,16 @@
           border: 2px solid colors.$dp-color-silver;
           border-radius: 30px;
         }
+
+        /* discount */
+
+        button:nth-child(1):disabled .dp-discount-arg,
+        button:nth-child(2):disabled .dp-discount-arg,
+        button:nth-child(3):disabled .dp-discount-arg,
+        button:nth-child(4):disabled .dp-discount-arg {
+          background-color: colors.$dp-color-silver;
+          color: colors.$dp-color-white;
+        }
       }
 
       /* ================================================================================ */
@@ -1370,6 +1416,10 @@
             padding: 3px 6px;
             z-index: 5;
             right: 0;
+          }
+
+          .dp-discount-arg {
+            color: #2e71ea;
           }
 
           .dp-btn-delete {
