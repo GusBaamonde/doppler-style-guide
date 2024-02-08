@@ -21,7 +21,9 @@ export const Inputs = ({}) => {
           <button type="button">
             Trimestral<span class="dp-discount">-5%</span>
           </button>
-          <button type="button">Mensual</button>
+          <button type="button">
+            Mensual <span class="dp-discount-arg">-5%</span>
+          </button>
           <div class="animation dp-frequency-monthly"></div>
           <!-- class active = dp-frequency-annual - dp-frequency-biannual -
           dp-frequency-quarterly - dp-frequency-monthly -->
@@ -95,6 +97,16 @@ export const Inputs = ({}) => {
           <ul class="dp-purchase-items">
             <li>
               <p class="dp-mark dp-strike">Incluye hasta 5.000 contactos</p>
+            </li>
+            <li>
+              <p class="dp-mark dp-discount-arg">
+                Descuento Exclusivo Argentina 12/meses
+              </p>
+              <button
+                type="button"
+                class="dp-btn-delete dpicon iconapp-delete"
+                title="borrar"
+              ></button>
             </li>
             <li>
               <p class="dp-mark">Promocode eliminar</p>
