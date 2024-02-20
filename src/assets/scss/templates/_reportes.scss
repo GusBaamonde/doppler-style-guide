@@ -490,9 +490,14 @@
   }
 
   .dp-chat {
-    padding: variables.$dp-spaces--lv2;
-    margin-bottom: 85px;
-    height: calc(100% - 100px);
+    padding: variables.$dp-spaces--lv2 variables.$dp-spaces--lv2
+      variables.$dp-spaces--lv6 variables.$dp-spaces--lv2;
+    margin-bottom: variables.$dp-spaces--lv0;
+    height: calc(100% - 120px);
+    position: fixed;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
 
   .wrapper-llm-chat {
