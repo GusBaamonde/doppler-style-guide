@@ -41,7 +41,7 @@
     "html-webpack-plugin": "5.6.0",
     "jquery": "3.7.1",
     "loader": "2.1.1",
-    "mini-css-extract-plugin": "2.8.0",
+    "mini-css-extract-plugin": "2.8.1",
     "sass": "1.71.1",
     "sass-loader": "14.1.1",
     "string-replace-loader": "3.1.0",
