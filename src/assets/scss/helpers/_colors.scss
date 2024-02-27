@@ -84,6 +84,7 @@ $dp-bg-overlay-50: rgba(34, 34, 34, 0.5);
 $dp-border-grey: #e8e8e8;
 $dp-color-wild-sand: #f6f6f6;
 $dp-color-hover-table: #fff7e8;
+$dp-color-verysoft-gray: #f6f6f6;
 
 /// Colors Payment process
 
@@ -254,5 +255,10 @@ $dp-color-iconcm: #ef9c70;
 
   .dp-green-highlighted-word {
     background: $dp-greenBackground-forWords;
+  }
+
+  /* bg */
+  .dp-bg-verysoft-gray {
+    background-color: $dp-color-verysoft-gray;
   }
 }
