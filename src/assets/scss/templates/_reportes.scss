@@ -345,8 +345,6 @@
   .dp-header-chat {
     padding: variables.$dp-spaces--lv2;
     border-bottom: 1px solid colors.$dp-color-silver;
-    /*margin-bottom: variables.$dp-spaces--lv2;*/
-    /*position: fixed;*/
     width: 100%;
     background-color: colors.$dp-color-white;
     direction: ltr;
@@ -535,6 +533,10 @@
       display: flex;
       flex-direction: column;
       width: fit-content;
+      background-color: colors.$dp-color-blue-brightness;
+      border-radius: 6px;
+      padding: variables.$dp-spaces--lv2;
+      box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
 
       &:before {
         content: "";
@@ -560,30 +562,38 @@
         border-bottom-right-radius: 10px;
       }
 
+      p {
+        margin: variables.$dp-spaces--lv1 variables.$dp-spaces--lv0;
+      }
+
       p,
       ol,
       ul {
-        padding: variables.$dp-spaces--lv2;
-        border-radius: 6px;
-        font-size: typography.$dp-fontsize-base;
-        background-color: colors.$dp-color-blue-brightness;
+        font-size: 0.875rem;
+        line-height: 18px;
       }
 
       ol,
       ul {
-        padding-left: variables.$dp-spaces--lv6;
-        padding-bottom: variables.$dp-spaces--lv2;
-        padding-top: variables.$dp-spaces--lv2;
+        padding-left: variables.$dp-spaces--lv3;
+        padding-top: variables.$dp-spaces--lv0;
+        padding-bottom: variables.$dp-spaces--lv0;
+        margin: 0;
+
+        li {
+          margin: variables.$dp-spaces--lv1 variables.$dp-spaces--lv0;
+        }
 
         p {
-          padding: variables.$dp-spaces--lv0;
           border: none;
+          padding: 0 6px;
+          margin: 0;
+          line-height: 18px;
         }
       }
 
       ul {
         list-style: disc;
-        margin: variables.$dp-spaces--lv2 variables.$dp-spaces--lv0;
       }
 
       a {
@@ -594,8 +604,11 @@
 
     .message-human {
       text-align: right;
-      margin: variables.$dp-spaces--lv4 variables.$dp-spaces--lv0;
+      margin: variables.$dp-spaces--lv3 variables.$dp-spaces--lv0;
       position: relative;
+      background-color: #f2edfd;
+      border-radius: 6px;
+      box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
 
       &::before {
         content: "";
@@ -623,10 +636,8 @@
       }
 
       p {
-        background-color: #f2edfd;
-        padding: variables.$dp-spaces--lv2;
-        border-radius: 6px;
-        font-size: typography.$dp-fontsize-base;
+        padding: variables.$dp-spaces--lv1 variables.$dp-spaces--lv2;
+        font-size: 0.875rem;
       }
     }
 
@@ -768,8 +779,9 @@
     }
 
     .dp-end-chat {
-      background: #b1b1b1;
-      transition: all 0.3seg ease-in-out;
+      background-color: #fff;
+      color: #333;
+      border: 1px solid #8c9196;
 
       &:hover {
         background: colors.$dp-color-silver;
@@ -778,7 +790,6 @@
 
     .dp-cancel-chat {
       background: transparent;
-      transition: all 0.3seg ease-in-out;
 
       &:hover {
         background: colors.$dp-color-silver;
@@ -789,8 +800,8 @@
       margin-bottom: variables.$dp-spaces--lv2;
       font-weight: normal;
       font-size: typography.$dp-fontsize-base;
-      width: 70%;
       padding: variables.$dp-spaces--lv3;
+      width: 100%;
     }
   }
 
