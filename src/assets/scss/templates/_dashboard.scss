@@ -380,10 +380,11 @@
     ul {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: start;
     }
 
     li {
+      margin-right: 24px;
     }
 
     .dp-kpi-card {

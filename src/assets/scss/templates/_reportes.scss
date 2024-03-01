@@ -490,9 +490,14 @@
   }
 
   .dp-chat {
-    padding: variables.$dp-spaces--lv2;
-    margin-bottom: 85px;
-    height: calc(100% - 100px);
+    padding: variables.$dp-spaces--lv2 variables.$dp-spaces--lv2
+      variables.$dp-spaces--lv6 variables.$dp-spaces--lv2;
+    margin-bottom: variables.$dp-spaces--lv0;
+    height: calc(100% - 120px);
+    position: fixed;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
 
   .wrapper-llm-chat {
@@ -723,30 +728,31 @@
 
   /* overlay */
 
-  .dp-close-confirmation {
+  .dp-overlay-chat {
     position: absolute;
     background-color: rgba($color: #000000, $alpha: 0.7);
-    display: flex;
     width: 100%;
     height: 100%;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     top: 0;
     z-index: 3;
   }
 
-  .dp-form-chat-options {
+  .dp-form-chat-wrapper {
     background-color: colors.$dp-color-white;
     width: 100%;
-    height: 100%;
     display: flex;
-    top: 55%;
+    bottom: 0;
     position: absolute;
-    border-radius: 12px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-top: 15px solid #fff;
+    border-bottom: none;
     padding: variables.$dp-spaces--lv3;
     text-align: center;
+  }
 
+  .dp-form-chat-options {
+    margin: 0 auto;
     h3 {
       padding: variables.$dp-spaces--lv3 variables.$dp-spaces--lv0
         variables.$dp-spaces--lv0 variables.$dp-spaces--lv0;
@@ -791,16 +797,12 @@
   /* form contact chat */
 
   .dp-form-chat-contact {
-    background-color: colors.$dp-color-white;
-    font-size: typography.$dp-fontsize-base;
-    width: 100%;
+    width: 400px;
     height: 100%;
     display: flex;
-    top: 26%;
-    position: absolute;
-    border-radius: 12px;
+    margin: 0 auto;
     padding: variables.$dp-spaces--lv3;
-    text-align: left;
+    text-align: center;
 
     .dp-inputs-chat {
       margin-top: variables.$dp-spaces--lv3;
