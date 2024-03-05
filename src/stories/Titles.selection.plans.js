@@ -15,6 +15,11 @@ export const isoText = ({}) => {
             </p>
 
             <h2 class="dp-first-order-title">
+              ¿Quieres agrega un pack de landings?
+              <span class="dpicon iconapp-landing-page"></span>
+            </h2>
+
+            <h2 class="dp-first-order-title">
               Elige tu plan de marketing
               <span class="dpicon iconapp-email-alert"></span>
             </h2>

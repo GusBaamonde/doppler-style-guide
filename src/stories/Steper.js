@@ -24,6 +24,12 @@ export const Chat = ({}) => {
           </li>
           <li class="active">
             <span
+              ><span class="dpicon iconapp-landing-page"></span>Pack
+              Landings</span
+            >
+          </li>
+          <li class="active">
+            <span
               ><span class="dpicon iconapp-fast-money"></span>Finaliza tu
               compra</span
             >
