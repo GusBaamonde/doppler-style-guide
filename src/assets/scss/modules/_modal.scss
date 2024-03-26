@@ -148,9 +148,52 @@
 
   .dp-iconmodal-center {
     display: flex;
-    margin: 24px auto;
+    margin: variables.$dp-spaces--lv4 auto;
     text-align: center;
     align-items: center;
     justify-content: center;
+  }
+
+  /* Modal pack landings */
+
+  .dp-modal-pack-landing {
+    padding: variables.$dp-spaces--lv5 variables.$dp-spaces--lv6;
+    text-align: center;
+    width: 370px;
+    margin: variables.$dp-spaces--lv0 auto;
+
+    .dp-button {
+      width: 100%;
+      margin: variables.$dp-spaces--lv3 variables.$dp-spaces--lv0;
+      color: colors.$dp-color-white;
+      font-weight: normal;
+      font-size: variables.$dp-sizing--lvl3;
+    }
+
+    .dp-button.link-green {
+      color: colors.$dp-color-green;
+      font-weight: normal;
+
+      &:hover {
+        color: colors.$dp-color-darkgreen;
+      }
+    }
+
+    a {
+      font-size: variables.$dp-sizing--lvl2-14;
+    }
+
+    .dp-carousel-wrapper {
+      border: none;
+      background-color: colors.$dp-color-white;
+      background-image: url("assets/img/placeholder-carousel.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 247px;
+    }
+
+    .dp-carousel-slide {
+      min-height: 247px;
+    }
   }
 }

@@ -27,10 +27,7 @@ export const Inputs = ({}) => {
           <ul>
             <li><a href="#">Mas información</a></li>
             <li>
-              <button
-                type="button"
-                class="dp-button button-medium secondary-green"
-              >
+              <button type="button" class="dp-button button-medium ctaTertiary">
                 Comprar ahora
               </button>
             </li>
@@ -54,10 +51,7 @@ export const Inputs = ({}) => {
           <ul>
             <li><a href="#">Mas información</a></li>
             <li>
-              <button
-                type="button"
-                class="dp-button button-medium secondary-green"
-              >
+              <button type="button" class="dp-button button-medium ctaTertiary">
                 Comprar ahora
               </button>
             </li>
