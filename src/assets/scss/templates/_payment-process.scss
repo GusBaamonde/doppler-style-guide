@@ -1218,6 +1218,44 @@
           border: 2px solid colors.$dp-color-silver;
           border-radius: 30px;
         }
+
+        /* state disabled all */
+
+        &.dp-pf-disabled .dp-frequency-annual,
+        button:nth-child(1):hover ~ .animation {
+          width: 70px;
+          left: variables.$dp-spaces--lv0;
+          background-color: colors.$dp-color-snow;
+          border: 2px solid colors.$dp-color-silver;
+          border-radius: 30px;
+        }
+
+        &.dp-pf-disabled .dp-frequency-biannual,
+        button:nth-child(2):hover ~ .animation {
+          width: 99px;
+          left: 70px;
+          background-color: colors.$dp-color-snow;
+          border: 2px solid colors.$dp-color-silver;
+          border-radius: 30px;
+        }
+
+        &.dp-pf-disabled .dp-frequency-quarterly,
+        button:nth-child(3):hover ~ .animation {
+          width: 98px;
+          left: 170px;
+          background-color: colors.$dp-color-snow;
+          border: 2px solid colors.$dp-color-silver;
+          border-radius: 30px;
+        }
+
+        &.dp-pf-disabled .dp-frequency-monthly,
+        button:nth-child(4):hover ~ .animation {
+          width: 89px;
+          left: 268px;
+          background-color: colors.$dp-color-snow;
+          border: 2px solid colors.$dp-color-silver;
+          border-radius: 30px;
+        }
       }
 
       /* Payment frequency en */
@@ -1358,6 +1396,44 @@
         button:nth-child(4):disabled .dp-discount-arg {
           background-color: colors.$dp-color-silver;
           color: colors.$dp-color-white;
+        }
+
+        /*=== State disabled all ===*/
+
+        &.dp-pf-disabled .dp-frequency-annual,
+        button:nth-child(1):hover ~ .animation {
+          width: 84px;
+          left: variables.$dp-spaces--lv0;
+          background-color: colors.$dp-color-snow;
+          border: 2px solid colors.$dp-color-silver;
+          border-radius: 30px;
+        }
+
+        &.dp-pf-disabled .dp-frequency-biannual,
+        button:nth-child(2):hover ~ .animation {
+          width: 100px;
+          left: 80px;
+          background-color: colors.$dp-color-snow;
+          border: 2px solid colors.$dp-color-silver;
+          border-radius: 30px;
+        }
+
+        &.dp-pf-disabled .dp-frequency-quarterly,
+        button:nth-child(3):hover ~ .animation {
+          width: 98px;
+          left: 175px;
+          background-color: colors.$dp-color-snow;
+          border: 2px solid colors.$dp-color-silver;
+          border-radius: 30px;
+        }
+
+        &.dp-pf-disabled .dp-frequency-monthly,
+        button:nth-child(4):hover ~ .animation {
+          width: 89px;
+          left: 268px;
+          background-color: colors.$dp-color-snow;
+          border: 2px solid colors.$dp-color-silver;
+          border-radius: 30px;
         }
       }
 
