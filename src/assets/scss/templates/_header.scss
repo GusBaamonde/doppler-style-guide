@@ -642,6 +642,11 @@
       font-size: var.$dp-sizing--lvl2;
       padding-top: var.$dp-spaces--lv2;
       line-height: 18px;
+
+      span {
+        display: block;
+        font-size: var.$dp-sizing--lvl2;
+      }
     }
   }
 
