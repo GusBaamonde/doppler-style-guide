@@ -18,10 +18,11 @@
     margin: 10px variables.$dp-spaces--lv0 variables.$dp-spaces--lv9;
     position: relative;
     width: 100%;
+    padding: 0 12px;
   }
 
   .tabs-bg {
-    position: absolute;
+    position: relative;
     border-top: 1px solid colors.$dp-color-silver;
     background-color: colors.$dp-color-snow;
     height: 4px;
