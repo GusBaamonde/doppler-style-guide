@@ -422,4 +422,73 @@
     max-height: 357px;
     overflow-y: auto;
   }
+
+  /* My plan */
+
+  .dp-wrapper-plan {
+    padding: 18px;
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .dp-buttons--plan {
+      width: 187px;
+
+      button {
+        font-weight: 600;
+      }
+    }
+
+    .dp-item--plan {
+      color: #212121;
+
+      li {
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 70px;
+      }
+    }
+
+    .dp-functionalities {
+      color: #212121;
+      padding: 18px 0;
+    }
+
+    .dp-func--items {
+      display: flex;
+
+      ul {
+        padding: 18px 0;
+        line-height: 36px;
+      }
+
+      li {
+        background-image: url(assets/img/Check-black.svg);
+        background-repeat: no-repeat;
+        background-position: center left;
+        padding-left: 30px;
+        color: #666;
+      }
+    }
+
+    footer {
+      border-top: 1px solid #ccc;
+      padding: 18px 0 0;
+      text-align: center;
+
+      a {
+        color: colors.$dp-color-darkgreen;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          color: colors.$dp-color-green;
+        }
+      }
+    }
+  }
 }

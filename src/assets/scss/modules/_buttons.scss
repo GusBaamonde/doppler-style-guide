@@ -203,6 +203,25 @@
       }
     }
 
+    /* btn cancel */
+
+    &.btn-cancel {
+      background-color: colors.$dp-color-white;
+      color: colors.$dp-color-red;
+      border: 1px solid colors.$dp-color-red;
+      font-weight: normal;
+
+      &:hover {
+        background-color: colors.$dp-color-lightred;
+        color: colors.$dp-color-white;
+        border: 1px solid colors.$dp-color-darkred;
+      }
+
+      &:focus {
+        color: colors.$dp-color-darkred;
+      }
+    }
+
     &.link- {
       &green {
         color: colors.$dp-color-green;
@@ -388,6 +407,10 @@
         top: 50%;
         transform: translateY(-50%);
       }
+    }
+
+    &.dp-w-100 {
+      width: 100%;
     }
   }
 }
