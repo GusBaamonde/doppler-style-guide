@@ -491,4 +491,74 @@
       }
     }
   }
+
+  /* Addons */
+  .dp-addons-wrapper {
+    header {
+      padding: 24px 24px 0px 24px;
+    }
+
+    .dp-content-addons {
+      padding: 0px 24px 24px;
+      justify-content: center;
+      align-items: center;
+
+      div:nth-child(2)::before {
+        content: "";
+        height: 100%;
+        border-left: 1px solid #eaeaea;
+        position: absolute;
+        left: -7px;
+      }
+
+      div:nth-child(3)::before {
+        content: "";
+        height: 100%;
+        border-left: 1px solid #eaeaea;
+        position: absolute;
+        left: -3px;
+      }
+
+      div {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      h2 {
+        font-size: 36px;
+        line-height: 42px;
+        font-weight: 600;
+        margin: 0;
+        padding: 0;
+        padding-left: 6px;
+      }
+
+      .dp-legend-price {
+        font-size: 14px;
+        color: #666;
+        font-weight: normal;
+        padding-left: 6px;
+      }
+
+      .dp-disclaimer {
+        font-size: 14px;
+        font-style: italic;
+        color: #666;
+        font-weight: normal;
+        padding-left: 6px;
+      }
+    }
+
+    .dp-footer-addons {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 24px;
+
+      a {
+        color: #666;
+        font-size: 12px;
+      }
+    }
+  }
 }
