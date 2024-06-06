@@ -516,4 +516,27 @@
       }
     }
   }
+
+  /* My Plan Card */
+
+  .dp-card-grey {
+    background-color: colors.$dp-color-ghostwhite;
+    padding: 30px 18px;
+
+    h2 {
+      padding-bottom: 30px;
+    }
+
+    h4 {
+      font-size: 12px;
+      line-height: 18px;
+      padding-bottom: 6px;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+
+    .dp-button {
+      margin-top: 24px;
+    }
+  }
 }
