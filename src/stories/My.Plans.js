@@ -281,7 +281,25 @@ export const Inputs = ({ disabled }) => {
                     </div>
                   </div>
                   <div class="col-lg-4 col-sm-12">
-                    <div class="dp-box-shadow"><p>columna</p></div>
+                    <div class="dp-box-shadow">
+                      <div class="dp-card-grey">
+                        <h4>ASESORIA Y ACOMPAÑAMIENTO ESTRATEICO</h4>
+                        <h2>
+                          Te ayudaremos a alcanzar los objetivos en tus campañas
+                        </h2>
+                        <p>
+                          Revisaremos juntos cada aspecto de tu estrategia
+                          actual y te ayudaremos a diseñar el plan de acción
+                          ideal para alcanzar tus objetivos.
+                        </p>
+                        <button
+                          type="button"
+                          class="dp-button button-medium primary-green dp-w-100"
+                        >
+                          Solicitar consultoría
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -652,7 +670,25 @@ export const Inputs = ({ disabled }) => {
                     </div>
                   </div>
                   <div class="col-lg-4 col-sm-12">
-                    <div class="dp-box-shadow"><p>columna</p></div>
+                    <div class="dp-box-shadow">
+                      <div class="dp-card-grey">
+                        <h4>ASESORIA Y ACOMPAÑAMIENTO ESTRATEICO</h4>
+                        <h2>
+                          Te ayudaremos a alcanzar los objetivos en tus campañas
+                        </h2>
+                        <p>
+                          Revisaremos juntos cada aspecto de tu estrategia
+                          actual y te ayudaremos a diseñar el plan de acción
+                          ideal para alcanzar tus objetivos.
+                        </p>
+                        <button
+                          type="button"
+                          class="dp-button button-medium primary-green dp-w-100"
+                        >
+                          Solicitar consultoría
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -666,7 +702,25 @@ export const Inputs = ({ disabled }) => {
                     </div>
                   </div>
                   <div class="col-lg-4 col-sm-12">
-                    <div class="dp-box-shadow"><p>columna</p></div>
+                    <div class="dp-box-shadow">
+                      <div class="dp-card-grey">
+                        <h4>ASESORIA Y ACOMPAÑAMIENTO ESTRATEICO</h4>
+                        <h2>
+                          Te ayudaremos a alcanzar los objetivos en tus campañas
+                        </h2>
+                        <p>
+                          Revisaremos juntos cada aspecto de tu estrategia
+                          actual y te ayudaremos a diseñar el plan de acción
+                          ideal para alcanzar tus objetivos.
+                        </p>
+                        <button
+                          type="button"
+                          class="dp-button button-medium primary-green dp-w-100"
+                        >
+                          Solicitar consultoría
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -680,7 +734,25 @@ export const Inputs = ({ disabled }) => {
                     </div>
                   </div>
                   <div class="col-lg-4 col-sm-12">
-                    <div class="dp-box-shadow"><p>columna</p></div>
+                    <div class="dp-box-shadow">
+                      <div class="dp-card-grey">
+                        <h4>ASESORIA Y ACOMPAÑAMIENTO ESTRATEICO</h4>
+                        <h2>
+                          Te ayudaremos a alcanzar los objetivos en tus campañas
+                        </h2>
+                        <p>
+                          Revisaremos juntos cada aspecto de tu estrategia
+                          actual y te ayudaremos a diseñar el plan de acción
+                          ideal para alcanzar tus objetivos.
+                        </p>
+                        <button
+                          type="button"
+                          class="dp-button button-medium primary-green dp-w-100"
+                        >
+                          Solicitar consultoría
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
