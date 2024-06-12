@@ -101,6 +101,9 @@ export const initModalsBehavior = function () {
     $(".modal .close").click(function () {
       $(".modal").fadeOut();
     });
+    $("#btn-cancel-subscription").click(function () {
+      $("#modal-cancel-subscription").fadeIn($delayFade);
+    });
   });
 };
 
