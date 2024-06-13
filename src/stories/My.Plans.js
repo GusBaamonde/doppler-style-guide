@@ -22,7 +22,6 @@ export const Inputs = ({ disabled }) => {
               </p>
             </div>
           </div>
-          <span class="arrow"></span>
         </div>
       </header>
       <div class="dp-container">
@@ -30,7 +29,7 @@ export const Inputs = ({ disabled }) => {
           <nav class="tabs-wrapper">
             <ul class="tabs-nav" data-tab-active="1">
               <li class="tab--item">
-                <a href="#" class="tab--link active">Detalle de suscripción</a>
+                <a href="#" class="tab--link">Detalle de suscripción</a>
               </li>
               <li class="tab--item">
                 <a href="#" class="tab--link">Add- ons</a>
@@ -41,12 +40,15 @@ export const Inputs = ({ disabled }) => {
               <li class="tab--item">
                 <a href="#" class="tab--link">Historial de Facturación</a>
               </li>
+              <li class="tab--item">
+                <a href="#" class="tab--link active">Modals</a>
+              </li>
             </ul>
             <!-- nav -->
             <div class="tabs-bg"></div>
           </nav>
           <div class="tab--container active col-sm-12">
-            <article class="tab--content active">
+            <article class="tab--content">
               <div class="dp-container col-p-l-0 col-p-r-0">
                 <div class="dp-rowflex">
                   <div class="col-lg-8 col-md-12 m-b-24">
@@ -281,7 +283,7 @@ export const Inputs = ({ disabled }) => {
                     </div>
                   </div>
                   <div class="col-lg-4 col-sm-12">
-                    <div class="dp-box-shadow">
+                    <div class="dp-box-shadow m-b-24">
                       <div class="dp-card-grey">
                         <h4>ASESORIA Y ACOMPAÑAMIENTO ESTRATEICO</h4>
                         <h2>
@@ -300,11 +302,14 @@ export const Inputs = ({ disabled }) => {
                         </button>
                       </div>
                     </div>
+                    <div class="dp-box-shadow">
+                      <div class="dp-card-grey"></div>
+                    </div>
                   </div>
                 </div>
               </div>
             </article>
-            <article class="tab--content active">
+            <article class="tab--content">
               <div class="dp-container col-p-l-0 col-p-r-0">
                 <div class="dp-rowflex">
                   <div class="col-lg-8 col-md-12 m-b-24">
@@ -702,25 +707,7 @@ export const Inputs = ({ disabled }) => {
                     </div>
                   </div>
                   <div class="col-lg-4 col-sm-12">
-                    <div class="dp-box-shadow">
-                      <div class="dp-card-grey">
-                        <h4>ASESORIA Y ACOMPAÑAMIENTO ESTRATEICO</h4>
-                        <h2>
-                          Te ayudaremos a alcanzar los objetivos en tus campañas
-                        </h2>
-                        <p>
-                          Revisaremos juntos cada aspecto de tu estrategia
-                          actual y te ayudaremos a diseñar el plan de acción
-                          ideal para alcanzar tus objetivos.
-                        </p>
-                        <button
-                          type="button"
-                          class="dp-button button-medium primary-green dp-w-100"
-                        >
-                          Solicitar consultoría
-                        </button>
-                      </div>
-                    </div>
+                    <div class="dp-box-shadow"><p>columna</p></div>
                   </div>
                 </div>
               </div>
@@ -734,30 +721,210 @@ export const Inputs = ({ disabled }) => {
                     </div>
                   </div>
                   <div class="col-lg-4 col-sm-12">
-                    <div class="dp-box-shadow">
-                      <div class="dp-card-grey">
-                        <h4>ASESORIA Y ACOMPAÑAMIENTO ESTRATEICO</h4>
-                        <h2>
-                          Te ayudaremos a alcanzar los objetivos en tus campañas
-                        </h2>
-                        <p>
-                          Revisaremos juntos cada aspecto de tu estrategia
-                          actual y te ayudaremos a diseñar el plan de acción
-                          ideal para alcanzar tus objetivos.
-                        </p>
-                        <button
-                          type="button"
-                          class="dp-button button-medium primary-green dp-w-100"
-                        >
-                          Solicitar consultoría
-                        </button>
-                      </div>
+                    <div class="dp-box-shadow"><p>columna</p></div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="tab--content active">
+              <div class="dp-container">
+                <div class="dp-rowflex">
+                  <div class="col-lg-8 col-md-12 m-b-24">
+                    <div class="dp-box-shadow p-t-30 p-b-30 p-l-30 p-r-30">
+                      <button
+                        id="btn-cancel-subscription"
+                        type="button"
+                        class="dp-button button-medium primary-green"
+                      >
+                        cancel subscription
+                      </button>
                     </div>
                   </div>
                 </div>
               </div>
             </article>
           </div>
+        </div>
+      </div>
+
+      <div class="modal" id="modal-cancel-subscription">
+        <div class="modal-content--medium">
+          <span class="close"></span>
+          <h2 class="modal-title">Cancelar suscripción</h2>
+          <p>
+            Queremos que su proceso de desuscripción curse sin problemas y que
+            podamos responder cualquier duda antes de cancelar.
+            <strong
+              >Completa los siguientes datos para iniciar la gestión.</strong
+            >
+          </p>
+          <h4>Datos de contacto:</h4>
+          <form action="#" class="awa-form">
+            <legend>Añadir nuevo colaborador</legend>
+            <fieldset>
+              <ul class="field-group">
+                <li class="field-item">
+                  <ul class="field-group">
+                    <li class="field-item field-item--50">
+                      <label
+                        for="name"
+                        class="labelcontrol"
+                        aria-disabled="false"
+                        data-required="true"
+                        >Nombre
+                        <input
+                          type="name"
+                          id="name"
+                          name="Name"
+                          placeholder="Your Name"
+                          aria-required="true"
+                          aria-invalid="false"
+                          aria-placeholder="Your Name"
+                        />
+                        <!-- <div class="assistance-wrap">
+                      <span>Assistive text</span>
+                    </div> -->
+                      </label>
+                    </li>
+                    <li class="field-item field-item--50">
+                      <label
+                        for="lastname"
+                        class="labelcontrol"
+                        aria-disabled="false"
+                        data-required="true"
+                        >Apellido
+                        <input
+                          type="lastname"
+                          id="lastname"
+                          name="lastname"
+                          placeholder="Your lastname"
+                          aria-required="true"
+                          aria-invalid="false"
+                          aria-placeholder="lastname"
+                        />
+                        <!-- <div class="assistance-wrap">
+                      <span>Assistive text</span>
+                    </div> -->
+                      </label>
+                    </li>
+                  </ul>
+                </li>
+                <li class="field-item">
+                  <ul class="field-group">
+                    <li class="field-item field-item--50">
+                      <label
+                        for="schedule"
+                        class="labelcontrol"
+                        aria-disabled="false"
+                        data-required="true"
+                        >¿ En que horario podemos llamarte?:
+                        <input
+                          type="text"
+                          id="schedule"
+                          name="schedule"
+                          placeholder="1am a 6pm"
+                          aria-required="true"
+                          aria-invalid="false"
+                          aria-placeholder="Your Name"
+                        />
+                        <!-- <div class="assistance-wrap">
+                      <span>Assistive text</span>
+                    </div> -->
+                      </label>
+                    </li>
+                    <li class="field-item field-item--50">
+                      <label
+                        for="tel"
+                        class="labelcontrol"
+                        aria-disabled="false"
+                        data-required="true"
+                        >Teléfono
+                        <input
+                          type="number"
+                          id="tel"
+                          name="tel"
+                          placeholder="Your Phone"
+                          aria-required="true"
+                          aria-invalid="false"
+                          aria-placeholder="Your Phone"
+                        />
+                        <div class="iti iti--allow-dropdown"></div>
+                        <!-- <div class="assistance-wrap assistance-error">
+                      <span>Assistive text</span>
+                    </div> -->
+                      </label>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <h4>Motivo de cancelación:</h4>
+              <ul class="field-group">
+                <li class="field-item">
+                  <ul class="field-group">
+                    <li class="field-item field-item--50">
+                      <div class="dp-input--radio" checked="">
+                        <label>
+                          <input type="radio" name="radio" checked="" />
+                          <span>No alcancé los objetivos esperados</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="field-item field-item--50">
+                      <div class="dp-input--radio" checked="">
+                        <label>
+                          <input type="radio" name="radio" checked="" />
+                          <span>Mi proyecto terminó</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="field-item field-item--50">
+                      <div class="dp-input--radio" checked="">
+                        <label>
+                          <input type="radio" name="radio" checked="" />
+                          <span>Doppler es caro a mi presupuesto</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="field-item field-item--50">
+                      <div class="dp-input--radio" checked="">
+                        <label>
+                          <input type="radio" name="radio" checked="" />
+                          <span class="dp-radio-twolines"
+                            >A Doppler le falta una o varias
+                            funcionalidades</span
+                          >
+                        </label>
+                      </div>
+                    </li>
+                    <li class="field-item field-item--50">
+                      <div class="dp-input--radio" checked="">
+                        <label>
+                          <input type="radio" name="radio" checked="" />
+                          <span>Doppler no funciona correctamente</span>
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
+              <ul class="dp-group-buttons">
+                <li>
+                  <!-- <button type="button" class="dp-button button-medium ctaTertiary">
+                Volver
+              </button> -->
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="dp-button button-medium primary-green"
+                  >
+                    Siguiente
+                  </button>
+                </li>
+              </ul>
+            </fieldset>
+          </form>
         </div>
       </div>
     </section>
