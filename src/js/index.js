@@ -104,6 +104,9 @@ export const initModalsBehavior = function () {
     $("#btn-cancel-subscription").click(function () {
       $("#modal-cancel-subscription").fadeIn($delayFade);
     });
+    $("#btn-discount-code-confirmation").click(function () {
+      $("#modal-discount-code-confirmation").fadeIn($delayFade);
+    });
   });
 };
 
