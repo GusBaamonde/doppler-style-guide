@@ -1322,7 +1322,15 @@
                       type="button"
                       class="dp-button button-medium primary-green"
                     >
-                      cancel subscription
+                      Cancel subscription
+                    </button>
+
+                    <button
+                      id="btn-discount-code-confirmation"
+                      type="button"
+                      class="dp-button button-medium primary-green"
+                    >
+                      Request discount code confirmation
                     </button>
                   </div>
                 </div>
@@ -1509,6 +1517,29 @@
             </ul>
           </fieldset>
         </form>
+      </div>
+    </div>
+    <div class="modal" id="modal-discount-code-confirmation">
+      <div class="modal-content--medium">
+        <span class="close"></span>
+        <h2 class="modal-title">¡Solicitaste tu código de descuento!</h2>
+        <p>
+          Estaremos activando tu código de descuento y podrás ver el beneficio
+          aplicado en tu próxima factura. Nos alegra poder continuar ayudándote
+          a alcanzar tus objetivos de negocio.
+        </p>
+        <ul class="dp-group-buttons">
+          <li>
+            <!-- <button type="button" class="dp-button button-medium ctaTertiary">
+              Volver
+            </button> -->
+          </li>
+          <li>
+            <button type="button" class="dp-button button-medium primary-green">
+              Aceptar
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
     <!-- container-kpi -->
