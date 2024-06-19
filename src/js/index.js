@@ -107,9 +107,11 @@ export const initModalsBehavior = function () {
     $("#btn-discount-code-confirmation").click(function () {
       $("#modal-discount-code-confirmation").fadeIn($delayFade);
     });
+    $("#btn-pre-cancellation-subscription").click(function () {
+      $("#modal-pre-cancellation-subscription").fadeIn($delayFade);
+    });
   });
 };
-
 export const initDemonstrateBehavior = function () {
   $(() => {
     // This script is ONLY to DEMONSTRATE how to show and hide password, not use in production

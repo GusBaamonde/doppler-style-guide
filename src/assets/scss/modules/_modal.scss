@@ -35,8 +35,8 @@
     left: 0;
     position: relative;
     right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 30px;
+    /*transform: translateY(-50%);*/
 
     p {
       font-family: settings.$dp-font-family;
@@ -87,6 +87,37 @@
     &.p-all--20 {
       padding: 20px;
     }
+  }
+
+  /* Tamaño del scroll */
+  .modal::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Estilos barra (thumb) de scroll */
+  .modal::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 0px;
+  }
+
+  .modal::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+  }
+
+  .modadl::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Estilos track de scroll */
+  .modal::-webkit-scrollbar-track {
+    background: #212121;
+    border-radius: 4px;
+  }
+
+  .modal::-webkit-scrollbar-track:hover,
+  .modal::-webkit-scrollbar-track:active {
+    background: #212121;
   }
 
   .modal-content--small {
@@ -197,6 +228,8 @@
     }
   }
 
+  /* Modal cancel subscription */
+
   #modal-cancel-subscription .modal-content--medium {
     padding: 30px 30px;
     background-color: #fff;
@@ -237,7 +270,7 @@
     }
   }
 
-  /* modal */
+  /* Modal discount code confirmation */
 
   #modal-discount-code-confirmation {
     .modal-content--medium {
@@ -255,6 +288,62 @@
       margin-top: 18px;
       display: flex;
       justify-content: end;
+    }
+  }
+
+  /* Modal Pre cancellation subscription */
+
+  #modal-pre-cancellation-subscription {
+    text-align: center;
+
+    .modal-content--small {
+      padding: 30px 65px;
+      max-width: 450px;
+    }
+
+    .dp-arrow-back {
+      background-image: url(assets/img/arrow-back.svg);
+      background-repeat: no-repeat;
+      width: 29px;
+      height: 27px;
+      display: block;
+      position: absolute;
+      top: 30px;
+      left: 20px;
+      cursor: pointer;
+    }
+
+    .dp-bg-retention {
+      border: none;
+      background-image: url(assets/img/placeholder-carousel.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 247px;
+      padding: 0 0 30px;
+      margin: 0 auto 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        margin: 0 auto;
+        display: block;
+      }
+    }
+
+    .dp-link-cancellation {
+      color: #a63a33;
+      font-size: 12px;
+      line-height: 18px;
+
+      &:hover {
+        color: #e34f45;
+        text-decoration: underline;
+      }
+    }
+
+    textarea {
+      margin-top: 6px;
     }
   }
 }

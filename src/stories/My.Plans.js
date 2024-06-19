@@ -736,7 +736,23 @@ export const Inputs = ({ disabled }) => {
                         type="button"
                         class="dp-button button-medium primary-green"
                       >
-                        cancel subscription
+                        Cancel subscription
+                      </button>
+
+                      <button
+                        id="btn-discount-code-confirmation"
+                        type="button"
+                        class="dp-button button-medium primary-green"
+                      >
+                        Request discount code confirmation
+                      </button>
+
+                      <button
+                        id="btn-pre-cancellation-subscription"
+                        type="button"
+                        class="dp-button button-medium primary-green"
+                      >
+                        Pre cancellation subscription
                       </button>
                     </div>
                   </div>
@@ -782,8 +798,8 @@ export const Inputs = ({ disabled }) => {
                           aria-placeholder="Your Name"
                         />
                         <!-- <div class="assistance-wrap">
-                      <span>Assistive text</span>
-                    </div> -->
+                        <span>Assistive text</span>
+                      </div> -->
                       </label>
                     </li>
                     <li class="field-item field-item--50">
@@ -803,8 +819,8 @@ export const Inputs = ({ disabled }) => {
                           aria-placeholder="lastname"
                         />
                         <!-- <div class="assistance-wrap">
-                      <span>Assistive text</span>
-                    </div> -->
+                        <span>Assistive text</span>
+                      </div> -->
                       </label>
                     </li>
                   </ul>
@@ -828,8 +844,8 @@ export const Inputs = ({ disabled }) => {
                           aria-placeholder="Your Name"
                         />
                         <!-- <div class="assistance-wrap">
-                      <span>Assistive text</span>
-                    </div> -->
+                        <span>Assistive text</span>
+                      </div> -->
                       </label>
                     </li>
                     <li class="field-item field-item--50">
@@ -850,8 +866,8 @@ export const Inputs = ({ disabled }) => {
                         />
                         <div class="iti iti--allow-dropdown"></div>
                         <!-- <div class="assistance-wrap assistance-error">
-                      <span>Assistive text</span>
-                    </div> -->
+                        <span>Assistive text</span>
+                      </div> -->
                       </label>
                     </li>
                   </ul>
@@ -864,7 +880,7 @@ export const Inputs = ({ disabled }) => {
                     <li class="field-item field-item--50">
                       <div class="dp-input--radio" checked="">
                         <label>
-                          <input type="radio" name="radio" checked="" />
+                          <input type="radio" name="radio" />
                           <span>No alcancé los objetivos esperados</span>
                         </label>
                       </div>
@@ -872,7 +888,7 @@ export const Inputs = ({ disabled }) => {
                     <li class="field-item field-item--50">
                       <div class="dp-input--radio" checked="">
                         <label>
-                          <input type="radio" name="radio" checked="" />
+                          <input type="radio" name="radio" />
                           <span>Mi proyecto terminó</span>
                         </label>
                       </div>
@@ -880,7 +896,7 @@ export const Inputs = ({ disabled }) => {
                     <li class="field-item field-item--50">
                       <div class="dp-input--radio" checked="">
                         <label>
-                          <input type="radio" name="radio" checked="" />
+                          <input type="radio" name="radio" />
                           <span>Doppler es caro a mi presupuesto</span>
                         </label>
                       </div>
@@ -888,7 +904,7 @@ export const Inputs = ({ disabled }) => {
                     <li class="field-item field-item--50">
                       <div class="dp-input--radio" checked="">
                         <label>
-                          <input type="radio" name="radio" checked="" />
+                          <input type="radio" name="radio" />
                           <span class="dp-radio-twolines"
                             >A Doppler le falta una o varias
                             funcionalidades</span
@@ -899,20 +915,37 @@ export const Inputs = ({ disabled }) => {
                     <li class="field-item field-item--50">
                       <div class="dp-input--radio" checked="">
                         <label>
-                          <input type="radio" name="radio" checked="" />
+                          <input type="radio" name="radio" />
                           <span>Doppler no funciona correctamente</span>
                         </label>
                       </div>
                     </li>
                   </ul>
                 </li>
+                <li class="field-item m-t-18">
+                  <label
+                    for="textarea"
+                    class="labelcontrol"
+                    aria-disabled="false"
+                    data-required="true"
+                  >
+                    Indica que funcionalidad te gustaría que agreguemos:
+                    <textarea
+                      name="textarea"
+                      rows="10"
+                      cols="50"
+                      class="m-t-6"
+                      placeholder="Escribe una funcionalidad"
+                    ></textarea>
+                  </label>
+                </li>
               </ul>
 
               <ul class="dp-group-buttons">
                 <li>
                   <!-- <button type="button" class="dp-button button-medium ctaTertiary">
-                Volver
-              </button> -->
+                  Volver
+                </button> -->
                 </li>
                 <li>
                   <button
@@ -925,6 +958,54 @@ export const Inputs = ({ disabled }) => {
               </ul>
             </fieldset>
           </form>
+        </div>
+      </div>
+      <div class="modal" id="modal-discount-code-confirmation">
+        <div class="modal-content--medium">
+          <span class="close"></span>
+          <h2 class="modal-title">¡Solicitaste tu código de descuento!</h2>
+          <p>
+            Estaremos activando tu código de descuento y podrás ver el beneficio
+            aplicado en tu próxima factura. Nos alegra poder continuar
+            ayudándote a alcanzar tus objetivos de negocio.
+          </p>
+          <ul class="dp-group-buttons">
+            <li>
+              <!-- <button type="button" class="dp-button button-medium ctaTertiary">
+              Volver
+            </button> -->
+            </li>
+            <li>
+              <button
+                type="button"
+                class="dp-button button-medium primary-green"
+              >
+                Aceptar
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="modal" id="modal-pre-cancellation-subscription">
+        <div class="modal-content--small">
+          <span class="dp-arrow-back"></span>
+          <!-- <div class="dp-bg-pic"></div> -->
+          <div class="dp-bg-retention">foto</div>
+          <h4>¡Te brindamos una Asesoría Estratégica totalmente gratis!</h4>
+          <p>
+            Solicita la asesoría y fija una reunión con nuestros asesores para
+            que puedan ayudarte a alcanzar tus objetivos de negocio.
+          </p>
+          <button
+            type="button"
+            class="dp-button button-medium primary-green dp-w-100 m-b-18"
+          >
+            Solicitar asesoría
+          </button>
+          <a href="#" class="dp-link-cancellation"
+            >CONTINUAR CON LA CANCELACIÓN</a
+          >
         </div>
       </div>
     </section>
