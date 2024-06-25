@@ -41,7 +41,7 @@ export const Inputs = ({ disabled, label, labelRequired, isError }) => {
         </header>
         <div class="col-sm-12 m-t-24 m-b-36">
           <h3 class="m-t-24 m-b-30">COLABORADORES DE TU CUENTA</h3>
-          <div class="dp-table-responsive">
+          <div class="_dp-table-responsive">
             <table
               class="dp-table-multilogin"
               aria-label="Resultado multilogin"
@@ -225,14 +225,108 @@ export const Inputs = ({ disabled, label, labelRequired, isError }) => {
                             aria-invalid="false"
                           />
                           <!-- <div class="assistance-wrap">
-                    <span>Assistive text</span>
-                  </div> -->
+                        <span>Assistive text</span>
+                      </div> -->
                         </div>
                       </label>
                     </li>
                   </ul>
                 </fieldset>
               </form>
+              <div class="dp-list-scroll-accounts">
+                <ul class="dp-list-accounts">
+                  <li>
+                    <div class="dp-account">
+                      <span class="dp-img-account"></span>
+                      <p class="dp-account-name">
+                        <span><strong>Nombre y Apellido</strong></span>
+                        <span>mail@fromdoppler.com</span>
+                      </p>
+                      <p class="dp-account-status">
+                        <span>Propietario</span>
+                      </p>
+                      <div class="dp-input--radio" checked="">
+                        <label>
+                          <input type="radio" name="radio" />
+                          <span></span>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="dp-account">
+                      <span class="dp-img-account"></span>
+                      <p class="dp-account-name">
+                        <span><strong>Nombre y Apellido</strong></span>
+                        <span>mail@fromdoppler.com</span>
+                      </p>
+                      <p class="dp-account-status">
+                        <span>Colaborador</span>
+                      </p>
+                      <div class="dp-input--radio" checked="">
+                        <label>
+                          <input type="radio" name="radio" />
+                          <span></span>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="dp-account">
+                      <span class="dp-img-account"></span>
+                      <p class="dp-account-name">
+                        <span><strong>Nombre y Apellido</strong></span>
+                        <span>mail@fromdoppler.com</span>
+                      </p>
+                      <p class="dp-account-status">
+                        <span>Propietario</span>
+                      </p>
+                      <div class="dp-input--radio" checked="">
+                        <label>
+                          <input type="radio" name="radio" />
+                          <span></span>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="dp-account">
+                      <span class="dp-img-account"></span>
+                      <p class="dp-account-name">
+                        <span><strong>Nombre y Apellido</strong></span>
+                        <span>mail@fromdoppler.com</span>
+                      </p>
+                      <p class="dp-account-status">
+                        <span>Colaborador</span>
+                      </p>
+                      <div class="dp-input--radio" checked="">
+                        <label>
+                          <input type="radio" name="radio" />
+                          <span></span>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="dp-account">
+                      <span class="dp-img-account"></span>
+                      <p class="dp-account-name">
+                        <span><strong>Nombre y Apellido</strong></span>
+                        <span>mail@fromdoppler.com</span>
+                      </p>
+                      <p class="dp-account-status">
+                        <span>Colaborador</span>
+                      </p>
+                      <div class="dp-input--radio" checked="">
+                        <label>
+                          <input type="radio" name="radio" />
+                          <span></span>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="modal" id="modal-new-collaborator">
@@ -265,8 +359,8 @@ export const Inputs = ({ disabled, label, labelRequired, isError }) => {
                           aria-placeholder="Your Email"
                         />
                         <!-- <div class="assistance-wrap">
-                  <span>Assistive text</span>
-                </div> -->
+                      <span>Assistive text</span>
+                    </div> -->
                       </label>
                     </li>
                     <li class="field-item">
@@ -288,8 +382,8 @@ export const Inputs = ({ disabled, label, labelRequired, isError }) => {
                               aria-placeholder="Your Name"
                             />
                             <!-- <div class="assistance-wrap">
-                      <span>Assistive text</span>
-                    </div> -->
+                          <span>Assistive text</span>
+                        </div> -->
                           </label>
                         </li>
                         <li class="field-item field-item--50">
@@ -309,8 +403,8 @@ export const Inputs = ({ disabled, label, labelRequired, isError }) => {
                               aria-placeholder="Your Name"
                             />
                             <!-- <div class="assistance-wrap">
-                      <span>Assistive text</span>
-                    </div> -->
+                          <span>Assistive text</span>
+                        </div> -->
                           </label>
                         </li>
                       </ul>
@@ -319,8 +413,8 @@ export const Inputs = ({ disabled, label, labelRequired, isError }) => {
                   <ul class="dp-group-buttons">
                     <li>
                       <!-- <button type="button" class="dp-button button-medium ctaTertiary">
-                Volver
-              </button> -->
+                    Volver
+                  </button> -->
                     </li>
                     <li>
                       <button
@@ -353,16 +447,32 @@ export const Inputs = ({ disabled, label, labelRequired, isError }) => {
                   <ul class="field-group">
                     <li class="field-item">
                       <ul class="field-group">
-                        <li class="field-item field-item--50">
+                        <li class="field-item field-item--50 dp-no-m-b">
                           <label class="dp-label-checkbox">
+                            <input type="checkbox" />
                             <span>Campañas</span>
-                            <input type="checkbox" aria-checked="true" />
                           </label>
                         </li>
-                        <li class="field-item field-item--50">
+                        <li class="field-item field-item--50 dp-no-m-b">
                           <label class="dp-label-checkbox">
-                            <span>Campañas</span>
-                            <input type="checkbox" checked />
+                            <input type="checkbox" />
+                            <span>Listas</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="field-item">
+                      <ul class="field-group">
+                        <li class="field-item field-item--50 dp-no-m-b">
+                          <label class="dp-label-checkbox">
+                            <input type="checkbox" />
+                            <span>Reportes</span>
+                          </label>
+                        </li>
+                        <li class="field-item field-item--50 dp-no-m-b">
+                          <label class="dp-label-checkbox">
+                            <input type="checkbox" />
+                            <span>Automation</span>
                           </label>
                         </li>
                       </ul>
@@ -371,30 +481,14 @@ export const Inputs = ({ disabled, label, labelRequired, isError }) => {
                       <ul class="field-group">
                         <li class="field-item field-item--50">
                           <label class="dp-label-checkbox">
-                            <span>Campañas</span>
                             <input type="checkbox" />
+                            <span>Plantillas</span>
                           </label>
                         </li>
                         <li class="field-item field-item--50">
                           <label class="dp-label-checkbox">
-                            <span>Campañas</span>
                             <input type="checkbox" />
-                          </label>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="field-item">
-                      <ul class="field-group">
-                        <li class="field-item field-item--50">
-                          <label class="dp-label-checkbox">
-                            <span>Campañas</span>
-                            <input type="checkbox" />
-                          </label>
-                        </li>
-                        <li class="field-item field-item--50">
-                          <label class="dp-label-checkbox">
-                            <span>Campañas</span>
-                            <input type="checkbox" />
+                            <span>Integraciones</span>
                           </label>
                         </li>
                       </ul>
