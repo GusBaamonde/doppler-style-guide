@@ -83,4 +83,6 @@
   hr {
     @include line-break.dp-hr(colors.$dp-border-grey);
   }
+
+  /* Multilogin */
 }

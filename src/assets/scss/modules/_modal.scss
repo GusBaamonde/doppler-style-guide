@@ -346,4 +346,105 @@
       margin-top: 6px;
     }
   }
+
+  /* Multilogin modal permissions */
+
+  #modal-permissions {
+    h2 {
+      margin: 0;
+    }
+
+    .modal-content--medium {
+      padding: 30px 24px;
+    }
+
+    .dp-no-m-b {
+      margin-bottom: 0;
+    }
+  }
+
+  #modal-all-accounts {
+    .modal-content--medium {
+      padding: 36px 30px;
+      background-color: #fff;
+    }
+
+    .dp-list-scroll-accounts {
+      height: 300px;
+      overflow-x: hidden;
+      overflow-y: scroll;
+
+      /* Tamaño del scroll */
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      /* Estilos barra (thumb) de scroll */
+      &::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 0px;
+      }
+
+      &::-webkit-scrollbar-thumb:active {
+        background-color: #999999;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background: #b3b3b3;
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Estilos track de scroll */
+      &::-webkit-scrollbar-track {
+        background: #e5e5e5;
+        border-radius: 4px;
+      }
+
+      &::-webkit-scrollbar-track:hover,
+      &::-webkit-scrollbar-track:active {
+        background: #ccc;
+      }
+    }
+
+    .dp-account {
+      padding: 18px 0;
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      .dp-input--radio {
+        margin: 0;
+        height: auto;
+
+        input:focus {
+          border: none;
+          box-shadow: none;
+        }
+      }
+    }
+
+    .dp-img-account {
+      height: 46px;
+      width: 46px;
+      display: block;
+      border-radius: 100%;
+      background-color: #999999;
+    }
+
+    .dp-account-name {
+      margin: 0;
+      span {
+        display: block;
+      }
+    }
+
+    .dp-account-status {
+      background-image: url(assets/img/icon-status.svg);
+      background-repeat: no-repeat;
+      background-position: 0 4px;
+      margin: 0;
+      padding-left: 24px;
+    }
+  }
 }
