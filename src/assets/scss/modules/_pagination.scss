@@ -110,7 +110,7 @@
 
     .dp-steper {
       counter-reset: step;
-      margin: 60px auto;
+      margin: variables.$dp-spaces--lv6 auto variables.$dp-spaces--lv2;
     }
 
     .dp-steper li {
@@ -131,7 +131,7 @@
       height: 30px;
       border: 3px solid colors.$dp-color-darkgreen;
       display: block;
-      margin: 0 auto 10px auto;
+      margin: variables.$dp-spaces--lv0 auto 10px auto;
       border-radius: 50%;
       line-height: 27px;
       text-align: center;
@@ -143,7 +143,7 @@
       height: 30px;
       border: 3px solid colors.$dp-color-lightgrey;
       display: block;
-      margin: 0 auto 10px auto;
+      margin: variables.$dp-spaces--lv0 auto 10px auto;
       border-radius: 50%;
       line-height: 27px;
       background: colors.$dp-color-ghostwhite;
@@ -204,7 +204,7 @@
 
     .dp-steper-counter {
       counter-reset: step;
-      margin: 60px auto;
+      margin: variables.$dp-spaces--lv10 auto;
     }
 
     .dp-steper-counter li {
@@ -218,7 +218,7 @@
     .dp-steper-counter li.active::before {
       border-color: colors.$dp-color-darkgreen;
       background: colors.$dp-color-green;
-      color: white;
+      color: colors.$dp-color-white;
     }
 
     .dp-steper-counter li:before {
@@ -227,7 +227,7 @@
       height: 30px;
       border: 2px solid #bebebe;
       display: block;
-      margin: 0 auto 10px auto;
+      margin: variables.$dp-spaces--lv0 auto 10px auto;
       border-radius: 50%;
       line-height: 27px;
       background: colors.$dp-color-white;
@@ -242,7 +242,7 @@
       height: 30px;
       border: 3px solid colors.$dp-color-lightgrey;
       display: block;
-      margin: 0 auto 10px auto;
+      margin: variables.$dp-spaces--lv0 auto 10px auto;
       border-radius: 50%;
       line-height: 27px;
       background: colors.$dp-color-ghostwhite;
