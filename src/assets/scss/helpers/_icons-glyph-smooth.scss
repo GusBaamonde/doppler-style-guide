@@ -11,6 +11,21 @@
   font-display: block;
 }
 
+@font-face {
+  font-family: "transactional-email";
+  src: url("assets/fonts/transactional-email.eot?2f326d");
+  src:
+    url("assets/fonts/transactional-email.eot?2f326d#iefix")
+      format("embedded-opentype"),
+    url("assets/fonts/transactional-email.ttf?2f326d") format("truetype"),
+    url("assets/fonts/transactional-email.woff?2f326d") format("woff"),
+    url("assets/fonts/transactional-email.svg?2f326d#transactional-email")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
 .dp-icons-wrapper {
   border-bottom: 1px solid #ccc;
   padding: 18px 0;
@@ -51,6 +66,25 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "transactional-email" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-transactional-email-grey:before {
+  content: "\e899";
 }
 
 .iconapp-st-position1:before {
