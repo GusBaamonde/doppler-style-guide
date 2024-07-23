@@ -578,6 +578,39 @@
       display: flex;
       align-items: center;
 
+      .dp-account-status {
+        display: none;
+      }
+
+      .dp-button {
+        display: none;
+      }
+
+      &.header-user-info {
+        justify-content: space-around;
+        align-items: unset;
+
+        p {
+          margin-left: unset;
+        }
+
+        .user-avatar--menu {
+          margin-top: 6px;
+        }
+
+        .dp-info-user {
+          width: 80%;
+        }
+
+        .dp-account-status {
+          display: block;
+        }
+
+        .dp-button {
+          display: block;
+        }
+      }
+
       p {
         margin-left: var.$dp-spaces--lv2;
 
@@ -609,6 +642,14 @@
         font-size: var.$dp-sizing--lvl2;
         color: colors.$dp-color-grey;
       }
+    }
+
+    .dp-account-status {
+      background-image: url(assets/img/icon-status.svg);
+      background-repeat: no-repeat;
+      background-position: 0 4px;
+      margin: 0;
+      padding-left: 24px;
     }
   }
 
