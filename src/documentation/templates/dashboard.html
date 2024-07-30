@@ -391,34 +391,7 @@
               </form>
             </div>
 
-            <div class="col-sm-4">
-              <div class="dp-modal-pack-landing">
-                <div class="dp-carousel" id="carousel2">
-                  <div class="dp-carousel-wrapper">
-                    <div class="dp-carousel-content">
-                      <div
-                        class="dp-carousel-slide active"
-                        data-order="first"
-                      ></div>
-                      <div class="dp-carousel-slide" data-order="second"></div>
-                      <div class="dp-carousel-slide" data-order="third"></div>
-                    </div>
-                  </div>
-                </div>
-
-                <h3>Adquiere un Pack de Landigs</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur. Ac eleifend diam
-                  lobortis montes.
-                </p>
-                <a href="#" class="dp-button button-medium primary-green">
-                  Crear una campaña
-                </a>
-                <button type="button" class="dp-button link-green">
-                  No quiero este beneficio
-                </button>
-              </div>
-            </div>
+            <div class="col-sm-4"></div>
           </div>
         </div>
         <div class="col-lg-4 col-sm-12">
@@ -1570,23 +1543,72 @@
 
     <div class="modal" id="modal-pre-cancellation-subscription">
       <div class="modal-content--small">
-        <span class="dp-arrow-back"></span>
-        <!-- <div class="dp-bg-pic"></div> -->
-        <div class="dp-bg-retention">foto</div>
-        <h4>¡Te brindamos una Asesoría Estratégica totalmente gratis!</h4>
-        <p>
-          Solicita la asesoría y fija una reunión con nuestros asesores para que
-          puedan ayudarte a alcanzar tus objetivos de negocio.
-        </p>
-        <button
-          type="button"
-          class="dp-button button-medium primary-green dp-w-100 m-b-18"
-        >
-          Solicitar asesoría
-        </button>
-        <a href="#" class="dp-link-cancellation"
-          >CONTINUAR CON LA CANCELACIÓN</a
-        >
+        <span class="close"></span>
+        <div class="dp-carousel dp-modal-cancel" id="carousel1">
+          <div class="dp-carousel-wrappers">
+            <div class="dp-carousel-content">
+              <div class="dp-carousel-slide active" data-order="first">
+                <div class="bg-carousel">
+                  <div class="pic-carousel"></div>
+                </div>
+                <h3>
+                  ¡Te brindamos una Asesoría Estratégica totalmente gratis!
+                </h3>
+                <p>
+                  Solicita la asesoría y fija una reunión con nuestros asesores
+                  para que puedan ayudarte a alcanzar tus objetivos de negocio.
+                </p>
+                <a
+                  href="#"
+                  class="dp-button button-medium primary-green dp-w-100"
+                >
+                  Solicitar asesoría
+                </a>
+                <a href="#" class="dp-link-cancel"
+                  >CONTINUAR CON LA CANCELACIÓN</a
+                >
+              </div>
+              <div class="dp-carousel-slide" data-order="second">
+                <div class="bg-carousel">
+                  <div class="pic-carousel"><!-- colocar imagen --></div>
+                </div>
+                <h3>
+                  ¡Te brindamos una Asesoría Estratégica totalmente gratis!
+                </h3>
+                <p>
+                  Solicita la asesoría y fija una reunión con nuestros asesores
+                  para que puedan ayudarte a alcanzar tus objetivos de negocio.
+                </p>
+                <a
+                  href="#"
+                  class="dp-button button-medium primary-green dp-w-100"
+                >
+                  Solicitar asesoría
+                </a>
+                <a href="#" class="dp-link-cancel"
+                  >CONTINUAR CON LA CANCELACIÓN</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="dp-carousel-dots">
+            <input
+              class="dp-carousel-dot"
+              checked=""
+              type="radio"
+              value="first"
+              id="first"
+              name="carousel1"
+            />
+            <input
+              class="dp-carousel-dot"
+              type="radio"
+              value="second"
+              id="second"
+              name="carousel1"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </body>
