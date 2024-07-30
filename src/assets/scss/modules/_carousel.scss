@@ -154,6 +154,86 @@
         box-shadow: inset 0 0 0 2px colors.$dp-color-orange-focus;
       }
     }
+
+    &.dp-modal-cancel {
+      a {
+        position: relative;
+        font-weight: normal;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+
+      .dp-arrow-back {
+        background-image: url(assets/img/arrow-back.svg);
+        background-repeat: no-repeat;
+        width: 29px;
+        height: 27px;
+        display: block;
+        position: absolute;
+        top: 30px;
+        left: 20px;
+        cursor: pointer;
+      }
+
+      .bg-carousel {
+        border: none;
+        background-color: colors.$dp-color-white;
+        background-image: url("assets/img/placeholder-carousel.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 247px;
+
+        img {
+          margin: 0 auto;
+          display: block;
+        }
+      }
+
+      h3 {
+        font-size: 20px;
+        color: #000;
+        font-weight: 700;
+        line-height: 22px;
+        margin-bottom: 6px;
+        margin-top: 24px;
+        text-align: center;
+        display: block;
+      }
+
+      p {
+        color: #666;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+      }
+
+      .dp-link-cancel {
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 18px;
+        text-align: center;
+        color: #e34f45;
+        margin: 12px 0;
+        padding: 0;
+
+        &:hover {
+          color: #e34f45;
+          text-decoration: underline;
+        }
+      }
+
+      .dp-carousel-slide {
+        padding: 0;
+      }
+
+      .dp-carousel-dots {
+        position: relative;
+        display: flex;
+        justify-content: center;
+      }
+    }
   }
 
   .dp-carousel-orange {
