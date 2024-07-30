@@ -372,7 +372,6 @@
     .dp-list-scroll-accounts {
       height: 300px;
       overflow-x: hidden;
-      overflow-y: scroll;
 
       /* Tamaño del scroll */
       &::-webkit-scrollbar {
@@ -426,7 +425,9 @@
     .dp-img-account {
       height: 46px;
       width: 46px;
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       border-radius: 100%;
       background-color: #999999;
       margin: 0 18px 0 0px;
