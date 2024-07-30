@@ -60,6 +60,7 @@
       height: 20px;
       opacity: 0.7;
       cursor: pointer;
+      z-index: 100;
 
       &:hover {
         opacity: 1;
@@ -294,11 +295,16 @@
   /* Modal Pre cancellation subscription */
 
   #modal-pre-cancellation-subscription {
-    text-align: center;
+    /*text-align: center;*/
 
     .modal-content--small {
-      padding: 30px 65px;
-      max-width: 450px;
+      padding: 20px 45px;
+      max-width: 480px;
+      background-color: #fff;
+
+      .dp-carousel {
+        padding-bottom: 0;
+      }
     }
 
     .dp-arrow-back {
