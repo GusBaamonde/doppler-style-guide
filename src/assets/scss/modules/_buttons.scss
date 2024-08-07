@@ -702,4 +702,15 @@
   [slider]:hover > div > [sign] {
     opacity: 1;
   }
+
+  /*-- Group buttons */
+
+  .dp-group-buttons {
+    border-top: 1px solid #ccc;
+    display: flex;
+    padding-top: 18px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
