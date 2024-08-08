@@ -3,7 +3,7 @@ import { html } from "lit-html";
 /**
  * Primary UI component for user interaction
  */
-export const Inputs = ({}) => {
+export const Addons = ({}) => {
   return html`
     <div class="dp-wrapper-addons m-t-42" style="width: 396px">
       <h2>

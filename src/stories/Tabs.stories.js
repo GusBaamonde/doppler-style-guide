@@ -1,4 +1,4 @@
-import { Animations } from "./Tabs.js";
+import { Tabs } from "./Tabs.js";
 
 // More on default export:
 // https://storybook.js.org/docs/web-components/writing-stories/introduction#default-export
@@ -10,6 +10,6 @@ export default {
 
 // More on component templates:
 // https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
-const Template = (args) => Animations(args);
+const Template = (args) => Tabs(args);
 
-export const Saving = Template.bind();
+export const Default = Template.bind({});

@@ -1,4 +1,4 @@
-import { isoText } from "./Box.packs";
+import { Box } from "./Box.packs";
 
 // More on default export:
 // https://storybook.js.org/docs/web-components/writing-stories/introduction#default-export
@@ -11,7 +11,7 @@ export default {
 // More on component templates:
 // https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 const Template = (args) => {
-  return isoText(args);
+  return Box(args);
 };
 
 export const Default = Template.bind({});

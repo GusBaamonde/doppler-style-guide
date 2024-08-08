@@ -3,7 +3,7 @@ import { html } from "lit-html";
 /**
  * Primary UI component for user interaction
  */
-export const Inputs = ({ disabled, label, isError }) => {
+export const Contact = ({ disabled, label, isError }) => {
   return html`
     <h3 class="m-t-30">
       Tenemos el error de formulario (Assisted text) para los inputs y al pie de
