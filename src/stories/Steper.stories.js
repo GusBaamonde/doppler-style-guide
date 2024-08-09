@@ -1,4 +1,4 @@
-import { Chat } from "./Steper";
+import { Steper } from "./Steper";
 
 // More on default export:
 // https://storybook.js.org/docs/web-components/writing-stories/introduction#default-export
@@ -11,7 +11,7 @@ export default {
 // More on component templates:
 // https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 const Template = (args) => {
-  return Chat(args);
+  return Steper(args);
 };
 
 export const Default = Template.bind({});

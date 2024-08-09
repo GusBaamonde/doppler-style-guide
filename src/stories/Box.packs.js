@@ -3,7 +3,7 @@ import { html } from "lit-html";
 /**
  * Primary UI component for user interaction
  */
-export const isoText = ({}) => {
+export const Box = ({}) => {
   return html`
     <div class="dp-library">
       <div class="dp-container">

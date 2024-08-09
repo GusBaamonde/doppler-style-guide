@@ -3,7 +3,7 @@ import { html } from "lit-html";
 /**
  * Primary UI component for user interaction
  */
-export const Chat = ({}) => {
+export const Steper = ({}) => {
   return html`
     <h2>Steper Icons</h2>
     <hr />
