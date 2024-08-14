@@ -1,4 +1,4 @@
-import { Checkbox } from "./Slider.II";
+import { Slider } from "./Slider.II";
 
 // More on default export:
 // https://storybook.js.org/docs/web-components/writing-stories/introduction#default-export
@@ -11,7 +11,7 @@ export default {
 // More on component templates:
 // https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 const Template = (args) => {
-  return Checkbox(args);
+  return Slider(args);
 };
 
 export const Default = Template.bind({});

@@ -3,7 +3,7 @@ import { html } from "lit-html";
 /**
  * Primary UI component for user interaction
  */
-export const Inputs = ({ disabled }) => {
+export const Myplans = ({ disabled }) => {
   return html`
     <section class="dp-library">
       <header class="hero-banner">

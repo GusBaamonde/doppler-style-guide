@@ -1,0 +1,226 @@
+import { html } from "lit-html";
+
+/**
+ * Primary UI component for user interaction
+ */
+export const Grid = ({}) => {
+  return html`
+    <div class="dpsg-content-wrap">
+      <article class="dpsg-content">
+        <h3>Grid system</h3>
+        <p>
+          Este es nuestro primer sistema de grilla basado en el modelo de caja
+          Flex.<br />
+          Su implementación nos permite alcanzar desde desktop (1260px) hasta
+          mobile (320px)
+        </p>
+        <p>
+          <strong
+            >Consiste en 12 columnas verticales para la distribución de nuestro
+            contenido.</strong
+          >
+          <br />
+          Las clases utilizan el prefijo de
+          <span class="dpsg-code">col-</span> +
+          <span class="dpsg-code">lg</span> (hace referencia a large = desktop)
+          o <span class="dpsg-code">md</span> (que hace referencia a medium =
+          tablet) o <span class="dpsg-code">sm</span> (que hace referencia a
+          small = mobile) más su número de columna, para saber cuanto espacio
+          podemos abarcar en el layout.
+        </p>
+        <p>
+          <strong>Ejemplo de clases:</strong>
+          <span class="dpsg-code">col-lg-12</span>
+          <span class="dpsg-code">col-md-8</span>
+          <span class="dpsg-code">col-sm-6</span><br />
+          En el futuro crearemos un sistema de grilla en Grid.
+        </p>
+        <hr class="dpsg-break" />
+        <div class="dp-container">
+          <div class="dp-rowflex">
+            <div class="col-sm-12 col-md-8 col-lg-6 m-b-12">
+              <div class="dp-box-shadow dpsg-content-sample">
+                <p class="dp-boxshadow">
+                  facere quam omnis debitis incidunt in neque maiores molestias
+                  nesciunt perspiciatis laboriosam temporibus dolorum. Beatae,
+                  ex.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-6 m-b-12">
+              <div class="dp-box-shadow dpsg-content-sample">
+                <p class="dp-boxshadow--usermsg">
+                  facere quam omnis debitis incidunt in neque maiores molestias
+                  nesciunt perspiciatis laboriosam temporibus dolorum. Beatae,
+                  ex.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3 m-b-12">
+              <div class="dp-box-shadow dpsg-content-sample">
+                <p>
+                  facere quam omnis debitis incidunt in neque maiores molestias
+                  nesciunt perspiciatis laboriosam temporibus dolorum. Beatae,
+                  ex.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6 m-b-12">
+              <div class="dp-box-shadow dpsg-content-sample">
+                <p>
+                  facere quam omnis debitis incidunt in neque maiores molestias
+                  nesciunt perspiciatis laboriosam temporibus dolorum. Beatae,
+                  ex.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-4 col-md-12 col-lg-3 m-b-12">
+              <div class="dp-box-shadow dpsg-content-sample">
+                <p>
+                  facere quam omnis debitis incidunt in neque maiores molestias
+                  nesciunt perspiciatis laboriosam temporibus dolorum. Beatae,
+                  ex.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-4 col-md-2 col-lg-4 m-b-12">
+              <div class="dp-box-shadow dpsg-content-sample">
+                <p>
+                  facere quam omnis debitis incidunt in neque maiores molestias
+                  nesciunt perspiciatis laboriosam temporibus dolorum. Beatae,
+                  ex.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-4 col-md-2 col-lg-2 m-b-12">
+              <div class="dp-box-shadow dpsg-content-sample">
+                <p>
+                  facere quam omnis debitis incidunt in neque maiores molestias
+                  nesciunt perspiciatis laboriosam temporibus dolorum. Beatae,
+                  ex.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-4 col-md-2 col-lg-2 m-b-12">
+              <div class="dp-box-shadow dpsg-content-sample">
+                <p>
+                  facere quam omnis debitis incidunt in neque maiores molestias
+                  nesciunt perspiciatis laboriosam temporibus dolorum. Beatae,
+                  ex.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-8 col-md-2 col-lg-4 m-b-12">
+              <div class="dp-box-shadow dpsg-content-sample">
+                <p>
+                  facere quam omnis debitis incidunt in neque maiores molestias
+                  nesciunt perspiciatis laboriosam temporibus dolorum. Beatae,
+                  ex.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-2 col-md-4 m-b-12">
+              <div class="dp-box-shadow dpsg-content-sample">
+                <p>
+                  facere quam omnis debitis incidunt in neque maiores molestias
+                  nesciunt perspiciatis laboriosam temporibus dolorum. Beatae,
+                  ex.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-4 m-b-12">
+              <div class="dp-box-shadow dpsg-content-sample">
+                <p>
+                  facere quam omnis debitis incidunt in neque maiores molestias
+                  nesciunt perspiciatis laboriosam temporibus dolorum. Beatae,
+                  ex.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4 m-b-12">
+              <div class="dp-box-shadow dpsg-content-sample">
+                <p>
+                  facere quam omnis debitis incidunt in neque maiores molestias
+                  nesciunt perspiciatis laboriosam temporibus dolorum. Beatae,
+                  ex.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-5 m-b-12">
+              <div class="dp-box-shadow dpsg-content-sample">
+                <p>
+                  facere quam omnis debitis incidunt in neque maiores molestias
+                  nesciunt perspiciatis laboriosam temporibus dolorum. Beatae,
+                  ex.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-4 col-md-12 col-lg-7 m-b-12">
+              <div class="dp-box-shadow dpsg-content-sample">
+                <p>
+                  facere quam omnis debitis incidunt in neque maiores molestias
+                  nesciunt perspiciatis laboriosam temporibus dolorum. Beatae,
+                  ex.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-8 col-md-3 col-lg-10 m-b-12">
+              <div class="dp-box-shadow dpsg-content-sample">
+                <p>
+                  facere quam omnis debitis incidunt in neque maiores molestias
+                  nesciunt perspiciatis laboriosam temporibus dolorum. Beatae,
+                  ex.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-4 col-md-2 col-lg-2 m-b-12">
+              <div class="dp-box-shadow dpsg-content-sample">
+                <p>
+                  facere quam omnis debitis incidunt in neque maiores molestias
+                  nesciunt perspiciatis laboriosam temporibus dolorum. Beatae,
+                  ex.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-3 col-lg-3 m-b-12">
+              <div class="dp-box-shadow dpsg-content-sample">
+                <p>
+                  facere quam omnis debitis incidunt in neque maiores molestias
+                  nesciunt perspiciatis laboriosam temporibus dolorum. Beatae,
+                  ex.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 m-b-12">
+              <div class="dp-box-shadow dpsg-content-sample">
+                <p>
+                  facere quam omnis debitis incidunt in neque maiores molestias
+                  nesciunt perspiciatis laboriosam temporibus dolorum. Beatae,
+                  ex.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3 m-b-12">
+              <div class="dp-box-shadow dpsg-content-sample">
+                <p>
+                  facere quam omnis debitis incidunt in neque maiores molestias
+                  nesciunt perspiciatis laboriosam temporibus dolorum. Beatae,
+                  ex.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 m-b-12">
+              <div class="dp-box-shadow dpsg-content-sample">
+                <p>
+                  facere quam omnis debitis incidunt in neque maiores molestias
+                  nesciunt perspiciatis laboriosam temporibus dolorum. Beatae,
+                  ex.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  `;
+};

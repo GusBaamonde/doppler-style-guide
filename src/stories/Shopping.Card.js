@@ -3,7 +3,7 @@ import { html } from "lit-html";
 /**
  * Primary UI component for user interaction
  */
-export const Inputs = ({}) => {
+export const Shopping = ({}) => {
   return html`
     <div class="dp-shopping-card m-t-42" style="width: 396px">
       <header>

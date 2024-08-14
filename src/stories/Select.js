@@ -3,7 +3,7 @@ import { html } from "lit-html";
 /**
  * Primary UI component for user interaction
  */
-export const Inputs = ({ disabled, label, labelRequired, isError }) => {
+export const Select = ({ disabled, label, labelRequired, isError }) => {
   return html`
     <div class="awa-form" style="width:350px;margin-top: 40px;">
       <label
