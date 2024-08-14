@@ -20,8 +20,8 @@ export const Atomic = ({}) => {
         <strong>(t = top, b=bottom, l=left, r=right)</strong>
       </p>
       <p>
-        La segunda sigla seguida de un guion es la posición
-        <strong>(t = top, b=bottom, l=left, r=right)</strong>
+        Los espaciados que se utilizan en la libreria saltan de 6px en 6px
+        <strong>(desde 0px a 174px)</strong>
       </p>
       <hr class="dpsg-break" />
       <p><strong>m-t-30</strong> = margin-top: 30px;</p>
