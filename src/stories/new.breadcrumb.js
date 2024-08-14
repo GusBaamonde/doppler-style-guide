@@ -3,7 +3,7 @@ import { html } from "lit-html";
 /**
  * Primary UI component for user interaction
  */
-export const Inputs = ({}) => {
+export const Breadcrumb = ({}) => {
   return html`
     <nav class="dp-bread-crumb m-t-42">
       <ul>

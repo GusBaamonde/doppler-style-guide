@@ -3,7 +3,7 @@ import { html } from "lit-html";
 /**
  * Primary UI component for user interaction
  */
-export const Checkbox = ({}) => {
+export const Slider = ({}) => {
   return html`
     <div class="button-description">
       <p class="m-b-18">

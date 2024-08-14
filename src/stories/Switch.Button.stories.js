@@ -1,4 +1,4 @@
-import { Inputs } from "./Switch.Button";
+import { Switch } from "./Switch.Button";
 
 // More on default export:
 // https://storybook.js.org/docs/web-components/writing-stories/introduction#default-export
@@ -11,7 +11,7 @@ export default {
 // More on component templates:
 // https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 const Template = (args) => {
-  return Inputs(args);
+  return Switch(args);
 };
 
 export const Default = Template.bind({});

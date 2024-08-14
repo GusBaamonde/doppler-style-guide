@@ -3,7 +3,7 @@ import { html } from "lit-html";
 /**
  * Primary UI component for user interaction
  */
-export const Inputs = ({ disabled, label, labelRequired, isError }) => {
+export const Switch = ({ disabled, label, labelRequired, isError }) => {
   return html` <div class="m-t-42">
     <h2>Nuetro Switch Button tiene tres estados</h2>
     <h3>Checked</h3>

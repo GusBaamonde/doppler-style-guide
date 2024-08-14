@@ -3,7 +3,7 @@ import { html } from "lit-html";
 /**
  * Primary UI component for user interaction
  */
-export const isoText = ({}) => {
+export const Summary = ({}) => {
   return html`
     <div style="width: 100%; margin-top: 45px; padding-left: 60px;">
       <header class="hero-banner m-t-48">
